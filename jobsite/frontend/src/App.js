@@ -1,20 +1,17 @@
+import GlobalStyle from './globalStyles';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Home, JobList } from './pages';
+
 function App() {
 	return (
-		<div className='App'>
-			<header className='App-header'>
-				<p>
-					HAHA <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className='App-link'
-					href='https://reactjs.org'
-					target='_blank'
-					rel='noopener noreferrer'
-				>
-					Learn React
-				</a>
-			</header>
-		</div>
+		<Router>
+			<GlobalStyle />
+			<Switch>
+				<Route path='/' exact component={Home} />
+				<Route path='/category' component={JobList} />
+				<Route path='/category/jobname' component={JobList} />
+			</Switch>
+		</Router>
 	);
 }
 
