@@ -5,10 +5,12 @@ import {
 	NavLink,
 	NavItem,
 	NavLogo,
+	NavIcon,
 } from './Header.elements';
 import Data from './Data';
+import { useMediaQuery } from 'react-responsive';
 
-const DesktopMenu = () => {
+const DisplayMenu = () => {
 	return (
 		<NavMenu>
 			{Data.map((data, index) => (
@@ -19,11 +21,14 @@ const DesktopMenu = () => {
 		</NavMenu>
 	);
 };
+
 const Header = () => {
+	const isDesktop = useMediaQuery({ minWidth: 992 });
 	return (
 		<NavContainer>
 			<NavLogo to='/'>LOGO</NavLogo>
-			<DesktopMenu />
+			{!isDesktop && <NavIcon />}
+			<DisplayMenu />
 		</NavContainer>
 	);
 };

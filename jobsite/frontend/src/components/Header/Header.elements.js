@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
+import { FaHamburger } from 'react-icons/fa';
 export const NavContainer = styled.nav`
 	display: flex;
 	align-items: center;
@@ -18,16 +18,35 @@ export const NavLogo = styled(Link)`
 	padding: 1rem;
 	color: #000;
 `;
+export const NavIcon = styled(FaHamburger)`
+	font-size: 2rem;
+	position: absolute;
+	right: 20px;
+`;
 
 export const NavMenu = styled.ul`
 	display: flex;
-	align-items: center;
+	width: 200px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 	list-style: none;
-	text-align: center;
+	background: grey;
+	align-items: center;
+	flex-direction: column;
+	@media screen and (min-width: 992px) {
+		display: flex;
+		justify-content: flex-end;
+		position: initial;
+		align-items: center;
+		width: 100%;
+		background: initial;
+		flex-direction: row;
+	}
 `;
 
 export const NavItem = styled.li`
-	height: 80px;
 	border-bottom: 2px solid transparent;
 `;
 
