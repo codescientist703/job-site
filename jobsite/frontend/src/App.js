@@ -8,7 +8,7 @@ function App() {
 			<GlobalStyle />
 			<Switch>
 				<Route path='/' exact component={Home} />
-				<Route path='/category' component={JobList} />
+				<Route path='/category' exact component={JobList} />
 				<Route path='/category/jobname' component={JobList} />
 			</Switch>
 		</Router>
