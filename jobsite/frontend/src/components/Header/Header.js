@@ -6,22 +6,24 @@ import {
 	NavItem,
 	NavLogo,
 } from './Header.elements';
+import Data from './Data';
 
+const DesktopMenu = () => {
+	return (
+		<NavMenu>
+			{Data.map((data, index) => (
+				<NavItem key={index}>
+					<NavLink to={data.link}>{data.name}</NavLink>
+				</NavItem>
+			))}
+		</NavMenu>
+	);
+};
 const Header = () => {
 	return (
 		<NavContainer>
-			<NavLogo />
-			<NavMenu>
-				<NavItem>
-					<NavLink>Home</NavLink>
-				</NavItem>
-				<NavItem>
-					<NavLink>Contact</NavLink>
-				</NavItem>
-				<NavItem>
-					<NavLink>About</NavLink>
-				</NavItem>
-			</NavMenu>
+			<NavLogo to='/'>LOGO</NavLogo>
+			<DesktopMenu />
 		</NavContainer>
 	);
 };
