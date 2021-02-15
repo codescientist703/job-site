@@ -12,6 +12,7 @@ const Home = () => {
 			<Header />
 			<FeatureContainer>
 				<FeatureContent>
+					ff
 					<h1>Tired of searching for jobs ?</h1>
 					<p>Forget the hassle for searching by the revolutuion</p>
 				</FeatureContent>
