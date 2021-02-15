@@ -14,6 +14,11 @@ import { useMediaQuery } from 'react-responsive';
 const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 	return (
 		<NavMenu isOpen={isOpen}>
+			{!isDesktop && (
+				<NavItem>
+					<NavLogo to='/'>LOGO</NavLogo>
+				</NavItem>
+			)}
 			{Data.map((data, index) => (
 				<NavItem key={index} onClick={handleClick}>
 					<NavLink to={data.link}>{data.name}</NavLink>
