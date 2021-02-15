@@ -4,6 +4,10 @@ import {
 	FeatureContainer,
 	FeatureContent,
 	FeatureImage,
+	SearchContainer,
+	SearchIcon,
+	SearchInput,
+	SearchButton
 } from './Home.elements';
 import JobImg from '../../images/homejob.svg';
 const Home = () => {
@@ -13,8 +17,15 @@ const Home = () => {
 			<FeatureContainer>
 				<FeatureContent>
 					<h1>Tired of searching for jobs ?</h1>
-					<p>Forget the hassle for searching by the revolutuion</p>
+					<p>Forget the hassle for searching by the revolution</p>
+
+					<SearchContainer>
+						<SearchIcon />
+						<SearchInput type="text" placeholder="Search..." />
+						<SearchButton >Search</SearchButton>
+					</SearchContainer>
 				</FeatureContent>
+
 				<FeatureImage src={JobImg} />
 			</FeatureContainer>
 		</div>
