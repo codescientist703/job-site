@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { FaHamburger } from 'react-icons/fa';
+import { FaHamburger, FaWindowClose } from 'react-icons/fa';
 export const NavContainer = styled.nav`
 	display: flex;
 	align-items: center;
@@ -24,17 +24,24 @@ export const NavIcon = styled(FaHamburger)`
 	right: 20px;
 `;
 
+export const CloseIcon = styled(FaWindowClose)`
+	position: absolute;
+	right: 0;
+	font-size: 1.5rem;
+`;
+
 export const NavMenu = styled.ul`
 	display: flex;
 	width: 200px;
 	height: 100%;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: ${({ isOpen }) => (isOpen ? 0 : '-100%')};
 	list-style: none;
 	background: grey;
 	align-items: center;
 	flex-direction: column;
+	transition: all 0.3s ease-out;
 	@media screen and (min-width: 992px) {
 		display: flex;
 		justify-content: flex-end;
@@ -43,6 +50,7 @@ export const NavMenu = styled.ul`
 		width: 100%;
 		background: initial;
 		flex-direction: row;
+    transition: none;
 	}
 `;
 
