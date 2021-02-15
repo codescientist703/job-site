@@ -42,7 +42,7 @@ export const NavMenu = styled.ul`
 	align-items: center;
 	flex-direction: column;
 	transition: all 0.3s ease-out;
-	@media screen and (min-width: 992px) {
+	@media screen and (min-width: ${(props) => props.theme.lg}px) {
 		display: flex;
 		justify-content: flex-end;
 		position: initial;
@@ -50,7 +50,7 @@ export const NavMenu = styled.ul`
 		width: 100%;
 		background: initial;
 		flex-direction: row;
-    transition: none;
+		transition: none;
 	}
 `;
 

@@ -10,7 +10,8 @@ import {
 } from './Header.elements';
 import Data from './Data';
 import { useMediaQuery } from 'react-responsive';
-
+import { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 	return (
 		<NavMenu isOpen={isOpen}>
@@ -29,8 +30,9 @@ const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 	);
 };
 const Header = () => {
-	const isDesktop = useMediaQuery({ minWidth: 992 });
 	const [isOpen, setIsOpen] = useState(false);
+	const themeContext = useContext(ThemeContext);
+	const isDesktop = useMediaQuery({ minWidth: themeContext.lg });
 
 	const handleClick = () => {
 		setIsOpen(!isOpen);
