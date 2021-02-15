@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+	NavHeader,
 	NavContainer,
 	NavMenu,
 	NavLink,
@@ -38,15 +39,17 @@ const Header = () => {
 		setIsOpen(!isOpen);
 	};
 	return (
-		<NavContainer>
-			<NavLogo to='/'>LOGO</NavLogo>
-			{!isDesktop && <NavIcon onClick={handleClick} />}
-			<DisplayMenu
-				isDesktop={isDesktop}
-				isOpen={isOpen}
-				handleClick={handleClick}
-			/>
-		</NavContainer>
+		<NavHeader>
+			<NavContainer>
+				<NavLogo to='/'>LOGO</NavLogo>
+				<NavIcon onClick={handleClick} />
+				<DisplayMenu
+					isDesktop={isDesktop}
+					isOpen={isOpen}
+					handleClick={handleClick}
+				/>
+			</NavContainer>
+		</NavHeader>
 	);
 };
 
