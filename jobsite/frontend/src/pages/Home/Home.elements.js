@@ -13,8 +13,7 @@ export const FeatureContainer = styled.div`
 	/* margin: 60px auto 0; */
 	padding: 0 1.35rem;
 
-
-	@media screen and (min-width: ${({ theme }) => theme.md}px){
+	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		height: 70vh;
 		margin: 60px auto 0;
 		align-items: start;
@@ -32,23 +31,23 @@ export const FeatureContent = styled.div`
 	/* padding: 20px; */
 	/* padding: 0 1.35rem; */
 	h1 {
-		font-weight: 900;
+		font-weight: bold;
 		font-size: 2.5rem;
 	}
 	p {
 		margin-top: 1.1rem;
 		font-size: 1.3rem;
 		font-weight: 600;
-		color: rgba(0,0,0,0.7);
+		color: rgba(0, 0, 0, 0.7);
 	}
 
-	@media screen and (min-width: ${({ theme }) => theme.md}px){
+	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		h1 {
 			font-size: 2.8rem;
 		}
 	}
 
-	@media screen and (min-width: ${({ theme }) => theme.lg}px){
+	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		h1 {
 			font-size: 3.5rem;
 		}
@@ -67,7 +66,6 @@ export const FeatureImage = styled.img`
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		display: block;
 	}
-
 `;
 
 export const SearchContainer = styled.div`
@@ -75,7 +73,7 @@ export const SearchContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
 	padding: 5px 5px;
 	width: 100%;
 	max-width: 450px;
@@ -99,14 +97,12 @@ export const SearchInput = styled.input`
 	width: 50%;
 	border: none;
 	outline: none;
-	padding: 5px ;
+	padding: 5px;
 	font-size: 1.09rem;
 
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		width: 70%;
 	}
-
-	
 `;
 
 export const SearchButton = styled.button`
