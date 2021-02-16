@@ -1,6 +1,17 @@
 import styled from 'styled-components';
 import { IoSearch } from 'react-icons/io5';
 
+export const HomeContainer = styled.div`
+	padding: 0 1.5rem;
+`;
+export const WaveIcon = styled.svg`
+	display: none;
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
+	@media screen and (min-width: ${({ theme }) => theme.md}px) {
+		display: block;
+	}
+`;
 export const FeatureContainer = styled.div`
 	/* display: flex;
 	flex-direction: column; */
@@ -11,15 +22,13 @@ export const FeatureContainer = styled.div`
 	width: 100%;
 	max-width: 1300px;
 	/* margin: 60px auto 0; */
-	padding: 0 1.35rem;
+	margin: 70px auto 30px;
 
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
-		height: 70vh;
-		margin: 60px auto 0;
+		margin: 70px auto 30px;
 		align-items: start;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 20px;
-		margin-top: 100px;
 	}
 `;
 
@@ -31,13 +40,12 @@ export const FeatureContent = styled.div`
 	/* padding: 20px; */
 	/* padding: 0 1.35rem; */
 	h1 {
-		font-weight: bold;
-		font-size: 2.5rem;
+		font-weight: 800;
+		font-size: 2.4rem;
 	}
 	p {
 		margin-top: 1.1rem;
 		font-size: 1.3rem;
-		font-weight: 600;
 		color: rgba(0, 0, 0, 0.7);
 	}
 
@@ -49,7 +57,7 @@ export const FeatureContent = styled.div`
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		h1 {
-			font-size: 3.5rem;
+			font-size: 3.6rem;
 		}
 	}
 `;
@@ -59,9 +67,6 @@ export const FeatureImage = styled.img`
 	width: 100%;
 	height: auto;
 	display: none;
-	/* @media screen and (min-width: ${({ theme }) => theme.lg}px) {
-		display: block;
-	} */
 
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		display: block;
@@ -114,4 +119,40 @@ export const SearchButton = styled.button`
 	font-weight: 500;
 	/* letter-spacing: 1px; */
 	font-size: 1.01rem;
+`;
+
+export const SecTwoContainer = styled.div`
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 2rem 0rem;
+	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
+		flex-direction: row;
+		padding: 4rem 10rem;
+	}
+`;
+export const Content = styled.div`
+	font-size: 1rem;
+	margin-bottom: 3rem;
+	h2 {
+		font-size: 2.4rem;
+		margin-bottom: 1rem;
+	}
+	p {
+		font-size: 1.3rem;
+		margin-bottom: 1.5rem;
+	}
+`;
+export const BoySvg = styled.div`
+	img {
+		width: 100%;
+		height: auto;
+		@media screen and (min-width: ${({ theme }) => theme.md}px) {
+			width: 700px;
+		}
+	}
+	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
+		margin-right: 1rem;
+	}
 `;
