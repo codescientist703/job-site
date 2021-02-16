@@ -18,10 +18,10 @@ import BoyImg from '../../images/boyjob.svg';
 import { Button } from '../../components';
 const Home = () => {
 	return (
-		<HomeContainer>
+		<div>
 			<SectionOne />
 			<SectionTwo />
-		</HomeContainer>
+		</div>
 	);
 };
 const SectionOne = () => {

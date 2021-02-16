@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 import { IoSearch } from 'react-icons/io5';
-
-export const HomeContainer = styled.div`
-	padding: 0 1.5rem;
-`;
 export const WaveIcon = styled.svg`
 	display: none;
-	margin-left: -1.5rem;
-	margin-right: -1.5rem;
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		display: block;
 	}
@@ -23,6 +17,7 @@ export const FeatureContainer = styled.div`
 	max-width: 1300px;
 	/* margin: 60px auto 0; */
 	margin: 70px auto 30px;
+	padding: 0rem 1.5rem;
 
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		margin: 70px auto 30px;
@@ -126,9 +121,12 @@ export const SecTwoContainer = styled.div`
 	flex-direction: column-reverse;
 	justify-content: center;
 	align-items: flex-start;
-	padding: 2rem 0rem;
+	padding: 15rem 1.5rem;
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		flex-direction: row;
+		padding: 4rem 10rem;
+	}
+	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		padding: 4rem 10rem;
 	}
 `;
@@ -137,6 +135,7 @@ export const Content = styled.div`
 	margin-bottom: 3rem;
 	h2 {
 		font-size: 2.4rem;
+		font-weight: 800;
 		margin-bottom: 1rem;
 	}
 	p {
