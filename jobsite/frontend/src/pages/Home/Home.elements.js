@@ -122,6 +122,7 @@ export const SecTwoContainer = styled.div`
 	justify-content: center;
 	align-items: flex-start;
 	padding: 15rem 1.5rem;
+	background: #f5f5f5;
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		flex-direction: row;
 		padding: 4rem 10rem;
