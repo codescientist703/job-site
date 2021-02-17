@@ -12,6 +12,22 @@ import {
 	Content,
 	SecTwoContainer,
 	BoySvg,
+
+	Container,
+	ContainerLeft,
+	ContainerRight,
+	SVG,
+	Heading,
+	Description,
+	Btn,
+
+	ContainerThree,
+	ContainerHeading,
+	Underline,
+	CardContainer,
+	Card,
+	CardImg,
+	CardTitle
 } from './Home.elements';
 import JobImg from '../../images/homejob.svg';
 import BoyImg from '../../images/boyjob.svg';
@@ -21,6 +37,8 @@ const Home = () => {
 		<article>
 			<SectionOne />
 			<SectionTwo />
+			<SecTwo />
+			<SectionThree />
 		</article>
 	);
 };
@@ -71,7 +89,74 @@ const SectionTwo = () => {
 	);
 };
 
+const SecTwo = () => {
+	return (
+		<Container>
+			<ContainerLeft>
+				<SVG src={BoyImg} alt="boy image" />
+			</ContainerLeft>
+			<ContainerRight>
+				<Heading>
+					Find Thousands of jobs and apply for what you like..
+				</Heading>
+				<Description>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eligendi facere saepe dolorem facilis esse numquam odit maxime mollitia non at, cumque laboriosam aut ipsum doloribus ut ducimus culpa deleniti.
+				</Description>
+				<Btn>
+					Apply Now
+				</Btn>
+			</ContainerRight>
+		</Container>
+	)
+}
+
 const SectionThree = () => {
-	return <section>section3</section>;
+	return (
+		<ContainerThree>
+			<ContainerHeading>
+				Browse By Category
+			</ContainerHeading>
+			<Underline />
+
+			<CardContainer>
+
+				<Card>
+					<CardImg alt="card image" />
+					<CardTitle>
+						Web Developer
+					</CardTitle>
+				</Card>
+
+				<Card>
+					<CardImg alt="card image" />
+					<CardTitle>
+						Web Developer
+					</CardTitle>
+				</Card>
+
+				<Card>
+					<CardImg alt="card image" />
+					<CardTitle>
+						Web Developer
+					</CardTitle>
+				</Card>
+
+				<Card>
+					<CardImg alt="card image" />
+					<CardTitle>
+						Web Developer
+					</CardTitle>
+				</Card>
+
+				<Card>
+					<CardImg alt="card image" />
+					<CardTitle>
+						Web Developer
+					</CardTitle>
+				</Card>
+
+			</CardContainer>
+		</ContainerThree>
+	);
 };
 export default Home;
