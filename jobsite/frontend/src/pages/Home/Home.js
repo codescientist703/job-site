@@ -20,12 +20,14 @@ import {
 	Underline,
 	CardContainer,
 	Card,
-	CardImg,
 	CardTitle,
+	CardIcon,
+	CardContent,
 } from './Home.elements';
 import JobImg from '../../images/homejob.svg';
 import BoyImg from '../../images/boyjob.svg';
 import { Button } from '../../components';
+import { Data } from './Data';
 const Home = () => {
 	return (
 		<article>
@@ -40,8 +42,8 @@ const SectionOne = () => {
 		<section>
 			<FeatureContainer>
 				<FeatureContent>
-					<h1>Tired of searching for jobs ?</h1>
-					<p>Forget the hassle for searching by the revolution</p>
+					<h1>{Data.homeTitle}</h1>
+					<p>{Data.homeContent}</p>
 					<SearchContainer>
 						<SearchIcon />
 						<SearchInput type='text' placeholder='Search...' />
@@ -69,15 +71,8 @@ const SectionTwo = () => {
 					<SVG src={BoyImg} alt='boy image' />
 				</ContainerLeft>
 				<ContainerRight>
-					<Heading>
-						Find Thousands of jobs and apply for what you like..
-					</Heading>
-					<Description>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-						eligendi facere saepe dolorem facilis esse numquam odit maxime
-						mollitia non at, cumque laboriosam aut ipsum doloribus ut ducimus
-						culpa deleniti.
-					</Description>
+					<Heading>{Data.sec2Title}</Heading>
+					<Description>{Data.sec2Content}</Description>
 					<Button>Apply Now</Button>
 				</ContainerRight>
 			</Container>
@@ -90,32 +85,14 @@ const SectionThree = () => {
 		<ContainerThree>
 			<ContainerHeading>Browse By Category</ContainerHeading>
 			<Underline />
-
 			<CardContainer>
-				<Card>
-					<CardImg alt='card image' />
-					<CardTitle>Web Developer</CardTitle>
-				</Card>
-
-				<Card>
-					<CardImg alt='card image' />
-					<CardTitle>Web Developer</CardTitle>
-				</Card>
-
-				<Card>
-					<CardImg alt='card image' />
-					<CardTitle>Web Developer</CardTitle>
-				</Card>
-
-				<Card>
-					<CardImg alt='card image' />
-					<CardTitle>Web Developer</CardTitle>
-				</Card>
-
-				<Card>
-					<CardImg alt='card image' />
-					<CardTitle>Web Developer</CardTitle>
-				</Card>
+				{Data.card.map((data, index) => (
+					<Card>
+						<CardIcon color={data.cardIconColor}>{data.cardIcon}</CardIcon>
+						<CardTitle>{data.cardTitle}</CardTitle>
+						<CardContent>{data.cardContent}</CardContent>
+					</Card>
+				))}
 			</CardContainer>
 		</ContainerThree>
 	);

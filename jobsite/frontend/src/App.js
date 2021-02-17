@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Home, JobList } from './pages';
 import { theme } from './theme';
 import { ThemeProvider } from 'styled-components';
-import { Header } from './components';
+import { Header, Footer } from './components';
 function App() {
 	return (
 		<Router>
@@ -15,6 +15,7 @@ function App() {
 					<Route path='/category' exact component={JobList} />
 					<Route path='/category/jobname' component={JobList} />
 				</Switch>
+				<Footer />
 			</ThemeProvider>
 		</Router>
 	);

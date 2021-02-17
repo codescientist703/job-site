@@ -81,14 +81,6 @@ export const SearchContainer = styled.div`
 	width: 100%;
 	max-width: 450px;
 	border-radius: 50px;
-
-	/* @media screen and (min-width: 600px) {
-		width: 60%;
-	}
-
-	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
-		width: 80%;
-	} */
 `;
 
 export const SearchIcon = styled(IoSearch)`
@@ -183,7 +175,7 @@ export const SVG = styled.img`
 export const Heading = styled.h2`
 	/* for mobile */
 	font-size: 1.7rem;
-	margin-bottom: 10px;
+	margin-bottom: 1rem;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		font-size: 1.95rem;
@@ -193,11 +185,11 @@ export const Heading = styled.h2`
 export const Description = styled.p`
 	/* for mobile */
 	font-size: 1.05rem;
-	margin-bottom: 10px;
+	margin-bottom: 1rem;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		margin-bottom: 20px;
-		font-size: 1.25rem;
+		font-size: 20px;
 	}
 `;
 
@@ -208,13 +200,7 @@ export const ContainerThree = styled.div`
 	width: 100%;
 	max-width: 1300px;
 	margin: 0 auto;
-	padding: 30px 20px;
-	background-color: #e9e9e9;
-
-	/* tablet and higher devices */
-	@media screen and (min-width: ${({ theme }) => theme.md}px) {
-		/* padding: 30px 20px;	 */
-	}
+	padding: 3rem 1rem 6rem 1rem;
 `;
 
 export const ContainerHeading = styled.h2`
@@ -229,12 +215,12 @@ export const Underline = styled.div`
 	background-color: black;
 	margin: 0 auto;
 `;
-
+export const CardSection = styled.section``;
 export const CardContainer = styled.div`
 	/* for mobile device */
 	display: grid;
 	grid-template-columns: 1fr;
-	margin-top: 100px;
+	margin-top: 4rem;
 
 	/* for tablet  */
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
@@ -258,21 +244,26 @@ export const Card = styled.div`
 	background-color: #fff;
 	border-radius: 10px;
 	min-height: 200px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-	margin-bottom: 20px;
-
-	/* for tablet */
-	@media screen and (min-width: ${({ theme }) => theme.md}px) {
-		/* margin-right: 20px; */
-		/* width: 50%; */
-	}
-
-	/* for laptop */
-	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
-		/* width: 30%; */
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+	margin-bottom: 1.25rem;
+	padding: 1.25rem 1.3rem;
+	&:hover {
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 	}
 `;
 
-export const CardImg = styled.img``;
+export const CardIcon = styled.div`
+	font-size: 3rem;
+	color: ${({ color }) => color};
+	margin-bottom: 0px;
+`;
 
-export const CardTitle = styled.h3``;
+export const CardTitle = styled.h3`
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+`;
+export const CardContent = styled.div`
+	font-size: 16px;
+	margin-bottom: 0.5rem;
+`;

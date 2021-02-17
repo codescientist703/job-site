@@ -5,6 +5,10 @@ export const theme = {
 	button: {
 		text: 'todo',
 		background: 'todo',
+		hover: {
+			text: 'todo',
+			background: 'todo',
+		},
 	},
 	link: {
 		text: 'todo',
