@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-	font-size: 1.4rem;
-	padding: 1rem 4rem;
+	font-size: 1.2rem;
+	padding: 7px 25px;
 	border: none;
-	background: blue;
+	background: linear-gradient(to bottom right, blue, purple);
 	color: #fff;
 	transition: 0.2s ease-out;
 	&:hover {
