@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-	HomeContainer,
 	FeatureContainer,
 	FeatureContent,
 	FeatureImage,
@@ -9,25 +8,20 @@ import {
 	SearchInput,
 	SearchButton,
 	WaveIcon,
-	Content,
 	SecTwoContainer,
-	BoySvg,
-
 	Container,
 	ContainerLeft,
 	ContainerRight,
 	SVG,
 	Heading,
 	Description,
-	Btn,
-
 	ContainerThree,
 	ContainerHeading,
 	Underline,
 	CardContainer,
 	Card,
 	CardImg,
-	CardTitle
+	CardTitle,
 } from './Home.elements';
 import JobImg from '../../images/homejob.svg';
 import BoyImg from '../../images/boyjob.svg';
@@ -37,7 +31,6 @@ const Home = () => {
 		<article>
 			<SectionOne />
 			<SectionTwo />
-			<SecTwo />
 			<SectionThree />
 		</article>
 	);
@@ -67,94 +60,62 @@ const SectionOne = () => {
 		</section>
 	);
 };
+
 const SectionTwo = () => {
 	return (
-		<section>
-			<SecTwoContainer>
-				<BoySvg>
-					<img src={BoyImg} alt='boy-job' />
-				</BoySvg>
-				<Content>
-					<h2>Find Thousands of jobs and apply for what you like..</h2>
-					<p>
+		<SecTwoContainer>
+			<Container>
+				<ContainerLeft>
+					<SVG src={BoyImg} alt='boy image' />
+				</ContainerLeft>
+				<ContainerRight>
+					<Heading>
+						Find Thousands of jobs and apply for what you like..
+					</Heading>
+					<Description>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
 						eligendi facere saepe dolorem facilis esse numquam odit maxime
 						mollitia non at, cumque laboriosam aut ipsum doloribus ut ducimus
 						culpa deleniti.
-					</p>
-					<Button>Apply Now !!</Button>
-				</Content>
-			</SecTwoContainer>
-		</section>
+					</Description>
+					<Button>Apply Now</Button>
+				</ContainerRight>
+			</Container>
+		</SecTwoContainer>
 	);
 };
-
-const SecTwo = () => {
-	return (
-		<Container>
-			<ContainerLeft>
-				<SVG src={BoyImg} alt="boy image" />
-			</ContainerLeft>
-			<ContainerRight>
-				<Heading>
-					Find Thousands of jobs and apply for what you like..
-				</Heading>
-				<Description>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eligendi facere saepe dolorem facilis esse numquam odit maxime mollitia non at, cumque laboriosam aut ipsum doloribus ut ducimus culpa deleniti.
-				</Description>
-				<Btn>
-					Apply Now
-				</Btn>
-			</ContainerRight>
-		</Container>
-	)
-}
 
 const SectionThree = () => {
 	return (
 		<ContainerThree>
-			<ContainerHeading>
-				Browse By Category
-			</ContainerHeading>
+			<ContainerHeading>Browse By Category</ContainerHeading>
 			<Underline />
 
 			<CardContainer>
-
 				<Card>
-					<CardImg alt="card image" />
-					<CardTitle>
-						Web Developer
-					</CardTitle>
+					<CardImg alt='card image' />
+					<CardTitle>Web Developer</CardTitle>
 				</Card>
 
 				<Card>
-					<CardImg alt="card image" />
-					<CardTitle>
-						Web Developer
-					</CardTitle>
+					<CardImg alt='card image' />
+					<CardTitle>Web Developer</CardTitle>
 				</Card>
 
 				<Card>
-					<CardImg alt="card image" />
-					<CardTitle>
-						Web Developer
-					</CardTitle>
+					<CardImg alt='card image' />
+					<CardTitle>Web Developer</CardTitle>
 				</Card>
 
 				<Card>
-					<CardImg alt="card image" />
-					<CardTitle>
-						Web Developer
-					</CardTitle>
+					<CardImg alt='card image' />
+					<CardTitle>Web Developer</CardTitle>
 				</Card>
 
 				<Card>
-					<CardImg alt="card image" />
-					<CardTitle>
-						Web Developer
-					</CardTitle>
+					<CardImg alt='card image' />
+					<CardTitle>Web Developer</CardTitle>
 				</Card>
-
 			</CardContainer>
 		</ContainerThree>
 	);
