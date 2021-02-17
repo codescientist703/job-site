@@ -83,33 +83,31 @@ export const SearchContainer = styled.div`
 	border-radius: 50px;
 `;
 
-export const SearchIcon = styled(IoSearch)`
-	width: 15%;
-	font-size: 1.5rem;
-`;
+// export const SearchIcon = styled(IoSearch)`
+// 	width: 15%;
+// 	font-size: 1.5rem;
+// `;
 
-export const SearchInput = styled.input`
-	width: 50%;
-	border: none;
-	outline: none;
-	padding: 5px;
-	font-size: 1.09rem;
+// export const SearchInput = styled.input`
+// 	width: 50%;
+// 	border: none;
+// 	outline: none;
+// 	padding: 5px;
+// 	font-size: 1.09rem;
 
-	@media screen and (min-width: ${({ theme }) => theme.md}px) {
-		width: 70%;
-	}
-`;
+// 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
+// 		width: 70%;
+// 	}
+// `;
 
-export const SearchButton = styled.button`
-	/* width: 25%; */
-	border: none;
-	outline: none;
-	padding: 9px 20px;
-	border-radius: 20px;
-	font-weight: 500;
-	/* letter-spacing: 1px; */
-	font-size: 1.01rem;
-`;
+// export const SearchButton = styled.button`
+// 	border: none;
+// 	outline: none;
+// 	padding: 9px 20px;
+// 	border-radius: 20px;
+// 	font-weight: 500;
+// 	font-size: 1.01rem;
+// `;
 
 // styling for section two starts
 
@@ -267,3 +265,202 @@ export const CardContent = styled.div`
 	font-size: 16px;
 	margin-bottom: 0.5rem;
 `;
+<<<<<<< HEAD
+=======
+
+
+
+// hero section styling starts
+
+export const HeroSection = styled.section`
+
+	width: 100%;
+	position: relative;
+	
+	/* for tablet */
+	/* @media screen and (min-width: ${({ theme }) => theme.md}px){
+		min-height: 50vh;
+	} */
+
+	/* for desktop */
+	/* @media screen and (min-width: ${({ theme }) => theme.lg}px){
+		min-height: 80vh;
+	} */
+`;
+
+export const ContainerOne = styled.div`
+
+	/* for mobile */
+
+	width: 100%;
+	max-width: 1300px;
+	
+	margin: 0 auto;
+	margin-top: 1.5rem;
+	padding: 0px 20px;
+	/* background-color: #eaeaea; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* flex-wrap: wrap; */
+
+	/* for tablet */
+	@media screen and (min-width: ${({ theme }) => theme.md}px){ 
+		margin-top: 2.5rem;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+`;
+
+export const ContainerOneLeft = styled.article`
+
+	/* for mobile */
+	/* background-color: #fafafa; */
+	padding: 10px 20px;
+	width: 100%;
+
+	/* for tablet */
+	@media screen and (min-width: ${({ theme }) => theme.md}px){
+		width: 45%;
+	}
+`;
+
+export const ContainerOneRight = styled.figure`
+	/* for mobile */
+	/* background-color: #fafafa; */
+	padding: 10px 20px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* for tablet */
+	@media screen and (min-width: ${({ theme }) => theme.md}px){
+		width: 48%;
+	}
+	
+`;
+
+export const HeroHeading = styled.h2`
+
+	/* for mobile */
+	font-size: 1.8rem;
+	margin-bottom: 10px;
+	font-weight: 900;
+
+	/* for tablet */
+	@media screen and (min-width: ${({ theme }) => theme.md}px){
+		font-size: 2rem;
+	}
+
+	/* for desktop */
+	@media screen and (min-width: ${({ theme }) => theme.lg}px){
+		font-size: 2.5rem;
+	}
+`;
+
+export const HeroSubHeading = styled.p`
+	
+	/* for mobile */
+	font-size: 1.15rem;
+	font-weight: 500;
+	color: rgba(0,0,0,0.5);
+	margin-bottom: 30px;
+
+	/* for tablet */
+	@media screen and (min-width: ${({ theme }) => theme.md}px){
+		font-size: 1.2rem;
+	}
+
+	/* for desktop */
+	@media screen and (min-width: ${({ theme }) => theme.lg}px){
+		font-size: 1.35rem;
+	}
+`;
+
+export const SearchBox = styled.div`
+
+	/* for mobile */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* background-color: #ddd; */
+	padding: 4px 7px;
+	border-radius: 50px;
+	max-width: 380px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
+	/* for tablet */
+	@media screen and (min-width: ${({ theme }) => theme.md}px){
+		padding: 6px 7px;
+	}
+`;
+
+export const SearchIcon = styled(IoSearch)`
+
+	/* for mobile */
+	width: 15%;
+	font-size: 1.5rem;
+`;
+
+export const SearchInput = styled.input`
+	width: 50%;
+	border: none;
+	outline: none;
+	padding: 5px;
+	font-size: 1.09rem;
+
+	@media screen and (min-width: ${({ theme }) => theme.md}px) {
+		/* width: 70%; */
+		width: 55%;
+	}
+`;
+
+export const SearchButton = styled.button`
+	border: none;
+	outline: none;
+	padding: 9px 20px;
+	border-radius: 20px;
+	font-weight: 500;
+	font-size: 1.01rem;
+`;
+
+export const HeroImg = styled.img`
+
+	width: 100%;
+	height: auto;
+	max-width: 450px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+	/* for tablet */
+	@media screen and (min-width: ${({ theme }) => theme.md}px){
+		margin: 0;
+	}
+`;
+
+export const WaveSVG = styled.svg`
+	/* position: absolute; */
+	position: relative;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	display: none;
+	/* min-height: 250px; */
+	/* max-height: 300px; */
+
+	/* for tablet */
+	@media screen and (min-width: ${({ theme }) => theme.md}px){
+		display: block;
+	}
+
+	/* for desktop */
+	/* @media screen and (min-width: 1500px){
+		height: 300px;
+	} */
+`;
+
+
+>>>>>>> main
