@@ -45,6 +45,7 @@ export const NavMenu = styled.ul`
 	height: 100%;
 	position: absolute;
 	top: 0;
+	z-index: 100;
 	left: ${({ isOpen }) => (isOpen ? 0 : '-100%')};
 	list-style: none;
 	background: grey;

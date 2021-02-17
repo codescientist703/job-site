@@ -1,10 +1,5 @@
 import React from 'react';
 import {
-	FeatureContainer,
-	FeatureContent,
-	FeatureImage,
-	SearchContainer,
-	WaveIcon,
 	SecTwoContainer,
 	Container,
 	ContainerLeft,
