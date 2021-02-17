@@ -55,4 +55,8 @@ export const DividerContainer = styled.div`
 	flex-direction: column;
 	padding-left: 2rem;
 	padding-right: 2rem;
+
+	div{
+		text-align: center;
+	}
 `;
