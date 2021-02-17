@@ -1,26 +1,9 @@
 import React from 'react';
 import {
-<<<<<<< HEAD
-=======
-	HeroSection,
-	ContainerOne,
-	ContainerOneLeft,
-	ContainerOneRight,
-	HeroHeading,
-	HeroSubHeading,
-	SearchBox,
-	HeroImg,
-	WaveSVG,
-
-	HomeContainer,
->>>>>>> main
 	FeatureContainer,
 	FeatureContent,
 	FeatureImage,
 	SearchContainer,
-	SearchIcon,
-	SearchInput,
-	SearchButton,
 	WaveIcon,
 	SecTwoContainer,
 	Container,
@@ -37,15 +20,23 @@ import {
 	CardTitle,
 	CardIcon,
 	CardContent,
+	HeroSection,
+	ContainerOne,
+	ContainerOneLeft,
+	HeroHeading,
+	HeroSubHeading,
+	SearchBox,
+	SearchIcon,
+	SearchInput,
+	SearchButton,
+	ContainerOneRight,
+	HeroImg,
+	WaveSVG,
 } from './Home.elements';
 import JobImg from '../../images/homejob.svg';
 import BoyImg from '../../images/boyjob.svg';
 import { Button } from '../../components';
-<<<<<<< HEAD
 import { Data } from './Data';
-=======
-
->>>>>>> main
 const Home = () => {
 	return (
 		<article>
@@ -54,32 +45,6 @@ const Home = () => {
 			<SectionTwo />
 			<SectionThree />
 		</article>
-	);
-};
-
-const SectionOne = () => {
-	return (
-		<section>
-			<FeatureContainer>
-				<FeatureContent>
-					<h1>{Data.homeTitle}</h1>
-					<p>{Data.homeContent}</p>
-					<SearchContainer>
-						<SearchIcon />
-						<SearchInput type='text' placeholder='Search...' />
-						<SearchButton>Search</SearchButton>
-					</SearchContainer>
-				</FeatureContent>
-				<FeatureImage src={JobImg} />
-			</FeatureContainer>
-			<WaveIcon xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'>
-				<path
-					fill='#0099ff'
-					fill-opacity='1'
-					d='M0,96L40,96C80,96,160,96,240,128C320,160,400,224,480,245.3C560,267,640,245,720,213.3C800,181,880,139,960,106.7C1040,75,1120,53,1200,69.3C1280,85,1360,139,1400,165.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z'
-				></path>
-			</WaveIcon>
-		</section>
 	);
 };
 
@@ -122,11 +87,8 @@ const SecOne = () => {
 	return (
 		<HeroSection>
 			<ContainerOne>
-
 				<ContainerOneLeft>
-					<HeroHeading>
-						Tired of searching for jobs ?
-					</HeroHeading>
+					<HeroHeading>Tired of searching for jobs ?</HeroHeading>
 					<HeroSubHeading>
 						Forget the hassle for searching by the revolution
 					</HeroSubHeading>
@@ -138,7 +100,7 @@ const SecOne = () => {
 				</ContainerOneLeft>
 
 				<ContainerOneRight>
-					<HeroImg src={JobImg} alt="Hero section image" />
+					<HeroImg src={JobImg} alt='Hero section image' />
 				</ContainerOneRight>
 			</ContainerOne>
 
@@ -151,5 +113,5 @@ const SecOne = () => {
 			</WaveSVG>
 		</HeroSection>
 	);
-}
+};
 export default Home;
