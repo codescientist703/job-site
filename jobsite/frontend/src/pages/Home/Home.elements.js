@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { IoSearch } from 'react-icons/io5';
 
 // styling for section two starts

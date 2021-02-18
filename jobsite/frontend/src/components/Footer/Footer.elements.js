@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const SiteFooter = styled.footer`
 	background-color: #f8f8ff;
@@ -56,7 +56,7 @@ export const DividerContainer = styled.div`
 	padding-left: 2rem;
 	padding-right: 2rem;
 
-	div{
+	div {
 		text-align: center;
 	}
 `;
