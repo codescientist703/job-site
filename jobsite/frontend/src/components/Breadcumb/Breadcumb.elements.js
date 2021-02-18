@@ -10,4 +10,5 @@ export const BreadItems = styled.li``;
 export const BreadLink = styled(Link)`
 	text-decoration: none;
 	color: black;
+	text-transform: capitalize;
 `;

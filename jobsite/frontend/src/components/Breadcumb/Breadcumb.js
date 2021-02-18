@@ -1,17 +1,18 @@
 import { BreadContainer, BreadItems, BreadLink } from './Breadcumb.elements';
 
-const Breadcumb = () => {
+const Breadcumb = ({ breadData }) => {
 	return (
 		<BreadContainer>
-			<BreadItems>
-				<BreadLink>Home&nbsp;/&nbsp;</BreadLink>
-			</BreadItems>
-			<BreadItems>
-				<BreadLink>Category&nbsp;/&nbsp;</BreadLink>
-			</BreadItems>
-			<BreadItems>
-				<BreadLink>Jobs</BreadLink>
-			</BreadItems>
+			{breadData.map((data, index) => (
+				<BreadItems key={index}>
+					<BreadLink to={data.link}>
+						{data.name}
+						&nbsp;
+						{!(index === breadData.length - 1) && `/`}
+						&nbsp;
+					</BreadLink>
+				</BreadItems>
+			))}
 		</BreadContainer>
 	);
 };
