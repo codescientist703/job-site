@@ -9,7 +9,7 @@ const Data = [
 	},
 	{
 		name: 'Jobs',
-		link: '/',
+		link: '/category',
 	},
 	{
 		name: 'Internships',
