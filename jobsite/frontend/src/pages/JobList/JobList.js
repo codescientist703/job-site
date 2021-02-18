@@ -1,9 +1,10 @@
 import React from 'react';
-import { JobCard } from '../../components';
+import { JobCard, Breadcumb } from '../../components';
 
 const JobList = () => {
 	return (
 		<div>
+			<Breadcumb />
 			<JobCard />
 		</div>
 	);
