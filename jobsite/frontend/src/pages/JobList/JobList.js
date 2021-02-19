@@ -2,6 +2,10 @@ import React from 'react';
 import { JobCard, Breadcumb } from '../../components';
 
 const JobList = () => {
+	return <div>Filter</div>;
+};
+
+const JobList = () => {
 	const breadData = [
 		{ name: 'home', link: '/' },
 		{ name: 'category', link: '/category' },
