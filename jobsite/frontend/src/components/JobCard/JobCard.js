@@ -9,6 +9,7 @@ import {
 	JobDescription,
 	StarIcon,
 	Item,
+	ItemIcon,
 	ItemTitle,
 	ItemDescription,
 	Btn,
@@ -32,7 +33,10 @@ const JobCard = () => {
 			<CardMiddle>
 				<Item>
 					<ItemTitle>
-						<AiFillHome />
+						<ItemIcon>
+							<AiFillHome />
+						</ItemIcon>
+						&nbsp;
 						Location
 					</ItemTitle>
 					<ItemDescription>Mumbai</ItemDescription>
@@ -40,7 +44,10 @@ const JobCard = () => {
 
 				<Item>
 					<ItemTitle>
-						<BiTimeFive />
+						<ItemIcon >
+							<BiTimeFive />
+						</ItemIcon>
+						&nbsp;
 						Date
 					</ItemTitle>
 					<ItemDescription>20-11-2021</ItemDescription>
@@ -48,7 +55,10 @@ const JobCard = () => {
 
 				<Item>
 					<ItemTitle>
-						<BiTimeFive />
+						<ItemIcon >
+							<BiTimeFive />
+						</ItemIcon>
+						&nbsp;
 						Salary
 					</ItemTitle>
 					<ItemDescription>20,000</ItemDescription>
@@ -56,7 +66,10 @@ const JobCard = () => {
 
 				<Item>
 					<ItemTitle>
-						<BiTimeFive />
+						<ItemIcon >
+							<BiTimeFive />
+						</ItemIcon>
+						&nbsp;
 						Experience
 					</ItemTitle>
 					<ItemDescription>3+</ItemDescription>

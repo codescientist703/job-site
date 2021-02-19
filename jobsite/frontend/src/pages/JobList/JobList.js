@@ -1,8 +1,53 @@
 import React from 'react';
-import { JobCard, Breadcumb } from '../../components';
+import { JobCard, Breadcumb, Container, } from '../../components';
+import {
+	MainContainer,
+	JobContainer,
+	FilterContainer,
+	FilterBtn,
+	FilterItem,
+	SubmitBtn,
+	FilterName,
+	FilterInput,
+	FilterRange
+} from './JobList.elements';
 
 const Filter = () => {
-	return <div>Filter</div>;
+	return (
+		<FilterContainer>
+			<FilterItem>
+				<FilterName>
+					Location
+				</FilterName>
+				<FilterInput placeholder="e.g, Vadodara" />
+			</FilterItem>
+
+			<FilterItem>
+				<FilterName>
+					Job Title
+				</FilterName>
+				<FilterInput placeholder="e.g, Software Developer" />
+			</FilterItem>
+
+			<FilterItem>
+				<FilterName>
+					Experience
+				</FilterName>
+				<FilterInput placeholder="e.g, Fresher" />
+			</FilterItem>
+
+			<FilterItem>
+				<FilterName>
+					Salary
+				</FilterName>
+				<FilterRange type="range" />
+			</FilterItem>
+
+			<FilterItem>
+				<SubmitBtn>Submit</SubmitBtn>
+			</FilterItem>
+		</FilterContainer>
+	);
 };
 
 const JobList = () => {
@@ -11,10 +56,24 @@ const JobList = () => {
 		{ name: 'category', link: '/category' },
 	];
 	return (
-		<div>
+		<Container>
 			<Breadcumb breadData={breadData} />
-			<JobCard />
-		</div>
+			<MainContainer>
+				<Filter />
+				<FilterBtn>Filter</FilterBtn>
+				<JobContainer>
+					<JobCard />
+					<JobCard />
+					<JobCard />
+					<JobCard />
+					<JobCard />
+					<JobCard />
+				</JobContainer>
+
+			</MainContainer>
+
+		</Container>
+
 	);
 };
 
