@@ -67,7 +67,7 @@ const SectionThree = () => {
 			<Underline />
 			<CardContainer>
 				{Data.card.map((data, index) => (
-					<Card>
+					<Card key={index}>
 						<CardIcon color={data.cardIconColor}>{data.cardIcon}</CardIcon>
 						<CardTitle>{data.cardTitle}</CardTitle>
 						<CardContent>{data.cardContent}</CardContent>
