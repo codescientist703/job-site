@@ -1,7 +1,7 @@
 import React from 'react';
 import { JobCard, Breadcumb } from '../../components';
 
-const JobList = () => {
+const Filter = () => {
 	return <div>Filter</div>;
 };
 

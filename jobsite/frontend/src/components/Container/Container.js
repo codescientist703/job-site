@@ -5,4 +5,4 @@ const Container = styled.div`
 	margin: 0 auto;
 `;
 
-export default Button;
+export default Container;
