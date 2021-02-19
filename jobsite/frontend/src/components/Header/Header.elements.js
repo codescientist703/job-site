@@ -11,7 +11,7 @@ export const NavContainer = styled.nav`
 	align-items: center;
 	justify-content: space-between;
 	height: 80px;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	width: 100%;
 	max-width: 1300px;
 	margin: 0 auto;

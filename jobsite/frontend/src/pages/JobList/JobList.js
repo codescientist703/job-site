@@ -1,5 +1,5 @@
-import React from 'react';
-import { JobCard, Breadcumb, Container, } from '../../components';
+import React, { useState } from 'react';
+import { JobCard, Breadcumb, Container } from '../../components';
 import {
 	MainContainer,
 	JobContainer,
@@ -9,38 +9,32 @@ import {
 	SubmitBtn,
 	FilterName,
 	FilterInput,
-	FilterRange
+	FilterRange,
+	FilterHeader,
 } from './JobList.elements';
 
-const Filter = () => {
+const Filter = ({ isFilterOpen }) => {
 	return (
-		<FilterContainer>
+		<FilterContainer isFilterOpen={isFilterOpen}>
+			<FilterHeader>Filters</FilterHeader>
 			<FilterItem>
-				<FilterName>
-					Location
-				</FilterName>
-				<FilterInput placeholder="e.g, Vadodara" />
+				<FilterName>Location</FilterName>
+				<FilterInput placeholder='e.g, Vadodara' />
 			</FilterItem>
 
 			<FilterItem>
-				<FilterName>
-					Job Title
-				</FilterName>
-				<FilterInput placeholder="e.g, Software Developer" />
+				<FilterName>Job Title</FilterName>
+				<FilterInput placeholder='e.g, Software Developer' />
 			</FilterItem>
 
 			<FilterItem>
-				<FilterName>
-					Experience
-				</FilterName>
-				<FilterInput placeholder="e.g, Fresher" />
+				<FilterName>Experience</FilterName>
+				<FilterInput placeholder='e.g, Fresher' />
 			</FilterItem>
 
 			<FilterItem>
-				<FilterName>
-					Salary
-				</FilterName>
-				<FilterRange type="range" />
+				<FilterName>Salary</FilterName>
+				<FilterRange type='range' />
 			</FilterItem>
 
 			<FilterItem>
@@ -55,12 +49,18 @@ const JobList = () => {
 		{ name: 'home', link: '/' },
 		{ name: 'category', link: '/category' },
 	];
+	const [isFilterOpen, setisFilterOpen] = useState(false);
+	const toggleFilterClick = () => {
+		setisFilterOpen(!isFilterOpen);
+	};
 	return (
 		<Container>
 			<Breadcumb breadData={breadData} />
 			<MainContainer>
-				<Filter />
-				<FilterBtn>Filter</FilterBtn>
+				<FilterBtn onClick={toggleFilterClick}>
+					{isFilterOpen ? 'Hide Filters' : 'Show Filters'}
+				</FilterBtn>
+				<Filter isFilterOpen={isFilterOpen} />
 				<JobContainer>
 					<JobCard />
 					<JobCard />
@@ -69,11 +69,8 @@ const JobList = () => {
 					<JobCard />
 					<JobCard />
 				</JobContainer>
-
 			</MainContainer>
-
 		</Container>
-
 	);
 };
 

@@ -72,4 +72,9 @@ export const Btn = styled.button`
 	border: none;
 	outline: none;
 	background-color: transparent;
+	cursor: pointer;
+	color: ${({ theme }) => theme.link.text};
+	&:hover {
+		color: ${({ theme }) => theme.link.hover.text};
+	}
 `;

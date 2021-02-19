@@ -11,6 +11,9 @@ export const theme = {
 		},
 	},
 	link: {
-		text: 'todo',
+		text: 'black',
+		hover: {
+			text: 'green',
+		},
 	},
 };
