@@ -40,15 +40,16 @@ export const FilterContainer = styled.aside`
 
 	/* background-color: #eee; */
 	max-height: ${({ isFilterOpen }) => (isFilterOpen ? '540px' : '0')};
-	padding: ${({ isFilterOpen }) => (isFilterOpen ? '0.8rem 1.2rem' : '0rem')};
+	padding: ${({ isFilterOpen }) => (isFilterOpen ? '0.8rem' : '0rem')};
 	overflow: hidden;
 	margin-bottom: ${({ isFilterOpen }) => (isFilterOpen ? '1rem' : '0rem')};
 	border-radius: 5px;
-	border: ${({ isFilterOpen }) => (isFilterOpen ? '1px solid #ddd' : 'none')};
+	border: ${({ isFilterOpen }) => (isFilterOpen ? '1px solid #ddd' : '0rem')};
 	transition: max-height 0.2s ease-out;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		display: block;
+		overflow: visible;
 		padding: 0.8rem 1.2rem;
 		border-radius: 5px;
 		border: 1px solid #ddd;
