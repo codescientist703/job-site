@@ -123,22 +123,29 @@ export const FilterRange = styled.input`
 `;
 export const PaginateComponent = styled.div`
 	display: flex;
-	justify-content: flex-end;
-	padding: 1.2rem;
+	/* justify-content: center; */
+	/* padding: 1.2rem; */
+	background-color: #eee;
+	border-radius: 5px;
+	margin-bottom: 1.2rem;
 
 	.pagination {
+		
 		margin: 15px auto;
 		display: flex;
 		list-style: none;
 		outline: none;
+		text-transform: capitalize;
 		.active a {
 			background-color: #47ccde;
-			border-color: #47ccde;
+			/* border-color: #47ccde; */
 			color: #fff;
+			font-weight:600;
 		}
 		li a {
-			border: 1px solid #47ccde;
-			padding: 5px 10px;
+			/* border: 1px solid #47ccde; */
+			border-radius: 5px;
+			padding: 5px 12px;
 			outline: none;
 			cursor: pointer;
 		}
