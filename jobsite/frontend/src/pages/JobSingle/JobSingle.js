@@ -1,9 +1,14 @@
 import {} from './JobSingle.elements';
+import { JobCard, Container } from '../../components';
 
 import React from 'react';
 
 const JobSingle = () => {
-	return <div>Job Singla</div>;
+	return (
+		<Container>
+			<JobCard type={'single'} />
+		</Container>
+	);
 };
 
 export default JobSingle;

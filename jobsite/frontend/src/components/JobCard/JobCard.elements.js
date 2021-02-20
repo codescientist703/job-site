@@ -5,7 +5,8 @@ export const Card = styled.div`
 	/* for mobile */
 	width: 100%;
 	/* max-width: 550px; */
-	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+	box-shadow: ${({ type }) =>
+		type === 'single' ? 'none' : '0 2px 7px rgba(0, 0, 0, 0.2)'};
 	margin: 0 auto;
 	padding: 0.7rem;
 	border-radius: 10px;
