@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro';
-import { keyframes } from 'styled-components/macro';
 export const MainContainer = styled.section`
 	/* for mobile */
 
@@ -23,16 +22,6 @@ export const JobContainer = styled.div`
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		/* padding: 0.8rem 1.5rem; */
 	}
-`;
-
-const fadeIn = keyframes`
-  from {
-    margin-top: -50%;
-  }
-
-  to {
-    margin-top: 0%;
-  }
 `;
 
 export const FilterContainer = styled.aside`

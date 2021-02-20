@@ -13,7 +13,7 @@ const Data = [
 	},
 	{
 		name: 'Internships',
-		link: '/',
+		link: '/category/jobname',
 	},
 ];
 export default Data;
