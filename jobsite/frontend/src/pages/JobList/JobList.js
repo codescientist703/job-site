@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { JobCard, Breadcumb, Container } from '../../components';
+import ReactPaginate from 'react-paginate';
 import {
 	MainContainer,
 	JobContainer,
@@ -11,6 +12,7 @@ import {
 	FilterInput,
 	FilterRange,
 	FilterHeader,
+	PaginateComponent,
 } from './JobList.elements';
 
 const Filter = ({ isFilterOpen }) => {
@@ -68,6 +70,20 @@ const JobList = () => {
 					<JobCard />
 					<JobCard />
 					<JobCard />
+					<PaginateComponent>
+						<ReactPaginate
+							previousLabel={'prev'}
+							nextLabel={'next'}
+							breakLabel={'...'}
+							breakClassName={'break-me'}
+							pageCount={10}
+							marginPagesDisplayed={4}
+							pageRangeDisplayed={10}
+							containerClassName={'pagination'}
+							subContainerClassName={'pages pagination'}
+							activeClassName={'active'}
+						/>
+					</PaginateComponent>
 				</JobContainer>
 			</MainContainer>
 		</Container>

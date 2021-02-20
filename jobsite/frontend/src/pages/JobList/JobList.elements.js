@@ -119,3 +119,26 @@ export const FilterRange = styled.input`
     padding: 5px 10px;
     border-radius: 5px; */
 `;
+export const PaginateComponent = styled.div`
+	display: flex;
+	justify-content: flex-end;
+	padding: 1.2rem;
+
+	.pagination {
+		margin: 15px auto;
+		display: flex;
+		list-style: none;
+		outline: none;
+		.active a {
+			background-color: #47ccde;
+			border-color: #47ccde;
+			color: #fff;
+		}
+		li a {
+			border: 1px solid #47ccde;
+			padding: 5px 10px;
+			outline: none;
+			cursor: pointer;
+		}
+	}
+`;
