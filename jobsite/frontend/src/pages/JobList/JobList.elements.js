@@ -48,6 +48,8 @@ export const FilterContainer = styled.aside`
 	transition: max-height 0.2s ease-out;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
+		position: sticky;
+		top: 10px;
 		display: block;
 		overflow: visible;
 		padding: 0.8rem 1.2rem;
