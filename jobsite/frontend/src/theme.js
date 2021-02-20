@@ -11,9 +11,9 @@ export const theme = {
 		},
 	},
 	link: {
-		text: 'black',
+		text: '#00BFFF',
 		hover: {
-			text: 'green',
+			text: 'darkblue',
 		},
 	},
 };

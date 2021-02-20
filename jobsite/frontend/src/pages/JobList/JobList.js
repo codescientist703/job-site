@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import { FiArrowLeft } from 'react-icons/fi';
 import { JobCard, Breadcumb, Container } from '../../components';
 import ReactPaginate from 'react-paginate';
 import {
@@ -72,13 +73,13 @@ const JobList = () => {
 					<JobCard />
 					<PaginateComponent>
 						<ReactPaginate
-							previousLabel={'prev'}
+							previousLabel={`prev`}
 							nextLabel={'next'}
 							breakLabel={'...'}
 							breakClassName={'break-me'}
-							pageCount={10}
-							marginPagesDisplayed={4}
-							pageRangeDisplayed={10}
+							pageCount={5}
+							marginPagesDisplayed={3}
+							pageRangeDisplayed={4}
 							containerClassName={'pagination'}
 							subContainerClassName={'pages pagination'}
 							activeClassName={'active'}
