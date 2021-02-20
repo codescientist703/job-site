@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-
+import { keyframes } from 'styled-components/macro';
 export const MainContainer = styled.section`
 	/* for mobile */
 
@@ -25,22 +25,35 @@ export const JobContainer = styled.div`
 	}
 `;
 
+const fadeIn = keyframes`
+  from {
+    margin-top: -50%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+`;
+
 export const FilterContainer = styled.aside`
 	/* for mobile */
 
 	/* background-color: #eee; */
-	display: ${({ isFilterOpen }) => (isFilterOpen ? 'block' : 'none')};
-	transition: all 0.2s ease-in;
-	padding: 0.8rem 1.2rem;
-	margin-bottom: 1rem;
+	max-height: ${({ isFilterOpen }) => (isFilterOpen ? '540px' : '0')};
+	padding: ${({ isFilterOpen }) => (isFilterOpen ? '0.8rem 1.2rem' : '0rem')};
+	overflow: hidden;
+	margin-bottom: ${({ isFilterOpen }) => (isFilterOpen ? '1rem' : '0rem')};
 	border-radius: 5px;
-	border: 1px solid #ddd;
+	border: ${({ isFilterOpen }) => (isFilterOpen ? '1px solid #ddd' : 'none')};
+	transition: max-height 0.2s ease-out;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		display: block;
 		padding: 0.8rem 1.2rem;
 		border-radius: 5px;
 		border: 1px solid #ddd;
+		max-height: 100%;
+		margin-bottom: 1rem;
 	}
 `;
 
