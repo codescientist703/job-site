@@ -49,7 +49,7 @@ export const FilterContainer = styled.aside`
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		position: sticky;
-		top: 10px;
+		top: 30px;
 		display: block;
 		overflow: visible;
 		padding: 0.8rem 1.2rem;
