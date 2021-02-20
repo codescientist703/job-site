@@ -30,11 +30,12 @@ import {
 } from './Home.elements';
 import JobImg from '../../images/homejob.svg';
 import BoyImg from '../../images/boyjob.svg';
-import { Button } from '../../components';
+import { Button, Seo } from '../../components';
 import { Data } from './Data';
 const Home = () => {
 	return (
 		<article>
+			<Seo title={'bolbo'} />
 			{/* <SectionOne /> */}
 			<SecOne />
 			<SectionTwo />

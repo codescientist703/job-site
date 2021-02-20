@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.6.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
     "react-paginate": "^7.1.0",
     "react-responsive": "^8.2.0",
