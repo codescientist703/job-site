@@ -1,9 +1,11 @@
 import styled from 'styled-components/macro';
 import { FiShare2 } from 'react-icons/fi';
 import { Button, Breadcumb } from '../../components';
-export const JobTitle = styled.h2`
+
+export const JobTitle = styled.h1`
 	text-align: center;
 	margin: 2rem 0;
+	font-size: 2rem;
 `;
 export const SingleJobContainer = styled.div`
 	position: relative;

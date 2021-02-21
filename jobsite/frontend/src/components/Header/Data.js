@@ -4,10 +4,6 @@ const Data = [
 		link: '/',
 	},
 	{
-		name: 'About',
-		link: '/',
-	},
-	{
 		name: 'Jobs',
 		link: '/category',
 	},
@@ -15,5 +11,13 @@ const Data = [
 		name: 'Internships',
 		link: '/category/jobname',
 	},
+	{
+		name: 'Job Experience',
+		link: '/job-experience',
+	},
+	{
+		name: 'About',
+		link: '/',
+	}
 ];
 export default Data;

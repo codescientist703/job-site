@@ -18,8 +18,9 @@ const JobSingle = () => {
 	return (
 		<Container>
 			<Breadcumb breadData={breadData} width={'lg'} />
+			<JobTitle>Web Developer at Flipkart</JobTitle>
 			<SingleJobContainer>
-				<JobTitle>Web Developer at Flipkart</JobTitle>
+
 
 				<JobCard type={'single'} />
 				<ShareIcon />

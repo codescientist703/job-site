@@ -1,6 +1,6 @@
 import GlobalStyle from './globalStyles';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Home, JobList, JobSingle } from './pages';
+import { Home, JobList, JobSingle, JobExperience } from './pages';
 import { theme } from './theme';
 import { ThemeProvider } from 'styled-components';
 import { Header, Footer } from './components';
@@ -14,6 +14,7 @@ function App() {
 					<Route path='/' exact component={Home} />
 					<Route path='/category' exact component={JobList} />
 					<Route path='/category/jobname' component={JobSingle} />
+					<Route path='/job-experience' component={JobExperience} />
 				</Switch>
 				<Footer />
 			</ThemeProvider>
