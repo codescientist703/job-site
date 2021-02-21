@@ -3,21 +3,24 @@ import {
 	SingleJobContainer,
 	Line,
 	ShareIcon,
-	JobDetails,
-	About,
-	Description,
 	ApplyBtn,
 } from './JobSingle.elements';
-import { JobCard, Container, Content } from '../../components';
+import { JobCard, Container, Content, Breadcumb } from '../../components';
 
 import React from 'react';
 
 const JobSingle = () => {
+	const breadData = [
+		{ name: 'home', link: '/' },
+		{ name: 'category', link: '/category' },
+		{ name: 'job', link: '/category/jobname' },
+	];
 	return (
 		<Container>
-			<JobTitle>Web Developer at Flipkart</JobTitle>
-
+			<Breadcumb breadData={breadData} width={'lg'} />
 			<SingleJobContainer>
+				<JobTitle>Web Developer at Flipkart</JobTitle>
+
 				<JobCard type={'single'} />
 				<ShareIcon />
 				<Line />

@@ -1,8 +1,8 @@
 import { BreadContainer, BreadItems, BreadLink } from './Breadcumb.elements';
 
-const Breadcumb = ({ breadData }) => {
+const Breadcumb = ({ breadData, width }) => {
 	return (
-		<BreadContainer>
+		<BreadContainer width={width}>
 			{breadData.map((data, index) => (
 				<BreadItems key={index}>
 					<BreadLink to={data.link}>

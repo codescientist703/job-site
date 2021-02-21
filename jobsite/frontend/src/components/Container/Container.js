@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 
 const Container = styled.div`
-	max-width: 1200px;
+	max-width: ${({ theme }) => theme.maxWidthLg}px;
 	margin: 0 auto;
 	padding: 0 0.4rem;
 

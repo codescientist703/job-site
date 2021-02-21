@@ -7,6 +7,7 @@ export const BreadContainer = styled.ul`
 	padding: 0.6rem 1rem;
 	border-radius: 5px;
 	margin-top: 1.7rem;
+	margin: 1.7rem auto 1rem;
 `;
 export const BreadItems = styled.li``;
 export const BreadLink = styled(Link)`

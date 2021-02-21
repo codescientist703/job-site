@@ -1,6 +1,8 @@
 export const theme = {
 	lg: 992,
 	md: 768,
+	maxWidthLg: 1200,
+	maxWidthSm: 1024,
 	font: 'todo',
 	button: {
 		text: 'todo',
