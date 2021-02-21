@@ -29,7 +29,6 @@ const JobCard = ({ type }) => {
 				</JobDetails>
 				<StarIcon />
 			</CardTop>
-
 			<CardMiddle>
 				<Item>
 					<ItemTitle>
@@ -40,7 +39,6 @@ const JobCard = ({ type }) => {
 					</ItemTitle>
 					<ItemDescription>Mumbai</ItemDescription>
 				</Item>
-
 				<Item>
 					<ItemTitle>
 						<ItemIcon>
@@ -50,7 +48,6 @@ const JobCard = ({ type }) => {
 					</ItemTitle>
 					<ItemDescription>20-11-2021</ItemDescription>
 				</Item>
-
 				<Item>
 					<ItemTitle>
 						<ItemIcon>
@@ -60,7 +57,6 @@ const JobCard = ({ type }) => {
 					</ItemTitle>
 					<ItemDescription>20,000</ItemDescription>
 				</Item>
-
 				<Item>
 					<ItemTitle>
 						<ItemIcon>

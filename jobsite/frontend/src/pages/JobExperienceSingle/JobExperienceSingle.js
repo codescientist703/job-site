@@ -4,23 +4,29 @@ import {
 	Line,
 	ShareIcon,
 	ApplyBtn,
-} from './JobSingle.elements';
-import { JobCard, Container, Content, Breadcumb } from '../../components';
+} from './JobExperienceSingle.elements';
+import {
+	JobCard,
+	Container,
+	Content,
+	Breadcumb,
+	ExperienceCard,
+} from '../../components';
 
 import React from 'react';
 
-const JobSingle = () => {
+const JobExperienceSingle = () => {
 	const breadData = [
 		{ name: 'home', link: '/' },
-		{ name: 'category', link: '/category' },
-		{ name: 'job', link: '/category/jobname' },
+		{ name: 'job-experience', link: '/job-experience' },
+		{ name: 'singlejob expereince', link: '/job-experience/exp' },
 	];
 	return (
 		<Container>
 			<Breadcumb breadData={breadData} width={'lg'} />
-			<JobTitle>Web Developer at Flipkart</JobTitle>
+			<JobTitle>Interview Experience for Flipkart</JobTitle>
 			<SingleJobContainer>
-				<JobCard type={'single'} />
+				<ExperienceCard type={'single'} />
 				<ShareIcon />
 				<Line />
 				<Content>
@@ -34,10 +40,9 @@ const JobSingle = () => {
 					<p>peletegues romane conti des</p>
 					<a href='sdf'>sdsdf</a>
 				</Content>
-				<ApplyBtn>Apply Now</ApplyBtn>
 			</SingleJobContainer>
 		</Container>
 	);
 };
 
-export default JobSingle;
+export default JobExperienceSingle;

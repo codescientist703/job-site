@@ -16,8 +16,8 @@ const Data = [
 		link: '/job-experience',
 	},
 	{
-		name: 'About',
-		link: '/',
-	}
+		name: 'Single Experience',
+		link: '/job-experience/exp',
+	},
 ];
 export default Data;
