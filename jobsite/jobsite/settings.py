@@ -31,6 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'admin_tools',
+    'admin_tools.theming',
+    'admin_tools.menu',
+    'admin_tools.dashboard',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -53,23 +57,26 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'jobsite.urls'
 
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            BASE_DIR / 'frontend/build'
+TEMPLATES = [{
+    'BACKEND': 'django.template.backends.django.DjangoTemplates',
+    'DIRS': [
+        BASE_DIR / 'frontend/build'
+    ],
+    'APP_DIRS': False,
+    'OPTIONS': {
+        'context_processors': [
+            'django.template.context_processors.debug',
+            'django.template.context_processors.request',
+            'django.contrib.auth.context_processors.auth',
+            'django.contrib.messages.context_processors.messages',
         ],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
+        'loaders': [
+            'django.template.loaders.filesystem.Loader',
+            'django.template.loaders.app_directories.Loader',
+            'admin_tools.template_loaders.Loader',
+        ],
     },
-]
+}]
 
 WSGI_APPLICATION = 'jobsite.wsgi.application'
 
@@ -123,5 +130,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'frontend/build/static'
+    BASE_DIR / "frontend/build/static"
 ]
+# STATIC_ROOT = BASE_DIR / "staticfiles"
+# # STATICFILES_FINDERS = [
+# #     'django.contrib.staticfiles.finders.AppDirectoriesFinder'
+# # ]
+ADMIN_TOOLS_INDEX_DASHBOARD = 'jobsite.dashboard.CustomIndexDashboard'
