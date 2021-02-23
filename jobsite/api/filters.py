@@ -7,7 +7,9 @@ class JobListFilter(django_filters.FilterSet):
                                          lookup_expr='iexact')
     jobtitle = django_filters.CharFilter(field_name='jobtitle__name',
                                          lookup_expr='icontains')
+    company = django_filters.CharFilter(
+        field_name='company', lookup_expr='icontains')
 
     class Meta:
         model = Job
-        fields = ['salary', 'experience', 'company']
+        fields = ['salary', 'experience']
