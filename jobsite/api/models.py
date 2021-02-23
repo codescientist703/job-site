@@ -5,7 +5,7 @@ from ckeditor.fields import RichTextField
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.TextField(max_length=300)
     description = models.CharField(max_length=200)
 
     class Meta:
@@ -36,7 +36,7 @@ class Job(models.Model):
         JobTitle, on_delete=models.SET_NULL, blank=True, null=True)
     location = models.ForeignKey(
         Location, on_delete=models.SET_NULL, blank=True, null=True)
-    date = models.DateField(auto_now_add=True)
+    date = models.DateField()
     salary = models.IntegerField(default=-1)
     experience = models.IntegerField()
     company = models.CharField(max_length=200)
