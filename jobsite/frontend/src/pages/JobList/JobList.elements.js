@@ -96,6 +96,7 @@ export const FilterInput = styled.input`
 	border-radius: 5px;
 	outline: none;
 	font-size: 1rem;
+	width: 100%;
 
 	&:focus {
 		/* border: 5px solid lightblue; */
