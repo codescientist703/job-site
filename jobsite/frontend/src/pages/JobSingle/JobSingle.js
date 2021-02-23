@@ -5,7 +5,7 @@ import {
 	ShareIcon,
 	ApplyBtn,
 } from './JobSingle.elements';
-import { JobCard, Container, Content, Breadcumb } from '../../components';
+import { JobCard, ContainerSM, Content, Breadcumb } from '../../components';
 
 import React from 'react';
 
@@ -16,7 +16,7 @@ const JobSingle = () => {
 		{ name: 'job', link: '/category/jobname' },
 	];
 	return (
-		<Container>
+		<ContainerSM>
 			<Breadcumb breadData={breadData} width={'lg'} />
 			<JobTitle>Web Developer at Flipkart</JobTitle>
 			<SingleJobContainer>
@@ -36,7 +36,7 @@ const JobSingle = () => {
 				</Content>
 				<ApplyBtn>Apply Now</ApplyBtn>
 			</SingleJobContainer>
-		</Container>
+		</ContainerSM>
 	);
 };
 
