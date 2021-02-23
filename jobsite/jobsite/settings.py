@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api',
     'rest_framework',
+    'ckeditor',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -137,3 +139,26 @@ STATICFILES_DIRS = [
 # #     'django.contrib.staticfiles.finders.AppDirectoriesFinder'
 # # ]
 ADMIN_TOOLS_INDEX_DASHBOARD = 'jobsite.dashboard.CustomIndexDashboard'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'uiColor': '#ADD8E6',
+        'toolbar': 'custom',
+        'width': '100%',
+        'height': '600px',
+        'toolbar': [["Format", "Bold", "Italic", "Underline", "Strike", "SpellChecker"],
+                    ['TextColor', 'BGColor'],
+                    ['Styles', 'FontSize'],
+                    ['NumberedList', 'BulletedList', 'JustifyLeft', 'JustifyCenter',
+                     'JustifyRight', 'JustifyBlock'],
+                    ["Image", "Table", "Link", "Unlink", "Anchor", "SectionLink",
+                        "Subscript", "Superscript", "Smiley"],
+                    ['Undo', 'Redo'],
+                    ["Maximize", "Preview"], ],
+    },
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 1
+}
