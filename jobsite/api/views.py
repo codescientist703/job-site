@@ -11,16 +11,19 @@ from .filters import JobListFilter
 class CategoryView(generics.ListAPIView):
     queryset = Category.objects.all().order_by('name')
     serializer_class = CategorySerializer
+    pagination_class = None
 
 
 class JobTitleView(generics.ListAPIView):
     queryset = JobTitle.objects.all().order_by('name')
     serializer_class = JobTitleSerializer
+    pagination_class = None
 
 
 class LocationView(generics.ListAPIView):
     queryset = Location.objects.all().order_by('name')
     serializer_class = LocationSerializer
+    pagination_class = None
 
 
 class JobListView(generics.ListAPIView):
