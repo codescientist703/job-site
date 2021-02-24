@@ -96,7 +96,12 @@ export const FilterInput = styled.input`
 	border-radius: 5px;
 	outline: none;
 	font-size: 1rem;
-	width: 100%;
+	@media screen and (min-width: ${({ theme }) => theme.md}px) {
+		width: 100%;
+	}
+	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
+		width: auto;
+	}
 
 	&:focus {
 		/* border: 5px solid lightblue; */
@@ -120,7 +125,6 @@ export const PaginateComponent = styled.div`
 	margin-bottom: 1.2rem;
 
 	.pagination {
-		
 		margin: 15px auto;
 		display: flex;
 		list-style: none;
@@ -130,7 +134,7 @@ export const PaginateComponent = styled.div`
 			background-color: #47ccde;
 			/* border-color: #47ccde; */
 			color: #fff;
-			font-weight:600;
+			font-weight: 600;
 		}
 		li a {
 			/* border: 1px solid #47ccde; */
