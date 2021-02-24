@@ -154,3 +154,13 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 1
 }
+
+MATERIAL_ADMIN_SITE = {
+    'HEADER':  ('Job Site Admin Portal'),  # Admin site header
+    'TITLE':  ('REST API'),
+    'SHOW_THEMES':  True,  # Show default admin themes button
+    'TRAY_REVERSE': False,  # Hide object-tools and additional-submit-line by default
+    'NAVBAR_REVERSE': False,  # Hide side navbar by default
+    'SHOW_COUNTS': True,  # Show instances counts for each model
+
+}
