@@ -39,7 +39,7 @@ export const Paragraph = styled.p``;
 export const Icon = styled.i`
 	font-size: 1.1rem;
 	margin-right: 0.5rem;
-	/* margin-top: 3px; */
+	margin-top: 0.2rem;
 	vertical-align: middle;
 `;
 

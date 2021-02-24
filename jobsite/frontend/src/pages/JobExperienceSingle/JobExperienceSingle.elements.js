@@ -5,7 +5,7 @@ import { Button } from '../../components';
 export const JobTitle = styled.h1`
 	text-align: center;
 	margin: 2rem 0;
-	font-size: 2rem;
+	font-size:  ${({ theme }) => theme.h1}rem;
 `;
 export const SingleJobContainer = styled.div`
 	position: relative;

@@ -1,11 +1,12 @@
 import styled from 'styled-components/macro';
 
 export const SiteFooter = styled.footer`
-	background-color: #f8f8ff;
+	/* background-color: #f8f8ff; */
+	background-color: #48426d;
 	padding: 2.3rem 0 1.5rem;
 	font-size: 15px;
 	line-height: 24px;
-	color: #000;
+	color: #fff;
 `;
 
 export const FooterContainer = styled.div`

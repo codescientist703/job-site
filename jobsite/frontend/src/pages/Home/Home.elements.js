@@ -4,7 +4,7 @@ import { IoSearch } from 'react-icons/io5';
 // styling for section two starts
 
 export const SecTwoContainer = styled.section`
-	background-color: #e2e2e2;
+	background-color:  ${({ theme }) => theme.bgLight};
 `;
 
 export const Container = styled.div`
@@ -76,7 +76,7 @@ export const Description = styled.p`
 	/* for mobile */
 	font-size: 1.05rem;
 	margin-bottom: 1rem;
-
+	color:  ${({ theme }) => theme.subParaColor};
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		margin-bottom: 20px;
 		font-size: 20px;
@@ -134,11 +134,13 @@ export const Card = styled.div`
 	background-color: #fff;
 	border-radius: 10px;
 	min-height: 200px;
-	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+	box-shadow:  ${({ theme }) => theme.shadow};
 	margin-bottom: 1.25rem;
 	padding: 1.25rem 1.3rem;
+	transition: transform 0.5s, box-shadow 0.5s;
 	&:hover {
-		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+		box-shadow:  ${({ theme }) => theme.shadowHover};
+		transform: scale(1.03);
 	}
 `;
 
@@ -237,7 +239,7 @@ export const HeroSubHeading = styled.p`
 	/* for mobile */
 	font-size: 1.15rem;
 	font-weight: 500;
-	color: rgba(0, 0, 0, 0.5);
+	color:  ${({ theme }) => theme.subParaColor};
 	margin-bottom: 30px;
 	/* for tablet */
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
@@ -258,7 +260,7 @@ export const SearchBox = styled.div`
 	padding: 4px 7px;
 	border-radius: 50px;
 	max-width: 380px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	box-shadow:  ${({ theme }) => theme.shadow};
 	/* for tablet */
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		padding: 6px 7px;
