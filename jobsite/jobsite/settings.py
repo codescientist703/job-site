@@ -43,11 +43,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'ckeditor',
     'django_filters',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -152,7 +154,7 @@ CKEDITOR_CONFIGS = {
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 1
+    'PAGE_SIZE': 10
 }
 
 MATERIAL_ADMIN_SITE = {
@@ -164,3 +166,4 @@ MATERIAL_ADMIN_SITE = {
     'SHOW_COUNTS': True,  # Show instances counts for each model
 
 }
+CORS_ALLOW_ALL_ORIGINS = True
