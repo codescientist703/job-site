@@ -43,6 +43,7 @@ class JobView(generics.RetrieveAPIView):
     serializer_class = JobSerializer
     pagination_class = None
     queryset = Job.objects.all()
+    lookup_field = 'slug'
 
 
 class InterviewListView(generics.ListAPIView):
@@ -54,3 +55,4 @@ class InterviewView(generics.RetrieveAPIView):
     serializer_class = InterviewSerializer
     pagination_class = None
     queryset = Interview.objects.all()
+    lookup_field = 'slug'
