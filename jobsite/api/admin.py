@@ -8,9 +8,10 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class JobAdmin(admin.ModelAdmin):
-    list_display = ('category', 'jobtitle', 'company', 'location')
+    list_display = ('jobtitle', 'company', 'location')
     list_filter = (
         ('date', admin.DateFieldListFilter),
+        ('category__name', admin.AllValuesFieldListFilter),
     )
 
 
