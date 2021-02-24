@@ -96,6 +96,7 @@ export const FilterInput = styled.input`
 	border-radius: 5px;
 	outline: none;
 	font-size: 1rem;
+	width: 100%;
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		width: 100%;
 	}
