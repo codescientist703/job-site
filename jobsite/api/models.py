@@ -42,6 +42,7 @@ class Job(models.Model):
     company = models.CharField(max_length=200)
     content = RichTextField(blank=True, null=True)
     description = models.TextField(max_length=200, blank=True, null=True)
+    slug = models.SlugField(unique=True, max_length=300, null=True)
 
     class Meta:
         ordering = ['-date']
@@ -56,6 +57,7 @@ class Interview(models.Model):
     content = RichTextField(blank=True, null=True)
     draft = models.BooleanField(default=True)
     description = models.TextField(max_length=200, blank=True, null=True)
+    slug = models.SlugField(unique=True, max_length=300, null=True)
 
     class Meta:
         ordering = ['draft']

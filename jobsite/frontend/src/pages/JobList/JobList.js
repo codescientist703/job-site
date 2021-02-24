@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-// import { FiArrowLeft } from 'react-icons/fi';
+import React, { useState, useEffect } from 'react';
 import { JobCard, Breadcumb, Container } from '../../components';
 import ReactPaginate from 'react-paginate';
 import {
@@ -15,6 +14,7 @@ import {
 	FilterHeader,
 	PaginateComponent,
 } from './JobList.elements';
+import axios from '../../axios';
 
 const Filter = ({ isFilterOpen }) => {
 	return (
@@ -56,6 +56,19 @@ const JobList = () => {
 	const toggleFilterClick = () => {
 		setisFilterOpen(!isFilterOpen);
 	};
+	const [state, setState] = useState([]);
+	useEffect(() => {
+		async function fetchData() {
+			try {
+				const response = await axios.get('joblist/jobs');
+				console.log(response.data);
+			} catch (error) {
+				console.log(error.request.status);
+			}
+		}
+		fetchData();
+	}, []);
+	// console.log(state);
 	return (
 		<Container>
 			<Breadcumb breadData={breadData} />

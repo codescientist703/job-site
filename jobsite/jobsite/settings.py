@@ -31,11 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'admin_tools',
-    'admin_tools.theming',
-    'admin_tools.menu',
-    'admin_tools.dashboard',
-    'django.contrib.admin',
+
+    'material.admin',
+    'material.admin.default',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -45,11 +43,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'ckeditor',
     'django_filters',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -59,26 +59,21 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'jobsite.urls'
 
-TEMPLATES = [{
-    'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [
-        BASE_DIR / 'frontend/build'
-    ],
-    'APP_DIRS': False,
-    'OPTIONS': {
-        'context_processors': [
-            'django.template.context_processors.debug',
-            'django.template.context_processors.request',
-            'django.contrib.auth.context_processors.auth',
-            'django.contrib.messages.context_processors.messages',
-        ],
-        'loaders': [
-            'django.template.loaders.filesystem.Loader',
-            'django.template.loaders.app_directories.Loader',
-            'admin_tools.template_loaders.Loader',
-        ],
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR / 'frontend/build'],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
     },
-}]
+]
 
 WSGI_APPLICATION = 'jobsite.wsgi.application'
 
@@ -138,7 +133,6 @@ STATICFILES_DIRS = [
 # # STATICFILES_FINDERS = [
 # #     'django.contrib.staticfiles.finders.AppDirectoriesFinder'
 # # ]
-ADMIN_TOOLS_INDEX_DASHBOARD = 'jobsite.dashboard.CustomIndexDashboard'
 
 CKEDITOR_CONFIGS = {
     'default': {
@@ -160,5 +154,16 @@ CKEDITOR_CONFIGS = {
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 1
+    'PAGE_SIZE': 10
 }
+
+MATERIAL_ADMIN_SITE = {
+    'HEADER':  ('Job Site Admin Portal'),  # Admin site header
+    'TITLE':  ('REST API'),
+    'SHOW_THEMES':  True,  # Show default admin themes button
+    'TRAY_REVERSE': False,  # Hide object-tools and additional-submit-line by default
+    'NAVBAR_REVERSE': False,  # Hide side navbar by default
+    'SHOW_COUNTS': True,  # Show instances counts for each model
+
+}
+CORS_ALLOW_ALL_ORIGINS = True

@@ -28,17 +28,18 @@ class JobListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Job
         fields = ['jobtitle', 'location', 'date',
-                  'salary', 'experience', 'company', 'description', 'id']
+                  'salary', 'experience', 'company', 'description', 'slug']
 
 
 class JobSerializer(serializers.ModelSerializer):
     jobtitle = serializers.StringRelatedField()
     location = serializers.StringRelatedField()
+    category = serializers.StringRelatedField()
 
     class Meta:
         model = Job
         fields = ['jobtitle', 'location', 'date',
-                  'salary', 'experience', 'company', 'content']
+                  'salary', 'experience', 'company', 'content', 'category']
 
 
 class InterviewListSerializer(serializers.ModelSerializer):
@@ -46,7 +47,7 @@ class InterviewListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Interview
-        fields = ['name', 'company', 'jobtitle', 'description']
+        fields = ['name', 'company', 'jobtitle', 'description', 'slug']
 
 
 class InterviewSerializer(serializers.ModelSerializer):
