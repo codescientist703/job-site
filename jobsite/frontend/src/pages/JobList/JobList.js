@@ -34,10 +34,14 @@ const Filter = ({ isFilterOpen }) => {
 				<FilterName>Job Title</FilterName>
 				<FilterInput placeholder='e.g, Software Developer' />
 			</FilterItem>
+			<FilterItem>
+				<FilterName>Company</FilterName>
+				<FilterInput placeholder='e.g, Microsoft' />
+			</FilterItem>
 
 			<FilterItem>
-				<FilterName>Experience</FilterName>
-				<FilterInput placeholder='e.g, Fresher' />
+				<FilterName>Experience (in years)</FilterName>
+				<FilterInput placeholder='e.g, 3' />
 			</FilterItem>
 
 			<FilterItem>
@@ -61,8 +65,12 @@ const JobList = () => {
 	const [filterData, setfilterData] = useState({
 		company: '',
 		location: '',
-		page: '',
+		jobtitle: '',
+		salary: '',
+		experience: '',
+		page: '1',
 	});
+	const apiUrl = `joblist/${name}/?location=${filterData.location}&company=${filterData.company}&jobtitle=${filterData.jobtitle}&salary=${filterData.salary}&experience=${filterData.experience}&page=${filterData.page}`;
 	const [isFilterOpen, setisFilterOpen] = useState(false);
 	const [isLoading, setIsLoading] = useState(true);
 	const [data, setData] = useState([]);
@@ -75,7 +83,7 @@ const JobList = () => {
 	useEffect(() => {
 		async function fetchData() {
 			try {
-				const response = await axios.get(`joblist/${name}/?location=&company=`);
+				const response = await axios.get(apiUrl);
 				setData(response.data.results);
 				setIsLoading(false);
 				console.log(response.data);
