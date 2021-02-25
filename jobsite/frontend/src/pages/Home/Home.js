@@ -31,7 +31,7 @@ import {
 import JobImg from '../../images/homejob.svg';
 import BoyImg from '../../images/boyjob.svg';
 import { Button, Seo } from '../../components';
-import { Data } from './Data';
+import Data from '../../RawContent/HomeContent';
 const Home = () => {
 	return (
 		<article>

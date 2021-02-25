@@ -1,6 +1,6 @@
 import { BsServer, BsCode } from 'react-icons/bs';
 
-export const Data = {
+const Data = {
 	homeTitle: 'Tired of searching for jobs?',
 	homeContent: 'Forget the hassle for searching by the revolution',
 	sec2Title: 'Find Thousands of jobs and apply for what you like..',
@@ -51,3 +51,4 @@ export const Data = {
 		},
 	],
 };
+export default Data;
