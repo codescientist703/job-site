@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { JobCard, Breadcumb, Container } from '../../components';
+import {
+	JobCard,
+	Breadcumb,
+	Container,
+	LayoutContainer,
+} from '../../components';
 import ReactPaginate from 'react-paginate';
 import {
 	MainContainer,
@@ -15,7 +20,7 @@ import {
 	PaginateComponent,
 } from './JobList.elements';
 import axios from '../../axios';
-
+import { useParams } from 'react-router-dom';
 const Filter = ({ isFilterOpen }) => {
 	return (
 		<FilterContainer isFilterOpen={isFilterOpen}>
@@ -29,10 +34,14 @@ const Filter = ({ isFilterOpen }) => {
 				<FilterName>Job Title</FilterName>
 				<FilterInput placeholder='e.g, Software Developer' />
 			</FilterItem>
+			<FilterItem>
+				<FilterName>Company</FilterName>
+				<FilterInput placeholder='e.g, Microsoft' />
+			</FilterItem>
 
 			<FilterItem>
-				<FilterName>Experience</FilterName>
-				<FilterInput placeholder='e.g, Fresher' />
+				<FilterName>Experience (in years)</FilterName>
+				<FilterInput placeholder='e.g, 3' />
 			</FilterItem>
 
 			<FilterItem>
@@ -47,59 +56,95 @@ const Filter = ({ isFilterOpen }) => {
 	);
 };
 
-const JobList = () => {
+const JobList = (props) => {
+	if (props.location.state) {
+		console.log(props.location.state.haha);
+	}
+	console.log('haha');
+
 	const breadData = [
 		{ name: 'home', link: '/' },
 		{ name: 'category', link: '/category' },
 	];
+	let { name } = useParams();
+	if (name === 'search') {
+		name = 'jobs';
+	}
+	const [filterData, setfilterData] = useState({
+		company: '',
+		location: '',
+		jobtitle: '',
+		salary: '',
+		experience: '',
+		page: '1',
+	});
+	const apiUrl = `joblist/${name}/?location=${filterData.location}&company=${filterData.company}&jobtitle=${filterData.jobtitle}&salary=${filterData.salary}&experience=${filterData.experience}&page=${filterData.page}`;
 	const [isFilterOpen, setisFilterOpen] = useState(false);
+	const [isLoading, setIsLoading] = useState(true);
+	const [data, setData] = useState([]);
+	const [is404, set404] = useState(false);
+
 	const toggleFilterClick = () => {
 		setisFilterOpen(!isFilterOpen);
 	};
-	const [state, setState] = useState([]);
+
 	useEffect(() => {
 		async function fetchData() {
 			try {
-				const response = await axios.get('joblist/jobs');
-				console.log(response.data);
+				const response = await axios.get(apiUrl);
+				setData(response.data.results);
+				setIsLoading(false);
 			} catch (error) {
 				console.log(error.request.status);
+				if (error.request.status == 404) {
+					set404(true);
+				}
+				setIsLoading(false);
 			}
 		}
 		fetchData();
 	}, []);
-	// console.log(state);
+	const JobCards = () => {
+		return (
+			<>
+				{data.map((item, index) => (
+					<JobCard {...item} key={index} />
+				))}
+			</>
+		);
+	};
 	return (
 		<Container>
-			<Breadcumb breadData={breadData} />
-			<MainContainer>
-				<FilterBtn onClick={toggleFilterClick}>
-					{isFilterOpen ? 'Hide Filters' : 'Show Filters'}
-				</FilterBtn>
-				<Filter isFilterOpen={isFilterOpen} />
-				<JobContainer>
-					<JobCard />
-					<JobCard />
-					<JobCard />
-					<JobCard />
-					<JobCard />
-					<JobCard />
-					<PaginateComponent>
-						<ReactPaginate
-							previousLabel={`prev`}
-							nextLabel={'next'}
-							breakLabel={'...'}
-							breakClassName={'break-me'}
-							pageCount={5}
-							marginPagesDisplayed={3}
-							pageRangeDisplayed={4}
-							containerClassName={'pagination'}
-							subContainerClassName={'pages pagination'}
-							activeClassName={'active'}
-						/>
-					</PaginateComponent>
-				</JobContainer>
-			</MainContainer>
+			{isLoading ? (
+				<div>Loading...</div>
+			) : (
+				<LayoutContainer is404={is404}>
+					<Breadcumb breadData={breadData} />
+					<MainContainer>
+						<FilterBtn onClick={toggleFilterClick}>
+							{isFilterOpen ? 'Hide Filters' : 'Show Filters'}
+						</FilterBtn>
+						<Filter isFilterOpen={isFilterOpen} />
+						<JobContainer>
+							<JobCards />
+							<PaginateComponent>
+								<ReactPaginate
+									previousLabel={`prev`}
+									nextLabel={'next'}
+									breakLabel={'...'}
+									breakClassName={'break-me'}
+									pageCount={5}
+									marginPagesDisplayed={3}
+									pageRangeDisplayed={4}
+									containerClassName={'pagination'}
+									subContainerClassName={'pages pagination'}
+									activeClassName={'active'}
+								/>
+							</PaginateComponent>
+						</JobContainer>
+					</MainContainer>
+				</LayoutContainer>
+			)}
 		</Container>
 	);
 };

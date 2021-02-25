@@ -7,8 +7,9 @@ import {
 	LinkHeader,
 	DividerContainer,
 	Divider,
+	LinkItem,
 } from './Footer.elements';
-
+import data from '../../RawContent/FooterContent';
 const Footer = () => {
 	let dateObj = new Date();
 	let curYear = dateObj.getFullYear();
@@ -17,25 +18,24 @@ const Footer = () => {
 			<FooterContainer>
 				<AboutContainer>
 					<h3>ABOUT</h3>
-					<p>
-						Ham log ne ye job site banayi hai taki jobless log kam ho jaye or
-						unhe job mil jaye.Tum logo direct hi job dubh payuge or tumhe koi
-						mehnat nahi karni padegi. Bewakoof log bhi iss job site ka istamal
-						kar sakte hai. Tu agar app Bewakoof to jaroor use ki jiye.
-					</p>
+					<p>{data.description}</p>
 				</AboutContainer>
 				<LinkContainer>
 					<LinkColumn>
 						<LinkHeader>CATEGORIES</LinkHeader>
-						<li>sdfsdf</li>
-						<li>sdfsdf</li>
-						<li>sdfsdf</li>
+						{data.categories.map((item, index) => (
+							<li key={index}>
+								<LinkItem to={item.link}>{item.name}</LinkItem>
+							</li>
+						))}
 					</LinkColumn>
 					<LinkColumn>
 						<LinkHeader>QUICK LINKS</LinkHeader>
-						<li>baba</li>
-						<li>baba</li>
-						<li>baba</li>
+						{data.quicklinks.map((item, index) => (
+							<li key={index}>
+								<LinkItem to={item.link}>{item.name}</LinkItem>
+							</li>
+						))}
 					</LinkColumn>
 				</LinkContainer>
 			</FooterContainer>

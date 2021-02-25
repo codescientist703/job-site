@@ -1,10 +1,10 @@
 import styled from 'styled-components/macro';
 import { IoSearch } from 'react-icons/io5';
-
+import { Link } from 'react-router-dom';
 // styling for section two starts
 
 export const SecTwoContainer = styled.section`
-	background-color:  ${({ theme }) => theme.bgLight};
+	background-color: ${({ theme }) => theme.bgLight};
 `;
 
 export const Container = styled.div`
@@ -76,7 +76,7 @@ export const Description = styled.p`
 	/* for mobile */
 	font-size: 1.05rem;
 	margin-bottom: 1rem;
-	color:  ${({ theme }) => theme.subParaColor};
+	color: ${({ theme }) => theme.subParaColor};
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		margin-bottom: 20px;
 		font-size: 20px;
@@ -134,12 +134,12 @@ export const Card = styled.div`
 	background-color: #fff;
 	border-radius: 10px;
 	min-height: 200px;
-	box-shadow:  ${({ theme }) => theme.shadow};
+	box-shadow: ${({ theme }) => theme.shadow};
 	margin-bottom: 1.25rem;
 	padding: 1.25rem 1.3rem;
 	transition: transform 0.5s, box-shadow 0.5s;
 	&:hover {
-		box-shadow:  ${({ theme }) => theme.shadowHover};
+		box-shadow: ${({ theme }) => theme.shadowHover};
 		transform: scale(1.03);
 	}
 `;
@@ -239,7 +239,7 @@ export const HeroSubHeading = styled.p`
 	/* for mobile */
 	font-size: 1.15rem;
 	font-weight: 500;
-	color:  ${({ theme }) => theme.subParaColor};
+	color: ${({ theme }) => theme.subParaColor};
 	margin-bottom: 30px;
 	/* for tablet */
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
@@ -260,7 +260,7 @@ export const SearchBox = styled.div`
 	padding: 4px 7px;
 	border-radius: 50px;
 	max-width: 380px;
-	box-shadow:  ${({ theme }) => theme.shadow};
+	box-shadow: ${({ theme }) => theme.shadow};
 	/* for tablet */
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		padding: 6px 7px;
@@ -285,7 +285,10 @@ export const SearchInput = styled.input`
 	}
 `;
 
-export const SearchButton = styled.button`
+export const SearchButton = styled(Link)`
+	text-decoration: none;
+	background-color: lightblue;
+	color: white;
 	border: none;
 	outline: none;
 	padding: 9px 20px;

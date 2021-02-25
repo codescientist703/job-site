@@ -9,23 +9,17 @@ import {
 	NavIcon,
 	CloseIcon,
 	SideBarLogo,
-	SideBarIcon
+	SideBarIcon,
 } from './Header.elements';
-import Data from './Data';
+import Data from '../../RawContent/HeaderContent';
 import { useMediaQuery } from 'react-responsive';
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 
-
-
 const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 	return (
 		<NavMenu isOpen={isOpen}>
-			{!isDesktop && (
-
-				<SideBarLogo to='/'>LOGO</SideBarLogo>
-
-			)}
+			{!isDesktop && <SideBarLogo to='/'>LOGO</SideBarLogo>}
 			{Data.map((data, index) => (
 				<NavItem key={index} onClick={handleClick}>
 					<NavLink to={data.link}>

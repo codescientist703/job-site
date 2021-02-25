@@ -16,16 +16,23 @@ import {
 } from './JobCard.elements';
 import { AiFillHome } from 'react-icons/ai';
 import { BiTimeFive } from 'react-icons/bi';
-const JobCard = ({ type }) => {
-	const str =
-		'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi deleniti quaerat molestiae repellat facilis voluptatum vitae eligendi quod. Quos aperiam saepe asperiores tenetur amet sint itaque nostrum sunt distinctio fugit.';
-
+const JobCard = ({
+	type,
+	jobtitle,
+	company,
+	location,
+	date,
+	salary,
+	experience,
+	description,
+	slug,
+}) => {
 	return (
 		<Card type={type}>
 			<CardTop>
 				<JobDetails>
-					<JobTitle>Web Developer</JobTitle>
-					<JobCompany>Flipkart</JobCompany>
+					<JobTitle>{jobtitle}</JobTitle>
+					<JobCompany>{company}</JobCompany>
 				</JobDetails>
 				<StarIcon />
 			</CardTop>
@@ -37,7 +44,7 @@ const JobCard = ({ type }) => {
 						</ItemIcon>
 						&nbsp; Location
 					</ItemTitle>
-					<ItemDescription>Mumbai</ItemDescription>
+					<ItemDescription>{location}</ItemDescription>
 				</Item>
 				<Item>
 					<ItemTitle>
@@ -46,7 +53,7 @@ const JobCard = ({ type }) => {
 						</ItemIcon>
 						&nbsp; Date
 					</ItemTitle>
-					<ItemDescription>20-11-2021</ItemDescription>
+					<ItemDescription>{date}</ItemDescription>
 				</Item>
 				<Item>
 					<ItemTitle>
@@ -55,7 +62,7 @@ const JobCard = ({ type }) => {
 						</ItemIcon>
 						&nbsp; Salary
 					</ItemTitle>
-					<ItemDescription>20,000</ItemDescription>
+					<ItemDescription>{salary}</ItemDescription>
 				</Item>
 				<Item>
 					<ItemTitle>
@@ -64,14 +71,12 @@ const JobCard = ({ type }) => {
 						</ItemIcon>
 						&nbsp; Experience
 					</ItemTitle>
-					<ItemDescription>3+</ItemDescription>
+					<ItemDescription>{experience}</ItemDescription>
 				</Item>
 			</CardMiddle>
 			{type !== 'single' && (
 				<CardBottom>
-					<JobDescription>
-						{str.length > 100 ? `${str.slice(0, 50)}...` : str}
-					</JobDescription>
+					<JobDescription>{description}</JobDescription>
 					<Btn>View More &gt;</Btn>
 				</CardBottom>
 			)}

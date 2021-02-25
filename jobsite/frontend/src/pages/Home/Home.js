@@ -31,7 +31,8 @@ import {
 import JobImg from '../../images/homejob.svg';
 import BoyImg from '../../images/boyjob.svg';
 import { Button, Seo } from '../../components';
-import { Data } from './Data';
+import Data from '../../RawContent/HomeContent';
+import { Redirect } from 'react-router-dom';
 const Home = () => {
 	return (
 		<article>
@@ -91,7 +92,14 @@ const SecOne = () => {
 					<SearchBox>
 						<SearchIcon />
 						<SearchInput type='text' placeholder='Search...' />
-						<SearchButton>Search</SearchButton>
+						<SearchButton
+							to={{
+								pathname: '/category/search',
+								state: { haha: true },
+							}}
+						>
+							Search
+						</SearchButton>
 					</SearchBox>
 				</ContainerOneLeft>
 

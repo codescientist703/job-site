@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
 
 export const SiteFooter = styled.footer`
@@ -45,6 +46,10 @@ export const LinkColumn = styled.ul`
 	padding-right: 1rem;
 `;
 
+export const LinkItem = styled(Link)`
+	text-decoration: none;
+	color: white;
+`;
 export const Divider = styled.hr`
 	opacity: 0.5;
 	margin-bottom: 0.6rem;
