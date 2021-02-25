@@ -4,14 +4,15 @@ const Button = styled.button`
 	font-size: 1.2rem;
 	padding: 7px 25px;
 	border: none;
-	background: linear-gradient(to bottom right, blue, purple);
-	color: #fff;
-	transition: 0.2s ease-out;
+	background: ${({ theme }) => theme.button.background};
+	color: ${({ theme }) => theme.button.color};
+	transition: background 0.7s;
+	border-radius: 5px;
+
 	&:hover {
-		background: #ffc500;
+		background: ${({ theme }) => theme.button.hover.background};
 		cursor: pointer;
-		transition: 0.2s ease-out;
-		color: #000;
+		color: ${({ theme }) => theme.button.hover.color};
 	}
 `;
 export default Button;

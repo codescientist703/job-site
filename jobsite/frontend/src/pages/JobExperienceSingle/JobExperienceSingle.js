@@ -7,7 +7,7 @@ import {
 } from './JobExperienceSingle.elements';
 import {
 	JobCard,
-	ContainerSM,
+	Container,
 	Content,
 	Breadcumb,
 	ExperienceCard,
@@ -22,7 +22,7 @@ const JobExperienceSingle = () => {
 		{ name: 'singlejob expereince', link: '/job-experience/exp' },
 	];
 	return (
-		<ContainerSM>
+		<Container>
 			<Breadcumb breadData={breadData} width={'lg'} />
 			<JobTitle>Interview Experience for Flipkart</JobTitle>
 			<SingleJobContainer>
@@ -41,7 +41,7 @@ const JobExperienceSingle = () => {
 					<a href='sdf'>sdsdf</a>
 				</Content>
 			</SingleJobContainer>
-		</ContainerSM>
+		</Container>
 	);
 };
 

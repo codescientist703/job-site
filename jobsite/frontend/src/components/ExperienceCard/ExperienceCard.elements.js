@@ -45,8 +45,13 @@ export const Icon = styled.i`
 
 export const ReadMore = styled.a`
 	padding-left: 0.7rem;
-	color: #00bfff;
+	color: ${({ theme }) => theme.link.color};
 	font-weight: 500;
+	transition: ${({ theme }) => theme.link.transition};
+
+	&:hover{
+		color: ${({ theme }) => theme.link.hover.color};
+	}
 `;
 
 export const Contributer = styled.span`

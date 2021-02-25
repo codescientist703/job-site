@@ -86,25 +86,36 @@ export const NavItem = styled.li`
 	border-bottom: 2px solid transparent;
 	font-size: 1.2rem;
 	margin-bottom: 0.7rem;
+	
+
+	
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		width: fit-content;
 		margin-bottom: 0;
-
 	}
-
 `;
 
 export const NavLink = styled(Link)`
 	display: flex;
 	align-items: center;
 	text-decoration: none;
-	/* padding: 0.5rem 1rem; */
+	outline: none;
+	padding: 0.2rem 0.6rem;
 	height: 100%;
 	color: #000;
+	transition: color 0s, transform 0.6s;
+
+	&:hover{
+		transform: scale(1.06);
+		background-color: #00b0ff;
+		border-radius: 5px;
+		color: #fff;
+		font-weight: 550;
+	}
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
-		padding: 0 0.6rem;
+		padding: 0 0.7rem;
 	}
 `;
 
@@ -118,6 +129,6 @@ export const SideBarIcon = styled.div`
 `;
 
 export const SideBarLogo = styled(NavLogo)`
-	padding: 0;
+	padding: 0 0.6rem;
 	margin-bottom: 1.6rem;
 `;

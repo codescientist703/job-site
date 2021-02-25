@@ -22,8 +22,10 @@ const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 			{!isDesktop && <SideBarLogo to='/'>LOGO</SideBarLogo>}
 			{Data.map((data, index) => (
 				<NavItem key={index} onClick={handleClick}>
-					<SideBarIcon>{data.icon}</SideBarIcon>
-					<NavLink to={data.link}>{data.name}</NavLink>
+					<NavLink to={data.link}>
+						<SideBarIcon>{data.icon}</SideBarIcon>
+						{data.name}
+					</NavLink>
 				</NavItem>
 			))}
 			{!isDesktop && <CloseIcon onClick={handleClick} />}
