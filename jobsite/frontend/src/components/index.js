@@ -8,4 +8,3 @@ export { default as ContainerSM } from './Container/ContainerSM';
 export { default as Seo } from './Seo/Seo';
 export { default as Content } from './Content/Content';
 export { default as ExperienceCard } from './ExperienceCard/ExperienceCard';
-export { default as LayoutContainer } from './Container/LayoutContainer';

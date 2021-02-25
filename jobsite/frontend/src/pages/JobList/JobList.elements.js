@@ -137,6 +137,10 @@ export const PaginateComponent = styled.div`
 			color: #fff;
 			font-weight: 600;
 		}
+		.disabled {
+			opacity: 0.4;
+			pointer-events: none;
+		}
 		li a {
 			/* border: 1px solid #47ccde; */
 			border-radius: 5px;

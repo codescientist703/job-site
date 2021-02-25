@@ -10,7 +10,7 @@ const Data = [
 	},
 	{
 		name: 'Jobs',
-		link: '/category',
+		link: '/category/jobs',
 		icon: <HiOutlineOfficeBuilding />,
 	},
 	{

@@ -7,6 +7,7 @@ from .serializers import (
 from django_filters.rest_framework import DjangoFilterBackend
 from .filters import JobListFilter
 from django.shortcuts import get_object_or_404
+from jobsite import settings
 
 
 class CategoryView(generics.ListAPIView):
@@ -39,6 +40,12 @@ class JobListView(generics.ListAPIView):
         categoryObj = get_object_or_404(Category, name=category)
         jobs = Job.objects.filter(category=categoryObj)
         return jobs
+
+    def list(self, request, *args, **kwargs):
+        response = super().list(request, args, kwargs)
+        # Add data to response.data Example for your object:
+        response.data['page_size'] = settings.REST_FRAMEWORK['PAGE_SIZE']
+        return response
 
 
 class JobView(generics.RetrieveAPIView):
