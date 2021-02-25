@@ -27,7 +27,6 @@ const JobCard = ({
 	description,
 	slug,
 }) => {
-	console.log(slug);
 	return (
 		<Card type={type}>
 			<CardTop>

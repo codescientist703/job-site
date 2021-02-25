@@ -56,12 +56,20 @@ const Filter = ({ isFilterOpen }) => {
 	);
 };
 
-const JobList = () => {
+const JobList = (props) => {
+	if (props.location.state) {
+		console.log(props.location.state.haha);
+	}
+	console.log('haha');
+
 	const breadData = [
 		{ name: 'home', link: '/' },
 		{ name: 'category', link: '/category' },
 	];
 	let { name } = useParams();
+	if (name === 'search') {
+		name = 'jobs';
+	}
 	const [filterData, setfilterData] = useState({
 		company: '',
 		location: '',
@@ -86,7 +94,6 @@ const JobList = () => {
 				const response = await axios.get(apiUrl);
 				setData(response.data.results);
 				setIsLoading(false);
-				console.log(response.data);
 			} catch (error) {
 				console.log(error.request.status);
 				if (error.request.status == 404) {
