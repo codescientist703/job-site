@@ -6,6 +6,7 @@ import {
 	JobSingle,
 	JobExperience,
 	JobExperienceSingle,
+	Page404,
 } from './pages';
 import { theme } from './theme';
 import { ThemeProvider } from 'styled-components';
@@ -18,10 +19,11 @@ function App() {
 				<Header />
 				<Switch>
 					<Route path='/' exact component={Home} />
-					<Route path='/category' exact component={JobList} />
+					<Route path='/category/:name' exact component={JobList} />
 					<Route path='/category/jobname' component={JobSingle} />
 					<Route path='/job-experience' exact component={JobExperience} />
 					<Route path='/job-experience/exp' component={JobExperienceSingle} />
+					<Route component={Page404} />
 				</Switch>
 				<Footer />
 			</ThemeProvider>

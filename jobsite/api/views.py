@@ -6,6 +6,7 @@ from .serializers import (
     LocationSerializer, JobListSerializer, JobSerializer, InterviewListSerializer, InterviewSerializer)
 from django_filters.rest_framework import DjangoFilterBackend
 from .filters import JobListFilter
+from django.shortcuts import get_object_or_404
 
 
 class CategoryView(generics.ListAPIView):
@@ -35,7 +36,8 @@ class JobListView(generics.ListAPIView):
 
     def get_queryset(self):
         category = self.kwargs.get('category')
-        jobs = Job.objects.filter(category__name=category)
+        categoryObj = get_object_or_404(Category, name=category)
+        jobs = Job.objects.filter(category=categoryObj)
         return jobs
 
 
