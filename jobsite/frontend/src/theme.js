@@ -16,17 +16,18 @@ export const theme = {
 	maxWidthSm: 1100,
 	font: 'todo',
 	button: {
-		text: 'todo',
-		background: 'todo',
+		color: '#fff',
+		background: 'linear-gradient(to bottom right, blue, purple)',
 		hover: {
-			text: 'todo',
-			background: 'todo',
+			color: '#000',
+			background: '#00b0ff',
 		},
 	},
 	link: {
-		text: '#00BFFF',
+		color: '#00BFFF',
+		transition: 'color 0.2s',
 		hover: {
-			text: 'darkblue',
+			color: 'darkblue',
 		},
 	},
 };
