@@ -101,7 +101,7 @@ export const NavLink = styled(Link)`
 	align-items: center;
 	text-decoration: none;
 	outline: none;
-	/* padding: 0.5rem 1rem; */
+	padding: 0.2rem 0.6rem;
 	height: 100%;
 	color: #000;
 	transition: color 0s, transform 0.6s;
@@ -129,6 +129,6 @@ export const SideBarIcon = styled.div`
 `;
 
 export const SideBarLogo = styled(NavLogo)`
-	padding: 0;
+	padding: 0 0.6rem;
 	margin-bottom: 1.6rem;
 `;
