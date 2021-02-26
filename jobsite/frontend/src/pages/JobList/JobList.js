@@ -1,84 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { JobCard, Breadcumb, Container } from '../../components';
+import { JobCard, Breadcumb, Container, Filter } from '../../components';
 import ReactPaginate from 'react-paginate';
 import {
 	MainContainer,
 	JobContainer,
-	FilterContainer,
 	FilterBtn,
-	FilterItem,
-	SubmitBtn,
-	FilterName,
-	FilterInput,
-	FilterRange,
-	FilterHeader,
 	PaginateComponent,
 } from './JobList.elements';
 import axios from '../../axios';
 import { useParams, useHistory } from 'react-router-dom';
-
-const Filter = ({ isFilterOpen, filterData, onChange, onFilterSubmit }) => {
-	return (
-		<FilterContainer isFilterOpen={isFilterOpen}>
-			<FilterHeader>Filters</FilterHeader>
-			<FilterItem>
-				<FilterName>Location</FilterName>
-				<FilterInput
-					placeholder='e.g, Vadodara'
-					type='text'
-					name='location'
-					value={filterData.location}
-					onChange={onChange}
-				/>
-			</FilterItem>
-
-			<FilterItem>
-				<FilterName>Job Title</FilterName>
-				<FilterInput
-					placeholder='e.g, Software Developer'
-					type='text'
-					name='jobtitle'
-					value={filterData.jobtitle}
-					onChange={onChange}
-				/>
-			</FilterItem>
-			<FilterItem>
-				<FilterName>Company</FilterName>
-				<FilterInput
-					placeholder='e.g, Microsoft'
-					type='text'
-					name='company'
-					value={filterData.company}
-					onChange={onChange}
-				/>
-			</FilterItem>
-
-			<FilterItem>
-				<FilterName>Experience (in years)</FilterName>
-				<FilterInput
-					placeholder='e.g, 3'
-					name='experience'
-					value={filterData.experience}
-					onChange={onChange}
-				/>
-			</FilterItem>
-
-			<FilterItem>
-				<FilterName>Salary</FilterName>
-				<FilterRange
-					step={2}
-					type='range'
-					name='salary'
-					value={filterData.salary}
-					onChange={onChange}
-				/>
-			</FilterItem>
-			<FilterItem>
-				<SubmitBtn onClick={onFilterSubmit}>Submit</SubmitBtn>
-			</FilterItem>
-		</FilterContainer>
-	);
-};
 
 const JobList = (props) => {
 	let history = useHistory();
