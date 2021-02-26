@@ -20,6 +20,8 @@ class JobTitleView(generics.ListAPIView):
     queryset = JobTitle.objects.all().order_by('name')
     serializer_class = JobTitleSerializer
     pagination_class = None
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name']
 
 
 class LocationView(generics.ListAPIView):

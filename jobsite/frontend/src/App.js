@@ -19,7 +19,7 @@ function App() {
 				<Header />
 				<Switch>
 					<Route path='/' exact component={Home} />
-					<Route path='/category/:name' exact component={JobList} />
+					<Route path='/category/:categoryName' exact component={JobList} />
 					<Route path='/category/jobname' component={JobSingle} />
 					<Route path='/job-experience' exact component={JobExperience} />
 					<Route path='/job-experience/exp' component={JobExperienceSingle} />
