@@ -6,6 +6,11 @@ export const Card = styled.div`
 		type === 'single' ? 'none' : '0 2px 7px rgba(0, 0, 0, 0.2)'};
 	margin: 1.2rem 0;
 	border-radius: 10px;
+	background-color: #fff;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
 `;
 
 export const CardHeader = styled.div`

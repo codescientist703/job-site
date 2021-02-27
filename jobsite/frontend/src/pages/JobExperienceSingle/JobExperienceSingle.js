@@ -11,6 +11,7 @@ import {
 	Content,
 	Breadcumb,
 	ExperienceCard,
+	FluidContainer
 } from '../../components';
 
 import React from 'react';
@@ -22,26 +23,29 @@ const JobExperienceSingle = () => {
 		{ name: 'singlejob expereince', link: '/job-experience/exp' },
 	];
 	return (
-		<Container>
-			<Breadcumb breadData={breadData} width={'lg'} />
-			<JobTitle>Interview Experience for Flipkart</JobTitle>
-			<SingleJobContainer>
-				<ExperienceCard type={'single'} />
-				<ShareIcon />
-				<Line />
-				<Content>
-					<h1>About</h1>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-						dolorum quisquam aperiam distinctio dicta sunt odio veritatis optio,
-						placeat exercitationem blanditiis saepe excepturi, nostrum id est
-						hic fugit itaque voluptatum!
+		<FluidContainer>
+
+			<Container>
+				<Breadcumb breadData={breadData} width={'lg'} />
+				<JobTitle>Interview Experience for Flipkart</JobTitle>
+				<SingleJobContainer>
+					<ExperienceCard type={'single'} />
+					<ShareIcon />
+					<Line />
+					<Content>
+						<h1>About</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+							dolorum quisquam aperiam distinctio dicta sunt odio veritatis optio,
+							placeat exercitationem blanditiis saepe excepturi, nostrum id est
+							hic fugit itaque voluptatum!
 					</p>
-					<p>peletegues romane conti des</p>
-					<a href='sdf'>sdsdf</a>
-				</Content>
-			</SingleJobContainer>
-		</Container>
+						<p>peletegues romane conti des</p>
+						<a href='sdf'>sdsdf</a>
+					</Content>
+				</SingleJobContainer>
+			</Container>
+		</FluidContainer>
 	);
 };
 

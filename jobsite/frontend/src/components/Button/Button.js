@@ -6,11 +6,11 @@ const Button = styled.button`
 	border: none;
 	background: ${({ theme }) => theme.button.background};
 	color: ${({ theme }) => theme.button.color};
-	transition: background 0.7s;
+	transition: background-color 0.7s;
 	border-radius: 5px;
 
 	&:hover {
-		background: ${({ theme }) => theme.button.hover.background};
+		background-color: ${({ theme }) => theme.button.hover.background};
 		cursor: pointer;
 		color: ${({ theme }) => theme.button.hover.color};
 	}

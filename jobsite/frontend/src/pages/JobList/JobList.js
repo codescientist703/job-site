@@ -5,6 +5,7 @@ import {
 	Container,
 	Filter,
 	LayoutContainer,
+	FluidContainer
 } from '../../components';
 import {
 	MainContainer,
@@ -99,46 +100,50 @@ const JobList = (props) => {
 	};
 
 	return (
-		<Container>
-			{isLoading ? (
-				<div>Loading...</div>
-			) : (
-				<LayoutContainer is404={is404}>
-					<Breadcumb breadData={breadData} />
-					<MainContainer>
-						<FilterBtn onClick={toggleFilterClick}>
-							{isFilterOpen ? 'Hide Filters' : 'Show Filters'}
-						</FilterBtn>
-						<Filter
-							onFilterSubmit={onFilterSubmit}
-							isFilterOpen={isFilterOpen}
-							filterData={filterData}
-							fuckyou={fuckyou}
-						/>
-						<JobContainer>
-							<JobCards />
-							<PaginateComponent>
-								<ReactPaginate
-									previousLabel={`prev`}
-									nextLabel={'next'}
-									breakLabel={'...'}
-									breakClassName={'break-me'}
-									pageCount={numPages}
-									marginPagesDisplayed={3}
-									pageRangeDisplayed={2}
-									onPageChange={handlePageClick}
-									containerClassName={'pagination'}
-									subContainerClassName={'pages pagination'}
-									activeClassName={'active'}
-									disabledClassName={'disabled'}
-									forcePage={filterData.page - 1}
+		<FluidContainer>
+
+
+			<Container>
+				{isLoading ? (
+					<div>Loading...</div>
+				) : (
+						<LayoutContainer is404={is404}>
+							<Breadcumb breadData={breadData} />
+							<MainContainer>
+								<FilterBtn onClick={toggleFilterClick}>
+									{isFilterOpen ? 'Hide Filters' : 'Show Filters'}
+								</FilterBtn>
+								<Filter
+									onFilterSubmit={onFilterSubmit}
+									isFilterOpen={isFilterOpen}
+									filterData={filterData}
+									fuckyou={fuckyou}
 								/>
-							</PaginateComponent>
-						</JobContainer>
-					</MainContainer>
-				</LayoutContainer>
-			)}
-		</Container>
+								<JobContainer>
+									<JobCards />
+									<PaginateComponent>
+										<ReactPaginate
+											previousLabel={`prev`}
+											nextLabel={'next'}
+											breakLabel={'...'}
+											breakClassName={'break-me'}
+											pageCount={numPages}
+											marginPagesDisplayed={3}
+											pageRangeDisplayed={2}
+											onPageChange={handlePageClick}
+											containerClassName={'pagination'}
+											subContainerClassName={'pages pagination'}
+											activeClassName={'active'}
+											disabledClassName={'disabled'}
+											forcePage={filterData.page - 1}
+										/>
+									</PaginateComponent>
+								</JobContainer>
+							</MainContainer>
+						</LayoutContainer>
+					)}
+			</Container>
+		</FluidContainer>
 	);
 };
 

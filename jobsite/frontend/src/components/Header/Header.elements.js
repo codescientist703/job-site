@@ -87,7 +87,13 @@ export const NavItem = styled.li`
 	font-size: 1.2rem;
 	margin-bottom: 0.7rem;
 	
-
+	&:hover{
+		/* 	transform: scale(1.06); */
+		background-color: #00b0ff;
+		border-radius: 5px;
+		font-weight: 550;
+		
+	}
 	
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
@@ -104,15 +110,9 @@ export const NavLink = styled(Link)`
 	padding: 0.2rem 0.6rem;
 	height: 100%;
 	color: #000;
-	transition: color 0s, transform 0.6s;
+	transition: color 0s, background-color 0.6s;
 
-	&:hover{
-		transform: scale(1.06);
-		background-color: #00b0ff;
-		border-radius: 5px;
-		color: #fff;
-		font-weight: 550;
-	}
+	
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		padding: 0 0.7rem;

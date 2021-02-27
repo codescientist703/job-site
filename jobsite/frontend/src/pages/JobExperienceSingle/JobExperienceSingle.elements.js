@@ -14,6 +14,7 @@ export const SingleJobContainer = styled.div`
 	border: 1px solid #ddd;
 	border-radius: 5px;
 	margin-bottom: 2rem;
+	background-color: #fff;
 `;
 
 export const ShareIcon = styled(FiShare2)`
