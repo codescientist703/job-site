@@ -14,7 +14,7 @@ import {
 } from './JobList.elements';
 import axios from '../../axios';
 import ReactPaginate from 'react-paginate';
-import Autosuggest from 'react-autosuggest';
+
 import { useParams } from 'react-router-dom';
 
 const JobList = (props) => {
@@ -31,8 +31,6 @@ const JobList = (props) => {
 	const [data, setData] = useState([]);
 	const [numPages, setNumPages] = useState(-1);
 	const [is404, setIs404] = useState(false);
-	const [value, setValue] = useState('');
-	const [suggestions, setSuggestions] = useState([]);
 
 	const breadData = [
 		{ name: 'home', link: '/' },
@@ -66,27 +64,7 @@ const JobList = (props) => {
 			setIs404(true);
 		}
 	}
-	const gi = ['fs', 'fs'];
-	const getSuggestions = async (value) => {
-		const inputValue = value.trim().toLowerCase();
-		const response = await axios.get(
-			'http://127.0.0.1:8000/api/jobtitle/?search=' + inputValue
-		);
 
-		return response.data;
-	};
-
-	const onChange = (event, { newValue }) => {
-		setValue(newValue);
-	};
-	const onSuggestionsFetchRequested = async ({ value }) => {
-		setValue(value);
-		const ha = await getSuggestions(value);
-		setSuggestions(ha);
-	};
-	const onSuggestionsClearRequested = () => {
-		setSuggestions([]);
-	};
 	useEffect(() => {
 		fetchData();
 	}, [filterData.page, categoryName]);
@@ -116,12 +94,7 @@ const JobList = (props) => {
 			setfilterData({ ...filterData, page: 1 });
 		}
 	};
-	const inputProps = {
-		placeholder: 'Type a programming language',
-		value,
-		onChange: onChange,
-	};
-	console.log(suggestions);
+
 	return (
 		<Container>
 			{isLoading ? (
@@ -133,19 +106,10 @@ const JobList = (props) => {
 						<FilterBtn onClick={toggleFilterClick}>
 							{isFilterOpen ? 'Hide Filters' : 'Show Filters'}
 						</FilterBtn>
-						<Autosuggest
-							getSuggestionValue={(suggestion) => suggestion}
-							renderSuggestion={(suggestion) => <span>{suggestion.name}</span>}
-							suggestions={suggestions}
-							onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-							onSuggestionsClearRequested={onSuggestionsClearRequested}
-							inputProps={{
-								placeholder: "Type 'c'",
-								value: value,
-								onChange: (_, { newValue, method }) => {
-									setValue(newValue);
-								},
-							}}
+						<Filter
+							onFilterSubmit={onFilterSubmit}
+							isFilterOpen={isFilterOpen}
+							filterData={filterData}
 						/>
 						<JobContainer>
 							<JobCards />
