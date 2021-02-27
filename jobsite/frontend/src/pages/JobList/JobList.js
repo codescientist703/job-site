@@ -68,6 +68,9 @@ const JobList = (props) => {
 	useEffect(() => {
 		fetchData();
 	}, [filterData.page, categoryName]);
+	const fuckyou = (fck) => {
+		console.log(fck);
+	};
 
 	const JobCards = () => {
 		return (
@@ -110,6 +113,7 @@ const JobList = (props) => {
 							onFilterSubmit={onFilterSubmit}
 							isFilterOpen={isFilterOpen}
 							filterData={filterData}
+							fuckyou={fuckyou}
 						/>
 						<JobContainer>
 							<JobCards />
