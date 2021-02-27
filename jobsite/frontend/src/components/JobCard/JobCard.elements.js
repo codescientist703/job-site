@@ -12,6 +12,7 @@ export const Card = styled.div`
 	border-radius: 10px;
 	margin-bottom: 1.2rem;
 	/* margin-top: 0.7rem; */
+	background-color: #fff;
 
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		padding: 0.7rem 1.2rem;

@@ -3,6 +3,7 @@ import {
 	SingleJobContainer,
 	Line,
 	ShareIcon,
+	About,
 	ApplyBtn,
 } from './JobExperienceSingle.elements';
 import {
@@ -33,7 +34,7 @@ const JobExperienceSingle = () => {
 					<ShareIcon />
 					<Line />
 					<Content>
-						<h1>About</h1>
+						<About>About</About>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
 							dolorum quisquam aperiam distinctio dicta sunt odio veritatis optio,

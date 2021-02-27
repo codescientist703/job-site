@@ -11,6 +11,7 @@ export const FilterContainer = styled.aside`
 	border-radius: 5px;
 	border: ${({ isFilterOpen }) => (isFilterOpen ? '1px solid #ddd' : '0rem')};
 	transition: max-height 0.2s ease-out;
+	background-color: #fff;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		position: sticky;

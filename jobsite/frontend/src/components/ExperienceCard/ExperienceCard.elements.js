@@ -18,7 +18,7 @@ export const CardHeader = styled.div`
 `;
 
 export const CardDescription = styled.div`
-	margin-top: 1.3rem;
+	margin-top: 0.6rem;
 	display: flex;
 	align-items: flex-start;
 `;

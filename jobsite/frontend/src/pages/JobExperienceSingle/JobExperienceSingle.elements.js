@@ -34,3 +34,7 @@ export const Line = styled.div`
 export const ApplyBtn = styled(Button)`
 	margin: 1rem 1rem;
 `;
+
+export const About = styled.h3`
+	margin-bottom: 0.3rem;
+`;

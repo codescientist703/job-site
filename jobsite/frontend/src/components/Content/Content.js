@@ -5,11 +5,11 @@ const Content = styled.div`
 	/* letter-spacing: 1px; */
 	padding: 1rem 1rem;
 	h1 {
-		font-size: 24px;
-		font-weight: 600;
+		font-size: 2rem;
+		/* font-weight: 600; */
 	}
 	h2 {
-		font-size: 22px;
+		font-size: 1.5rem;
 	}
 	p {
 		font-size: 1rem;
