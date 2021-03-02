@@ -25,8 +25,6 @@ const Filter = ({
 	const onInputRangeChange = (e) => {
 		setInputValue(e.target.value);
 	};
-	console.log(filterData.salary);
-
 	return (
 		<FilterContainer isFilterOpen={isFilterOpen}>
 			<FilterHeader>Filters</FilterHeader>

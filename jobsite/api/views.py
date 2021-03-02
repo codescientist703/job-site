@@ -45,7 +45,7 @@ class JobListView(generics.ListAPIView):
     serializer_class = JobListSerializer
     filter_backends = [filters.SearchFilter, DjangoFilterBackend]
     search_fields = ['location__name',
-                     'company', 'jobtitle__name']
+                     'company__name', 'jobtitle__name']
     filterset_class = JobListFilter
 
     def get_queryset(self):

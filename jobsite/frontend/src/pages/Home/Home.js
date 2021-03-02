@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
 	SecTwoContainer,
 	Container,
@@ -32,7 +32,6 @@ import JobImg from '../../images/homejob.svg';
 import BoyImg from '../../images/boyjob.svg';
 import { Button, Seo } from '../../components';
 import Data from '../../RawContent/HomeContent';
-import { Redirect } from 'react-router-dom';
 const Home = () => {
 	return (
 		<article>
@@ -81,6 +80,10 @@ const SectionThree = () => {
 };
 
 const SecOne = () => {
+	const [searchValue, setSearchValue] = useState('');
+	const onChange = (event) => {
+		setSearchValue(event.target.value);
+	};
 	return (
 		<HeroSection>
 			<ContainerOne>
@@ -91,11 +94,17 @@ const SecOne = () => {
 					</HeroSubHeading>
 					<SearchBox>
 						<SearchIcon />
-						<SearchInput type='text' placeholder='Search...' />
+						<SearchInput
+							type='text'
+							placeholder='Search...'
+							name='search'
+							value={searchValue}
+							onChange={onChange}
+						/>
 						<SearchButton
 							to={{
 								pathname: '/category/search',
-								state: { haha: true },
+								state: { searchValue: searchValue },
 							}}
 						>
 							Search

@@ -27,6 +27,7 @@ const JobList = (props) => {
 		salary: '',
 		experience: '',
 		page: 1,
+		search: props.location.state ? props.location.state.searchValue : '',
 	});
 	const [isFilterOpen, setisFilterOpen] = useState(false);
 	const [isLoading, setIsLoading] = useState(true);
@@ -39,9 +40,9 @@ const JobList = (props) => {
 		{ name: `${categoryName}`, link: `/category/${categoryName}` },
 	];
 
-	if (props.location.state) {
-		console.log(props.location.state.haha);
-	}
+	// if (props.location.state) {
+	// 	console.log(props.location.state.searchValue);
+	// }
 
 	if (categoryName === 'search') {
 		categoryName = 'jobs';
@@ -58,6 +59,9 @@ const JobList = (props) => {
 			setIsLoading(true);
 		}
 		let apiUrl = `joblist/${categoryName}/?location=${filterData.location}&company=${filterData.company}&jobtitle=${filterData.jobtitle}&salary=${filterData.salary}&experience=${filterData.experience}&page=${filterData.page}`;
+		if (filterData.search !== '') {
+			apiUrl = apiUrl + `&search=${filterData.search}`;
+		}
 		try {
 			const response = await axios.get(apiUrl);
 			setData(response.data.results);
@@ -91,6 +95,7 @@ const JobList = (props) => {
 	};
 	const onFilterClear = () => {
 		setfilterData({
+			...filterData,
 			company: '',
 			location: '',
 			jobtitle: '',

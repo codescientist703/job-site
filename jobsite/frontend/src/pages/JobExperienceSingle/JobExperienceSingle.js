@@ -19,8 +19,6 @@ import {
 import { useParams } from 'react-router-dom';
 import axios from '../../axios';
 
-import React from 'react';
-
 const JobExperienceSingle = () => {
 	const breadData = [
 		{ name: 'home', link: '/' },
