@@ -41,7 +41,8 @@ class JobListSerializer(serializers.ModelSerializer):
 class JobSerializer(serializers.ModelSerializer):
     jobtitle = serializers.StringRelatedField()
     location = serializers.StringRelatedField()
-    category = serializers.StringRelatedField()
+    category = serializers.CharField(
+        read_only=True, source='category.name')
     company = serializers.StringRelatedField()
 
     class Meta:
@@ -61,6 +62,7 @@ class InterviewListSerializer(serializers.ModelSerializer):
 
 class InterviewSerializer(serializers.ModelSerializer):
     jobtitle = serializers.StringRelatedField()
+    company = serializers.StringRelatedField()
 
     class Meta:
         model = Interview

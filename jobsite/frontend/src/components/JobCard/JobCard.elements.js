@@ -72,17 +72,3 @@ export const JobDescription = styled.p`
 	font-size: 0.85rem;
 	width: 60%;
 `;
-
-export const Btn = styled(Link)`
-	border: none;
-	outline: none;
-	background-color: transparent;
-	cursor: pointer;
-	text-decoration: none;
-	color: ${({ theme }) => theme.link.color};
-	transition: ${({ theme }) => theme.link.transition};
-
-	&:hover {
-		color: ${({ theme }) => theme.link.hover.color};
-	}
-`;

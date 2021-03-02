@@ -25,8 +25,8 @@ const JobSingle = () => {
 	let { slug } = useParams();
 	const breadData = [
 		{ name: 'home', link: '/' },
-		{ name: 'category', link: `/category/${data.category}` },
-		{ name: 'job', link: `/${slug}` },
+		{ name: `${data.category}`, link: `/category/${data.category}` },
+		{ name: `${data.title}`, link: `/${slug}` },
 	];
 
 	const fetchData = async () => {

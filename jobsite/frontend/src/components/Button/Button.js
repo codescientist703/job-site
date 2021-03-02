@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
-
-const Button = styled.a`
+import { Link } from 'react-router-dom';
+export const Button = styled.a`
 	font-size: 1.1rem;
 	padding: 7px 25px;
 	border: none;
@@ -16,4 +16,17 @@ const Button = styled.a`
 		color: ${({ theme }) => theme.button.hover.color};
 	}
 `;
-export default Button;
+
+export const LinkButton = styled(Link)`
+	border: none;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+	text-decoration: none;
+	color: ${({ theme }) => theme.link.color};
+	transition: ${({ theme }) => theme.link.transition};
+
+	&:hover {
+		color: ${({ theme }) => theme.link.hover.color};
+	}
+`;

@@ -12,10 +12,10 @@ import {
 	ItemIcon,
 	ItemTitle,
 	ItemDescription,
-	Btn,
 } from './JobCard.elements';
 import { AiFillHome } from 'react-icons/ai';
 import { BiTimeFive } from 'react-icons/bi';
+import { LinkButton } from '../../components';
 const JobCard = ({
 	type,
 	jobtitle,
@@ -79,7 +79,7 @@ const JobCard = ({
 			{type !== 'single' && (
 				<CardBottom>
 					<JobDescription>{description}</JobDescription>
-					<Btn to={`/${slug}`}>View More &gt;</Btn>
+					<LinkButton to={`/${slug}`}>View More &gt;</LinkButton>
 				</CardBottom>
 			)}
 		</Card>

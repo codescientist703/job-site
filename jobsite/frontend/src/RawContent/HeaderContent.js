@@ -23,10 +23,5 @@ const Data = [
 		link: '/job-experience',
 		icon: <BiBuildings />,
 	},
-	{
-		name: 'Single Experience',
-		link: '/job-experience/exp',
-		icon: <BiBuildings />,
-	},
 ];
 export default Data;

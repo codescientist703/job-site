@@ -8,7 +8,7 @@ export const Card = styled.div`
 	border-radius: 10px;
 	background-color: #fff;
 
-	&:last-child{
+	&:last-child {
 		margin-bottom: 0;
 	}
 `;
@@ -46,17 +46,6 @@ export const Icon = styled.i`
 	margin-right: 0.5rem;
 	margin-top: 0.2rem;
 	vertical-align: middle;
-`;
-
-export const ReadMore = styled.a`
-	padding-left: 0.7rem;
-	color: ${({ theme }) => theme.link.color};
-	font-weight: 500;
-	transition: ${({ theme }) => theme.link.transition};
-
-	&:hover{
-		color: ${({ theme }) => theme.link.hover.color};
-	}
 `;
 
 export const Contributer = styled.span`

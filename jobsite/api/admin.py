@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, JobTitle, Job, Location, Interview, Company
+from .models import Category, JobTitle, Job, Location, Interview, Company, Interview
 # Register your models here.
 
 

@@ -72,6 +72,12 @@ class InterviewListView(generics.ListAPIView):
     serializer_class = InterviewListSerializer
     queryset = Interview.objects.filter(draft=False)
 
+    def list(self, request, *args, **kwargs):
+        response = super().list(request, args, kwargs)
+        # Add data to response.data Example for your object:
+        response.data['page_size'] = settings.REST_FRAMEWORK['PAGE_SIZE']
+        return response
+
 
 class InterviewView(generics.RetrieveAPIView):
     serializer_class = InterviewSerializer

@@ -14,8 +14,9 @@ import {
 } from './ExperienceCard.elements';
 import { BiBookContent, BiUser, BiBuildings } from 'react-icons/bi';
 import { FaHandshake } from 'react-icons/fa';
+import { LinkButton } from '../../components';
 
-function ExperienceCard({ type }) {
+function ExperienceCard({ type, company, name, jobtitle, description, slug }) {
 	return (
 		<Card type={type}>
 			<CardHeader>
@@ -23,7 +24,7 @@ function ExperienceCard({ type }) {
 					<Icon>
 						<BiUser />
 					</Icon>
-					<JobRole>Software Engineer</JobRole>
+					<JobRole>{jobtitle}</JobRole>
 				</JobDetail>
 				<JobDetail>
 					<Icon>
@@ -31,7 +32,7 @@ function ExperienceCard({ type }) {
 						<BiBuildings />
 					</Icon>
 
-					<CompanyName>Amazon</CompanyName>
+					<CompanyName>{company}</CompanyName>
 				</JobDetail>
 			</CardHeader>
 			{type !== 'single' && (
@@ -40,11 +41,8 @@ function ExperienceCard({ type }) {
 						<BiBookContent />
 					</Icon>
 					<Paragraph>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-						commodi recusandae officia iste odit mollitia fugiat in deserunt
-						debitis, facilis hic a quia blanditiis ex assumenda, amet velit
-						incidunt magni...
-						<ReadMore>Read More</ReadMore>
+						{description}...
+						<LinkButton to={`job-experience/${slug}`}>Read More</LinkButton>
 					</Paragraph>
 				</CardDescription>
 			)}
@@ -52,7 +50,7 @@ function ExperienceCard({ type }) {
 				<Icon>
 					<FaHandshake />
 				</Icon>
-				Contributed by : <Contributer> Job Lele</Contributer>
+				Contributed by : <Contributer> {name}</Contributer>
 			</CardCredits>
 		</Card>
 	);

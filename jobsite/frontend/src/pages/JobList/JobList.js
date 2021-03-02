@@ -36,7 +36,7 @@ const JobList = (props) => {
 
 	const breadData = [
 		{ name: 'home', link: '/' },
-		{ name: 'category', link: `/category/${categoryName}` },
+		{ name: `${categoryName}`, link: `/category/${categoryName}` },
 	];
 
 	if (props.location.state) {
