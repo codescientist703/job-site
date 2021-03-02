@@ -4,7 +4,7 @@ export const FilterContainer = styled.aside`
 	/* for mobile */
 
 	/* background-color: #eee; */
-	max-height: ${({ isFilterOpen }) => (isFilterOpen ? '540px' : '0')};
+	max-height: ${({ isFilterOpen }) => (isFilterOpen ? '620px' : '0')};
 	padding: ${({ isFilterOpen }) => (isFilterOpen ? '0.8rem' : '0rem')};
 	overflow: hidden;
 	margin-bottom: ${({ isFilterOpen }) => (isFilterOpen ? '1rem' : '0rem')};
@@ -43,12 +43,18 @@ export const FilterBtn = styled.button`
 	}
 `;
 
-export const SubmitBtn = styled(FilterBtn)`
+export const ClearButton = styled(FilterBtn)`
 	display: block;
 	align-self: flex-start;
 	margin: 0 0;
+	color: red;
+	background: cyan;
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		margin: 0 auto;
+		display: block;
+	}
+	&:hover {
+		background: lightblue;
 	}
 `;
 
@@ -58,63 +64,11 @@ export const FilterHeader = styled.h2`
 `;
 export const FilterItem = styled.div`
 	margin-bottom: 1.2rem;
-	.react-autosuggest__input {
-		border: 1px solid #d2d2d2;
-		padding: 8px 14px;
-		border-radius: 5px;
-		font-size: 1rem;
+
+	.sliderContainer {
+		display: inline;
+		background: red;
 		width: 100%;
-		@media screen and (min-width: ${({ theme }) => theme.md}px) {
-			width: 100%;
-		}
-		@media screen and (min-width: ${({ theme }) => theme.lg}px) {
-			width: auto;
-		}
-
-		&:focus {
-			/* border: 5px solid lightblue; */
-			outline: none;
-		}
-	}
-	.react-autosuggest__input--open {
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-	.react-autosuggest__container {
-		position: relative;
-	}
-	.react-autosuggest__suggestions-container {
-		display: none;
-		margin: 0;
-	}
-
-	.react-autosuggest__suggestions-container--open {
-		display: block;
-		z-index: 1000;
-		position: absolute;
-		top: 50px;
-		background-color: #fff;
-		border: 1px solid #d2d2d2;
-		padding: 0px 0px;
-		border-radius: 5px;
-		outline: none;
-		font-size: 1rem;
-		width: 100%;
-	}
-
-	.react-autosuggest__suggestions-list {
-		margin: 0;
-		padding: 0;
-		list-style-type: none;
-	}
-
-	.react-autosuggest__suggestion {
-		cursor: pointer;
-		padding: 10px 20px;
-	}
-
-	.react-autosuggest__suggestion--highlighted {
-		background-color: #ddd;
 	}
 `;
 

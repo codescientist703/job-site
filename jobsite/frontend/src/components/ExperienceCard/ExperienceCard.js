@@ -34,18 +34,20 @@ function ExperienceCard({ type }) {
 					<CompanyName>Amazon</CompanyName>
 				</JobDetail>
 			</CardHeader>
-			<CardDescription>
-				<Icon>
-					<BiBookContent />
-				</Icon>
-				<Paragraph>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem commodi
-					recusandae officia iste odit mollitia fugiat in deserunt debitis,
-					facilis hic a quia blanditiis ex assumenda, amet velit incidunt
-					magni...
-					<ReadMore>Read More</ReadMore>
-				</Paragraph>
-			</CardDescription>
+			{type !== 'single' && (
+				<CardDescription>
+					<Icon>
+						<BiBookContent />
+					</Icon>
+					<Paragraph>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+						commodi recusandae officia iste odit mollitia fugiat in deserunt
+						debitis, facilis hic a quia blanditiis ex assumenda, amet velit
+						incidunt magni...
+						<ReadMore>Read More</ReadMore>
+					</Paragraph>
+				</CardDescription>
+			)}
 			<CardCredits>
 				<Icon>
 					<FaHandshake />

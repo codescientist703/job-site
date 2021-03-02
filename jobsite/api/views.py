@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from rest_framework import generics, filters
-from .models import Category, Location, JobTitle, Job, Interview
+from .models import Category, Location, JobTitle, Job, Interview, Company
 from .serializers import (
     CategorySerializer, JobTitleSerializer,
-    LocationSerializer, JobListSerializer, JobSerializer, InterviewListSerializer, InterviewSerializer)
+    LocationSerializer, JobListSerializer, JobSerializer, InterviewListSerializer, InterviewSerializer,
+    CompanySerializer)
 from django_filters.rest_framework import DjangoFilterBackend
 from .filters import JobListFilter
 from django.shortcuts import get_object_or_404
@@ -28,6 +29,16 @@ class LocationView(generics.ListAPIView):
     queryset = Location.objects.all().order_by('name')
     serializer_class = LocationSerializer
     pagination_class = None
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name']
+
+
+class CompanyView(generics.ListAPIView):
+    queryset = Company.objects.all().order_by('name')
+    serializer_class = CompanySerializer
+    pagination_class = None
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name']
 
 
 class JobListView(generics.ListAPIView):

@@ -8,8 +8,12 @@ class JobListFilter(django_filters.FilterSet):
     jobtitle = django_filters.CharFilter(field_name='jobtitle__name',
                                          lookup_expr='icontains')
     company = django_filters.CharFilter(
-        field_name='company', lookup_expr='icontains')
+        field_name='company__name', lookup_expr='icontains')
+    experience = django_filters.CharFilter(
+        field_name='experience', lookup_expr='gte')
+    salary = django_filters.CharFilter(
+        field_name='salary', lookup_expr='gte')
 
     class Meta:
         model = Job
-        fields = ['salary', 'experience']
+        exclude = ['content', 'id']

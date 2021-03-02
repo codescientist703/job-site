@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, JobTitle, Job, Location, Interview
+from .models import Category, JobTitle, Job, Location, Interview, Company
 # Register your models here.
 
 
@@ -22,8 +22,9 @@ class InterviewAdmin(admin.ModelAdmin):
     )
 
 
+admin.site.register(Job, JobAdmin)
+admin.site.register(Interview, InterviewAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(JobTitle, CategoryAdmin)
 admin.site.register(Location, CategoryAdmin)
-admin.site.register(Job, JobAdmin)
-admin.site.register(Interview, InterviewAdmin)
+admin.site.register(Company, CategoryAdmin)

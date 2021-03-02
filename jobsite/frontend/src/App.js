@@ -20,9 +20,14 @@ function App() {
 				<Switch>
 					<Route path='/' exact component={Home} />
 					<Route path='/category/:categoryName' exact component={JobList} />
-					<Route path='/category/jobname' component={JobSingle} />
 					<Route path='/job-experience' exact component={JobExperience} />
-					<Route path='/job-experience/exp' component={JobExperienceSingle} />
+					<Route
+						path='/job-experience/exp'
+						exact
+						component={JobExperienceSingle}
+					/>
+					<Route path='/:slug' component={JobSingle} />
+
 					<Route component={Page404} />
 				</Switch>
 				<Footer />

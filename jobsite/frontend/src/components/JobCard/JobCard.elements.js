@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 import { FiStar } from 'react-icons/fi';
-
+import { Link } from 'react-router-dom';
 export const Card = styled.div`
 	/* for mobile */
 	width: 100%;
@@ -62,7 +62,10 @@ export const ItemIcon = styled.i`
 `;
 
 export const ItemDescription = styled.p`
-	font-size: 0.8rem;
+	font-size: 0.7rem;
+	@media screen and (min-width: ${({ theme }) => theme.md}px) {
+		font-size: 0.8rem;
+	}
 `;
 
 export const JobDescription = styled.p`
@@ -70,11 +73,12 @@ export const JobDescription = styled.p`
 	width: 60%;
 `;
 
-export const Btn = styled.button`
+export const Btn = styled(Link)`
 	border: none;
 	outline: none;
 	background-color: transparent;
 	cursor: pointer;
+	text-decoration: none;
 	color: ${({ theme }) => theme.link.color};
 	transition: ${({ theme }) => theme.link.transition};
 

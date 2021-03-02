@@ -6,10 +6,15 @@ const Content = styled.div`
 	padding: 1rem 1rem;
 	h1 {
 		font-size: 2rem;
-		/* font-weight: 600; */
+		font-weight: 600;
 	}
 	h2 {
 		font-size: 1.5rem;
+		font-weight: 600;
+	}
+	h3 {
+		font-size: 1.2rem;
+		font-weight: 600;
 	}
 	p {
 		font-size: 1rem;

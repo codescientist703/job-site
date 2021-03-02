@@ -18,7 +18,7 @@ export const InputContainer = styled.div`
 
 		&:focus {
 			/* border: 5px solid lightblue; */
-			outline: none;
+			border-color: blue;
 		}
 	}
 	.react-autosuggest__input--open {
@@ -35,7 +35,7 @@ export const InputContainer = styled.div`
 
 	.react-autosuggest__suggestions-container--open {
 		display: block;
-		z-index: 1000;
+		z-index: 2;
 		position: absolute;
 		top: 50px;
 		background-color: #fff;
@@ -63,8 +63,13 @@ export const InputContainer = styled.div`
 	}
 `;
 
-const MyAutosuggest = ({ placeholder, field, fuckyou }) => {
-	const [value, setValue] = useState('');
+const MyAutosuggest = ({
+	placeholder,
+	field,
+	onSuggestionValueChange,
+	filterData,
+}) => {
+	const [value, setValue] = useState(filterData);
 	const [suggestions, setSuggestions] = useState([]);
 	const getSuggestions = async (value) => {
 		const inputValue = value.trim().toLowerCase();
@@ -88,10 +93,11 @@ const MyAutosuggest = ({ placeholder, field, fuckyou }) => {
 	};
 	const getSuggestionValue = (suggestion) => suggestion.name;
 	const renderSuggestion = (suggestion) => <span>{suggestion.name}</span>;
-	const test = (event) => {
-		console.log(event.target.innerText);
-	};
 
+	const onSuggestionClick = (event, { suggestionValue }) => {
+		console.log(suggestionValue);
+		onSuggestionValueChange(field, suggestionValue);
+	};
 	const inputProps = {
 		placeholder: placeholder,
 		value,
@@ -102,12 +108,13 @@ const MyAutosuggest = ({ placeholder, field, fuckyou }) => {
 			<Autosuggest
 				getSuggestionValue={getSuggestionValue}
 				renderSuggestion={renderSuggestion}
-				onSuggestionSelected={test}
+				onSuggestionSelected={onSuggestionClick}
 				suggestions={suggestions}
 				onSuggestionsFetchRequested={onSuggestionsFetchRequested}
 				onSuggestionsClearRequested={onSuggestionsClearRequested}
 				inputProps={inputProps}
 				focusInputOnSuggestionClick={false}
+				highlightFirstSuggestion={true}
 			/>
 		</InputContainer>
 	);
