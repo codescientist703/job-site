@@ -75,3 +75,8 @@ export const PaginateComponent = styled.div`
 		}
 	}
 `;
+
+export const NoData = styled.div`
+	height: 50vh;
+	text-align: center;
+`;

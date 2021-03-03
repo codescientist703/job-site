@@ -12,6 +12,7 @@ import {
 	JobContainer,
 	FilterBtn,
 	PaginateComponent,
+	NoData,
 } from './JobList.elements';
 import axios from '../../axios';
 import ReactPaginate from 'react-paginate';
@@ -34,10 +35,12 @@ const JobList = (props) => {
 	const [data, setData] = useState([]);
 	const [numPages, setNumPages] = useState(-1);
 	const [is404, setIs404] = useState(false);
+	const title =
+		filterData.search !== '' ? 'search results' : `all ${categoryName}`;
 
 	const breadData = [
 		{ name: 'home', link: '/' },
-		{ name: `${categoryName}`, link: `/category/${categoryName}` },
+		{ name: title, link: `/category/${categoryName}` },
 	];
 
 	// if (props.location.state) {
@@ -108,44 +111,53 @@ const JobList = (props) => {
 	return (
 		<FluidContainer>
 			<Container>
-				{isLoading ? (
+				<Breadcumb breadData={breadData} />
+				{/* {isLoading ? (
 					<div>Loading...</div>
-				) : (
-					<LayoutContainer is404={is404}>
-						<Breadcumb breadData={breadData} />
-						<MainContainer>
-							<FilterBtn onClick={toggleFilterClick}>
-								{isFilterOpen ? 'Hide Filters' : 'Show Filters'}
-							</FilterBtn>
-							<Filter
-								onFilterSubmit={onFilterSubmit}
-								isFilterOpen={isFilterOpen}
-								filterData={filterData}
-								onFilterClear={onFilterClear}
-							/>
-							<JobContainer>
-								<JobCards />
-								<PaginateComponent>
-									<ReactPaginate
-										previousLabel={`prev`}
-										nextLabel={'next'}
-										breakLabel={'...'}
-										breakClassName={'break-me'}
-										pageCount={numPages}
-										marginPagesDisplayed={3}
-										pageRangeDisplayed={2}
-										onPageChange={handlePageClick}
-										containerClassName={'pagination'}
-										subContainerClassName={'pages pagination'}
-										activeClassName={'active'}
-										disabledClassName={'disabled'}
-										forcePage={filterData.page - 1}
-									/>
-								</PaginateComponent>
-							</JobContainer>
-						</MainContainer>
-					</LayoutContainer>
-				)}
+				) : ( */}
+				<LayoutContainer is404={is404}>
+					<MainContainer>
+						<FilterBtn onClick={toggleFilterClick}>
+							{isFilterOpen ? 'Hide Filters' : 'Show Filters'}
+						</FilterBtn>
+						<Filter
+							onFilterSubmit={onFilterSubmit}
+							isFilterOpen={isFilterOpen}
+							filterData={filterData}
+							onFilterClear={onFilterClear}
+						/>
+						<JobContainer>
+							<JobCards />
+							{isLoading && (
+								<>
+									{[...Array(10)].map((e, i) => (
+										<>
+											<JobCard />
+										</>
+									))}
+								</>
+							)}
+							<PaginateComponent>
+								<ReactPaginate
+									previousLabel={`prev`}
+									nextLabel={'next'}
+									breakLabel={'...'}
+									breakClassName={'break-me'}
+									pageCount={numPages}
+									marginPagesDisplayed={3}
+									pageRangeDisplayed={2}
+									onPageChange={handlePageClick}
+									containerClassName={'pagination'}
+									subContainerClassName={'pages pagination'}
+									activeClassName={'active'}
+									disabledClassName={'disabled'}
+									forcePage={filterData.page - 1}
+								/>
+							</PaginateComponent>
+						</JobContainer>
+					</MainContainer>
+				</LayoutContainer>
+				{/* )} */}
 			</Container>
 		</FluidContainer>
 	);

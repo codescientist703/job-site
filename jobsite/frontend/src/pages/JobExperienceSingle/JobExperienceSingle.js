@@ -20,12 +20,12 @@ import { useParams } from 'react-router-dom';
 import axios from '../../axios';
 
 const JobExperienceSingle = () => {
+	const [data, setData] = useState({});
 	const breadData = [
 		{ name: 'home', link: '/' },
 		{ name: 'experience', link: '/job-experience' },
-		{ name: 'singlejob expereince', link: '/job-experience/exp' },
+		{ name: `${data.company}`, link: '/job-experience/exp' },
 	];
-	const [data, setData] = useState({});
 	const [is404, setIs404] = useState(false);
 
 	const [isLoading, setIsLoading] = useState(true);

@@ -16,6 +16,7 @@ import {
 import { AiFillHome } from 'react-icons/ai';
 import { BiTimeFive } from 'react-icons/bi';
 import { LinkButton } from '../../components';
+import Skeleton from 'react-loading-skeleton';
 const JobCard = ({
 	type,
 	jobtitle,
@@ -31,55 +32,111 @@ const JobCard = ({
 		<Card type={type}>
 			<CardTop>
 				<JobDetails>
-					<JobTitle>{jobtitle}</JobTitle>
-					<JobCompany>{company}</JobCompany>
+					<JobTitle>{jobtitle || <Skeleton />}</JobTitle>
+					<JobCompany>{company || <Skeleton width={100} />}</JobCompany>
 				</JobDetails>
-				<StarIcon />
+				{slug ? <StarIcon /> : <Skeleton width={30} />}
 			</CardTop>
 			<CardMiddle>
 				<Item>
-					<ItemTitle>
-						<ItemIcon>
-							<AiFillHome />
-						</ItemIcon>
-						&nbsp; Location
-					</ItemTitle>
-					<ItemDescription>{location}</ItemDescription>
+					{location ? (
+						<>
+							<ItemTitle>
+								<ItemIcon>
+									<AiFillHome />
+								</ItemIcon>
+								&nbsp; Location
+							</ItemTitle>
+							<ItemDescription>{location}</ItemDescription>
+						</>
+					) : (
+						<>
+							<div>
+								<Skeleton width={90} />
+							</div>
+							<div>
+								<Skeleton width={90} />
+							</div>
+						</>
+					)}
 				</Item>
 				<Item>
-					<ItemTitle>
-						<ItemIcon>
-							<BiTimeFive />
-						</ItemIcon>
-						&nbsp; Date
-					</ItemTitle>
-					<ItemDescription>{date}</ItemDescription>
+					{date ? (
+						<>
+							<ItemTitle>
+								<ItemIcon>
+									<BiTimeFive />
+								</ItemIcon>
+								&nbsp; Date
+							</ItemTitle>
+							<ItemDescription>{date}</ItemDescription>
+						</>
+					) : (
+						<>
+							<div>
+								<Skeleton width={90} />
+							</div>
+							<div>
+								<Skeleton width={90} />
+							</div>
+						</>
+					)}
 				</Item>
 				<Item>
-					<ItemTitle>
-						<ItemIcon>
-							<BiTimeFive />
-						</ItemIcon>
-						&nbsp; Salary
-					</ItemTitle>
-					<ItemDescription>
-						{salary === -1 ? 'Not Specified' : `₹ ${salary} /annum`}
-					</ItemDescription>
+					{salary ? (
+						<>
+							<ItemTitle>
+								<ItemIcon>
+									<BiTimeFive />
+								</ItemIcon>
+								&nbsp; Salary
+							</ItemTitle>
+							<ItemDescription>
+								{salary === -1 ? 'Not Specified' : `₹ ${salary} /annum`}
+							</ItemDescription>
+						</>
+					) : (
+						<>
+							<div>
+								<Skeleton width={90} />
+							</div>
+							<div>
+								<Skeleton width={90} />
+							</div>
+						</>
+					)}
 				</Item>
 				<Item>
-					<ItemTitle>
-						<ItemIcon>
-							<BiTimeFive />
-						</ItemIcon>
-						&nbsp; Experience
-					</ItemTitle>
-					<ItemDescription>{experience} years</ItemDescription>
+					{experience ? (
+						<>
+							<ItemTitle>
+								<ItemIcon>
+									<BiTimeFive />
+								</ItemIcon>
+								&nbsp; Experience
+							</ItemTitle>
+							<ItemDescription>{experience} years</ItemDescription>
+						</>
+					) : (
+						<>
+							<div>
+								<Skeleton width={90} />
+							</div>
+							<div>
+								<Skeleton width={90} />
+							</div>
+						</>
+					)}
 				</Item>
 			</CardMiddle>
 			{type !== 'single' && (
 				<CardBottom>
-					<JobDescription>{description}</JobDescription>
-					<LinkButton to={`/${slug}`}>View More &gt;</LinkButton>
+					<JobDescription>{description || <Skeleton />}</JobDescription>
+					{slug ? (
+						<LinkButton to={`/${slug}`}>View More &gt;</LinkButton>
+					) : (
+						<Skeleton width={100} />
+					)}
 				</CardBottom>
 			)}
 		</Card>
