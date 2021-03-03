@@ -59,12 +59,18 @@ export const ItemTitle = styled.p`
 
 export const ItemIcon = styled.i`
 	vertical-align: middle;
+	display: none;
+	@media screen and (min-width: ${({ theme }) => theme.md}px) {
+		display: initial;
+	}
 `;
 
 export const ItemDescription = styled.p`
 	font-size: 0.7rem;
+	margin-left: 0.4rem;
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		font-size: 0.8rem;
+		margin-left: 0rem;
 	}
 `;
 
