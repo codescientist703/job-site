@@ -88,15 +88,18 @@ const JobList = (props) => {
 		setisFilterOpen(!isFilterOpen);
 	};
 	const handlePageClick = (data) => {
+		setData([]);
 		setfilterData({
 			...filterData,
 			page: data.selected + 1,
 		});
 	};
 	const onFilterSubmit = (name, value) => {
+		setData([]);
 		setfilterData({ ...filterData, [name]: value, page: 1 });
 	};
 	const onFilterClear = () => {
+		setData([]);
 		setfilterData({
 			...filterData,
 			company: '',
@@ -111,11 +114,8 @@ const JobList = (props) => {
 	return (
 		<FluidContainer>
 			<Container>
-				<Breadcumb breadData={breadData} />
-				{/* {isLoading ? (
-					<div>Loading...</div>
-				) : ( */}
 				<LayoutContainer is404={is404}>
+					<Breadcumb breadData={breadData} />
 					<MainContainer>
 						<FilterBtn onClick={toggleFilterClick}>
 							{isFilterOpen ? 'Hide Filters' : 'Show Filters'}
@@ -125,15 +125,14 @@ const JobList = (props) => {
 							isFilterOpen={isFilterOpen}
 							filterData={filterData}
 							onFilterClear={onFilterClear}
+							isLoading={isLoading}
 						/>
 						<JobContainer>
 							<JobCards />
 							{isLoading && (
 								<>
 									{[...Array(10)].map((e, i) => (
-										<>
-											<JobCard />
-										</>
+										<JobCard key={i} />
 									))}
 								</>
 							)}
@@ -157,7 +156,6 @@ const JobList = (props) => {
 						</JobContainer>
 					</MainContainer>
 				</LayoutContainer>
-				{/* )} */}
 			</Container>
 		</FluidContainer>
 	);

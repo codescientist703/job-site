@@ -35,7 +35,7 @@ const JobCard = ({
 					<JobTitle>{jobtitle || <Skeleton />}</JobTitle>
 					<JobCompany>{company || <Skeleton width={100} />}</JobCompany>
 				</JobDetails>
-				{slug ? <StarIcon /> : <Skeleton width={30} />}
+				{jobtitle ? <StarIcon /> : <Skeleton width={30} />}
 			</CardTop>
 			<CardMiddle>
 				<Item>

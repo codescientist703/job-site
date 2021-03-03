@@ -14,6 +14,7 @@ import {
 	FluidContainer,
 	LayoutContainer,
 } from '../../components';
+import Skeleton from 'react-loading-skeleton';
 import { useParams } from 'react-router-dom';
 import axios from '../../axios';
 
@@ -53,29 +54,31 @@ const JobSingle = () => {
 	return (
 		<FluidContainer>
 			<Container>
-				{isLoading ? (
-					<div>Loading..</div>
-				) : (
-					<LayoutContainer is404={is404}>
-						<Breadcumb breadData={breadData} width={'lg'} />
-						<JobTitle>{data.title}</JobTitle>
-						<SingleJobContainer>
-							<JobCard type={'single'} {...data} />
-							<ShareIcon />
-							<Line />
-							<Content>
+				<Breadcumb breadData={breadData} width={'lg'} />
+				<LayoutContainer is404={is404}>
+					<JobTitle>{data.title || <Skeleton />}</JobTitle>
+					<SingleJobContainer>
+						<JobCard type={'single'} {...data} />
+						<ShareIcon />
+						<Line />
+						<Content>
+							{data.content ? (
 								<div
 									dangerouslySetInnerHTML={{
 										__html: data.content,
 									}}
 								></div>
-							</Content>
+							) : (
+								<Skeleton count={5} />
+							)}
+						</Content>
+						{isLoading === false && (
 							<ApplyBtn href={data.apply_link} target={'_blank'}>
 								Apply Now
 							</ApplyBtn>
-						</SingleJobContainer>
-					</LayoutContainer>
-				)}
+						)}
+					</SingleJobContainer>
+				</LayoutContainer>
 			</Container>
 		</FluidContainer>
 	);
