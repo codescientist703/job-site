@@ -42,11 +42,6 @@ const JobList = (props) => {
 		{ name: 'home', link: '/' },
 		{ name: title, link: `/category/${categoryName}` },
 	];
-
-	// if (props.location.state) {
-	// 	console.log(props.location.state.searchValue);
-	// }
-
 	if (categoryName === 'search') {
 		categoryName = 'jobs';
 	}
@@ -88,18 +83,15 @@ const JobList = (props) => {
 		setisFilterOpen(!isFilterOpen);
 	};
 	const handlePageClick = (data) => {
-		setData([]);
 		setfilterData({
 			...filterData,
 			page: data.selected + 1,
 		});
 	};
 	const onFilterSubmit = (name, value) => {
-		setData([]);
 		setfilterData({ ...filterData, [name]: value, page: 1 });
 	};
 	const onFilterClear = () => {
-		setData([]);
 		setfilterData({
 			...filterData,
 			company: '',
@@ -128,13 +120,14 @@ const JobList = (props) => {
 							isLoading={isLoading}
 						/>
 						<JobContainer>
-							<JobCards />
-							{isLoading && (
+							{isLoading ? (
 								<>
 									{[...Array(10)].map((e, i) => (
 										<JobCard key={i} />
 									))}
 								</>
+							) : (
+								<JobCards />
 							)}
 							<PaginateComponent>
 								<ReactPaginate
