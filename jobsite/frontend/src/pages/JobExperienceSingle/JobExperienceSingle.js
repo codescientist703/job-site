@@ -65,9 +65,7 @@ const JobExperienceSingle = () => {
 					<SingleJobContainer>
 						<ExperienceCard type={'single'} {...data} />
 						{isLoading === false && <ShareIcon />}
-
 						<Line />
-
 						<Content>
 							{isLoading ? (
 								<Skeleton count={5} />

@@ -33,7 +33,7 @@ const JobCard = ({
 			<CardTop>
 				<JobDetails>
 					<JobTitle>{jobtitle || <Skeleton />}</JobTitle>
-					<JobCompany>{company || <Skeleton width={100} />}</JobCompany>
+					<JobCompany>{company || <Skeleton width={80} />}</JobCompany>
 				</JobDetails>
 				{jobtitle ? <StarIcon /> : <Skeleton width={30} />}
 			</CardTop>
@@ -52,10 +52,10 @@ const JobCard = ({
 					) : (
 						<>
 							<div>
-								<Skeleton width={90} />
+								<Skeleton width={70} />
 							</div>
 							<div>
-								<Skeleton width={90} />
+								<Skeleton width={70} />
 							</div>
 						</>
 					)}
@@ -74,10 +74,10 @@ const JobCard = ({
 					) : (
 						<>
 							<div>
-								<Skeleton width={90} />
+								<Skeleton width={70} />
 							</div>
 							<div>
-								<Skeleton width={90} />
+								<Skeleton width={70} />
 							</div>
 						</>
 					)}
@@ -98,10 +98,10 @@ const JobCard = ({
 					) : (
 						<>
 							<div>
-								<Skeleton width={90} />
+								<Skeleton width={70} />
 							</div>
 							<div>
-								<Skeleton width={90} />
+								<Skeleton width={70} />
 							</div>
 						</>
 					)}
@@ -120,10 +120,10 @@ const JobCard = ({
 					) : (
 						<>
 							<div>
-								<Skeleton width={90} />
+								<Skeleton width={70} />
 							</div>
 							<div>
-								<Skeleton width={90} />
+								<Skeleton width={70} />
 							</div>
 						</>
 					)}

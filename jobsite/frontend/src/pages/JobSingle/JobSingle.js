@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
 	JobTitle,
 	SingleJobContainer,
@@ -54,8 +54,8 @@ const JobSingle = () => {
 	return (
 		<FluidContainer>
 			<Container>
-				<Breadcumb breadData={breadData} width={'lg'} />
 				<LayoutContainer is404={is404}>
+					<Breadcumb breadData={breadData} width={'lg'} />
 					<JobTitle>{data.title || <Skeleton />}</JobTitle>
 					<SingleJobContainer>
 						<JobCard type={'single'} {...data} />

@@ -28,7 +28,6 @@ function ExperienceCard({ type, company, name, jobtitle, description, slug }) {
 					) : (
 						<Skeleton width={100} />
 					)}
-
 					<JobRole>{jobtitle || <Skeleton />}</JobRole>
 				</JobDetail>
 				<JobDetail>
