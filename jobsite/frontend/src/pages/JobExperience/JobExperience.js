@@ -50,35 +50,37 @@ function JobExperience() {
 	return (
 		<FluidContainer>
 			<Container>
+				<Breadcumb breadData={breadData} />
+				<Title>Interview Experiences</Title>
+				<Paragraph>
+					Find interview experiences of your dream company hear!!
+				</Paragraph>
 				{isLoading ? (
-					<div>Loading...</div>
-				) : (
 					<>
-						<Breadcumb breadData={breadData} />
-						<Title>Interview Experiences</Title>
-						<Paragraph>
-							Find interview experiences of your dream company hear!!
-						</Paragraph>
-						<ExperienceCards />
-						<PaginateComponent>
-							<ReactPaginate
-								previousLabel={`prev`}
-								nextLabel={'next'}
-								breakLabel={'...'}
-								breakClassName={'break-me'}
-								pageCount={numPages}
-								marginPagesDisplayed={3}
-								pageRangeDisplayed={2}
-								onPageChange={handlePageClick}
-								containerClassName={'pagination'}
-								subContainerClassName={'pages pagination'}
-								activeClassName={'active'}
-								disabledClassName={'disabled'}
-								forcePage={page - 1}
-							/>
-						</PaginateComponent>
+						{[...Array(10)].map((e, i) => (
+							<ExperienceCard key={i} />
+						))}
 					</>
+				) : (
+					<ExperienceCards />
 				)}
+				<PaginateComponent>
+					<ReactPaginate
+						previousLabel={`prev`}
+						nextLabel={'next'}
+						breakLabel={'...'}
+						breakClassName={'break-me'}
+						pageCount={numPages}
+						marginPagesDisplayed={3}
+						pageRangeDisplayed={2}
+						onPageChange={handlePageClick}
+						containerClassName={'pagination'}
+						subContainerClassName={'pages pagination'}
+						activeClassName={'active'}
+						disabledClassName={'disabled'}
+						forcePage={page - 1}
+					/>
+				</PaginateComponent>
 			</Container>
 		</FluidContainer>
 	);

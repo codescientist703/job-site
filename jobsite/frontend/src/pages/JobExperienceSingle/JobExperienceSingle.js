@@ -4,11 +4,8 @@ import {
 	SingleJobContainer,
 	Line,
 	ShareIcon,
-	About,
-	ApplyBtn,
 } from './JobExperienceSingle.elements';
 import {
-	JobCard,
 	Container,
 	Content,
 	Breadcumb,
@@ -18,13 +15,15 @@ import {
 } from '../../components';
 import { useParams } from 'react-router-dom';
 import axios from '../../axios';
+import Skeleton from 'react-loading-skeleton';
 
 const JobExperienceSingle = () => {
 	const [data, setData] = useState({});
+
 	const breadData = [
 		{ name: 'home', link: '/' },
 		{ name: 'experience', link: '/job-experience' },
-		{ name: `${data.company}`, link: '/job-experience/exp' },
+		{ name: data.company ? data.company : '', link: '/job-experience/exp' },
 	];
 	const [is404, setIs404] = useState(false);
 
@@ -54,26 +53,34 @@ const JobExperienceSingle = () => {
 	return (
 		<FluidContainer>
 			<Container>
-				{isLoading ? (
-					<div>Loading..</div>
-				) : (
-					<LayoutContainer>
-						<Breadcumb breadData={breadData} width={'lg'} />
-						<JobTitle>Interview Experience for Flipkart</JobTitle>
-						<SingleJobContainer>
-							<ExperienceCard type={'single'} {...data} />
-							<ShareIcon />
-							<Line />
-							<Content>
+				<LayoutContainer>
+					<Breadcumb breadData={breadData} width={'lg'} />
+					<JobTitle>
+						{isLoading ? (
+							<Skeleton />
+						) : (
+							`Interview experience for ${data.company}`
+						)}
+					</JobTitle>
+					<SingleJobContainer>
+						<ExperienceCard type={'single'} {...data} />
+						{isLoading === false && <ShareIcon />}
+
+						<Line />
+
+						<Content>
+							{isLoading ? (
+								<Skeleton count={5} />
+							) : (
 								<div
 									dangerouslySetInnerHTML={{
 										__html: data.content,
 									}}
 								></div>
-							</Content>
-						</SingleJobContainer>
-					</LayoutContainer>
-				)}
+							)}
+						</Content>
+					</SingleJobContainer>
+				</LayoutContainer>
 			</Container>
 		</FluidContainer>
 	);

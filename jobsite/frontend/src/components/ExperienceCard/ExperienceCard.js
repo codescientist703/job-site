@@ -9,48 +9,77 @@ import {
 	Paragraph,
 	Icon,
 	JobDetail,
-	ReadMore,
 	Contributer,
 } from './ExperienceCard.elements';
 import { BiBookContent, BiUser, BiBuildings } from 'react-icons/bi';
 import { FaHandshake } from 'react-icons/fa';
 import { LinkButton } from '../../components';
+import Skeleton from 'react-loading-skeleton';
 
 function ExperienceCard({ type, company, name, jobtitle, description, slug }) {
 	return (
 		<Card type={type}>
 			<CardHeader>
 				<JobDetail>
-					<Icon>
-						<BiUser />
-					</Icon>
-					<JobRole>{jobtitle}</JobRole>
+					{jobtitle ? (
+						<Icon>
+							<BiUser />
+						</Icon>
+					) : (
+						<Skeleton width={100} />
+					)}
+
+					<JobRole>{jobtitle || <Skeleton />}</JobRole>
 				</JobDetail>
 				<JobDetail>
-					<Icon>
-						{' '}
-						<BiBuildings />
-					</Icon>
-
-					<CompanyName>{company}</CompanyName>
+					{company ? (
+						<>
+							<Icon>
+								{' '}
+								<BiBuildings />
+							</Icon>
+							<CompanyName>{company}</CompanyName>
+						</>
+					) : (
+						<Skeleton width={100} />
+					)}
 				</JobDetail>
 			</CardHeader>
 			{type !== 'single' && (
 				<CardDescription>
-					<Icon>
-						<BiBookContent />
-					</Icon>
-					<Paragraph>
-						{description}...
-						<LinkButton to={`job-experience/${slug}`}>Read More</LinkButton>
-					</Paragraph>
+					{description ? (
+						<>
+							<Icon>
+								<BiBookContent />
+							</Icon>
+							<Paragraph>
+								{description}...
+								<LinkButton to={`job-experience/${slug}`}>Read More</LinkButton>
+							</Paragraph>
+						</>
+					) : (
+						<div>
+							<div>
+								<Skeleton width={100} count={5} />
+							</div>
+							<div>
+								<Skeleton width={100} count={5} />
+							</div>
+						</div>
+					)}
 				</CardDescription>
 			)}
 			<CardCredits>
-				<Icon>
-					<FaHandshake />
-				</Icon>
-				Contributed by : <Contributer> {name}</Contributer>
+				{name ? (
+					<>
+						<Icon>
+							<FaHandshake />
+						</Icon>
+						Contributed by : <Contributer> {name}</Contributer>
+					</>
+				) : (
+					<Skeleton />
+				)}
 			</CardCredits>
 		</Card>
 	);

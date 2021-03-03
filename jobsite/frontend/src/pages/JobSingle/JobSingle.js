@@ -59,7 +59,7 @@ const JobSingle = () => {
 					<JobTitle>{data.title || <Skeleton />}</JobTitle>
 					<SingleJobContainer>
 						<JobCard type={'single'} {...data} />
-						<ShareIcon />
+						{isLoading === false && <ShareIcon />}
 						<Line />
 						<Content>
 							{data.content ? (
