@@ -6,6 +6,7 @@ import {
 	JobSingle,
 	JobExperience,
 	JobExperienceSingle,
+	JobExperienceForm,
 	Page404,
 } from './pages';
 import { theme } from './theme';
@@ -26,9 +27,12 @@ function App() {
 						exact
 						component={JobExperienceSingle}
 					/>
+					<Route
+						path='/contribute-your-experience'
+						exact
+						component={JobExperienceForm}
+					/>
 					<Route path='/:slug' component={JobSingle} />
-
-					{/* <Route component={Page404} /> */}
 				</Switch>
 				<Footer />
 			</ThemeProvider>

@@ -23,5 +23,10 @@ const Data = [
 		link: '/job-experience',
 		icon: <BiBuildings />,
 	},
+	{
+		name: 'Contribute',
+		link: '/contribute-your-experience',
+		icon: <BiBuildings />,
+	},
 ];
 export default Data;
