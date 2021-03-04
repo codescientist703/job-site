@@ -36,7 +36,7 @@ const JobList = (props) => {
 	const [numPages, setNumPages] = useState(-1);
 	const [is404, setIs404] = useState(false);
 	const title =
-		filterData.search !== '' ? 'search results' : `all ${categoryName}`;
+		filterData.search !== '' ? 'search results' : `${categoryName}`;
 
 	const breadData = [
 		{ name: 'home', link: '/' },
@@ -127,8 +127,8 @@ const JobList = (props) => {
 									))}
 								</>
 							) : (
-								<JobCards />
-							)}
+									<JobCards />
+								)}
 							<PaginateComponent>
 								<ReactPaginate
 									previousLabel={`prev`}

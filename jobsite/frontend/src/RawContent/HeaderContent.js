@@ -15,7 +15,7 @@ const Data = [
 	},
 	{
 		name: 'Internships',
-		link: '/category/haha',
+		link: '/category/internship',
 		icon: <BiBuildings />,
 	},
 	{

@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 export const Button = styled.a`
+	display: inline-block;
 	font-size: 1.1rem;
 	padding: 7px 25px;
 	border: none;

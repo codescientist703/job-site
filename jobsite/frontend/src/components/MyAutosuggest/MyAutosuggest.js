@@ -9,16 +9,16 @@ export const InputContainer = styled.div`
 		border-radius: 5px;
 		font-size: 1rem;
 		width: 100%;
-		@media screen and (min-width: ${({ theme }) => theme.md}px) {
+		/* @media screen and (min-width: ${({ theme }) => theme.md}px) {
 			width: 100%;
 		}
 		@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 			width: auto;
-		}
+		} */
 
 		&:focus {
 			/* border: 5px solid lightblue; */
-			border-color: blue;
+			border-color: red;
 		}
 	}
 	.react-autosuggest__input--open {

@@ -23,7 +23,7 @@ export const FilterContainer = styled.aside`
 		border: 1px solid #ddd;
 		max-height: 100%;
 		margin-bottom: 1rem;
-		width: 416px;
+		width: 350px;
 	}
 `;
 export const FilterBtn = styled.button`
@@ -86,12 +86,12 @@ export const FilterInput = styled.input`
 	outline: none;
 	font-size: 1rem;
 	width: 100%;
-	@media screen and (min-width: ${({ theme }) => theme.md}px) {
+	/* @media screen and (min-width: ${({ theme }) => theme.md}px) {
 		width: 100%;
 	}
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
-		width: auto;
-	}
+		width: 100%;
+	} */
 
 	&:focus {
 		/* border: 5px solid lightblue; */

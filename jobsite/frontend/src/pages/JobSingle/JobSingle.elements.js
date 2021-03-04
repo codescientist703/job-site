@@ -13,8 +13,9 @@ export const SingleJobContainer = styled.div`
 	max-width:  ${({ theme }) => theme.maxWidthMd}px;
 	border: 1px solid #ddd;
 	border-radius: 5px;
-	margin-bottom: 2rem;
+	/* margin-bottom: 2rem; */
 	background-color: #fff;
+	/* padding: 1rem; */
 `;
 
 export const ShareIcon = styled(FiShare2)`
@@ -32,5 +33,6 @@ export const Line = styled.div`
 `;
 
 export const ApplyBtn = styled(Button)`
-	margin: 1rem 1rem;
+	margin: 1rem;
+	margin-top: 0;
 `;
