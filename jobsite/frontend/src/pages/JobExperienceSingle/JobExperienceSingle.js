@@ -19,7 +19,6 @@ import Skeleton from 'react-loading-skeleton';
 
 const JobExperienceSingle = () => {
 	const [data, setData] = useState({});
-
 	const breadData = [
 		{ name: 'home', link: '/' },
 		{ name: 'experience', link: '/job-experience' },
@@ -53,7 +52,7 @@ const JobExperienceSingle = () => {
 	return (
 		<FluidContainer>
 			<Container>
-				<LayoutContainer>
+				<LayoutContainer is404={is404}>
 					<Breadcumb breadData={breadData} width={'lg'} />
 					<JobTitle>
 						{isLoading ? (

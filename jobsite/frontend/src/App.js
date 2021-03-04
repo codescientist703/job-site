@@ -28,7 +28,7 @@ function App() {
 					/>
 					<Route path='/:slug' component={JobSingle} />
 
-					<Route component={Page404} />
+					{/* <Route component={Page404} /> */}
 				</Switch>
 				<Footer />
 			</ThemeProvider>
