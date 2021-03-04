@@ -1,5 +1,19 @@
 import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
+
+export const Btn = styled.button`
+	font-size: 1.1rem;
+	padding: 7px 25px;
+	border: none;
+	background: ${({ theme }) => theme.button.background};
+	color: ${({ theme }) => theme.button.color};
+	transition: background-color 0.7s;
+	outline: none;
+	border-radius: 5px;
+	text-decoration: none;
+`;
+
+
 export const Button = styled.a`
 	display: inline-block;
 	font-size: 1.1rem;
