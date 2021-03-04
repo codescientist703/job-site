@@ -100,6 +100,11 @@ const SecOne = () => {
 							name='search'
 							value={searchValue}
 							onChange={onChange}
+							onKeyPress={(e) => {
+								if (e.key === 'Enter') {
+									onChange(e);
+								}
+							}}
 						/>
 						<SearchButton
 							to={{

@@ -35,8 +35,7 @@ const JobList = (props) => {
 	const [data, setData] = useState([]);
 	const [numPages, setNumPages] = useState(-1);
 	const [is404, setIs404] = useState(false);
-	const title =
-		filterData.search !== '' ? 'search results' : `${categoryName}`;
+	const title = filterData.search !== '' ? 'search results' : `${categoryName}`;
 
 	const breadData = [
 		{ name: 'home', link: '/' },
@@ -104,9 +103,9 @@ const JobList = (props) => {
 	};
 
 	return (
-		<FluidContainer>
-			<Container>
-				<LayoutContainer is404={is404}>
+		<LayoutContainer is404={is404}>
+			<FluidContainer>
+				<Container>
 					<Breadcumb breadData={breadData} />
 					<MainContainer>
 						<FilterBtn onClick={toggleFilterClick}>
@@ -127,8 +126,8 @@ const JobList = (props) => {
 									))}
 								</>
 							) : (
-									<JobCards />
-								)}
+								<JobCards />
+							)}
 							<PaginateComponent>
 								<ReactPaginate
 									previousLabel={`prev`}
@@ -148,9 +147,9 @@ const JobList = (props) => {
 							</PaginateComponent>
 						</JobContainer>
 					</MainContainer>
-				</LayoutContainer>
-			</Container>
-		</FluidContainer>
+				</Container>
+			</FluidContainer>
+		</LayoutContainer>
 	);
 };
 

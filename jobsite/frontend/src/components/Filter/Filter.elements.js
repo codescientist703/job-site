@@ -23,7 +23,7 @@ export const FilterContainer = styled.aside`
 		border: 1px solid #ddd;
 		max-height: 100%;
 		margin-bottom: 1rem;
-		width: 350px;
+		width: 375px;
 	}
 `;
 export const FilterBtn = styled.button`

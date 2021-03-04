@@ -50,9 +50,9 @@ const JobExperienceSingle = () => {
 		fetchData();
 	}, [slug]);
 	return (
-		<FluidContainer>
-			<Container>
-				<LayoutContainer is404={is404}>
+		<LayoutContainer is404={is404}>
+			<FluidContainer>
+				<Container>
 					<Breadcumb breadData={breadData} width={'lg'} />
 					<JobTitle>
 						{isLoading ? (
@@ -77,9 +77,9 @@ const JobExperienceSingle = () => {
 							)}
 						</Content>
 					</SingleJobContainer>
-				</LayoutContainer>
-			</Container>
-		</FluidContainer>
+				</Container>
+			</FluidContainer>
+		</LayoutContainer>
 	);
 };
 

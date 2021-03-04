@@ -52,9 +52,9 @@ const JobSingle = () => {
 		fetchData();
 	}, [slug]);
 	return (
-		<FluidContainer>
-			<Container>
-				<LayoutContainer is404={is404}>
+		<LayoutContainer is404={is404}>
+			<FluidContainer>
+				<Container>
 					<Breadcumb breadData={breadData} width={'lg'} />
 					<JobTitle>{data.title || <Skeleton />}</JobTitle>
 					<SingleJobContainer>
@@ -78,9 +78,9 @@ const JobSingle = () => {
 							</ApplyBtn>
 						)}
 					</SingleJobContainer>
-				</LayoutContainer>
-			</Container>
-		</FluidContainer>
+				</Container>
+			</FluidContainer>
+		</LayoutContainer>
 	);
 };
 
