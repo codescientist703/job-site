@@ -4,9 +4,8 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { Container, FluidContainer, Btn } from '../../components';
 import { Title, Form, FormInput, Label, Inpt } from './JobExperience.elements';
 import axios from '../../axios';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-toast.configure();
+import { toast } from 'react-toastify';
+
 const JobExperienceForm = () => {
 	const [formData, setFormData] = useState({
 		name: '',
@@ -20,7 +19,9 @@ const JobExperienceForm = () => {
 			const apiUrl = 'interview/create/';
 			const response = await axios.post(apiUrl, formData);
 			console.log(response.data);
-		} catch (error) {}
+		} catch (error) {
+			console.error(error);
+		}
 	};
 	const notify = () => {
 		toast('Wow so easy!', { position: toast.POSITION.TOP_LEFT });
@@ -48,7 +49,7 @@ const JobExperienceForm = () => {
 	return (
 		<FluidContainer>
 			<Container>
-				<Title>Interview Experience</Title>
+				<Title>Share Your Interview Experience</Title>
 				<Form onSubmit={handleSubmit} method='POST'>
 					<FormInput>
 						<Label>Name</Label>
