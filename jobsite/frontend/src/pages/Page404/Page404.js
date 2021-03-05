@@ -1,4 +1,4 @@
-import { NotFoundPage, IMG, Error, Text, BackBtn } from './Page404.elements';
+import { NotFoundPage, IMG, Text, BackBtn } from './Page404.elements';
 import NotFound from '../../images/illustatus.svg';
 
 const Page404 = () => {

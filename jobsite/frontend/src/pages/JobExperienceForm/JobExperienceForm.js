@@ -4,7 +4,9 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { Container, FluidContainer, Btn } from '../../components';
 import { Title, Form, FormInput, Label, Inpt } from './JobExperience.elements';
 import axios from '../../axios';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure();
 const JobExperienceForm = () => {
 	const [formData, setFormData] = useState({
 		name: '',
@@ -16,25 +18,39 @@ const JobExperienceForm = () => {
 	const submitData = async () => {
 		try {
 			const apiUrl = 'interview/create/';
-			axios.post(apiUrl, formData);
-			const response = await response;
+			const response = await axios.post(apiUrl, formData);
 			console.log(response.data);
 		} catch (error) {}
+	};
+	const notify = () => {
+		toast('Wow so easy!', { position: toast.POSITION.TOP_LEFT });
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		submitData();
+		notify();
 	};
+	console.log(formData);
 	const onChange = (e) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
+	};
+
+	const resetForm = () => {
+		setFormData({
+			name: '',
+			jobtitle: '',
+			company: '',
+			email: '',
+			content: '',
+		});
 	};
 
 	return (
 		<FluidContainer>
 			<Container>
 				<Title>Interview Experience</Title>
-				<Form onSubmit={handleSubmit}>
+				<Form onSubmit={handleSubmit} method='POST'>
 					<FormInput>
 						<Label>Name</Label>
 						<Inpt

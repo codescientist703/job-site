@@ -32,7 +32,7 @@ const JobList = (props) => {
 	});
 	const [isFilterOpen, setisFilterOpen] = useState(false);
 	const [isLoading, setIsLoading] = useState(true);
-	const [data, setData] = useState([{}]);
+	const [data, setData] = useState([]);
 	const [numPages, setNumPages] = useState(-1);
 	const [is404, setIs404] = useState(false);
 	const title = filterData.search !== '' ? 'search results' : `${categoryName}`;
@@ -102,7 +102,7 @@ const JobList = (props) => {
 		});
 	};
 
-	const tempdata = [{}, {}, {}, {}, {}];
+	const loadData = [{}, {}, {}, {}, {}];
 	return (
 		<LayoutContainer is404={is404}>
 			<FluidContainer>
@@ -121,7 +121,7 @@ const JobList = (props) => {
 						/>
 						<JobContainer>
 							{isLoading ? (
-								tempdata.map((e, i) => <JobCard key={i} />)
+								loadData.map((e, i) => <JobCard key={i} />)
 							) : (
 								<JobCards />
 							)}

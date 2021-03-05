@@ -26,24 +26,24 @@ function JobExperience() {
 		);
 	};
 
-	async function fetchData() {
-		if (isLoading === false) {
-			setIsLoading(true);
-		}
-		let apiUrl = `interviewlist/?page=${page}`;
-		try {
-			const response = await axios.get(apiUrl);
-			setData(response.data.results);
-			setIsLoading(false);
-			setNumPages(Math.ceil(response.data.count / response.data.page_size));
-		} catch (error) {
-			setIsLoading(false);
-		}
-	}
 	const handlePageClick = (data) => {
 		setPage(data.selected + 1);
 	};
 	useEffect(() => {
+		async function fetchData() {
+			if (isLoading === false) {
+				setIsLoading(true);
+			}
+			let apiUrl = `interviewlist/?page=${page}`;
+			try {
+				const response = await axios.get(apiUrl);
+				setData(response.data.results);
+				setIsLoading(false);
+				setNumPages(Math.ceil(response.data.count / response.data.page_size));
+			} catch (error) {
+				setIsLoading(false);
+			}
+		}
 		fetchData();
 	}, [page]);
 
