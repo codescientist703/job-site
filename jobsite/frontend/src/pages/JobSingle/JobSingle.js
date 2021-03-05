@@ -38,7 +38,7 @@ const JobSingle = () => {
 			if (isLoading === false) {
 				setIsLoading(true);
 			}
-			let apiUrl = `job/${slug}`;
+			let apiUrl = `job/${slug}/`;
 			try {
 				const response = await axios.get(apiUrl);
 				setIsLoading(false);
