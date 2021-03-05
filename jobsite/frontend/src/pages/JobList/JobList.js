@@ -12,7 +12,6 @@ import {
 	JobContainer,
 	FilterBtn,
 	PaginateComponent,
-	NoData,
 } from './JobList.elements';
 import axios from '../../axios';
 import ReactPaginate from 'react-paginate';
@@ -45,30 +44,30 @@ const JobList = (props) => {
 		categoryName = 'jobs';
 	}
 	useEffect(() => {
+		async function fetchData() {
+			if (is404 === true) {
+				setIs404(false);
+			}
+			if (isLoading === false) {
+				setIsLoading(true);
+			}
+			let apiUrl = `joblist/${categoryName}/?location=${filterData.location}&company=${filterData.company}&jobtitle=${filterData.jobtitle}&salary=${filterData.salary}&experience=${filterData.experience}&page=${filterData.page}`;
+			if (filterData.search !== '') {
+				apiUrl = apiUrl + `&search=${filterData.search}`;
+			}
+			try {
+				const response = await axios.get(apiUrl);
+				setData(response.data.results);
+				setIsLoading(false);
+				setNumPages(Math.ceil(response.data.count / response.data.page_size));
+			} catch (error) {
+				setIsLoading(false);
+				setIs404(true);
+			}
+		}
 		fetchData();
 	}, [filterData, categoryName]);
 
-	async function fetchData() {
-		if (is404 === true) {
-			setIs404(false);
-		}
-		if (isLoading === false) {
-			setIsLoading(true);
-		}
-		let apiUrl = `joblist/${categoryName}/?location=${filterData.location}&company=${filterData.company}&jobtitle=${filterData.jobtitle}&salary=${filterData.salary}&experience=${filterData.experience}&page=${filterData.page}`;
-		if (filterData.search !== '') {
-			apiUrl = apiUrl + `&search=${filterData.search}`;
-		}
-		try {
-			const response = await axios.get(apiUrl);
-			setData(response.data.results);
-			setIsLoading(false);
-			setNumPages(Math.ceil(response.data.count / response.data.page_size));
-		} catch (error) {
-			setIsLoading(false);
-			setIs404(true);
-		}
-	}
 	const JobCards = () => {
 		return (
 			<>
@@ -103,6 +102,7 @@ const JobList = (props) => {
 	};
 
 	const loadData = [{}, {}, {}, {}, {}];
+	console.log('fck');
 	return (
 		<LayoutContainer is404={is404}>
 			<FluidContainer>

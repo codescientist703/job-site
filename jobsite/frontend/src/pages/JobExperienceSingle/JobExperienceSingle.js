@@ -28,25 +28,25 @@ const JobExperienceSingle = () => {
 
 	const [isLoading, setIsLoading] = useState(true);
 	let { slug } = useParams();
-	const fetchData = async () => {
-		if (is404 === true) {
-			setIs404(false);
-		}
-		if (isLoading === false) {
-			setIsLoading(true);
-		}
-		let apiUrl = `interview/${slug}/`;
-		try {
-			const response = await axios.get(apiUrl);
-			setIsLoading(false);
-			setData(response.data);
-		} catch (error) {
-			setIsLoading(false);
-			setIs404(true);
-		}
-	};
 
 	useEffect(() => {
+		const fetchData = async () => {
+			if (is404 === true) {
+				setIs404(false);
+			}
+			if (isLoading === false) {
+				setIsLoading(true);
+			}
+			let apiUrl = `interview/${slug}/`;
+			try {
+				const response = await axios.get(apiUrl);
+				setIsLoading(false);
+				setData(response.data);
+			} catch (error) {
+				setIsLoading(false);
+				setIs404(true);
+			}
+		};
 		fetchData();
 	}, [slug]);
 	return (
