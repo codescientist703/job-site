@@ -75,7 +75,7 @@ const MyAutosuggest = ({
 		const inputValue = value.trim().toLowerCase();
 		const response = await axios.get(`${field}/?search=` + inputValue);
 
-		return response.data;
+		return response.data.slice(0, 6);
 	};
 
 	const onChange = (event, { newValue }) => {
