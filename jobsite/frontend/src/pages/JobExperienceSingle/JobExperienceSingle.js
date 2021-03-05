@@ -35,7 +35,7 @@ const JobExperienceSingle = () => {
 		if (isLoading === false) {
 			setIsLoading(true);
 		}
-		let apiUrl = `interview/${slug}`;
+		let apiUrl = `interview/${slug}/`;
 		try {
 			const response = await axios.get(apiUrl);
 			setIsLoading(false);

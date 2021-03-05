@@ -13,5 +13,7 @@ urlpatterns = [
     path('joblist/<str:category>/', views.JobListView.as_view()),
     path('job/<str:slug>/', views.JobView.as_view()),
     path('interviewlist/', views.InterviewListView.as_view()),
+    path('interview/create/', views.InterviewFormView.as_view()),
     path('interview/<str:slug>/', views.InterviewView.as_view()),
+
 ]

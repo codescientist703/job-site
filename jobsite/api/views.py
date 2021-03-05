@@ -4,11 +4,12 @@ from .models import Category, Location, JobTitle, Job, Interview, Company
 from .serializers import (
     CategorySerializer, JobTitleSerializer,
     LocationSerializer, JobListSerializer, JobSerializer, InterviewListSerializer, InterviewSerializer,
-    CompanySerializer)
+    CompanySerializer, InterviewFormSerializer)
 from django_filters.rest_framework import DjangoFilterBackend
 from .filters import JobListFilter
 from django.shortcuts import get_object_or_404
 from jobsite import settings
+from rest_framework import permissions
 
 
 class CategoryView(generics.ListAPIView):
@@ -84,3 +85,9 @@ class InterviewView(generics.RetrieveAPIView):
     pagination_class = None
     queryset = Interview.objects.all()
     lookup_field = 'slug'
+
+
+class InterviewFormView(generics.CreateAPIView):
+    serializer_class = InterviewFormSerializer
+    queryset = Interview.objects.all()
+    permission_classes = [permissions.AllowAny]
