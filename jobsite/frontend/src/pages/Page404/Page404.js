@@ -6,9 +6,9 @@ const Page404 = () => {
 		<NotFoundPage>
 			<IMG src={NotFound} alt='404 Not Found' />
 			<Text>
-				<span>404 Error!!</span>
+				<span>Error 404 !</span>
 				<br />
-				The page you are looking for does not exists!
+				Oops! The page you're looking for cannot be found.
 			</Text>
 			<BackBtn to='/'>&lt; Go Home</BackBtn>
 		</NotFoundPage>

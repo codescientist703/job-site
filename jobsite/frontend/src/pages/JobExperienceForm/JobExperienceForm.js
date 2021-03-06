@@ -34,10 +34,11 @@ const JobExperienceForm = () => {
 		toast('Wow so easy!', { position: toast.POSITION.TOP_LEFT });
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		submitData();
+		await submitData();
 		notify();
+		resetForm();
 	};
 	const onChange = (e) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -45,10 +46,14 @@ const JobExperienceForm = () => {
 
 	const resetForm = () => {
 		setFormData({
+			...formData,
 			name: '',
 			jobtitle: '',
 			company: '',
 			email: '',
+		});
+		setFormData({
+			...formData,
 			content: '',
 		});
 	};
@@ -56,7 +61,7 @@ const JobExperienceForm = () => {
 	return (
 		<FluidContainer>
 			<Container>
-				<Title>Interview Experience</Title>
+				<Title>Share Your Interview Experience</Title>
 				<Para>
 					Have any interview experience? Write your experience in below form and
 					help others so that they can also get insight about it!

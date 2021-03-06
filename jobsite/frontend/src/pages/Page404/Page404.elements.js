@@ -6,8 +6,7 @@ export const NotFoundPage = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding: 3rem 0;
-	margin-bottom: 1rem;
+	padding: 0.5rem 0.2rem 4rem 0.2rem;
 `;
 
 export const IMG = styled.img`
@@ -24,7 +23,7 @@ export const Text = styled.p`
 	/* color: #fff; */
 	margin-top: -1rem;
 	text-align: center;
-	font-size: 1.06rem;
+	font-size: 1rem;
 	span {
 		font-size: 2rem;
 		font-weight: 700;
@@ -35,7 +34,7 @@ export const Text = styled.p`
 		margin-top: -2.5rem;
 		font-size: 1.4rem;
 		span {
-			font-size: 3rem;
+			font-size: 4rem;
 		}
 	}
 `;
