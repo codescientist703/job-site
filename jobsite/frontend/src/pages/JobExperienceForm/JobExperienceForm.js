@@ -2,7 +2,14 @@ import { useState } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { Container, FluidContainer, Btn } from '../../components';
-import { Title, Form, FormInput, Label, Inpt, Para } from './JobExperience.elements';
+import {
+	Title,
+	Form,
+	FormInput,
+	Label,
+	Inpt,
+	Para,
+} from './JobExperience.elements';
 import axios from '../../axios';
 import { toast } from 'react-toastify';
 
@@ -19,13 +26,9 @@ const JobExperienceForm = () => {
 			const apiUrl = 'interview/create/';
 			const response = await axios.post(apiUrl, formData);
 			console.log(response.data);
-<<<<<<< HEAD
 		} catch (error) {
 			console.error(error);
 		}
-=======
-		} catch (error) { }
->>>>>>> 3a8c76b89d2d0f10c8413021e462007374cd6e34
 	};
 	const notify = () => {
 		toast('Wow so easy!', { position: toast.POSITION.TOP_LEFT });
@@ -53,12 +56,11 @@ const JobExperienceForm = () => {
 	return (
 		<FluidContainer>
 			<Container>
-<<<<<<< HEAD
-				<Title>Share Your Interview Experience</Title>
-=======
 				<Title>Interview Experience</Title>
-				<Para>Have any interview experience? Write your experience in below form and help others so that they can also get insight about it!</Para>
->>>>>>> 3a8c76b89d2d0f10c8413021e462007374cd6e34
+				<Para>
+					Have any interview experience? Write your experience in below form and
+					help others so that they can also get insight about it!
+				</Para>
 				<Form onSubmit={handleSubmit} method='POST'>
 					<FormInput>
 						<Label>Name</Label>
