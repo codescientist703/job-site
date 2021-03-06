@@ -10,5 +10,6 @@ export const Title = styled.h1`
 export const Paragraph = styled.p`
 
     margin-top: 2rem;
-    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+    font-size:  ${({ theme }) => theme.p}rem;
 `;

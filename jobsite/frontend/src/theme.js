@@ -5,6 +5,7 @@ export const theme = {
 	h4: 1,
 	h5: 0.875,
 	h6: 0.75,
+	p: 1.1,
 	shadow: '0 2px 6px rgba(0,0,0,0.2)',
 	shadowHover: '0 3px 10px rgba(0,0,0,0.4)',
 	subParaColor: 'rgba(0,0,0,0.6)',

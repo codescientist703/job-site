@@ -9,11 +9,12 @@ export const Title = styled.h1`
 export const Para = styled.p`
 	margin-left: 0.2rem;
 	margin-bottom: 0.7rem;
+	font-size: ${({ theme }) => theme.p}rem;
 `;
 
 export const Form = styled.form`
 	width: 100%;
-	padding: 1.5rem 2rem;
+	padding: 1.5rem;
 	background-color: #fff;
 	border-radius: 10px;
 	border: 1px solid #d9d9d9;
@@ -24,7 +25,6 @@ export const FormInput = styled.div`
 	margin-bottom: 1.5rem;
 	.ck-editor .ck-editor__editable {
 		min-height: 500px;
-		background: #f5f5f5;
 	}
 `;
 
