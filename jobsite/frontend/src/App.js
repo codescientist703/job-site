@@ -19,7 +19,7 @@ function App() {
 			<ThemeProvider theme={theme}>
 				<GlobalStyle />
 				<Header />
-				<ToastContainer />
+				<ToastContainer position='bottom-right' />
 				<Switch>
 					<Route path='/' exact component={Home} />
 					<Route path='/category/:categoryName' exact component={JobList} />

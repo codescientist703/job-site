@@ -6,6 +6,11 @@ export const Title = styled.h1`
 	margin-bottom: 2rem;
 `;
 
+export const Para = styled.p`
+	margin-left: 0.2rem;
+	margin-bottom: 0.7rem;
+`;
+
 export const Form = styled.form`
 	width: 100%;
 	padding: 1.5rem 2rem;
@@ -17,14 +22,15 @@ export const Form = styled.form`
 export const FormInput = styled.div`
 	width: 100%;
 	margin-bottom: 1.5rem;
-	.ck-editor__editable {
+	.ck-editor .ck-editor__editable {
 		min-height: 500px;
+		background: #f5f5f5;
 	}
 `;
 
 export const Label = styled.p`
 	margin-bottom: 0.3rem;
-	margin-left: 0.2rem;
+	/* margin-left: 0.2rem; */
 	font-size: 1rem;
 `;
 
@@ -32,8 +38,11 @@ export const Inpt = styled.input`
 	width: 100%;
 	padding: 0.6rem;
 	text-indent: 10px;
-	border-radius: 50px;
-	border: 1px solid #d9d9d9;
+	font-size: 1.04rem;
+	border: none;
+	border-bottom: 1px solid #c4c4c4;
+	border-radius: 3px;
+	background: #f5f5f5;
 	outline: none;
 
 	&::placeholder {
