@@ -25,19 +25,24 @@ const JobExperienceForm = () => {
 		try {
 			const apiUrl = 'interview/create/';
 			const response = await axios.post(apiUrl, formData);
-			console.log(response.data);
+			successToast('Your experience has been successfully submitted !');
 		} catch (error) {
-			console.error(error);
+			const errorData = error.response.data;
+			if (errorData.content) {
+				errorData.content.forEach(errorToast);
+			}
 		}
 	};
-	const notify = () => {
-		toast('Wow so easy!', { position: toast.POSITION.TOP_LEFT });
+	const successToast = (message) => {
+		toast.success(message);
+	};
+	const errorToast = (message) => {
+		toast.error(message);
 	};
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		await submitData();
-		notify();
 		resetForm();
 	};
 	const onChange = (e) => {

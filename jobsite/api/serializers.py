@@ -67,3 +67,5 @@ class InterviewFormSerializer(serializers.ModelSerializer):
     class Meta:
         model = Interview
         fields = ['name', 'email', 'jobtitle', 'content', 'company']
+        extra_kwargs = {'content': {"error_messages": {
+            "blank": "Content field cannot be empty."}}}

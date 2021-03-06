@@ -19,7 +19,13 @@ function App() {
 			<ThemeProvider theme={theme}>
 				<GlobalStyle />
 				<Header />
-				<ToastContainer position='bottom-right' />
+				<ToastContainer
+					position='top-right'
+					hideProgressBar={true}
+					autoClose={7000}
+					pauseOnHover={false}
+					closeOnClick
+				/>
 				<Switch>
 					<Route path='/' exact component={Home} />
 					<Route path='/category/:categoryName' exact component={JobList} />

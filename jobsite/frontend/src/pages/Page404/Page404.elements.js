@@ -6,7 +6,7 @@ export const NotFoundPage = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding: 0.5rem 0.2rem 4rem 0.2rem;
+	padding: 0.5rem 0.4rem 4rem 0.4rem;
 `;
 
 export const IMG = styled.img`
