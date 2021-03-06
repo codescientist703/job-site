@@ -5,7 +5,7 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 import { Container, FluidContainer, Btn } from '../../components';
-import { Title, Form, FormInput, Label, Inpt } from './JobExperience.elements';
+import { Title, Form, FormInput, Label, Inpt, Para } from './JobExperience.elements';
 
 const JobExperienceForm = () => {
 	const [content, setContent] = useState('');
@@ -20,22 +20,23 @@ const JobExperienceForm = () => {
 		<FluidContainer>
 			<Container>
 				<Title>Interview Experience</Title>
+				<Para>Have any interview experience? Write your experience in below form and help others so that they can also get insight about it!</Para>
 				<Form onSubmit={handleSubmit}>
 					<FormInput>
 						<Label>Name</Label>
-						<Inpt placeholder='e.g, Nihal' />
+						<Inpt type="text" placeholder='e.g, Nihal' />
 					</FormInput>
 					<FormInput>
 						<Label>Email</Label>
-						<Inpt placeholder='e.g, nihal@abc.com' />
+						<Inpt type="email" placeholder='e.g, nihal@abc.com' />
 					</FormInput>
 					<FormInput>
 						<Label>Job Title</Label>
-						<Inpt placeholder='e.g, Software Developer' />
+						<Inpt type="text" placeholder='e.g, Software Developer' />
 					</FormInput>
 					<FormInput>
 						<Label>Company</Label>
-						<Inpt placeholder='e.g, Amazon' />
+						<Inpt type="text" placeholder='e.g, Amazon' />
 					</FormInput>
 
 					<FormInput>

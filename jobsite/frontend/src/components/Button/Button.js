@@ -2,8 +2,12 @@ import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 
 export const Btn = styled.button`
-	font-size: 1.1rem;
-	padding: 7px 25px;
+	display: block;
+	width: 100%;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 0.6rem 1rem;
 	border: none;
 	background: ${({ theme }) => theme.button.background};
 	color: ${({ theme }) => theme.button.color};
