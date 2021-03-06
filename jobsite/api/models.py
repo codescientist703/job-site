@@ -61,14 +61,12 @@ class Job(models.Model):
 class Interview(models.Model):
     name = models.CharField(max_length=200)
     email = models.EmailField()
-    company = models.ForeignKey(
-        Company, on_delete=models.SET_NULL, blank=True, null=True)
-    jobtitle = models.ForeignKey(
-        JobTitle, on_delete=models.SET_NULL, blank=True, null=True)
-    content = RichTextField(blank=True, null=True)
+    company = models.CharField(max_length=200)
+    jobtitle = models.CharField(max_length=254)
+    content = RichTextField()
     draft = models.BooleanField(default=True)
     description = models.TextField(max_length=200, blank=True, null=True)
-    slug = models.SlugField(unique=True, max_length=300, null=True)
+    slug = models.SlugField(unique=True, max_length=300, null=True, blank=True)
 
     class Meta:
         ordering = ['draft']

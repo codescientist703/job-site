@@ -1,6 +1,5 @@
 import styled from 'styled-components/macro';
 import { FiStar } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
 export const Card = styled.div`
 	/* for mobile */
 	width: 100%;

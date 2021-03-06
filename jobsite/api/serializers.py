@@ -52,18 +52,18 @@ class JobSerializer(serializers.ModelSerializer):
 
 
 class InterviewListSerializer(serializers.ModelSerializer):
-    jobtitle = serializers.StringRelatedField()
-    company = serializers.StringRelatedField()
-
     class Meta:
         model = Interview
         fields = ['name', 'company', 'jobtitle', 'description', 'slug']
 
 
 class InterviewSerializer(serializers.ModelSerializer):
-    jobtitle = serializers.StringRelatedField()
-    company = serializers.StringRelatedField()
-
     class Meta:
         model = Interview
         fields = ['name', 'company', 'jobtitle', 'content']
+
+
+class InterviewFormSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Interview
+        fields = ['name', 'email', 'jobtitle', 'content', 'company']
