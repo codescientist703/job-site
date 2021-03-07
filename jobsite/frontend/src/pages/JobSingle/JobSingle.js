@@ -3,7 +3,6 @@ import {
 	JobTitle,
 	SingleJobContainer,
 	Line,
-	ShareIcon,
 	ApplyBtn,
 } from './JobSingle.elements';
 import {
@@ -13,6 +12,7 @@ import {
 	Breadcumb,
 	FluidContainer,
 	LayoutContainer,
+	ShareDropdown,
 } from '../../components';
 import Skeleton from 'react-loading-skeleton';
 import { useParams } from 'react-router-dom';
@@ -58,7 +58,7 @@ const JobSingle = () => {
 					<JobTitle>{data.title || <Skeleton />}</JobTitle>
 					<SingleJobContainer>
 						<JobCard type={'single'} {...data} />
-						{isLoading === false && <ShareIcon />}
+						{isLoading === false && <ShareDropdown />}
 						<Line />
 						<Content>
 							{isLoading === false ? (

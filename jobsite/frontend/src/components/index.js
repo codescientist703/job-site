@@ -13,3 +13,4 @@ export { default as ExperienceCard } from './ExperienceCard/ExperienceCard';
 export { default as Filter } from './Filter/Filter';
 export { default as LayoutContainer } from './Container/LayoutContainer';
 export { default as MyAutosuggest } from './MyAutosuggest/MyAutosuggest';
+export { default as ShareDropdown } from './ShareDropdown/ShareDropdown';

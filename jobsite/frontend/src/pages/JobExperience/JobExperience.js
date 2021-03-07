@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Container from '../../components/Container/Container';
 import { Title, Paragraph } from './JobExperience.elements';
-import {
-	Breadcumb,
-	ExperienceCard,
-	FluidContainer,
-	LayoutContainer,
-} from '../../components';
+import { Breadcumb, ExperienceCard, FluidContainer } from '../../components';
 import axios from '../../axios';
 import { PaginateComponent } from '../JobList/JobList.elements';
 import ReactPaginate from 'react-paginate';
