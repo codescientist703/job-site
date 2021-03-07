@@ -51,14 +51,17 @@ class JobListView(generics.ListAPIView):
 
     def get_queryset(self):
         category = self.kwargs.get('category')
-        categoryObj = get_object_or_404(Category, name=category)
-        jobs = Job.objects.filter(category=categoryObj)
+        self.categoryObj = get_object_or_404(Category, name=category)
+        jobs = Job.objects.filter(category=self.categoryObj)
         return jobs
 
     def list(self, request, *args, **kwargs):
         response = super().list(request, args, kwargs)
         # Add data to response.data Example for your object:
         response.data['page_size'] = settings.REST_FRAMEWORK['PAGE_SIZE']
+        response.data['description'] = self.categoryObj.description
+        response.data['title'] = self.categoryObj.title
+
         return response
 
 

@@ -92,7 +92,7 @@ const JobCard = ({
 								&nbsp; Salary
 							</ItemTitle>
 							<ItemDescription>
-								{salary === -1 ? 'Not Specified' : `₹ ${salary} /annum`}
+								{salary === 0 ? 'Not Specified' : `₹ ${salary} /annum`}
 							</ItemDescription>
 						</>
 					) : (

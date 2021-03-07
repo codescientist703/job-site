@@ -61,7 +61,7 @@ const JobSingle = () => {
 						{isLoading === false && <ShareIcon />}
 						<Line />
 						<Content>
-							{data.content ? (
+							{isLoading === false ? (
 								<div
 									dangerouslySetInnerHTML={{
 										__html: data.content,
