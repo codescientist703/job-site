@@ -22,7 +22,13 @@ const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 			{!isDesktop && <SideBarLogo to='/'>LOGO</SideBarLogo>}
 			{Data.map((data, index) => (
 				<NavItem key={index} onClick={handleClick}>
-					<NavLink to={data.link}>
+					<NavLink
+						exact
+						to={data.link}
+						activeStyle={{
+							color: '#00b0ff',
+						}}
+					>
 						<SideBarIcon>{data.icon}</SideBarIcon>
 						{data.name}
 					</NavLink>

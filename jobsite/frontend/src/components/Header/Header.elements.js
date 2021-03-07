@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import { Link } from 'react-router-dom';
+import { NavLink as NavvLink, Link } from 'react-router-dom';
 import { FaHamburger, FaWindowClose } from 'react-icons/fa';
 
 export const NavHeader = styled.header`
@@ -21,7 +21,7 @@ export const NavContainer = styled.nav`
 	padding: 0.7rem ${({ theme }) => theme.homePaddingLR};
 `;
 
-export const NavLogo = styled(Link)`
+export const NavLogo = styled(NavvLink)`
 	cursor: pointer;
 	text-decoration: none;
 	font-size: 2rem;
@@ -98,7 +98,7 @@ export const NavItem = styled.li`
 	}
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled(NavvLink)`
 	display: flex;
 	align-items: center;
 	text-decoration: none;
