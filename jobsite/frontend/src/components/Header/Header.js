@@ -27,6 +27,7 @@ const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 						to={data.link}
 						activeStyle={{
 							color: '#00b0ff',
+							fontWeight: '600',
 						}}
 					>
 						<SideBarIcon>{data.icon}</SideBarIcon>

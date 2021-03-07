@@ -4,18 +4,15 @@ import styled from 'styled-components/macro';
 export const SiteFooter = styled.footer`
 	background-color: #48426d;
 	padding: 2.3rem 0 2rem;
-	font-size: 15px;
-	line-height: 24px;
 	color: #fff;
 `;
 
 export const FooterContainer = styled.div`
-	max-width: 1300px;
+	max-width: ${({ theme }) => theme.maxWidthLg}px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	padding-left: 2rem;
-	padding-right: 2rem;
+	padding: 0 ${({ theme }) => theme.homePaddingLR};
 
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		flex-direction: row;
@@ -71,20 +68,19 @@ export const LinkItem = styled(Link)`
 	color: white;
 `;
 
-export const Divider = styled.hr`
-	opacity: 0.5;
-	margin-bottom: 0.6rem;
-`;
-
 export const DividerContainer = styled.div`
-	max-width: 1300px;
+	max-width: ${({ theme }) => theme.maxWidthLg}px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	padding-left: 2rem;
-	padding-right: 2rem;
+	padding: 0 ${({ theme }) => theme.homePaddingLR};
 
 	div {
 		text-align: center;
 	}
+`;
+
+export const Divider = styled.hr`
+	opacity: 0.5;
+	margin-bottom: 0.8rem;
 `;
