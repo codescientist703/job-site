@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import {
+	Seo,
 	JobCard,
 	Breadcumb,
 	Container,
@@ -105,6 +106,7 @@ const JobList = (props) => {
 	console.log('fck');
 	return (
 		<LayoutContainer is404={is404}>
+			<Seo title={'sdfdsf'} description={'test test'} />
 			<FluidContainer>
 				<Container>
 					<Breadcumb breadData={breadData} />
