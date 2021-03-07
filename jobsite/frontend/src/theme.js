@@ -8,7 +8,7 @@ export const theme = {
 	shadow: '0 2px 6px rgba(0,0,0,0.2)',
 	shadowHover: '0 3px 10px rgba(0,0,0,0.4)',
 	subParaColor: 'rgba(0,0,0,0.6)',
-	bgLight: '#eee',
+	bgLight: '#f8f8f8',
 	lg: 992,
 	md: 768,
 	maxWidthLg: 1300,

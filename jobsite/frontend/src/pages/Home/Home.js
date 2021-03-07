@@ -32,50 +32,15 @@ import JobImg from '../../images/homejob.svg';
 import BoyImg from '../../images/boyjob.svg';
 import { Button, Seo } from '../../components';
 import Data from '../../RawContent/HomeContent';
+
 const Home = () => {
 	return (
 		<article>
 			<Seo title={'bolbo'} />
-			{/* <SectionOne /> */}
 			<SecOne />
 			<SectionTwo />
 			<SectionThree />
 		</article>
-	);
-};
-
-const SectionTwo = () => {
-	return (
-		<SecTwoContainer>
-			<Container>
-				<ContainerLeft>
-					<SVG src={BoyImg} alt='boy image' />
-				</ContainerLeft>
-				<ContainerRight>
-					<Heading>{Data.sec2Title}</Heading>
-					<Description>{Data.sec2Content}</Description>
-					<Button>Apply Now</Button>
-				</ContainerRight>
-			</Container>
-		</SecTwoContainer>
-	);
-};
-
-const SectionThree = () => {
-	return (
-		<ContainerThree>
-			<ContainerHeading>Browse By Category</ContainerHeading>
-			<Underline />
-			<CardContainer>
-				{Data.card.map((data, index) => (
-					<Card key={index}>
-						<CardIcon color={data.cardIconColor}>{data.cardIcon}</CardIcon>
-						<CardTitle>{data.cardTitle}</CardTitle>
-						<CardContent>{data.cardContent}</CardContent>
-					</Card>
-				))}
-			</CardContainer>
-		</ContainerThree>
 	);
 };
 
@@ -132,4 +97,40 @@ const SecOne = () => {
 		</HeroSection>
 	);
 };
+
+const SectionTwo = () => {
+	return (
+		<SecTwoContainer>
+			<Container>
+				<ContainerLeft>
+					<SVG src={BoyImg} alt='boy image' />
+				</ContainerLeft>
+				<ContainerRight>
+					<Heading>{Data.sec2Title}</Heading>
+					<Description>{Data.sec2Content}</Description>
+					<Button>Apply Now</Button>
+				</ContainerRight>
+			</Container>
+		</SecTwoContainer>
+	);
+};
+
+const SectionThree = () => {
+	return (
+		<ContainerThree>
+			<ContainerHeading>Browse By Category</ContainerHeading>
+			<Underline />
+			<CardContainer>
+				{Data.card.map((data, index) => (
+					<Card key={index}>
+						<CardIcon color={data.cardIconColor}>{data.cardIcon}</CardIcon>
+						<CardTitle>{data.cardTitle}</CardTitle>
+						<CardContent>{data.cardContent}</CardContent>
+					</Card>
+				))}
+			</CardContainer>
+		</ContainerThree>
+	);
+};
+
 export default Home;
