@@ -14,7 +14,8 @@ export const theme = {
 	maxWidthLg: 1300,
 	maxWidthMd: 1200,
 	maxWidthSm: 1100,
-	font: 'todo',
+	homePaddingLR: '1.5rem',
+
 	button: {
 		color: '#fff',
 		background: 'linear-gradient(to bottom right, blue, purple)',
