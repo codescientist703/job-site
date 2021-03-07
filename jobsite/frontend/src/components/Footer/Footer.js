@@ -4,6 +4,8 @@ import {
 	LinkContainer,
 	LinkColumn,
 	AboutContainer,
+	AboutHeader,
+	AboutDescription,
 	LinkHeader,
 	DividerContainer,
 	Divider,
@@ -17,8 +19,8 @@ const Footer = () => {
 		<SiteFooter>
 			<FooterContainer>
 				<AboutContainer>
-					<h3>ABOUT</h3>
-					<p>{data.description}</p>
+					<AboutHeader>ABOUT</AboutHeader>
+					<AboutDescription>{data.description}</AboutDescription>
 				</AboutContainer>
 				<LinkContainer>
 					<LinkColumn>
@@ -41,7 +43,7 @@ const Footer = () => {
 			</FooterContainer>
 			<DividerContainer>
 				<Divider />
-				<div>Copyright © ${curYear} All Rights Reserved by JobLele. </div>
+				<div>Copyright © {curYear} | All Rights Reserved by JobLele. </div>
 			</DividerContainer>
 		</SiteFooter>
 	);

@@ -9,7 +9,7 @@ export const Title = styled.h1`
 
 export const Paragraph = styled.p`
 
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     margin-bottom: 0.7rem;
     font-size:  ${({ theme }) => theme.p}rem;
 `;
