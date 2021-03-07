@@ -6,10 +6,10 @@ export const NotFoundPage = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding: 4rem 0.5rem;
+	padding: 1rem 0.5rem 4rem 0.5rem;
 
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
-		padding: 4rem 1.5rem;
+		padding: 1rem 1.5rem 4rem 1.5rem;
 	}
 `;
 
