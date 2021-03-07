@@ -8,7 +8,7 @@ const Breadcumb = ({ breadData, width }) => {
 					<BreadLink to={data.link}>
 						{data.name}
 						&nbsp;
-						{!(index === breadData.length - 1) && ` >> `}
+						{!(index === breadData.length - 1) && `/`}
 						&nbsp;
 					</BreadLink>
 				</BreadItems>
