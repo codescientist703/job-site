@@ -1,4 +1,11 @@
-import { ShareIcon, DropDown, DropDownContent } from './ShareDropdown.elements';
+import {
+	IconContainer,
+	ShareIcon,
+	DropDown,
+	DropDownContent,
+	SocialIcon,
+	SocialIconName,
+} from './ShareDropdown.elements';
 import React, { useState } from 'react';
 import {
 	FacebookShareButton,
@@ -17,20 +24,28 @@ const ShareDropdown = ({ url, description, title, hashtag }) => {
 	};
 	return (
 		<DropDown>
-			<ShareIcon onClick={toggleIsOpen} />
+			<IconContainer>
+				<ShareIcon onClick={toggleIsOpen} />
+			</IconContainer>
 			<DropDownContent isOpen={isOpen}>
-				<FacebookShareButton url={url} hashtag={`#${hashtag}`}>
-					<FacebookIcon size={32} round={true} />
-					<div>Facebook</div>
-				</FacebookShareButton>
-				<LinkedinShareButton url={url} title={title} summary={description}>
-					<LinkedinIcon size={32} round={true} />
-					<div>Linkedin</div>
-				</LinkedinShareButton>
-				<TwitterShareButton url={'url'} title={'title'}>
-					<TwitterIcon size={32} round={true} />
-					<div>Twitter</div>
-				</TwitterShareButton>
+				<SocialIcon>
+					<FacebookShareButton url={url} hashtag={`#${hashtag}`}>
+						<FacebookIcon size={32} round={true} />
+						<SocialIconName>Facebook</SocialIconName>
+					</FacebookShareButton>
+				</SocialIcon>
+				<SocialIcon>
+					<LinkedinShareButton url={url} title={title} summary={description}>
+						<LinkedinIcon size={32} round={true} />
+						<SocialIconName>Linkedin</SocialIconName>
+					</LinkedinShareButton>
+				</SocialIcon>
+				<SocialIcon>
+					<TwitterShareButton url={'url'} title={'title'}>
+						<TwitterIcon size={32} round={true} />
+						<SocialIconName>Twitter</SocialIconName>
+					</TwitterShareButton>
+				</SocialIcon>
 			</DropDownContent>
 		</DropDown>
 	);
