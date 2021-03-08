@@ -17,21 +17,20 @@ export const Btn = styled.button`
 	text-decoration: none;
 `;
 
-
 export const Button = styled.a`
 	display: inline-block;
 	font-size: 1.1rem;
-	padding: 7px 25px;
+	padding: 0.44rem 1.55rem;
 	border: none;
 	background: ${({ theme }) => theme.button.background};
 	color: ${({ theme }) => theme.button.color};
-	transition: background-color 0.7s;
+	transition: 0.5s;
 	border-radius: 5px;
 	text-decoration: none;
+	cursor: pointer;
 
 	&:hover {
-		background-color: ${({ theme }) => theme.button.hover.background};
-		cursor: pointer;
+		background: ${({ theme }) => theme.button.hover.background};
 		color: ${({ theme }) => theme.button.hover.color};
 	}
 `;

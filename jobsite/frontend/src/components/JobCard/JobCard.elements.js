@@ -9,7 +9,7 @@ export const Card = styled.div`
 	margin: 0 auto;
 	padding: 0.7rem;
 	border-radius: 10px;
-	margin-bottom: ${({ type }) => (type === 'single' ? '0' : '1.2rem')};
+	margin-bottom: ${({ type }) => (type === 'single' ? '0' : '1.5rem')};
 	background-color: #fff;
 
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {

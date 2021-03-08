@@ -56,7 +56,7 @@ const Filter = ({
 					<Skeleton height={40} />
 				) : (
 					<MyAutosuggest
-						placeholder={'e,g, Software Developer'}
+						placeholder={'e.g, Software Developer'}
 						field={'jobtitle'}
 						onSuggestionValueChange={onSuggestionValueChange}
 						filterData={filterData.jobtitle}

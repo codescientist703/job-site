@@ -23,7 +23,7 @@ export const theme = {
 		color: '#fff',
 		background: 'linear-gradient(to bottom right, blue, purple)',
 		hover: {
-			color: '#000',
+			color: 'darkblue',
 			background: '#00b0ff',
 		},
 	},
