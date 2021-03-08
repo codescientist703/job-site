@@ -13,6 +13,7 @@ import {
 	FluidContainer,
 	LayoutContainer,
 	ShareDropdown,
+	Seo,
 } from '../../components';
 import Skeleton from 'react-loading-skeleton';
 import { useParams } from 'react-router-dom';
@@ -52,6 +53,7 @@ const JobSingle = () => {
 	}, [slug]);
 	return (
 		<LayoutContainer is404={is404}>
+			<Seo title={data.title} description={data.description} />
 			<FluidContainer>
 				<Container>
 					<Breadcumb breadData={breadData} width={'lg'} />

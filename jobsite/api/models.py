@@ -65,6 +65,9 @@ class Interview(models.Model):
     email = models.EmailField()
     company = models.CharField(max_length=200)
     jobtitle = models.CharField(max_length=254)
+    title = models.CharField(max_length=255, null=True, blank=True)
+    category = models.ForeignKey(
+        Category, on_delete=models.SET_NULL, blank=True, null=True, related_name='interviews')
     content = RichTextField()
     draft = models.BooleanField(default=True)
     description = models.TextField(max_length=200, blank=True, null=True)

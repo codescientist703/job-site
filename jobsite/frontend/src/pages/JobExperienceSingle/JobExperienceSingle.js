@@ -12,6 +12,7 @@ import {
 	ExperienceCard,
 	FluidContainer,
 	LayoutContainer,
+	Seo,
 } from '../../components';
 import { useParams } from 'react-router-dom';
 import axios from '../../axios';
@@ -19,6 +20,8 @@ import Skeleton from 'react-loading-skeleton';
 
 const JobExperienceSingle = () => {
 	const [data, setData] = useState({});
+	let { slug } = useParams();
+
 	const breadData = [
 		{ name: 'home', link: '/' },
 		{ name: 'experience', link: '/job-experience' },
@@ -27,7 +30,6 @@ const JobExperienceSingle = () => {
 	const [is404, setIs404] = useState(false);
 
 	const [isLoading, setIsLoading] = useState(true);
-	let { slug } = useParams();
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -51,16 +53,11 @@ const JobExperienceSingle = () => {
 	}, [slug]);
 	return (
 		<LayoutContainer is404={is404}>
+			<Seo title={data.title} description={data.description} />
 			<FluidContainer>
 				<Container>
 					<Breadcumb breadData={breadData} width={'lg'} />
-					<JobTitle>
-						{isLoading ? (
-							<Skeleton />
-						) : (
-							`Interview experience for ${data.company}`
-						)}
-					</JobTitle>
+					<JobTitle>{isLoading ? <Skeleton /> : data.title}</JobTitle>
 					<SingleJobContainer>
 						<ExperienceCard type={'single'} {...data} />
 						{isLoading === false && <ShareIcon />}

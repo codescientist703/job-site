@@ -37,6 +37,11 @@ const JobList = (props) => {
 	const [is404, setIs404] = useState(false);
 	const title = filterData.search !== '' ? 'search results' : `${categoryName}`;
 
+	const [seoData, setSeoData] = useState({
+		title: '',
+		description: '',
+	});
+
 	const breadData = [
 		{ name: 'home', link: '/' },
 		{ name: title, link: `/category/${categoryName}` },
@@ -61,6 +66,10 @@ const JobList = (props) => {
 				setData(response.data.results);
 				setIsLoading(false);
 				setNumPages(Math.ceil(response.data.count / response.data.page_size));
+				setSeoData({
+					title: response.data.title,
+					description: response.data.description,
+				});
 			} catch (error) {
 				setIsLoading(false);
 				setIs404(true);
@@ -103,10 +112,9 @@ const JobList = (props) => {
 	};
 
 	const loadData = [{}, {}, {}, {}, {}];
-	console.log('fck');
 	return (
 		<LayoutContainer is404={is404}>
-			<Seo title={'sdfdsf'} description={'test test'} />
+			<Seo title={seoData.title} description={seoData.description} />
 			<FluidContainer>
 				<Container>
 					<Breadcumb breadData={breadData} />

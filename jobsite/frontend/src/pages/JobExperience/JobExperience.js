@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import Container from '../../components/Container/Container';
 import { Title, Paragraph } from './JobExperience.elements';
-import { Breadcumb, ExperienceCard, FluidContainer } from '../../components';
+import {
+	Breadcumb,
+	ExperienceCard,
+	FluidContainer,
+	Container,
+	Seo,
+} from '../../components';
 import axios from '../../axios';
 import { PaginateComponent } from '../JobList/JobList.elements';
 import ReactPaginate from 'react-paginate';
+import Skeleton from 'react-loading-skeleton';
 
 function JobExperience() {
 	const breadData = [
@@ -15,6 +21,10 @@ function JobExperience() {
 	const [page, setPage] = useState(1);
 	const [numPages, setNumPages] = useState(-1);
 	const [isLoading, setIsLoading] = useState(true);
+	const [seoData, setSeoData] = useState({
+		title: '',
+		description: '',
+	});
 
 	const ExperienceCards = () => {
 		return (
@@ -40,6 +50,10 @@ function JobExperience() {
 				setData(response.data.results);
 				setIsLoading(false);
 				setNumPages(Math.ceil(response.data.count / response.data.page_size));
+				setSeoData({
+					title: response.data.title,
+					description: response.data.description,
+				});
 			} catch (error) {
 				setIsLoading(false);
 			}
@@ -49,12 +63,11 @@ function JobExperience() {
 
 	return (
 		<FluidContainer>
+			<Seo title={seoData.title} description={seoData.description} />
 			<Container>
 				<Breadcumb breadData={breadData} />
-				<Title>Interview Experiences</Title>
-				<Paragraph>
-					Find interview experiences of your dream company hear!!
-				</Paragraph>
+				<Title>{isLoading ? <Skeleton /> : seoData.title}</Title>
+				<Paragraph>{isLoading ? <Skeleton /> : seoData.description}</Paragraph>
 				{isLoading ? (
 					<>
 						{[...Array(10)].map((e, i) => (

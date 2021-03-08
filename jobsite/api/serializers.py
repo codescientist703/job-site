@@ -48,7 +48,7 @@ class JobSerializer(serializers.ModelSerializer):
     class Meta:
         model = Job
         fields = ['jobtitle', 'location', 'date',
-                  'salary', 'experience', 'company', 'content', 'category', 'apply_link', 'title']
+                  'salary', 'experience', 'company', 'content', 'category', 'apply_link', 'title', 'description']
 
 
 class InterviewListSerializer(serializers.ModelSerializer):
@@ -60,7 +60,8 @@ class InterviewListSerializer(serializers.ModelSerializer):
 class InterviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Interview
-        fields = ['name', 'company', 'jobtitle', 'content']
+        fields = ['name', 'company', 'jobtitle',
+                  'content', 'description', 'title']
 
 
 class InterviewFormSerializer(serializers.ModelSerializer):
