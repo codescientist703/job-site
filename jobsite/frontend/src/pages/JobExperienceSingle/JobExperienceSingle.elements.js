@@ -4,13 +4,13 @@ import { Button } from '../../components';
 
 export const JobTitle = styled.h1`
 	text-align: center;
-	margin: 2rem 0;
-	font-size:  ${({ theme }) => theme.h1}rem;
+	margin: ${({ theme }) => theme.titleMargin};
+	font-size: ${({ theme }) => theme.h1}rem;
 `;
+
 export const SingleJobContainer = styled.div`
 	position: relative;
-	/* margin: 0 auto; */
-	max-width:  ${({ theme }) => theme.maxWidthMd}px;
+	max-width: ${({ theme }) => theme.maxWidthMd}px;
 	border: 1px solid #ddd;
 	border-radius: 5px;
 	margin-bottom: 2rem;
@@ -32,7 +32,7 @@ export const Line = styled.div`
 `;
 
 export const ApplyBtn = styled(Button)`
-	margin: 1rem 1rem;
+	margin: 1rem;
 `;
 
 export const About = styled.h3`

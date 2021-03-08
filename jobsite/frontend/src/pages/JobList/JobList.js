@@ -13,6 +13,7 @@ import {
 	JobContainer,
 	FilterBtn,
 	PaginateComponent,
+	Title,
 } from './JobList.elements';
 import axios from '../../axios';
 import ReactPaginate from 'react-paginate';
@@ -118,6 +119,7 @@ const JobList = (props) => {
 			<FluidContainer>
 				<Container>
 					<Breadcumb breadData={breadData} />
+					<Title>{seoData.title}</Title>
 					<MainContainer>
 						<FilterBtn onClick={toggleFilterClick}>
 							{isFilterOpen ? 'Hide Filters' : 'Show Filters'}

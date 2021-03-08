@@ -15,6 +15,9 @@ export const theme = {
 	maxWidthMd: 1200,
 	maxWidthSm: 1100,
 	homePaddingLR: '1.5rem',
+	titleMargin: '2rem 0',
+	paddingLR: '1.5rem',
+	bgColor: '#f6f6f6',
 
 	button: {
 		color: '#fff',

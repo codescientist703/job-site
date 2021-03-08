@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';
 
 const FluidContainer = styled.div`
 	width: 100%;
-	background-color: #f6f6f6;
+	background-color: ${({ theme }) => theme.bgColor};
 	padding: 2rem 0;
 `;
 

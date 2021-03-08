@@ -37,7 +37,7 @@ const JobCard = ({
 				</JobDetails>
 				{jobtitle ? <StarIcon /> : <Skeleton width={30} />}
 			</CardTop>
-			<CardMiddle>
+			<CardMiddle type={type}>
 				<Item>
 					{location ? (
 						<>

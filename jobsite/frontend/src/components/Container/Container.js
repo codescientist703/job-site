@@ -6,7 +6,7 @@ const Container = styled.div`
 	padding: 0 0.8rem;
 
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
-		padding: 0 1.25rem;
+		padding: 0 ${({ theme }) => theme.paddingLR};
 	}
 `;
 

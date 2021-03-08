@@ -1,16 +1,12 @@
 import styled from 'styled-components';
 
 export const Card = styled.div`
-	padding: 0.5rem 1.3rem;
+	padding: 0.5rem 1.4rem;
 	box-shadow: ${({ type }) =>
 		type === 'single' ? 'none' : '0 2px 7px rgba(0, 0, 0, 0.2)'};
-	margin: 1.2rem 0;
+	margin: ${({ type }) => (type === 'single' ? '0.5rem' : '1.2rem')} 0;
 	border-radius: 10px;
 	background-color: #fff;
-
-	&:last-child {
-		margin-bottom: 0;
-	}
 `;
 
 export const CardHeader = styled.div`
@@ -18,17 +14,14 @@ export const CardHeader = styled.div`
 `;
 
 export const CardDescription = styled.div`
-	margin-top: 0.6rem;
 	display: flex;
 	align-items: flex-start;
 `;
 
-export const CardCredits = styled.div`
-	margin-top: 1.3rem;
-	margin-bottom: 0.5rem;
-`;
+export const CardCredits = styled.div``;
 
 export const JobDetail = styled.div`
+	margin: 0.3rem 0;
 	display: flex;
 	align-items: center;
 `;

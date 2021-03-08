@@ -1,16 +1,15 @@
 import styled from 'styled-components/macro';
 import { FiStar } from 'react-icons/fi';
+
 export const Card = styled.div`
 	/* for mobile */
 	width: 100%;
-	/* max-width: 550px; */
 	box-shadow: ${({ type }) =>
 		type === 'single' ? 'none' : '0 2px 7px rgba(0, 0, 0, 0.2)'};
 	margin: 0 auto;
 	padding: 0.7rem;
 	border-radius: 10px;
-	margin-bottom: 1.2rem;
-	/* margin-top: 0.7rem; */
+	margin-bottom: ${({ type }) => (type === 'single' ? '0' : '1.2rem')};
 	background-color: #fff;
 
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
@@ -27,7 +26,8 @@ export const CardTop = styled.div`
 export const CardMiddle = styled.div`
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 1.5rem;
+	margin-bottom: ${({ type }) => (type === 'single' ? '0.5rem' : '1.5rem')};
+	max-width: 700px;
 `;
 
 export const CardBottom = styled.div`
@@ -69,7 +69,7 @@ export const ItemDescription = styled.p`
 	margin-left: 0.4rem;
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		font-size: 0.8rem;
-		margin-left: 0rem;
+		margin-left: 0;
 	}
 `;
 

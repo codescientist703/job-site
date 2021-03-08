@@ -16,6 +16,11 @@ export const MainContainer = styled.section`
 	}
 `;
 
+export const Title = styled.h1`
+	text-align: center;
+	margin: ${({ theme }) => theme.titleMargin};
+`;
+
 export const JobContainer = styled.div`
 	/* padding: 0.8rem; */
 

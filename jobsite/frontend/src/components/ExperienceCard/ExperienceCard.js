@@ -47,15 +47,15 @@ function ExperienceCard({ type, company, name, jobtitle, description, slug }) {
 			{type !== 'single' && (
 				<CardDescription>
 					{description ? (
-						<>
+						<JobDetail>
 							<Icon>
 								<BiBookContent />
 							</Icon>
 							<Paragraph>
-								{description}...
+								{description}...&nbsp;
 								<LinkButton to={`job-experience/${slug}`}>Read More</LinkButton>
 							</Paragraph>
-						</>
+						</JobDetail>
 					) : (
 						<div>
 							<div>
@@ -70,12 +70,12 @@ function ExperienceCard({ type, company, name, jobtitle, description, slug }) {
 			)}
 			<CardCredits>
 				{name ? (
-					<>
+					<JobDetail>
 						<Icon>
 							<FaHandshake />
 						</Icon>
-						Contributed by : <Contributer> {name}</Contributer>
-					</>
+						Contributed by : &nbsp;<Contributer> {name}</Contributer>
+					</JobDetail>
 				) : (
 					<Skeleton />
 				)}
