@@ -2,32 +2,29 @@ import styled from 'styled-components/macro';
 import Autosuggest from 'react-autosuggest';
 import { useState } from 'react';
 import axios from '../../axios';
+
 export const InputContainer = styled.div`
 	.react-autosuggest__input {
 		border: 1px solid #d2d2d2;
-		padding: 8px 14px;
+		padding: 0.5rem 0.875rem;
 		border-radius: 5px;
 		font-size: 1rem;
 		width: 100%;
-		/* @media screen and (min-width: ${({ theme }) => theme.md}px) {
-			width: 100%;
-		}
-		@media screen and (min-width: ${({ theme }) => theme.lg}px) {
-			width: auto;
-		} */
 
 		&:focus {
-			/* border: 5px solid lightblue; */
 			border-color: red;
 		}
 	}
+
 	.react-autosuggest__input--open {
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
 	}
+
 	.react-autosuggest__container {
 		position: relative;
 	}
+
 	.react-autosuggest__suggestions-container {
 		display: none;
 		margin: 0;
@@ -40,7 +37,7 @@ export const InputContainer = styled.div`
 		top: 50px;
 		background-color: #fff;
 		border: 1px solid #d2d2d2;
-		padding: 0px 0px;
+		padding: 0;
 		border-radius: 5px;
 		outline: none;
 		font-size: 1rem;
@@ -55,7 +52,7 @@ export const InputContainer = styled.div`
 
 	.react-autosuggest__suggestion {
 		cursor: pointer;
-		padding: 10px 20px;
+		padding: 0.625rem 1.25rem;
 	}
 
 	.react-autosuggest__suggestion--highlighted {

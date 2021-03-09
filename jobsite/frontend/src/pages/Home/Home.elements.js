@@ -57,7 +57,7 @@ export const ContainerOneRight = styled.figure`
 export const HeroHeading = styled.h2`
 	/* for mobile */
 	font-size: 1.8rem;
-	margin-bottom: 10px;
+	margin-bottom: 0.625rem;
 	font-weight: 900;
 
 	/* for tablet */
@@ -75,7 +75,7 @@ export const HeroSubHeading = styled.p`
 	font-size: 1.15rem;
 	font-weight: 500;
 	color: ${({ theme }) => theme.subParaColor};
-	margin-bottom: 30px;
+	margin-bottom: 1.875rem;
 
 	/* for tablet */
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
@@ -92,14 +92,14 @@ export const SearchBox = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 4px 7px;
+	padding: 0.25rem 0.44rem;
 	border-radius: 50px;
 	max-width: 380px;
 	box-shadow: ${({ theme }) => theme.shadow};
 
 	/* for tablet */
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
-		padding: 6px 7px;
+		padding: 0.38rem 0.44rem;
 	}
 `;
 
@@ -113,10 +113,9 @@ export const SearchInput = styled.input`
 	width: 50%;
 	border: none;
 	outline: none;
-	padding: 5px;
+	padding: 0.3125rem;
 	font-size: 1.09rem;
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
-		/* width: 70%; */
 		width: 55%;
 	}
 `;
@@ -127,7 +126,7 @@ export const SearchButton = styled(Link)`
 	color: white;
 	border: none;
 	outline: none;
-	padding: 9px 20px;
+	padding: 0.565rem 1.25rem;
 	border-radius: 20px;
 	font-weight: 500;
 	font-size: 1.01rem;
@@ -137,8 +136,8 @@ export const HeroImg = styled.img`
 	width: 100%;
 	height: auto;
 	max-width: 450px;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin: 1.875rem 0;
+
 	/* for tablet */
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		margin: 0;

@@ -6,17 +6,16 @@ export const NotFoundPage = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding: 1rem 0.5rem 4rem 0.5rem;
+	padding: 1rem 0.5rem 4rem;
 
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
-		padding: 1rem 1.5rem 4rem 1.5rem;
+		padding: 1rem 1.5rem 4rem;
 	}
 `;
 
 export const IMG = styled.img`
 	height: auto;
 	width: 100%;
-	/* border: 1px solid black; */
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		width: 70%;
@@ -25,19 +24,20 @@ export const IMG = styled.img`
 `;
 
 export const Text = styled.p`
-	/* color: #fff; */
 	margin-top: -1rem;
+	margin-bottom: 1rem;
 	text-align: center;
 	font-size: 1rem;
+
 	span {
 		font-size: 2rem;
 		font-weight: 700;
 	}
-	margin-bottom: 1rem;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		margin-top: -2.5rem;
 		font-size: 1.4rem;
+
 		span {
 			font-size: 4rem;
 		}
@@ -46,8 +46,6 @@ export const Text = styled.p`
 
 export const BackBtn = styled(Button)`
 	margin-top: 1rem;
-	/* background: none; */
-	/* border: 2px solid white; */
-	font-weight: 600px;
+	font-weight: 600;
 	border-radius: 50px;
 `;

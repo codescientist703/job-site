@@ -14,7 +14,7 @@ const Content = styled.div`
 	}
 
 	h3 {
-		font-size: 1.2rem;
+		font-size: 1.125rem;
 		font-weight: 600;
 	}
 

@@ -5,6 +5,7 @@ export const JobTitle = styled.h1`
 	text-align: center;
 	margin: ${({ theme }) => theme.titleMargin};
 	font-size: ${({ theme }) => theme.h1}rem;
+	font-weight: ${({ theme }) => theme.titleWeight};
 `;
 
 export const SingleJobContainer = styled.div`

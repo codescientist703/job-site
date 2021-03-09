@@ -52,7 +52,7 @@ export const DropDownContent = styled.div`
 		width: 100%;
 
 		svg {
-			padding: 0 0.5rem 0 0;
+			padding-right: 0.5rem;
 		}
 	}
 `;

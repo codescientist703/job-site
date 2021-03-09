@@ -4,6 +4,7 @@ export const Title = styled.h1`
 	font-size: ${({ theme }) => theme.h1};
 	text-align: center;
 	margin: ${({ theme }) => theme.titleMargin};
+	font-weight: ${({ theme }) => theme.titleWeight};
 `;
 
 export const Para = styled.p`
@@ -30,7 +31,6 @@ export const FormInput = styled.div`
 
 export const Label = styled.p`
 	margin-bottom: 0.3rem;
-	/* margin-left: 0.2rem; */
 	font-size: 1rem;
 `;
 
