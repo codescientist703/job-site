@@ -19,6 +19,7 @@ import axios from '../../axios';
 import ReactPaginate from 'react-paginate';
 
 import { useParams } from 'react-router-dom';
+import Skeleton from 'react-loading-skeleton';
 
 const JobList = (props) => {
 	let { categoryName } = useParams();
@@ -112,14 +113,13 @@ const JobList = (props) => {
 		});
 	};
 
-	const loadData = [{}, {}, {}, {}, {}];
 	return (
 		<LayoutContainer is404={is404}>
 			<Seo title={seoData.title} description={seoData.description} />
 			<FluidContainer>
 				<Container>
 					<Breadcumb breadData={breadData} />
-					<Title>{seoData.title}</Title>
+					<Title>{isLoading ? <Skeleton /> : seoData.title}</Title>
 					<MainContainer>
 						<FilterBtn onClick={toggleFilterClick}>
 							{isFilterOpen ? 'Hide Filters' : 'Show Filters'}
@@ -133,7 +133,7 @@ const JobList = (props) => {
 						/>
 						<JobContainer>
 							{isLoading ? (
-								loadData.map((e, i) => <JobCard key={i} />)
+								[...Array(10)].map((e, i) => <JobCard key={i} />)
 							) : (
 								<JobCards />
 							)}

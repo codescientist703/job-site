@@ -7,7 +7,6 @@ import {
 	JobTitle,
 	JobCompany,
 	JobDescription,
-	StarIcon,
 	Item,
 	ItemIcon,
 	ItemTitle,
@@ -17,6 +16,9 @@ import { AiFillHome } from 'react-icons/ai';
 import { BiTimeFive } from 'react-icons/bi';
 import { LinkButton } from '../../components';
 import Skeleton from 'react-loading-skeleton';
+
+import { SaveJob } from '../../components';
+
 const JobCard = ({
 	type,
 	jobtitle,
@@ -35,7 +37,11 @@ const JobCard = ({
 					<JobTitle>{jobtitle || <Skeleton />}</JobTitle>
 					<JobCompany>{company || <Skeleton width={80} />}</JobCompany>
 				</JobDetails>
-				{jobtitle ? <StarIcon /> : <Skeleton width={30} />}
+				{jobtitle ? (
+					<SaveJob />
+				) : (
+					<Skeleton width={30} circle={true} height={30} />
+				)}
 			</CardTop>
 			<CardMiddle type={type}>
 				<Item>

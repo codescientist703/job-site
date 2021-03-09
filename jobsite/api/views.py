@@ -10,6 +10,8 @@ from .filters import JobListFilter
 from django.shortcuts import get_object_or_404
 from jobsite import settings
 from rest_framework import permissions
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 
 class CategoryView(generics.ListAPIView):
@@ -98,3 +100,11 @@ class InterviewFormView(generics.CreateAPIView):
     serializer_class = InterviewFormSerializer
     queryset = Interview.objects.all()
     permission_classes = [permissions.AllowAny]
+
+
+class MyJobsView(APIView):
+    def post(self, request, format=None):
+        print(request.data.get("myjobs"))
+        data = Job.objects.filter(slug__in=request.data.get("myjobs"))
+        serializer = JobListSerializer(data, many=True)
+        return Response(data=serializer.data)
