@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Card = styled.div`
 	padding: 0.5rem 1.4rem;
-	box-shadow: ${({ type }) =>
-		type === 'single' ? 'none' : '0 2px 7px rgba(0, 0, 0, 0.2)'};
+	box-shadow: ${({ type, theme }) =>
+		type === 'single' ? 'none' : theme.cardShadow};
 	margin: ${({ type }) => (type === 'single' ? '0.5rem' : '1.5rem')} 0;
 	border-radius: 10px;
 	background-color: #fff;

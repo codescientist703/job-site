@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import { FilterButton } from '../../components';
 
 export const MainContainer = styled.section`
 	/* for mobile */
@@ -23,23 +24,7 @@ export const Title = styled.h1`
 
 export const JobContainer = styled.div``;
 
-export const FilterBtn = styled.button`
-	/* for mobile */
-	display: block;
-	width: fit-content;
-	margin: 0 auto;
-	padding: 0.44rem 1.25rem;
-	border-radius: 5px;
-	outline: none;
-	border: none;
-	margin-bottom: 1.3rem;
-	font-size: 1.1.rem;
-	font-weight: 600;
-
-	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
-		display: none;
-	}
-`;
+export const FilterBtn = styled(FilterButton)``;
 
 export const PaginateComponent = styled.div`
 	display: flex;

@@ -4,8 +4,8 @@ import { FiStar } from 'react-icons/fi';
 export const Card = styled.div`
 	/* for mobile */
 	width: 100%;
-	box-shadow: ${({ type }) =>
-		type === 'single' ? 'none' : '0 2px 7px rgba(0, 0, 0, 0.2)'};
+	box-shadow: ${({ type, theme }) =>
+		type === 'single' ? 'none' : theme.cardShadow};
 	margin: 0 auto;
 	padding: 0.7rem;
 	border-radius: 10px;

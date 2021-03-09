@@ -48,3 +48,20 @@ export const LinkButton = styled(Link)`
 		color: ${({ theme }) => theme.link.hover.color};
 	}
 `;
+
+export const FilterButton = styled.button`
+	display: block;
+	width: fit-content;
+	margin: 0 auto;
+	padding: 0.44rem 1.25rem;
+	border-radius: 5px;
+	outline: none;
+	border: 1px solid #ccc;
+	margin-bottom: 1.3rem;
+	font-size: 0.9rem;
+	font-weight: 600;
+
+	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
+		display: none;
+	}
+`;

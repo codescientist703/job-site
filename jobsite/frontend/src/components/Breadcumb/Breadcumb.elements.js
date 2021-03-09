@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const BreadContainer = styled.ul`
 	display: flex;
 	list-style: none;
-	background: lightblue;
+	background: ${({ theme }) => theme.secondaryColor};
 	padding: 0.5rem 1rem;
 	border-radius: 5px;
 `;

@@ -10,7 +10,6 @@ export const JobTitle = styled.h1`
 
 export const SingleJobContainer = styled.div`
 	position: relative;
-	max-width: ${({ theme }) => theme.maxWidthMd}px;
 	border: 1px solid #ddd;
 	border-radius: 5px;
 	background-color: #fff;

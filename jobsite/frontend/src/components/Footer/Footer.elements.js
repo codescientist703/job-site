@@ -1,18 +1,22 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
+import { RiHeart2Fill } from 'react-icons/ri';
 
 export const SiteFooter = styled.footer`
 	background-color: #48426d;
-	padding: 2.3rem 0 2rem;
+	padding: 2.3rem 0 0.8rem;
 	color: #fff;
 `;
 
 export const FooterContainer = styled.div`
 	max-width: ${({ theme }) => theme.maxWidthLg}px;
 	margin: 0 auto;
+	padding: 0 ${({ theme }) => theme.homePaddingLR};
+`;
+
+export const FooterTop = styled.section`
 	display: flex;
 	flex-direction: column;
-	padding: 0 ${({ theme }) => theme.homePaddingLR};
 
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		flex-direction: row;
@@ -20,6 +24,8 @@ export const FooterContainer = styled.div`
 		align-items: flex-start;
 	}
 `;
+
+export const FooterBottom = styled.section``;
 
 export const AboutContainer = styled.div`
 	margin-bottom: 1.5rem;
@@ -42,19 +48,21 @@ export const LinkContainer = styled.div`
 	}
 `;
 
-export const AboutHeader = styled.h3`
+export const AboutHeader = styled.h4`
 	font-size: ${({ theme }) => theme.h3}rem;
 	margin-bottom: 0.4rem;
 `;
 
-export const AboutDescription = styled.p``;
+export const AboutDescription = styled.p`
+	font-size: 0.925rem;
+`;
 
-export const LinkHeader = styled.h3`
+export const LinkHeader = styled.h4`
 	font-size: ${({ theme }) => theme.h3}rem;
 	margin-bottom: 0.4rem;
 `;
 
-export const LinkColumn = styled.ul`
+export const LinkColumn = styled.div`
 	list-style: none;
 	padding-right: 1rem;
 
@@ -63,18 +71,17 @@ export const LinkColumn = styled.ul`
 	}
 `;
 
+export const LinkList = styled.ul`
+	list-style: none;
+`;
+
 export const LinkItem = styled(Link)`
 	text-decoration: none;
 	color: white;
+	font-size: 0.925rem;
 `;
 
 export const DividerContainer = styled.div`
-	max-width: ${({ theme }) => theme.maxWidthLg}px;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	padding: 0 ${({ theme }) => theme.homePaddingLR};
-
 	div {
 		text-align: center;
 	}
@@ -83,4 +90,15 @@ export const DividerContainer = styled.div`
 export const Divider = styled.hr`
 	opacity: 0.5;
 	margin-bottom: 0.8rem;
+`;
+
+export const LastLine = styled.p`
+	margin-top: 0.5rem;
+	text-align: center;
+`;
+
+export const HeartIcon = styled(RiHeart2Fill)`
+	margin: 0 0.2rem -0.2rem;
+	font-size: 1.1rem;
+	color: red;
 `;

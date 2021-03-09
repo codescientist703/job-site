@@ -64,7 +64,6 @@ export const NavMenu = styled.ul`
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		flex-direction: row;
-		/* align-items: center; */
 		position: initial;
 		padding: 0;
 		width: auto;
@@ -79,7 +78,7 @@ export const NavItem = styled.li`
 	align-items: center;
 	text-align: left;
 	width: 100%;
-	font-size: 1.125rem;
+	font-size: 1.08rem;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		width: fit-content;
@@ -87,10 +86,6 @@ export const NavItem = styled.li`
 		padding: 0.2rem 0.6rem;
 		border-radius: 5px;
 		transition: 0.3s;
-
-		&:hover {
-			/* background-color: #00b0ff; */
-		}
 
 		&:hover > .Headerelements__NavLink-vjhw7q-7 {
 			color: #00b0ff;
@@ -111,8 +106,6 @@ export const NavLink = styled(NavvLink)`
 	border-radius: 5px;
 
 	&:hover {
-		/* background-color: #00b0ff; */
-		/* color: #fff; */
 		color: #00b0ff;
 	}
 

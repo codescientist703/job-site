@@ -1,6 +1,7 @@
 export { default as Header } from './Header/Header';
 export { Btn } from './Button/Button';
 export { Button } from './Button/Button';
+export { FilterButton } from './Button/Button';
 export { LinkButton } from './Button/Button';
 export { default as Footer } from './Footer/Footer';
 export { default as JobCard } from './JobCard/JobCard';

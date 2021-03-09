@@ -1,6 +1,8 @@
 import {
 	SiteFooter,
 	FooterContainer,
+	FooterTop,
+	FooterBottom,
 	LinkContainer,
 	LinkColumn,
 	AboutContainer,
@@ -10,6 +12,9 @@ import {
 	DividerContainer,
 	Divider,
 	LinkItem,
+	LinkList,
+	LastLine,
+	HeartIcon,
 } from './Footer.elements';
 import data from '../../RawContent/FooterContent';
 const Footer = () => {
@@ -18,33 +23,44 @@ const Footer = () => {
 	return (
 		<SiteFooter>
 			<FooterContainer>
-				<AboutContainer>
-					<AboutHeader>ABOUT</AboutHeader>
-					<AboutDescription>{data.description}</AboutDescription>
-				</AboutContainer>
-				<LinkContainer>
-					<LinkColumn>
-						<LinkHeader>CATEGORIES</LinkHeader>
-						{data.categories.map((item, index) => (
-							<li key={index}>
-								<LinkItem to={item.link}>{item.name}</LinkItem>
-							</li>
-						))}
-					</LinkColumn>
-					<LinkColumn>
-						<LinkHeader>QUICK LINKS</LinkHeader>
-						{data.quicklinks.map((item, index) => (
-							<li key={index}>
-								<LinkItem to={item.link}>{item.name}</LinkItem>
-							</li>
-						))}
-					</LinkColumn>
-				</LinkContainer>
+				<FooterTop>
+					<AboutContainer>
+						<AboutHeader>ABOUT</AboutHeader>
+						<AboutDescription>{data.description}</AboutDescription>
+					</AboutContainer>
+					<LinkContainer>
+						<LinkColumn>
+							<LinkHeader>CATEGORIES</LinkHeader>
+							<LinkList>
+								{data.categories.map((item, index) => (
+									<li key={index}>
+										<LinkItem to={item.link}>{item.name}</LinkItem>
+									</li>
+								))}
+							</LinkList>
+						</LinkColumn>
+						<LinkColumn>
+							<LinkHeader>QUICK LINKS</LinkHeader>
+							<LinkList>
+								{data.quicklinks.map((item, index) => (
+									<li key={index}>
+										<LinkItem to={item.link}>{item.name}</LinkItem>
+									</li>
+								))}
+							</LinkList>
+						</LinkColumn>
+					</LinkContainer>
+				</FooterTop>
+				<FooterBottom>
+					<DividerContainer>
+						<Divider />
+						<div>Copyright © {curYear} | All Rights Reserved by JobLele. </div>
+					</DividerContainer>
+					<LastLine>
+						Made with <HeartIcon /> in INDIA
+					</LastLine>
+				</FooterBottom>
 			</FooterContainer>
-			<DividerContainer>
-				<Divider />
-				<div>Copyright © {curYear} | All Rights Reserved by JobLele. </div>
-			</DividerContainer>
 		</SiteFooter>
 	);
 };
