@@ -122,7 +122,7 @@ export const SearchInput = styled.input`
 
 export const SearchButton = styled(Link)`
 	text-decoration: none;
-	background-color: lightblue;
+	background-color: ${({ theme }) => theme.primaryColor};
 	color: white;
 	border: none;
 	outline: none;

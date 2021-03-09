@@ -38,6 +38,10 @@ export const CardBottom = styled.div`
 
 export const JobDetails = styled.div``;
 
+export const ShareIconDiv = styled.div`
+	display: ${({ type }) => (type === 'single' ? 'block' : 'none')};
+`;
+
 export const JobTitle = styled.p``;
 
 export const JobCompany = styled.h3`

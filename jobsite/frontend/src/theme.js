@@ -17,17 +17,17 @@ export const theme = {
 	titleMargin: '2rem 0',
 	titleWeight: '700',
 	paddingLR: '1.5rem',
-	bgColor: '#f6f6f6',
+	bgColor: 'rgba(238, 238, 252, 0.4)',
 	primaryColor: '#7579e7',
 	secondaryColor: '#9ab3f5',
 	bgLight: '#f8f8f8',
 
 	button: {
 		color: '#fff',
-		background: 'linear-gradient(to bottom right, blue, purple)',
+		background: '#7579e7',
 		hover: {
-			color: 'darkblue',
-			background: '#00b0ff',
+			color: '#7579e7',
+			background: 'transparent',
 		},
 	},
 	link: {

@@ -40,8 +40,9 @@ export const PaginateComponent = styled.div`
 		text-transform: capitalize;
 
 		.active a {
-			background-color: #47ccde;
-			color: #fff;
+			/* background-color: #47ccde; */
+			border: 2px solid ${({ theme }) => theme.primaryColor};
+			color: ${({ theme }) => theme.primaryColor};
 			font-weight: 600;
 		}
 

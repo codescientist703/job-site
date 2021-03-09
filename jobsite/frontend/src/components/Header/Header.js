@@ -15,6 +15,7 @@ import Data from '../../RawContent/HeaderContent';
 import { useMediaQuery } from 'react-responsive';
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
+import { theme } from '../../theme';
 
 const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 	return (
@@ -26,7 +27,7 @@ const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 						exact
 						to={data.link}
 						activeStyle={{
-							color: '#00b0ff',
+							color: theme.primaryColor,
 							fontWeight: '600',
 						}}
 					>

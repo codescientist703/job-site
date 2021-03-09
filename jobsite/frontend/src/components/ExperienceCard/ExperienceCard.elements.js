@@ -10,6 +10,8 @@ export const Card = styled.div`
 `;
 
 export const CardHeader = styled.div`
+	display: flex;
+	justify-content: space-between;
 	margin-top: 0.2rem;
 `;
 
@@ -19,6 +21,12 @@ export const CardDescription = styled.div`
 `;
 
 export const CardCredits = styled.div``;
+
+export const CardLeft = styled.div``;
+
+export const CardRight = styled.div`
+	display: ${({ type }) => (type === 'single' ? 'block' : 'none')};
+`;
 
 export const JobDetail = styled.div`
 	margin: 0.3rem 0;

@@ -60,12 +60,12 @@ const JobSingle = () => {
 					<JobTitle>{data.title || <Skeleton />}</JobTitle>
 					<SingleJobContainer>
 						<JobCard type={'single'} {...data} />
-						{isLoading === false && (
+						{/* {isLoading === false && (
 							<ShareDropdown
 								title={data.title}
 								description={data.description}
 							/>
-						)}
+						)} */}
 						<Line />
 						<Content>
 							{isLoading === false ? (

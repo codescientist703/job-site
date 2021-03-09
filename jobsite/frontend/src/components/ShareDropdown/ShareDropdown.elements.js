@@ -4,7 +4,6 @@ import styled from 'styled-components/macro';
 export const DropDown = styled.div`
 	position: relative;
 	display: inline-block;
-	left: 1rem;
 `;
 
 export const IconContainer = styled.div`
@@ -38,6 +37,7 @@ export const SocialIconName = styled.p``;
 export const DropDownContent = styled.div`
 	display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
 	position: absolute;
+	right: 10%;
 	background-color: #f1f1f1;
 	min-width: 160px;
 	z-index: 1;
@@ -50,6 +50,7 @@ export const DropDownContent = styled.div`
 		justify-content: flex-start;
 		align-items: center;
 		width: 100%;
+		outline: none;
 
 		svg {
 			padding-right: 0.5rem;

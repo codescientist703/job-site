@@ -20,8 +20,9 @@ export const Btn = styled.button`
 export const Button = styled.a`
 	display: inline-block;
 	font-size: 1.1rem;
+	font-weight: 550;
 	padding: 0.44rem 1.55rem;
-	border: none;
+	border: 2px solid ${({ theme }) => theme.primaryColor};
 	background: ${({ theme }) => theme.button.background};
 	color: ${({ theme }) => theme.button.color};
 	transition: 0.5s;
@@ -56,7 +57,9 @@ export const FilterButton = styled.button`
 	padding: 0.44rem 1.25rem;
 	border-radius: 5px;
 	outline: none;
-	border: 1px solid #ccc;
+	background: transparent;
+	border: 1px solid ${({ theme }) => theme.primaryColor};
+	color: ${({ theme }) => theme.primaryColor};
 	margin-bottom: 1.3rem;
 	font-size: 0.9rem;
 	font-weight: 600;

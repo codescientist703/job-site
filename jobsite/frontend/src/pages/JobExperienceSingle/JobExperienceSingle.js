@@ -60,7 +60,7 @@ const JobExperienceSingle = () => {
 					<JobTitle>{isLoading ? <Skeleton /> : data.title}</JobTitle>
 					<SingleJobContainer>
 						<ExperienceCard type={'single'} {...data} />
-						{isLoading === false && <ShareIcon />}
+						{/* {isLoading === false && <ShareIcon />} */}
 						<Line />
 						<Content>
 							{isLoading ? (

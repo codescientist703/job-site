@@ -11,11 +11,13 @@ import {
 	ItemIcon,
 	ItemTitle,
 	ItemDescription,
+	ShareIconDiv,
 } from './JobCard.elements';
 import { AiFillHome } from 'react-icons/ai';
 import { BiTimeFive } from 'react-icons/bi';
 import { LinkButton } from '../../components';
 import Skeleton from 'react-loading-skeleton';
+import { ShareDropdown } from '../../components';
 
 const JobCard = ({
 	type,
@@ -36,6 +38,9 @@ const JobCard = ({
 					<JobTitle>{jobtitle || <Skeleton />}</JobTitle>
 					<JobCompany>{company || <Skeleton width={80} />}</JobCompany>
 				</JobDetails>
+				<ShareIconDiv type={type}>
+					<ShareDropdown />
+				</ShareIconDiv>
 			</CardTop>
 			<CardMiddle type={type}>
 				<Item>

@@ -88,7 +88,7 @@ export const NavItem = styled.li`
 		transition: 0.3s;
 
 		&:hover > .Headerelements__NavLink-vjhw7q-7 {
-			color: #00b0ff;
+			color: ${({ theme }) => theme.primaryColor};
 		}
 	}
 `;
@@ -106,7 +106,7 @@ export const NavLink = styled(NavvLink)`
 	border-radius: 5px;
 
 	&:hover {
-		color: #00b0ff;
+		color: ${({ theme }) => theme.primaryColor};
 	}
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {

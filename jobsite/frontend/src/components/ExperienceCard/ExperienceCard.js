@@ -4,6 +4,8 @@ import {
 	CardHeader,
 	CardDescription,
 	CardCredits,
+	CardLeft,
+	CardRight,
 	JobRole,
 	CompanyName,
 	Paragraph,
@@ -15,34 +17,40 @@ import { BiBookContent, BiUser, BiBuildings } from 'react-icons/bi';
 import { FaHandshake } from 'react-icons/fa';
 import { LinkButton } from '../../components';
 import Skeleton from 'react-loading-skeleton';
+import ShareDropdown from '../ShareDropdown/ShareDropdown';
 
 function ExperienceCard({ type, company, name, jobtitle, description, slug }) {
 	return (
 		<Card type={type}>
 			<CardHeader>
-				<JobDetail>
-					{jobtitle ? (
-						<Icon>
-							<BiUser />
-						</Icon>
-					) : (
-						<Skeleton width={100} />
-					)}
-					<JobRole>{jobtitle || <Skeleton />}</JobRole>
-				</JobDetail>
-				<JobDetail>
-					{company ? (
-						<>
+				<CardLeft>
+					<JobDetail>
+						{jobtitle ? (
 							<Icon>
-								{' '}
-								<BiBuildings />
+								<BiUser />
 							</Icon>
-							<CompanyName>{company}</CompanyName>
-						</>
-					) : (
-						<Skeleton width={100} />
-					)}
-				</JobDetail>
+						) : (
+							<Skeleton width={100} />
+						)}
+						<JobRole>{jobtitle || <Skeleton />}</JobRole>
+					</JobDetail>
+					<JobDetail>
+						{company ? (
+							<>
+								<Icon>
+									{' '}
+									<BiBuildings />
+								</Icon>
+								<CompanyName>{company}</CompanyName>
+							</>
+						) : (
+							<Skeleton width={100} />
+						)}
+					</JobDetail>
+				</CardLeft>
+				<CardRight type={type}>
+					<ShareDropdown />
+				</CardRight>
 			</CardHeader>
 			{type !== 'single' && (
 				<CardDescription>
