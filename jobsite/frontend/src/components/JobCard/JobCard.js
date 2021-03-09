@@ -7,7 +7,6 @@ import {
 	JobTitle,
 	JobCompany,
 	JobDescription,
-	StarIcon,
 	Item,
 	ItemIcon,
 	ItemTitle,
@@ -17,6 +16,7 @@ import { AiFillHome } from 'react-icons/ai';
 import { BiTimeFive } from 'react-icons/bi';
 import { LinkButton } from '../../components';
 import Skeleton from 'react-loading-skeleton';
+
 const JobCard = ({
 	type,
 	jobtitle,
@@ -28,6 +28,7 @@ const JobCard = ({
 	description,
 	slug,
 }) => {
+	console.log(salary);
 	return (
 		<Card type={type}>
 			<CardTop>
@@ -35,7 +36,6 @@ const JobCard = ({
 					<JobTitle>{jobtitle || <Skeleton />}</JobTitle>
 					<JobCompany>{company || <Skeleton width={80} />}</JobCompany>
 				</JobDetails>
-				{jobtitle ? <StarIcon /> : <Skeleton width={30} />}
 			</CardTop>
 			<CardMiddle type={type}>
 				<Item>
@@ -83,7 +83,7 @@ const JobCard = ({
 					)}
 				</Item>
 				<Item>
-					{salary ? (
+					{salary >= 0 ? (
 						<>
 							<ItemTitle>
 								<ItemIcon>
@@ -92,7 +92,7 @@ const JobCard = ({
 								&nbsp; Salary
 							</ItemTitle>
 							<ItemDescription>
-								{salary === -1 ? 'Not Specified' : `₹ ${salary} /annum`}
+								{salary === 0 ? 'Not Specified' : `₹ ${salary} /annum`}
 							</ItemDescription>
 						</>
 					) : (
@@ -107,7 +107,7 @@ const JobCard = ({
 					)}
 				</Item>
 				<Item>
-					{experience ? (
+					{experience >= 0 ? (
 						<>
 							<ItemTitle>
 								<ItemIcon>
@@ -116,7 +116,7 @@ const JobCard = ({
 								&nbsp; Experience
 							</ItemTitle>
 							<ItemDescription>
-								{experience === -1 ? 'Fresher' : `${experience} years`}
+								{experience === 0 ? 'Fresher' : `${experience} years`}
 							</ItemDescription>
 						</>
 					) : (

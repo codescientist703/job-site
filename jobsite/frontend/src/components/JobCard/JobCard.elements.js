@@ -45,10 +45,6 @@ export const JobCompany = styled.h3`
 	letter-spacing: 1px;
 `;
 
-export const StarIcon = styled(FiStar)`
-	font-size: 1.2rem;
-`;
-
 export const Item = styled.div``;
 
 export const ItemTitle = styled.p`
