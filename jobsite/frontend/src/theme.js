@@ -17,7 +17,7 @@ export const theme = {
 	maxWidthSm: 1100,
 	homePaddingLR: '1.5rem',
 	titleMargin: '2rem 0',
-	titleWeight: '600',
+	titleWeight: '700',
 	paddingLR: '1.5rem',
 	bgColor: '#f6f6f6',
 
