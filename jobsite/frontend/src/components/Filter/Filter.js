@@ -30,6 +30,11 @@ const Filter = ({
 	const onInputRangeChange = (e) => {
 		setInputValue(e.target.value);
 	};
+	// console.log(filterData.salary);
+	const onFilterBoxClear = () => {
+		setInputValue(0);
+		onFilterClear();
+	};
 	return (
 		<FilterContainer isFilterOpen={isFilterOpen}>
 			<FilterHeader>
@@ -130,7 +135,7 @@ const Filter = ({
 				{isLoading ? (
 					<Skeleton width={80} />
 				) : (
-					<ClearButton onClick={onFilterClear}>Clear Filters</ClearButton>
+					<ClearButton onClick={onFilterBoxClear}>Clear Filters</ClearButton>
 				)}
 			</FilterItem>
 		</FilterContainer>

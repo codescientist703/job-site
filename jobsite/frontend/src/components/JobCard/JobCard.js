@@ -30,7 +30,6 @@ const JobCard = ({
 	description,
 	slug,
 }) => {
-	console.log(salary);
 	return (
 		<Card type={type}>
 			<CardTop>

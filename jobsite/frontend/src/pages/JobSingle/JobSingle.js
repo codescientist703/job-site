@@ -27,8 +27,11 @@ const JobSingle = () => {
 	let { slug } = useParams();
 	const breadData = [
 		{ name: 'home', link: '/' },
-		{ name: `${data.category}`, link: `/category/${data.category}` },
-		{ name: `${data.title}`, link: `/${slug}` },
+		{
+			name: `${data.category ? data.category : ''}`,
+			link: `/category/${data.category}`,
+		},
+		{ name: `${data.title ? data.title : ''}`, link: `/${slug}` },
 	];
 
 	useEffect(() => {
@@ -60,12 +63,6 @@ const JobSingle = () => {
 					<JobTitle>{data.title || <Skeleton />}</JobTitle>
 					<SingleJobContainer>
 						<JobCard type={'single'} {...data} />
-						{/* {isLoading === false && (
-							<ShareDropdown
-								title={data.title}
-								description={data.description}
-							/>
-						)} */}
 						<Line />
 						<Content>
 							{isLoading === false ? (

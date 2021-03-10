@@ -107,7 +107,7 @@ const JobList = (props) => {
 			company: '',
 			location: '',
 			jobtitle: '',
-			salary: '',
+			salary: 0,
 			experience: '',
 			page: 1,
 		});
