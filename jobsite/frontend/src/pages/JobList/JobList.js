@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { useEffectUpdate } from '../../hooks';
+import { useParams } from 'react-router-dom';
 import {
 	Seo,
 	JobCard,
@@ -17,8 +19,6 @@ import {
 } from './JobList.elements';
 import axios from '../../axios';
 import ReactPaginate from 'react-paginate';
-
-import { useParams } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 
 const JobList = (props) => {
@@ -51,6 +51,10 @@ const JobList = (props) => {
 	if (categoryName === 'search') {
 		categoryName = 'jobs';
 	}
+	useEffectUpdate(() => {
+		onFilterClear();
+	}, [categoryName]);
+
 	useEffect(() => {
 		async function fetchData() {
 			if (is404 === true) {
@@ -78,7 +82,7 @@ const JobList = (props) => {
 			}
 		}
 		fetchData();
-	}, [filterData, categoryName]);
+	}, [filterData]);
 
 	const JobCards = () => {
 		return (

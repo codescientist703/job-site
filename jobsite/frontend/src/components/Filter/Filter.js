@@ -12,7 +12,7 @@ import {
 } from './Filter.elements';
 import MyAutosuggest from '../MyAutosuggest/MyAutosuggest';
 import Skeleton from 'react-loading-skeleton';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 const Filter = ({
 	isFilterOpen,
 	filterData,
@@ -21,21 +21,24 @@ const Filter = ({
 	isLoading,
 	filterFor,
 }) => {
+	const [inputValue, setInputValue] = useState(filterData.salary);
+
 	const onValueChange = (e) => {
 		onFilterSubmit(e.target.name, e.target.value);
 	};
+
 	const onSuggestionValueChange = (name, value) => {
 		onFilterSubmit(name, value);
 	};
-	const [inputValue, setInputValue] = useState(filterData.salary);
+
 	const onInputRangeChange = (e) => {
 		setInputValue(e.target.value);
 	};
-	// console.log(filterData.salary);
-	const onFilterBoxClear = () => {
-		setInputValue(0);
-		onFilterClear();
-	};
+
+	useEffect(() => {
+		setInputValue(filterData.salary);
+	}, [filterData.salary]);
+
 	return (
 		<FilterContainer isFilterOpen={isFilterOpen}>
 			<FilterHeader>
@@ -156,7 +159,7 @@ const Filter = ({
 				{isLoading ? (
 					<Skeleton width={80} />
 				) : (
-					<ClearButton onClick={onFilterBoxClear}>Clear Filters</ClearButton>
+					<ClearButton onClick={onFilterClear}>Clear Filters</ClearButton>
 				)}
 			</FilterItem>
 		</FilterContainer>
