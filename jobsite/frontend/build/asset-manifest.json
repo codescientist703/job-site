@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.js": "/static/js/main.45d1896b.chunk.js",
-    "main.js.map": "/static/js/main.45d1896b.chunk.js.map",
+    "main.js": "/static/js/main.879becdc.chunk.js",
+    "main.js.map": "/static/js/main.879becdc.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c60b7f5c.js",
     "runtime-main.js.map": "/static/js/runtime-main.c60b7f5c.js.map",
     "static/css/2.82a37e40.chunk.css": "/static/css/2.82a37e40.chunk.css",
-    "static/js/2.7abefad1.chunk.js": "/static/js/2.7abefad1.chunk.js",
-    "static/js/2.7abefad1.chunk.js.map": "/static/js/2.7abefad1.chunk.js.map",
+    "static/js/2.17ee7368.chunk.js": "/static/js/2.17ee7368.chunk.js",
+    "static/js/2.17ee7368.chunk.js.map": "/static/js/2.17ee7368.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.82a37e40.chunk.css.map": "/static/css/2.82a37e40.chunk.css.map",
-    "static/js/2.7abefad1.chunk.js.LICENSE.txt": "/static/js/2.7abefad1.chunk.js.LICENSE.txt",
-    "static/media/boyjob.b8fbe8d9.svg": "/static/media/boyjob.b8fbe8d9.svg",
-    "static/media/homejob.d3a62475.svg": "/static/media/homejob.d3a62475.svg",
+    "static/js/2.17ee7368.chunk.js.LICENSE.txt": "/static/js/2.17ee7368.chunk.js.LICENSE.txt",
+    "static/media/boyjob.bd2a516c.svg": "/static/media/boyjob.bd2a516c.svg",
+    "static/media/homejob.d1df9669.svg": "/static/media/homejob.d1df9669.svg",
     "static/media/illustatus.e9522098.svg": "/static/media/illustatus.e9522098.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.c60b7f5c.js",
     "static/css/2.82a37e40.chunk.css",
-    "static/js/2.7abefad1.chunk.js",
-    "static/js/main.45d1896b.chunk.js"
+    "static/js/2.17ee7368.chunk.js",
+    "static/js/main.879becdc.chunk.js"
   ]
 }
