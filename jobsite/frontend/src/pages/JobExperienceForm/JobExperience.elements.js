@@ -1,12 +1,5 @@
 import styled from 'styled-components/macro';
 
-export const Title = styled.h1`
-	font-size: ${({ theme }) => theme.h1};
-	text-align: center;
-	margin: ${({ theme }) => theme.titleMargin};
-	font-weight: ${({ theme }) => theme.titleWeight};
-`;
-
 export const Para = styled.p`
 	margin-left: 0.2rem;
 	margin-bottom: 0.7rem;
@@ -39,10 +32,8 @@ export const Inpt = styled.input`
 	padding: 0.6rem;
 	text-indent: 10px;
 	font-size: 1.04rem;
-	border: none;
-	border-bottom: 1px solid rgba(117, 121, 231, 0.5);
+	border: 1px solid rgba(117, 121, 231, 0.5);
 	border-radius: 3px;
-	background: rgba(117, 121, 231, 0.1);
 	outline: none;
 
 	&::placeholder {

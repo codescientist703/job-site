@@ -114,7 +114,9 @@ const Filter = ({
 				<FilterName>
 					{isLoading ? <Skeleton width={80} /> : 'Minimum Salary'}
 				</FilterName>
-				<SliderValue>{inputValue}</SliderValue>
+				<SliderValue>
+					{isLoading ? <Skeleton width={30} /> : `₹ ${inputValue}`}
+				</SliderValue>
 				{isLoading ? (
 					<Skeleton height={10} />
 				) : filterFor === 'internship' ? (
@@ -130,7 +132,7 @@ const Filter = ({
 					/>
 				) : (
 					<FilterRange
-						step='100000'
+						step='50000'
 						type='range'
 						name='salary'
 						min='0'
@@ -142,17 +144,29 @@ const Filter = ({
 				)}
 
 				{filterFor === 'internship' ? (
-					<RangeData>
-						<Range>0</Range>
-						<Range>5k</Range>
-						<Range>10k</Range>
-					</RangeData>
+					<>
+						{isLoading ? (
+							<Skeleton />
+						) : (
+							<RangeData>
+								<Range>0</Range>
+								<Range>5k</Range>
+								<Range>10k</Range>
+							</RangeData>
+						)}
+					</>
 				) : (
-					<RangeData>
-						<Range>0</Range>
-						<Range>250k</Range>
-						<Range>500k</Range>
-					</RangeData>
+					<>
+						{isLoading ? (
+							<Skeleton />
+						) : (
+							<RangeData>
+								<Range>0</Range>
+								<Range>25 Lacs</Range>
+								<Range>50 Lacs</Range>
+							</RangeData>
+						)}
+					</>
 				)}
 			</FilterItem>
 			<FilterItem>

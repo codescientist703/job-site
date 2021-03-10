@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-const Content = styled.div`
+export const Content = styled.div`
 	padding: 1rem;
 
 	h1 {
@@ -32,4 +32,10 @@ const Content = styled.div`
 	}
 `;
 
-export default Content;
+export const Title = styled.h1`
+	font-size: ${({ theme }) => theme.h1};
+	text-align: center;
+	margin: ${({ theme }) => theme.titleMargin};
+	font-weight: ${({ theme }) => theme.titleWeight};
+	text-transform: capitalize;
+`;

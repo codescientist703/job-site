@@ -13,6 +13,7 @@ import {
 	FluidContainer,
 	LayoutContainer,
 	ShareDropdown,
+	Title,
 	Seo,
 } from '../../components';
 import Skeleton from 'react-loading-skeleton';
@@ -60,7 +61,7 @@ const JobSingle = () => {
 			<FluidContainer>
 				<Container>
 					<Breadcumb breadData={breadData} width={'lg'} />
-					<JobTitle>{data.title || <Skeleton />}</JobTitle>
+					<Title>{data.title || <Skeleton />}</Title>
 					<SingleJobContainer>
 						<JobCard type={'single'} {...data} />
 						<Line />

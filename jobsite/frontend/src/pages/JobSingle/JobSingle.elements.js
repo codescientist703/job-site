@@ -6,6 +6,7 @@ export const JobTitle = styled.h1`
 	margin: ${({ theme }) => theme.titleMargin};
 	font-size: ${({ theme }) => theme.h1}rem;
 	font-weight: ${({ theme }) => theme.titleWeight};
+	text-transform: capitalize;
 `;
 
 export const SingleJobContainer = styled.div`

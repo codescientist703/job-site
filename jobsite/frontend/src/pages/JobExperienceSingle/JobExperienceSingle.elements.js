@@ -2,13 +2,6 @@ import styled from 'styled-components/macro';
 import { FiShare2 } from 'react-icons/fi';
 import { Button } from '../../components';
 
-export const JobTitle = styled.h1`
-	text-align: center;
-	margin: ${({ theme }) => theme.titleMargin};
-	font-size: ${({ theme }) => theme.h1}rem;
-	font-weight: ${({ theme }) => theme.titleWeight};
-`;
-
 export const SingleJobContainer = styled.div`
 	position: relative;
 	border: 1px solid #ddd;

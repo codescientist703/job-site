@@ -9,13 +9,13 @@ import {
 	Filter,
 	LayoutContainer,
 	FluidContainer,
+	Title,
 } from '../../components';
 import {
 	MainContainer,
 	JobContainer,
 	FilterBtn,
 	PaginateComponent,
-	Title,
 } from './JobList.elements';
 import axios from '../../axios';
 import ReactPaginate from 'react-paginate';

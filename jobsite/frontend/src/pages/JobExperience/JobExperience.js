@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Title, Paragraph } from './JobExperience.elements';
+import { Paragraph } from './JobExperience.elements';
 import {
 	Breadcumb,
 	ExperienceCard,
 	FluidContainer,
 	Container,
 	Seo,
+	Title,
 } from '../../components';
 import axios from '../../axios';
 import { PaginateComponent } from '../JobList/JobList.elements';

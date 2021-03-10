@@ -1,15 +1,14 @@
 import { useState } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import { Container, FluidContainer, Btn, Breadcumb } from '../../components';
 import {
+	Container,
+	FluidContainer,
+	Btn,
+	Breadcumb,
 	Title,
-	Form,
-	FormInput,
-	Label,
-	Inpt,
-	Para,
-} from './JobExperience.elements';
+} from '../../components';
+import { Form, FormInput, Label, Inpt, Para } from './JobExperience.elements';
 import axios from '../../axios';
 import { toast } from 'react-toastify';
 

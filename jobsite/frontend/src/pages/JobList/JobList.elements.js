@@ -16,12 +16,6 @@ export const MainContainer = styled.section`
 	}
 `;
 
-export const Title = styled.h1`
-	text-align: center;
-	margin: ${({ theme }) => theme.titleMargin};
-	font-weight: ${({ theme }) => theme.titleWeight};
-`;
-
 export const JobContainer = styled.div``;
 
 export const FilterBtn = styled(FilterButton)``;

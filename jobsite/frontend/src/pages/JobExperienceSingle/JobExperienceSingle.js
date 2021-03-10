@@ -1,11 +1,7 @@
 import { useState, useEffect } from 'react';
+import { SingleJobContainer, Line } from './JobExperienceSingle.elements';
 import {
-	JobTitle,
-	SingleJobContainer,
-	Line,
-	ShareIcon,
-} from './JobExperienceSingle.elements';
-import {
+	Title,
 	Container,
 	Content,
 	Breadcumb,
@@ -57,7 +53,7 @@ const JobExperienceSingle = () => {
 			<FluidContainer>
 				<Container>
 					<Breadcumb breadData={breadData} width={'lg'} />
-					<JobTitle>{isLoading ? <Skeleton /> : data.title}</JobTitle>
+					<Title>{isLoading ? <Skeleton /> : data.title}</Title>
 					<SingleJobContainer>
 						<ExperienceCard type={'single'} {...data} />
 						{/* {isLoading === false && <ShareIcon />} */}

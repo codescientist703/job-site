@@ -19,6 +19,12 @@ import { LinkButton } from '../../components';
 import Skeleton from 'react-loading-skeleton';
 import { ShareDropdown } from '../../components';
 
+const convertToLacs = (number) => {
+	if (number >= 100000) {
+		return `${number / 100000} LPA`;
+	} else return `${number}`;
+};
+
 const JobCard = ({
 	type,
 	jobtitle,
@@ -96,7 +102,7 @@ const JobCard = ({
 								&nbsp; Salary
 							</ItemTitle>
 							<ItemDescription>
-								{salary === 0 ? 'Not Specified' : `₹ ${salary} /annum`}
+								{salary === 0 ? 'Not Specified' : `₹ ${convertToLacs(salary)}`}
 							</ItemDescription>
 						</>
 					) : (

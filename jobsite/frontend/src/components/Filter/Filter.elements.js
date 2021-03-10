@@ -3,7 +3,7 @@ import { FilterButton } from '../../components';
 
 export const FilterContainer = styled.aside`
 	/* for mobile */
-	max-height: ${({ isFilterOpen }) => (isFilterOpen ? '620px' : '0')};
+	max-height: ${({ isFilterOpen }) => (isFilterOpen ? '700px' : '0')};
 	padding: ${({ isFilterOpen }) => (isFilterOpen ? '0.8rem' : '0rem')};
 	overflow: hidden;
 	margin-bottom: ${({ isFilterOpen }) => (isFilterOpen ? '1rem' : '0')};

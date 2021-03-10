@@ -63,6 +63,7 @@ export const FilterButton = styled.button`
 	margin-bottom: 1.3rem;
 	font-size: 0.9rem;
 	font-weight: 600;
+	cursor: pointer;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		display: none;
