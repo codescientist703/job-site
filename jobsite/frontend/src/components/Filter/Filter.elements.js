@@ -69,6 +69,37 @@ export const FilterInput = styled.input`
 `;
 
 export const FilterRange = styled.input`
+	position: relative;
 	width: 100%;
 	outline: none;
+	-webkit-appearance: none;
+	height: 7px;
+	width: 100%;
+	background-color: ${({ theme }) => theme.primaryColor};
+	border-radius: 50px;
+
+	&::-webkit-slider-thumb {
+		position: relative;
+		-webkit-appearance: none;
+		color: ${({ theme }) => theme.primaryColor};
+		height: 20px;
+		width: 20px;
+		border-radius: 50%;
+		border: 2px solid ${({ theme }) => theme.primaryColor};
+		background: #fff;
+	}
+`;
+
+export const SliderValue = styled.p`
+	text-align: center;
+`;
+
+export const RangeData = styled.div`
+	display: flex;
+	justify-content: space-between;
+`;
+
+export const Range = styled.p`
+	color: ${({ theme }) => theme.subParaColor};
+	font-size: 0.9rem;
 `;

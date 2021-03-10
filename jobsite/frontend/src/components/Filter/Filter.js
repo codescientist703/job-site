@@ -4,8 +4,11 @@ import {
 	ClearButton,
 	FilterName,
 	FilterRange,
+	SliderValue,
 	FilterHeader,
 	FilterInput,
+	Range,
+	RangeData,
 } from './Filter.elements';
 import MyAutosuggest from '../MyAutosuggest/MyAutosuggest';
 import Skeleton from 'react-loading-skeleton';
@@ -102,18 +105,26 @@ const Filter = ({
 				<FilterName>
 					{isLoading ? <Skeleton width={80} /> : 'Salary'}
 				</FilterName>
+				<SliderValue>{inputValue}</SliderValue>
 				{isLoading ? (
 					<Skeleton height={10} />
 				) : (
 					<FilterRange
-						step={2}
+						step='1000'
 						type='range'
 						name='salary'
+						min='0'
+						max='10000'
 						value={inputValue}
 						onMouseUp={onValueChange}
 						onChange={onInputRangeChange}
 					/>
 				)}
+				<RangeData>
+					<Range>0</Range>
+					<Range>5k</Range>
+					<Range>10k</Range>
+				</RangeData>
 			</FilterItem>
 			<FilterItem>
 				{isLoading ? (

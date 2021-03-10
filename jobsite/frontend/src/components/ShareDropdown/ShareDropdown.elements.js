@@ -17,7 +17,7 @@ export const ShareIcon = styled(FiShare2)`
 	cursor: pointer;
 
 	&:hover {
-		color: #00b0ff;
+		color: ${({ theme }) => theme.primaryColor};
 	}
 `;
 

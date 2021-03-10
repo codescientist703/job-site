@@ -6,7 +6,7 @@ export const theme = {
 	h5: 0.875,
 	h6: 0.75,
 	shadow: '0 2px 6px rgba(0,0,0,0.2)',
-	cardShadow: '0 2px 7px rgba(0,0,0,0.2)',
+	cardShadow: '0 3px 8px rgba(117, 121, 231, 0.35)',
 	shadowHover: '0 3px 10px rgba(0,0,0,0.4)',
 	subParaColor: 'rgba(0,0,0,0.6)',
 	lg: 992,

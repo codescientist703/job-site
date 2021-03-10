@@ -40,9 +40,9 @@ export const Inpt = styled.input`
 	text-indent: 10px;
 	font-size: 1.04rem;
 	border: none;
-	border-bottom: 1px solid #c4c4c4;
+	border-bottom: 1px solid rgba(117, 121, 231, 0.5);
 	border-radius: 3px;
-	background: #f5f5f5;
+	background: rgba(117, 121, 231, 0.1);
 	outline: none;
 
 	&::placeholder {
