@@ -130,6 +130,7 @@ const JobList = (props) => {
 							filterData={filterData}
 							onFilterClear={onFilterClear}
 							isLoading={isLoading}
+							filterFor={categoryName}
 						/>
 						<JobContainer>
 							{isLoading ? (

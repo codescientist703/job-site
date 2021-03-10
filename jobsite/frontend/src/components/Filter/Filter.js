@@ -109,9 +109,9 @@ const Filter = ({
 
 			<FilterItem>
 				<FilterName>
-					{isLoading ? <Skeleton width={80} /> : 'Salary'}
+					{isLoading ? <Skeleton width={80} /> : 'Minimum Salary'}
 				</FilterName>
-				<SliderValue>&ge; {inputValue}</SliderValue>
+				<SliderValue>{inputValue}</SliderValue>
 				{isLoading ? (
 					<Skeleton height={10} />
 				) : filterFor === 'internship' ? (
