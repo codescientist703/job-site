@@ -19,6 +19,7 @@ const Filter = ({
 	onFilterSubmit,
 	onFilterClear,
 	isLoading,
+	filterFor,
 }) => {
 	const onValueChange = (e) => {
 		onFilterSubmit(e.target.name, e.target.value);
@@ -110,10 +111,10 @@ const Filter = ({
 				<FilterName>
 					{isLoading ? <Skeleton width={80} /> : 'Salary'}
 				</FilterName>
-				<SliderValue>{inputValue}</SliderValue>
+				<SliderValue>&ge; {inputValue}</SliderValue>
 				{isLoading ? (
 					<Skeleton height={10} />
-				) : (
+				) : filterFor === 'internship' ? (
 					<FilterRange
 						step='1000'
 						type='range'
@@ -124,12 +125,32 @@ const Filter = ({
 						onMouseUp={onValueChange}
 						onChange={onInputRangeChange}
 					/>
+				) : (
+					<FilterRange
+						step='100000'
+						type='range'
+						name='salary'
+						min='0'
+						max='5000000'
+						value={inputValue}
+						onMouseUp={onValueChange}
+						onChange={onInputRangeChange}
+					/>
 				)}
-				<RangeData>
-					<Range>0</Range>
-					<Range>5k</Range>
-					<Range>10k</Range>
-				</RangeData>
+
+				{filterFor === 'internship' ? (
+					<RangeData>
+						<Range>0</Range>
+						<Range>5k</Range>
+						<Range>10k</Range>
+					</RangeData>
+				) : (
+					<RangeData>
+						<Range>0</Range>
+						<Range>250k</Range>
+						<Range>500k</Range>
+					</RangeData>
+				)}
 			</FilterItem>
 			<FilterItem>
 				{isLoading ? (

@@ -102,4 +102,8 @@ export const RangeData = styled.div`
 export const Range = styled.p`
 	color: ${({ theme }) => theme.subParaColor};
 	font-size: 0.9rem;
+
+	&:not(:first-child) {
+		transform: translateX(40%);
+	}
 `;
