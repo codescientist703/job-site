@@ -95,7 +95,7 @@ export const SearchBox = styled.div`
 	padding: 0.25rem 0.44rem;
 	border-radius: 50px;
 	max-width: 380px;
-	box-shadow: ${({ theme }) => theme.shadow};
+	box-shadow: ${({ theme }) => theme.cardShadow};
 
 	/* for tablet */
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
@@ -162,7 +162,7 @@ export const WaveSVG = styled.svg`
 // styling for section two starts
 export const SecTwoContainer = styled.section`
 	position: relative;
-	background-color: ${({ theme }) => theme.bgLight};
+	background-color: ${({ theme }) => theme.bgColor};
 `;
 
 export const Container = styled.div`

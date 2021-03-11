@@ -17,7 +17,7 @@ export const FilterContainer = styled.aside`
 		top: 1.875rem;
 		display: block;
 		overflow: visible;
-		padding: 0.8rem 1.2rem;
+		padding: 0.8rem 1.7rem;
 		border-radius: 5px;
 		border: 1px solid #ddd;
 		max-height: 100%;

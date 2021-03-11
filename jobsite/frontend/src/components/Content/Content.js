@@ -33,9 +33,13 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h1`
-	font-size: ${({ theme }) => theme.h1};
+	font-size: ${({ theme }) => theme.h1Sm}rem;
 	text-align: center;
 	margin: ${({ theme }) => theme.titleMargin};
 	font-weight: ${({ theme }) => theme.titleWeight};
 	text-transform: capitalize;
+
+	@media screen and (min-width: ${({ theme }) => theme.md}px) {
+		font-size: ${({ theme }) => theme.h1}rem;
+	}
 `;

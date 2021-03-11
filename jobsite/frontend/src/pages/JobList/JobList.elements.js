@@ -22,7 +22,7 @@ export const FilterBtn = styled(FilterButton)``;
 
 export const PaginateComponent = styled.div`
 	display: flex;
-	background-color: #eee;
+	background-color: ${({ theme }) => theme.secondaryColor};
 	border-radius: 5px;
 	margin-bottom: 1.2rem;
 
@@ -34,7 +34,7 @@ export const PaginateComponent = styled.div`
 		text-transform: capitalize;
 
 		.active a {
-			/* background-color: #47ccde; */
+			background-color: #fff;
 			border: 2px solid ${({ theme }) => theme.primaryColor};
 			color: ${({ theme }) => theme.primaryColor};
 			font-weight: 600;
