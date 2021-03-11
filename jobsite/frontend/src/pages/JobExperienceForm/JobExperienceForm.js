@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+// import { CKEditor } from '@ckeditor/ckeditor5-react';
+// import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 import {
 	Container,
 	FluidContainer,
@@ -17,6 +19,13 @@ const JobExperienceForm = () => {
 		{ name: 'home', link: '/' },
 		{ name: 'Interview Experience Form', link: '/contribute-your-experience' },
 	];
+
+	const [expData, setExpdata] = useState('');
+
+	const onEditorChange = (val) => {
+		// console.log(val);
+		// setExpdata(val);
+	};
 
 	const [formData, setFormData] = useState({
 		name: '',
@@ -121,7 +130,8 @@ const JobExperienceForm = () => {
 
 					<FormInput>
 						<Label>Your Experience</Label>
-						<CKEditor
+						<ReactQuill placeholder='Write your detailed experience here...'></ReactQuill>
+						{/* <CKEditor
 							editor={ClassicEditor}
 							onChange={(e, editor) =>
 								setFormData({ ...formData, ['content']: editor.getData() })
@@ -132,7 +142,7 @@ const JobExperienceForm = () => {
 									height: '500px',
 								},
 							}}
-						/>
+						/> */}
 					</FormInput>
 					<Btn type='submit'>Submit</Btn>
 				</Form>
