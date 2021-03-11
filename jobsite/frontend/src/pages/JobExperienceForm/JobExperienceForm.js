@@ -75,7 +75,23 @@ const JobExperienceForm = () => {
 	const handleChange = (content) => {
 		setContent(content);
 	};
-	console.log(formData);
+	const config = {
+		formats: ['p', 'blockquote', 'pre', 'h2', 'h3', 'h4', 'h5', 'h6'],
+		buttonList: [
+			[
+				'bold',
+				'underline',
+				'italic',
+				'strike',
+				'subscript',
+				'superscript',
+				'list',
+			],
+			['outdent', 'indent', 'formatBlock', 'align'],
+			['table', 'link'],
+			['undo', 'redo'],
+		],
+	};
 
 	return (
 		<FluidContainer>
@@ -139,6 +155,7 @@ const JobExperienceForm = () => {
 							name='content'
 							placeholder='Please share your experience here...'
 							setContents={content}
+							setOptions={config}
 						/>
 					</FormInput>
 					<Btn type='submit'>Submit</Btn>
