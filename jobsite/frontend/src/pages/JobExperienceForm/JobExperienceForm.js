@@ -21,7 +21,6 @@ const JobExperienceForm = () => {
 	];
 
 	const editor = useRef(null);
-	const [editorContent, setEditorContent] = useState('');
 
 	const config = {
 		readonly: false,
@@ -29,8 +28,8 @@ const JobExperienceForm = () => {
 	};
 
 	const setData = (e) => {
-		setEditorContent(e.target.innerHTML);
 		console.log(e.target.innerHTML);
+		setFormData({ ...formData, ['content']: e.target.innerHTML });
 	};
 
 	const [formData, setFormData] = useState({
@@ -75,9 +74,6 @@ const JobExperienceForm = () => {
 			jobtitle: '',
 			company: '',
 			email: '',
-		});
-		setFormData({
-			...formData,
 			content: '',
 		});
 	};
@@ -138,7 +134,7 @@ const JobExperienceForm = () => {
 						<Label>Your Experience</Label>
 						<JoditEditor
 							ref={editor}
-							value={editorContent}
+							value={formData.content}
 							config={config}
 							tabIndex={5}
 							onBlur={setData}
