@@ -177,4 +177,10 @@ MATERIAL_ADMIN_SITE = {
     'SHOW_COUNTS': True,  # Show instances counts for each model
 
 }
+
+if DEBUG == False:
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+
+
 CORS_ALLOW_ALL_ORIGINS = True
