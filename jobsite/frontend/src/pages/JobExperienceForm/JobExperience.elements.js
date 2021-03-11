@@ -21,17 +21,6 @@ export const Form = styled.form`
 export const FormInput = styled.div`
 	width: 100%;
 	margin-bottom: 1.5rem;
-	/* .ck-editor .ck-editor__editable {
-		min-height: 500px;
-	} */
-	.jodit-container:not(.jodit_inline) .jodit-wysiwyg {
-		padding: 1rem 1.7rem;
-		min-height: 400px !important;
-	}
-
-	.jodit-placeholder {
-		padding: 1rem 1.7rem;
-	}
 `;
 
 export const Label = styled.p`

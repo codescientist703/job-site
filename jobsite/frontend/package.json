@@ -3,13 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^26.0.0",
-    "@ckeditor/ckeditor5-react": "^3.0.1",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
     "axios": "^0.21.1",
-    "jodit-react": "^1.0.74",
     "react": "^17.0.1",
     "react-autosuggest": "^10.1.0",
     "react-dom": "^17.0.1",
@@ -23,6 +20,7 @@
     "react-share": "^4.4.0",
     "react-toastify": "^7.0.3",
     "styled-components": "^5.2.1",
+    "suneditor-react": "^2.16.0",
     "web-vitals": "^1.1.0"
   },
   "scripts": {

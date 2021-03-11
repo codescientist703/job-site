@@ -1,8 +1,9 @@
 import { useState, useRef } from 'react';
 // import { CKEditor } from '@ckeditor/ckeditor5-react';
 // import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import JoditEditor from 'jodit-react';
 
+import SunEditor from 'suneditor-react';
+import 'suneditor/dist/css/suneditor.min.css'; // Import Sun Editor's CSS File
 import {
 	Container,
 	FluidContainer,
@@ -13,6 +14,8 @@ import {
 import { Form, FormInput, Label, Inpt, Para } from './JobExperience.elements';
 import axios from '../../axios';
 import { toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 const JobExperienceForm = () => {
 	const breadData = [
@@ -20,29 +23,21 @@ const JobExperienceForm = () => {
 		{ name: 'Interview Experience Form', link: '/contribute-your-experience' },
 	];
 
-	const editor = useRef(null);
-
-	const config = {
-		readonly: false,
-		placeholder: 'ajkj',
-	};
-
-	const setData = (e) => {
-		console.log(e.target.innerHTML);
-		setFormData({ ...formData, ['content']: e.target.innerHTML });
-	};
-
 	const [formData, setFormData] = useState({
 		name: '',
 		jobtitle: '',
 		company: '',
 		email: '',
-		content: '',
 	});
+	const [content, setContent] = useState('');
 	const submitData = async () => {
 		try {
 			const apiUrl = 'interview/create/';
-			const response = await axios.post(apiUrl, formData);
+			const validatedData = {
+				...formData,
+				content: content,
+			};
+			const response = await axios.post(apiUrl, validatedData);
 			successToast('Your experience has been successfully submitted !');
 		} catch (error) {
 			const errorData = error.response.data;
@@ -69,14 +64,18 @@ const JobExperienceForm = () => {
 
 	const resetForm = () => {
 		setFormData({
-			...formData,
 			name: '',
 			jobtitle: '',
 			company: '',
 			email: '',
-			content: '',
 		});
+		setContent('');
 	};
+
+	const handleChange = (content) => {
+		setContent(content);
+	};
+	console.log(formData);
 
 	return (
 		<FluidContainer>
@@ -132,32 +131,26 @@ const JobExperienceForm = () => {
 
 					<FormInput>
 						<Label>Your Experience</Label>
-						<JoditEditor
-							ref={editor}
-							value={formData.content}
-							config={config}
-							tabIndex={5}
-							onBlur={setData}
-							// onChange={(newContent) => {
-							// 	setEditorContent(newContent);
-							// }}
+						<SunEditor
+							autoFocus={true}
+							width='100%'
+							onChange={handleChange}
+							height='500px'
+							name='content'
+							placeholder='Please share your experience here...'
+							setContents={content}
 						/>
-						{/* <CKEditor
-							editor={ClassicEditor}
-							onChange={(e, editor) =>
-								setFormData({ ...formData, ['content']: editor.getData() })
-							}
-							data={formData.content}
-							config={{
-								default: {
-									height: '500px',
-								},
-							}}
-						/> */}
 					</FormInput>
 					<Btn type='submit'>Submit</Btn>
 				</Form>
 			</Container>
+			<ToastContainer
+				position='top-right'
+				hideProgressBar={true}
+				autoClose={7000}
+				pauseOnHover={false}
+				closeOnClick
+			/>
 		</FluidContainer>
 	);
 };
