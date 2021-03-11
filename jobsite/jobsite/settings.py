@@ -9,29 +9,33 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
+from dotenv import load_dotenv
 
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ktr^k^n$f-6p4n@pvf7+hwzx93sgtg3=j%^_v&w$zt_c5$h3g)'
+SECRET_KEY = os.getenv("SECREY_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+DEBUG = os.getenv("DEBUG")
+
+if DEBUG:
+    ALLOWED_HOSTS = []
+else:
+    ALLOWED_HOSTS = ['159.89.167.226']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-
     'material.admin',
     'material.admin.default',
     'django.contrib.auth',
@@ -143,10 +147,6 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = [
     BASE_DIR / "frontend/build/static"
 ]
-# STATIC_ROOT = BASE_DIR / "staticfiles"
-# # STATICFILES_FINDERS = [
-# #     'django.contrib.staticfiles.finders.AppDirectoriesFinder'
-# # ]
 
 CKEDITOR_CONFIGS = {
     'default': {
