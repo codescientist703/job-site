@@ -162,8 +162,8 @@ const Filter = ({
 						) : (
 							<RangeData>
 								<Range>0</Range>
-								<Range>25 Lacs</Range>
-								<Range>50 Lacs</Range>
+								<Range>25 LPA</Range>
+								<Range>50 LPA</Range>
 							</RangeData>
 						)}
 					</>

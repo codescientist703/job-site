@@ -7,6 +7,13 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Poppins', sans-serif;
     }
+    :root{
+        font-size: 12px;
+
+        @media screen and (min-width: ${({ theme }) => theme.md}px) {
+		font-size: 16px;
+	}
+    }
 `;
 
 export default GlobalStyle;

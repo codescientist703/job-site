@@ -1,10 +1,12 @@
 export const theme = {
 	h1: 2,
+	h1Sm: 1.65,
 	h2: 1.5,
 	h3: 1.125,
 	h4: 1,
 	h5: 0.875,
 	h6: 0.75,
+	p: 0.95,
 	shadow: '0 2px 6px rgba(0,0,0,0.2)',
 	cardShadow: '0 3px 8px rgba(117, 121, 231, 0.35)',
 	shadowHover: '0 3px 10px rgba(0,0,0,0.4)',
@@ -19,7 +21,7 @@ export const theme = {
 	paddingLR: '1.5rem',
 	bgColor: 'rgba(238, 238, 252, 0.4)',
 	primaryColor: '#7579e7',
-	secondaryColor: '#9ab3f5',
+	secondaryColor: 'rgba(203, 204, 246, 0.6)',
 	bgLight: '#f8f8f8',
 
 	button: {

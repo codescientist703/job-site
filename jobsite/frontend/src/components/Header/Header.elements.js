@@ -5,7 +5,7 @@ import { FaHamburger, FaWindowClose } from 'react-icons/fa';
 export const NavHeader = styled.header`
 	position: relative;
 	z-index: 1000;
-	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+	box-shadow: ${({ theme }) => theme.cardShadow};
 	width: 100%;
 `;
 
@@ -58,7 +58,7 @@ export const NavMenu = styled.ul`
 	z-index: 100;
 	left: ${({ isOpen }) => (isOpen ? 0 : '-100%')};
 	list-style: none;
-	background: #ccc;
+	background: #e2eafc;
 	transition: all 0.3s ease-out;
 	padding: 5rem 1rem 1rem;
 
