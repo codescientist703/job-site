@@ -8,10 +8,14 @@ export const Para = styled.p`
 
 export const Form = styled.form`
 	width: 100%;
-	padding: 1.5rem;
+	padding: 1rem;
 	background-color: #fff;
 	border-radius: 10px;
 	border: 1px solid #d9d9d9;
+
+	@media screen and (min-width: ${({ theme }) => theme.md}px) {
+		padding: 1.5rem;
+	}
 `;
 
 export const FormInput = styled.div`
@@ -20,12 +24,13 @@ export const FormInput = styled.div`
 	/* .ck-editor .ck-editor__editable {
 		min-height: 500px;
 	} */
-	.quill {
-		border-radius: 3px;
-		border: 1px solid rgba(117, 121, 231, 0.5);
+	.jodit-container:not(.jodit_inline) .jodit-wysiwyg {
+		padding: 1rem 1.7rem;
+		min-height: 400px !important;
 	}
-	.ql-container {
-		min-height: 500px;
+
+	.jodit-placeholder {
+		padding: 1rem 1.7rem;
 	}
 `;
 

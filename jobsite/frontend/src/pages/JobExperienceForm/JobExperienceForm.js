@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 // import { CKEditor } from '@ckeditor/ckeditor5-react';
 // import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+import JoditEditor from 'jodit-react';
+
 import {
 	Container,
 	FluidContainer,
@@ -20,11 +20,12 @@ const JobExperienceForm = () => {
 		{ name: 'Interview Experience Form', link: '/contribute-your-experience' },
 	];
 
-	const [expData, setExpdata] = useState('');
+	const editor = useRef(null);
+	const [editorContent, setEditorContent] = useState('');
 
-	const onEditorChange = (val) => {
-		// console.log(val);
-		// setExpdata(val);
+	const config = {
+		readonly: false,
+		placeholder: 'ajkj',
 	};
 
 	const [formData, setFormData] = useState({
@@ -130,7 +131,16 @@ const JobExperienceForm = () => {
 
 					<FormInput>
 						<Label>Your Experience</Label>
-						<ReactQuill placeholder='Write your detailed experience here...'></ReactQuill>
+						<JoditEditor
+							ref={editor}
+							value={editorContent}
+							config={config}
+							tabIndex={5}
+							// onBlur={(newContent) => setEditorContent(newContent)}
+							onChange={(newContent) => {
+								setEditorContent(newContent);
+							}}
+						/>
 						{/* <CKEditor
 							editor={ClassicEditor}
 							onChange={(e, editor) =>

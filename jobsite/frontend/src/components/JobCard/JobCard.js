@@ -55,7 +55,7 @@ const JobCard = ({
 								<ItemIcon>
 									<AiFillHome />
 								</ItemIcon>
-								&nbsp; Location
+								Location
 							</ItemTitle>
 							<ItemDescription>{location}</ItemDescription>
 						</>
@@ -77,7 +77,7 @@ const JobCard = ({
 								<ItemIcon>
 									<BiTimeFive />
 								</ItemIcon>
-								&nbsp; Date
+								Date
 							</ItemTitle>
 							<ItemDescription>{date}</ItemDescription>
 						</>
@@ -99,7 +99,7 @@ const JobCard = ({
 								<ItemIcon>
 									<BiTimeFive />
 								</ItemIcon>
-								&nbsp; Salary
+								Salary
 							</ItemTitle>
 							<ItemDescription>
 								{salary === 0 ? 'Not Specified' : `₹ ${convertToLacs(salary)}`}
@@ -123,7 +123,7 @@ const JobCard = ({
 								<ItemIcon>
 									<BiTimeFive />
 								</ItemIcon>
-								&nbsp; Experience
+								Experience
 							</ItemTitle>
 							<ItemDescription>
 								{experience === 0 ? 'Fresher' : `${experience} years`}
