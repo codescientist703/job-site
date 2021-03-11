@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro';
 import { NavLink as NavvLink, Link } from 'react-router-dom';
-import { FaHamburger, FaWindowClose } from 'react-icons/fa';
+import { FaHamburger } from 'react-icons/fa';
+import { IoClose } from 'react-icons/io5';
 
 export const NavHeader = styled.header`
 	position: relative;
@@ -27,7 +28,6 @@ export const NavLogo = styled(NavvLink)`
 	font-size: 2rem;
 	color: #000;
 	text-align: left;
-	width: 100%;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		width: auto;
@@ -41,11 +41,12 @@ export const NavIcon = styled(FaHamburger)`
 	}
 `;
 
-export const CloseIcon = styled(FaWindowClose)`
+export const CloseIcon = styled(IoClose)`
 	position: absolute;
 	top: 1rem;
 	right: 1rem;
-	font-size: 1.5rem;
+	font-size: 1.8rem;
+	cursor: pointer;
 `;
 
 export const NavMenu = styled.ul`

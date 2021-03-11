@@ -17,7 +17,14 @@ export const Form = styled.form`
 export const FormInput = styled.div`
 	width: 100%;
 	margin-bottom: 1.5rem;
-	.ck-editor .ck-editor__editable {
+	/* .ck-editor .ck-editor__editable {
+		min-height: 500px;
+	} */
+	.quill {
+		border-radius: 3px;
+		border: 1px solid rgba(117, 121, 231, 0.5);
+	}
+	.ql-container {
 		min-height: 500px;
 	}
 `;

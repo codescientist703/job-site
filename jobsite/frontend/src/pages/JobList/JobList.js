@@ -125,9 +125,12 @@ const JobList = (props) => {
 					<Breadcumb breadData={breadData} />
 					<Title>{isLoading ? <Skeleton /> : seoData.title}</Title>
 					<MainContainer>
-						<FilterBtn onClick={toggleFilterClick}>
-							{isFilterOpen ? 'Hide Filters' : 'Show Filters'}
-						</FilterBtn>
+						{!isLoading && (
+							<FilterBtn onClick={toggleFilterClick}>
+								{isFilterOpen ? 'Hide Filters' : 'Show Filters'}
+							</FilterBtn>
+						)}
+
 						<Filter
 							onFilterSubmit={onFilterSubmit}
 							isFilterOpen={isFilterOpen}

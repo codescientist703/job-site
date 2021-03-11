@@ -4,7 +4,7 @@ import { FilterButton } from '../../components';
 export const FilterContainer = styled.aside`
 	/* for mobile */
 	max-height: ${({ isFilterOpen }) => (isFilterOpen ? '700px' : '0')};
-	padding: ${({ isFilterOpen }) => (isFilterOpen ? '0.8rem' : '0rem')};
+	padding: ${({ isFilterOpen }) => (isFilterOpen ? '0.9rem' : '0rem')};
 	overflow: hidden;
 	margin-bottom: ${({ isFilterOpen }) => (isFilterOpen ? '1rem' : '0')};
 	border-radius: 5px;
@@ -17,7 +17,7 @@ export const FilterContainer = styled.aside`
 		top: 1.875rem;
 		display: block;
 		overflow: visible;
-		padding: 0.8rem 1.7rem;
+		padding: 0.9rem 1.5rem;
 		border-radius: 5px;
 		border: 1px solid #ddd;
 		max-height: 100%;
@@ -101,9 +101,13 @@ export const RangeData = styled.div`
 
 export const Range = styled.p`
 	color: ${({ theme }) => theme.subParaColor};
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 
-	&:not(:first-child) {
+	&:not(:last-child) {
 		transform: translateX(40%);
+	}
+
+	&:last-child {
+		transform: translateX(20%);
 	}
 `;
