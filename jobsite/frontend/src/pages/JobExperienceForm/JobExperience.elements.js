@@ -23,7 +23,7 @@ export const FormInput = styled.div`
 	margin-bottom: 1.5rem;
 `;
 
-export const Label = styled.p`
+export const Label = styled.label`
 	margin-bottom: 0.3rem;
 	font-size: 1rem;
 `;

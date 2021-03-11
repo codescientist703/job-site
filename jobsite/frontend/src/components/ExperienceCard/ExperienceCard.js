@@ -51,6 +51,18 @@ function ExperienceCard({ type, company, name, jobtitle, description, slug }) {
 					<ShareDropdown />
 				</CardRight>
 			</CardHeader>
+			<CardCredits>
+				{name ? (
+					<JobDetail>
+						<Icon>
+							<FaHandshake />
+						</Icon>
+						Contributed by : &nbsp;<Contributer> {name}</Contributer>
+					</JobDetail>
+				) : (
+					<Skeleton />
+				)}
+			</CardCredits>
 			{type !== 'single' && (
 				<CardDescription>
 					{description ? (
@@ -75,18 +87,6 @@ function ExperienceCard({ type, company, name, jobtitle, description, slug }) {
 					)}
 				</CardDescription>
 			)}
-			<CardCredits>
-				{name ? (
-					<JobDetail>
-						<Icon>
-							<FaHandshake />
-						</Icon>
-						Contributed by : &nbsp;<Contributer> {name}</Contributer>
-					</JobDetail>
-				) : (
-					<Skeleton />
-				)}
-			</CardCredits>
 		</Card>
 	);
 }

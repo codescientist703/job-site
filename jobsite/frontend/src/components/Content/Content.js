@@ -30,6 +30,11 @@ export const Content = styled.div`
 			text-decoration: underline;
 		}
 	}
+
+	ol,
+	ul {
+		padding-left: 1.1rem;
+	}
 `;
 
 export const Title = styled.h1`

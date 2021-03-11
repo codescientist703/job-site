@@ -287,6 +287,8 @@ export const CardContainer = styled.div`
 export const Card = styled.div`
 	/* for mobile */
 	width: 100%;
+	margin: 0 auto;
+	max-width: 430px;
 	background-color: #fff;
 	border-radius: 10px;
 	min-height: 200px;

@@ -4,7 +4,7 @@ export const Card = styled.div`
 	padding: 0.5rem 1.4rem;
 	box-shadow: ${({ type, theme }) =>
 		type === 'single' ? 'none' : theme.cardShadow};
-	margin: ${({ type }) => (type === 'single' ? '0.5rem' : '1.5rem')} 0;
+	margin: ${({ type }) => (type === 'single' ? '0.3rem' : '1.5rem')} 0;
 	border-radius: 10px;
 	background-color: #fff;
 `;
@@ -29,7 +29,7 @@ export const CardRight = styled.div`
 `;
 
 export const JobDetail = styled.div`
-	margin: 0.3rem 0;
+	margin: 0.2rem 0;
 	display: flex;
 	align-items: center;
 `;
@@ -50,6 +50,7 @@ export const Icon = styled.i`
 `;
 
 export const Contributer = styled.span`
-	color: green;
+	color: ${({ theme }) => theme.primaryColor};
+	text-transform: capitalize;
 	font-weight: 550;
 `;
