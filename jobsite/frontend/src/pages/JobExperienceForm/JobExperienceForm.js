@@ -28,6 +28,11 @@ const JobExperienceForm = () => {
 		placeholder: 'ajkj',
 	};
 
+	const setData = (e) => {
+		setEditorContent(e.target.innerHTML);
+		console.log(e.target.innerHTML);
+	};
+
 	const [formData, setFormData] = useState({
 		name: '',
 		jobtitle: '',
@@ -136,10 +141,10 @@ const JobExperienceForm = () => {
 							value={editorContent}
 							config={config}
 							tabIndex={5}
-							// onBlur={(newContent) => setEditorContent(newContent)}
-							onChange={(newContent) => {
-								setEditorContent(newContent);
-							}}
+							onBlur={setData}
+							// onChange={(newContent) => {
+							// 	setEditorContent(newContent);
+							// }}
 						/>
 						{/* <CKEditor
 							editor={ClassicEditor}
