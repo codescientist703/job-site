@@ -7,10 +7,15 @@ For more information on this file, see
 https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/
 """
 
-import os
-
 from django.core.wsgi import get_wsgi_application
+import os
+from dotenv import load_dotenv
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'jobsite.settings')
+load_dotenv()
+settings_module = "jobsite.production" if os.getenv(
+    "DJANGO_DEBUG") == 'False' else 'jobsite.settings'
+
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
 
 application = get_wsgi_application()
