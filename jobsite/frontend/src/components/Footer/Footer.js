@@ -15,6 +15,7 @@ import {
 	LinkList,
 	LastLine,
 	HeartIcon,
+	CopyRight,
 } from './Footer.elements';
 import data from '../../RawContent/FooterContent';
 const Footer = () => {
@@ -54,7 +55,9 @@ const Footer = () => {
 				<FooterBottom>
 					<DividerContainer>
 						<Divider />
-						<div>Copyright © {curYear} | All Rights Reserved by JobLele. </div>
+						<CopyRight>
+							Copyright © {curYear} | All Rights Reserved by JobLele.{' '}
+						</CopyRight>
 					</DividerContainer>
 					<LastLine>
 						Made with <HeartIcon /> in INDIA

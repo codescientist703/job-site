@@ -49,17 +49,29 @@ export const LinkContainer = styled.div`
 `;
 
 export const AboutHeader = styled.h4`
-	font-size: ${({ theme }) => theme.h3}rem;
+	font-size: ${({ theme }) => theme.h4}rem;
 	margin-bottom: 0.4rem;
+
+	@media screen and (min-width: ${({ theme }) => theme.md}px) {
+		font-size: ${({ theme }) => theme.h3}rem;
+	}
 `;
 
 export const AboutDescription = styled.p`
-	font-size: 0.925rem;
+	font-size: 0.85rem;
+
+	@media screen and (min-width: ${({ theme }) => theme.md}px) {
+		font-size: 0.925rem;
+	}
 `;
 
 export const LinkHeader = styled.h4`
-	font-size: ${({ theme }) => theme.h3}rem;
+	font-size: ${({ theme }) => theme.h4}rem;
 	margin-bottom: 0.4rem;
+
+	@media screen and (min-width: ${({ theme }) => theme.md}px) {
+		font-size: ${({ theme }) => theme.h3}rem;
+	}
 `;
 
 export const LinkColumn = styled.div`
@@ -76,25 +88,31 @@ export const LinkList = styled.ul`
 `;
 
 export const LinkItem = styled(Link)`
+	font-size: 0.85rem;
+
 	text-decoration: none;
 	color: white;
-	font-size: 0.925rem;
-`;
-
-export const DividerContainer = styled.div`
-	div {
-		text-align: center;
+	@media screen and (min-width: ${({ theme }) => theme.md}px) {
+		font-size: 0.925rem;
 	}
 `;
+
+export const DividerContainer = styled.div``;
 
 export const Divider = styled.hr`
 	opacity: 0.5;
 	margin-bottom: 0.8rem;
 `;
 
+export const CopyRight = styled.p`
+	text-align: center;
+	font-size: ${({ theme }) => theme.p}rem;
+`;
+
 export const LastLine = styled.p`
 	margin-top: 0.5rem;
 	text-align: center;
+	font-size: ${({ theme }) => theme.p}rem;
 `;
 
 export const HeartIcon = styled(RiHeart2Fill)`
