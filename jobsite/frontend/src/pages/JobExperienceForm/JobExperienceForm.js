@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 // import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 import SunEditor from 'suneditor-react';
-import 'suneditor/dist/css/suneditor.min.css'; // Import Sun Editor's CSS File
+// Import Sun Editor's CSS File
 import {
 	Container,
 	FluidContainer,
