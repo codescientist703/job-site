@@ -48,6 +48,8 @@ export const InputContainer = styled.div`
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
+		max-height: 200px;
+		overflow-y: auto;
 	}
 
 	.react-autosuggest__suggestion {
@@ -66,6 +68,7 @@ const MyAutosuggest = ({
 	onSuggestionValueChange,
 	filterData,
 }) => {
+	const errorMsg = 'No Results Found :(';
 	const [value, setValue] = useState(filterData);
 	const [suggestions, setSuggestions] = useState([]);
 	const getSuggestions = async (value) => {
@@ -76,11 +79,16 @@ const MyAutosuggest = ({
 	};
 
 	const onChange = (event, { newValue }) => {
-		setValue(newValue);
+		if (newValue !== errorMsg) {
+			setValue(newValue);
+		}
 	};
 	const onSuggestionsFetchRequested = async ({ value }) => {
 		setValue(value);
-		const data = await getSuggestions(value);
+		let data = await getSuggestions(value);
+		if (data.length === 0) {
+			data = [{ name: errorMsg }];
+		}
 		setSuggestions(data);
 	};
 	const onSuggestionsClearRequested = () => {
@@ -90,9 +98,13 @@ const MyAutosuggest = ({
 	const renderSuggestion = (suggestion) => <span>{suggestion.name}</span>;
 
 	const onSuggestionClick = (event, { suggestionValue }) => {
-		console.log(suggestionValue);
-		onSuggestionValueChange(field, suggestionValue);
+		if (suggestionValue !== errorMsg) {
+			onSuggestionValueChange(field, suggestionValue);
+		}
 	};
+	function shouldRenderSuggestions(value, reason) {
+		return value.trim().length >= 0;
+	}
 	const inputProps = {
 		placeholder: placeholder,
 		value,
@@ -110,6 +122,7 @@ const MyAutosuggest = ({
 				inputProps={inputProps}
 				focusInputOnSuggestionClick={false}
 				highlightFirstSuggestion={true}
+				shouldRenderSuggestions={shouldRenderSuggestions}
 			/>
 		</InputContainer>
 	);
