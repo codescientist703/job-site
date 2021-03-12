@@ -93,6 +93,7 @@ const JobExperienceForm = () => {
 	const config = {
 		formats: ['p', 'blockquote', 'pre', 'h2', 'h3', 'h4', 'h5', 'h6'],
 		buttonList: [
+			['formatBlock', 'align', 'outdent', 'indent'],
 			[
 				'bold',
 				'underline',
@@ -100,9 +101,8 @@ const JobExperienceForm = () => {
 				'strike',
 				'subscript',
 				'superscript',
-				'list',
+				'textStyle',
 			],
-			['outdent', 'indent', 'formatBlock', 'align'],
 			['table', 'link'],
 			['undo', 'redo'],
 		],
