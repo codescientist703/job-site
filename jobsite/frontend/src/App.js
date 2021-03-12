@@ -1,7 +1,6 @@
 import GlobalStyle from './globalStyles';
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
 import { theme } from './theme';
 import { ThemeProvider } from 'styled-components';
 import { Header, Footer } from './components';
@@ -18,6 +17,7 @@ const JobExperienceSingle = React.lazy(() =>
 const JobExperienceForm = React.lazy(() =>
 	import('./pages/JobExperienceForm/JobExperienceForm')
 );
+
 function App() {
 	return (
 		<Router>
