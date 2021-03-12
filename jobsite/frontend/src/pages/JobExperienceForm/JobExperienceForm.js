@@ -1,9 +1,4 @@
-import { useState, useRef } from 'react';
-// import { CKEditor } from '@ckeditor/ckeditor5-react';
-// import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-
-import SunEditor from 'suneditor-react';
-// Import Sun Editor's CSS File
+import React, { useState } from 'react';
 import {
 	Container,
 	FluidContainer,
@@ -17,6 +12,7 @@ import { toast } from 'react-toastify';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
+const SunEditor = React.lazy(() => import('suneditor-react'));
 const JobExperienceForm = () => {
 	const breadData = [
 		{ name: 'home', link: '/' },
