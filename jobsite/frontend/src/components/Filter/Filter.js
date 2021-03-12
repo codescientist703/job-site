@@ -140,6 +140,7 @@ const Filter = ({
 						value={inputValue}
 						onMouseUp={onValueChange}
 						onChange={onInputRangeChange}
+						onTouchEnd={onValueChange}
 					/>
 				)}
 
