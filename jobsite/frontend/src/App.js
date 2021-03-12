@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { theme } from './theme';
 import { ThemeProvider } from 'styled-components';
 import { Header, Footer } from './components';
+import { Loader } from './components';
 
 const Home = React.lazy(() => import('./pages/Home/Home'));
 const JobList = React.lazy(() => import('./pages/JobList/JobList'));
@@ -24,7 +25,7 @@ function App() {
 			<ThemeProvider theme={theme}>
 				<GlobalStyle />
 				<Header />
-				<Suspense fallback={<div>Loading...</div>}>
+				<Suspense fallback={<Loader />}>
 					<Switch>
 						<Route path='/' exact component={Home} />
 						<Route path='/category/:categoryName' exact component={JobList} />

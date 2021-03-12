@@ -1,4 +1,5 @@
 export { default as Header } from './Header/Header';
+export { default as Loader } from './Loader/Loader';
 export { Btn } from './Button/Button';
 export { Button } from './Button/Button';
 export { FilterButton } from './Button/Button';
