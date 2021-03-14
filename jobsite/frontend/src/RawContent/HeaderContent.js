@@ -28,5 +28,10 @@ const Data = [
 		link: '/contribute-your-experience',
 		icon: <BiBuildings />,
 	},
+	{
+		name: 'Privacy Policy',
+		link: '/privacy-policy',
+		icon: <BiBuildings />,
+	},
 ];
 export default Data;
