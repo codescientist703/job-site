@@ -6,7 +6,6 @@ import {
 	JobCard,
 	Breadcumb,
 	Container,
-	Filter,
 	LayoutContainer,
 	FluidContainer,
 	Title,
@@ -20,6 +19,9 @@ import {
 import axios from '../../axios';
 import ReactPaginate from 'react-paginate';
 import Skeleton from 'react-loading-skeleton';
+import React from 'react';
+
+const Filter = React.lazy(() => import('../../components/Filter/Filter'));
 
 const JobList = (props) => {
 	let { categoryName } = useParams();

@@ -2,7 +2,6 @@ import styled from 'styled-components/macro';
 
 export const Content = styled.div`
 	padding: 1rem;
-
 	h1 {
 		font-size: 2rem;
 		font-weight: 600;
@@ -39,13 +38,14 @@ export const Content = styled.div`
 
 export const Title = styled.h1`
 	font-size: ${({ theme }) => theme.h1Sm}rem;
-	margin: 1.5rem 0;
+	margin: ${({ generalPage }) => (generalPage ? '0 0 1.5rem' : '1.5rem 0')};
 	text-align: center;
 	font-weight: ${({ theme }) => theme.titleWeight};
 	text-transform: capitalize;
 
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		font-size: ${({ theme }) => theme.h1}rem;
-		margin: ${({ theme }) => theme.titleMargin};
+		margin: ${({ theme, generalPage }) =>
+			generalPage ? '0 0 1.5rem' : theme.titleMargin};
 	}
 `;

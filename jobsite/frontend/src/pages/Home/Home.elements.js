@@ -170,7 +170,7 @@ export const Container = styled.div`
 	width: 100%;
 	max-width: ${({ theme }) => theme.maxWidthLg}px;
 	margin: 0 auto;
-	padding: 6.25rem ${({ theme }) => theme.homePaddingLR};
+	padding: 6rem ${({ theme }) => theme.homePaddingLR};
 	display: flex;
 	flex-direction: column-reverse;
 
@@ -178,7 +178,6 @@ export const Container = styled.div`
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		flex-direction: row;
 		justify-content: space-between;
-		padding: 9rem ${({ theme }) => theme.homePaddingLR};
 	}
 `;
 
