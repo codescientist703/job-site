@@ -144,7 +144,6 @@ const JobExperienceForm = () => {
 					<FormInput>
 						<Label>Your Experience</Label>
 						<SunEditor
-							autoFocus={true}
 							width='100%'
 							onChange={handleChange}
 							height='500px'

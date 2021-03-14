@@ -10,7 +10,7 @@ export const NavHeader = styled.header`
 	width: 100%;
 `;
 
-export const NavContainer = styled.nav`
+export const NavContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -50,26 +50,25 @@ export const CloseIcon = styled(IoClose)`
 `;
 
 export const NavMenu = styled.ul`
+	position: relative;
+	top: 0;
+	left: ${({ isOpen }) => (isOpen ? 0 : '-100%')};
 	display: flex;
 	flex-direction: column;
 	width: 250px;
 	height: 100%;
-	position: fixed;
-	top: 0;
-	z-index: 100;
-	left: ${({ isOpen }) => (isOpen ? 0 : '-100%')};
-	list-style: none;
 	background: #e2eafc;
-	transition: all 0.3s ease-out;
 	padding: 5rem 1rem 1rem;
+	list-style: none;
+	transition: all 0.3s ease;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		flex-direction: row;
-		position: initial;
-		padding: 0;
-		width: auto;
 		height: fit-content;
+		width: auto;
 		background: initial;
+		padding: 0;
+		position: initial;
 		transition: none;
 	}
 `;
@@ -122,7 +121,7 @@ export const NavLink = styled(NavvLink)`
 
 export const SideBarIcon = styled.div`
 	margin-top: 0.2rem;
-	margin-right: 0.5rem;
+	margin-right: 0.9rem;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		display: none;
@@ -132,4 +131,21 @@ export const SideBarIcon = styled.div`
 export const SideBarLogo = styled(NavLogo)`
 	padding: 0 0.6rem;
 	margin-bottom: 1.6rem;
+`;
+
+export const NavBar = styled.nav`
+	position: fixed;
+	top: 0;
+	left: ${({ isOpen }) => (isOpen ? 0 : '-100%')};
+	z-index: 100;
+	width: 100%;
+	height: 100vh;
+	backdrop-filter: blur(3px);
+
+	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
+		backdrop-filter: blur(0);
+		position: initial;
+		width: auto;
+		height: fit-content;
+	}
 `;

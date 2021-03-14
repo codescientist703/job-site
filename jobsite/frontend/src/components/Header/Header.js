@@ -10,6 +10,7 @@ import {
 	CloseIcon,
 	SideBarLogo,
 	SideBarIcon,
+	NavBar,
 } from './Header.elements';
 import Data from '../../RawContent/HeaderContent';
 import { useMediaQuery } from 'react-responsive';
@@ -19,27 +20,30 @@ import { theme } from '../../theme';
 
 const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 	return (
-		<NavMenu isOpen={isOpen}>
-			{!isDesktop && <SideBarLogo to='/'>LOGO</SideBarLogo>}
-			{Data.map((data, index) => (
-				<NavItem key={index} onClick={handleClick}>
-					<NavLink
-						exact
-						to={data.link}
-						activeStyle={{
-							color: theme.primaryColor,
-							fontWeight: '600',
-						}}
-					>
-						<SideBarIcon>{data.icon}</SideBarIcon>
-						{data.name}
-					</NavLink>
-				</NavItem>
-			))}
-			{!isDesktop && <CloseIcon onClick={handleClick} />}
-		</NavMenu>
+		<NavBar isOpen={isOpen}>
+			<NavMenu isOpen={isOpen}>
+				{!isDesktop && <SideBarLogo to='/'>LOGO</SideBarLogo>}
+				{Data.map((data, index) => (
+					<NavItem key={index} onClick={handleClick}>
+						<NavLink
+							exact
+							to={data.link}
+							activeStyle={{
+								color: theme.primaryColor,
+								fontWeight: '600',
+							}}
+						>
+							<SideBarIcon>{data.icon}</SideBarIcon>
+							{data.name}
+						</NavLink>
+					</NavItem>
+				))}
+				{!isDesktop && <CloseIcon onClick={handleClick} />}
+			</NavMenu>
+		</NavBar>
 	);
 };
+
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const themeContext = useContext(ThemeContext);
