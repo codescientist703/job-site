@@ -28,7 +28,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 if DEBUG:
     ALLOWED_HOSTS = []
 else:
-    ALLOWED_HOSTS = ['159.89.167.226']
+    ALLOWED_HOSTS = ['159.89.167.226', 'jobdundho.com ', 'www.jobdundho.com ']
 
 # Application definition
 
