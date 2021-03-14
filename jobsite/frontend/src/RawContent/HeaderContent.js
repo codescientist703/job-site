@@ -1,6 +1,8 @@
 import { AiOutlineHome } from 'react-icons/ai';
 import { HiOutlineOfficeBuilding } from 'react-icons/hi';
 import { BiBuildings } from 'react-icons/bi';
+import { BsAward } from 'react-icons/bs';
+import { IoNewspaperOutline } from 'react-icons/io5';
 
 const Data = [
 	{
@@ -19,14 +21,14 @@ const Data = [
 		icon: <BiBuildings />,
 	},
 	{
-		name: 'Job Experience',
+		name: 'Interview Experience',
 		link: '/job-experience',
-		icon: <BiBuildings />,
+		icon: <IoNewspaperOutline />,
 	},
 	{
 		name: 'Contribute',
 		link: '/contribute-your-experience',
-		icon: <BiBuildings />,
+		icon: <BsAward />,
 	},
 	{
 		name: 'Privacy Policy',

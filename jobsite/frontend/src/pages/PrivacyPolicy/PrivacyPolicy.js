@@ -1,11 +1,11 @@
-import { Content, Title, Container, FluidContainer } from '../../components';
+import { Content, Title, FluidContainer, Container } from '../../components';
 
 const PrivacyPolicy = () => {
 	return (
 		<FluidContainer>
 			<Container>
 				<Title generalPage={true}>Privacy Policy for Job Dundho</Title>
-				<Content>
+				<Content generalPage={true}>
 					<p>
 						At Job Dundho, accessible from jobdundho.com, one of our main
 						priorities is the privacy of our visitors. This Privacy Policy

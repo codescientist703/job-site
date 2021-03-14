@@ -16,7 +16,7 @@ import Skeleton from 'react-loading-skeleton';
 function JobExperience() {
 	const breadData = [
 		{ name: 'home', link: '/' },
-		{ name: 'Job experiences', link: '/job-experience' },
+		{ name: 'interview experiences', link: '/job-experience' },
 	];
 	const [data, setData] = useState([]);
 	const [page, setPage] = useState(1);

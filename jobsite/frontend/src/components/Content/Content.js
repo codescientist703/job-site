@@ -1,7 +1,14 @@
 import styled from 'styled-components/macro';
 
 export const Content = styled.div`
-	padding: 1rem;
+	padding: ${({ generalPage }) => (generalPage ? '0 0.7rem' : '1rem')};
+
+	h1,
+	h2,
+	h3 {
+		margin: 0.8rem 0 0.2rem;
+	}
+
 	h1 {
 		font-size: 2rem;
 		font-weight: 600;
@@ -19,7 +26,7 @@ export const Content = styled.div`
 
 	p {
 		font-size: 1rem;
-		margin-bottom: 0.5rem;
+		margin-bottom: 0.6rem;
 	}
 
 	a {
