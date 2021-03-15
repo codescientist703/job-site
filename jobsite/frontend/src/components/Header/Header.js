@@ -20,7 +20,7 @@ import { theme } from '../../theme';
 
 const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 	return (
-		<NavBar isOpen={isOpen}>
+		<NavBar isOpen={isOpen} onClick={handleClick}>
 			<NavMenu isOpen={isOpen}>
 				{!isDesktop && <SideBarLogo to='/'>LOGO</SideBarLogo>}
 				{Data.map((data, index) => (
