@@ -141,10 +141,10 @@ export const NavBar = styled.nav`
 	z-index: 100;
 	width: 100%;
 	height: 100vh;
-	backdrop-filter: blur(3px);
+	background: rgba(0, 0, 0, 0.5);
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
-		backdrop-filter: blur(0);
+		background: rgba(0, 0, 0, 0);
 		position: initial;
 		width: auto;
 		height: fit-content;
