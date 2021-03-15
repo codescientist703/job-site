@@ -144,7 +144,7 @@ export const NavBar = styled.nav`
 	background: rgba(0, 0, 0, 0.5);
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
-		background: rgba(0, 0, 0, 0);
+		background: initial;
 		position: initial;
 		width: auto;
 		height: fit-content;
