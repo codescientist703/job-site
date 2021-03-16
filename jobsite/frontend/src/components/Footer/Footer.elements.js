@@ -37,7 +37,7 @@ export const AboutContainer = styled.div`
 export const LinkContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 	margin-bottom: 1rem;
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		justify-content: space-between;
@@ -59,6 +59,7 @@ export const AboutHeader = styled.h4`
 
 export const AboutDescription = styled.p`
 	font-size: 0.85rem;
+	text-align: justify;
 
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		font-size: 0.925rem;

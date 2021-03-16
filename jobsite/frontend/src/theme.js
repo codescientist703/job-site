@@ -9,6 +9,7 @@ export const theme = {
 	p: 0.95,
 	shadow: '0 2px 6px rgba(0,0,0,0.2)',
 	cardShadow: '0 3px 8px rgba(117, 121, 231, 0.35)',
+	cardShadowHover: '0 3px 10px rgba(117, 121, 231, 0.6)',
 	shadowHover: '0 3px 10px rgba(0,0,0,0.4)',
 	subParaColor: 'rgba(0,0,0,0.6)',
 	lg: 992,

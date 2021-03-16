@@ -291,12 +291,13 @@ export const Card = styled.div`
 	background-color: #fff;
 	border-radius: 10px;
 	min-height: 200px;
-	box-shadow: ${({ theme }) => theme.shadow};
+	box-shadow: ${({ theme }) => theme.cardShadow};
 	padding: 1.25rem 1.3rem;
 	transition: transform 0.5s, box-shadow 0.5s;
+	text-align: justify;
 
 	&:hover {
-		box-shadow: ${({ theme }) => theme.shadowHover};
+		box-shadow: ${({ theme }) => theme.cardShadowHover};
 		transform: scale(1.03);
 	}
 `;

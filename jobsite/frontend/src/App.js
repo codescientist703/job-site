@@ -32,7 +32,7 @@ function App() {
 					<Switch>
 						<Route path='/' exact component={Home} />
 						<Route
-							path='/interview-experience'
+							path='/interview-experiences'
 							exact
 							component={JobExperience}
 						/>
