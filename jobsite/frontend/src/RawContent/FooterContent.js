@@ -1,27 +1,35 @@
 const data = {
 	description:
-		'Ham log ne ye job site banayi hai taki jobless log kam ho jaye or unhe job mil jaye.Tum logo direct hi job dubh payuge or tumhe koimehnat nahi karni padegi. Bewakoof log bhi iss job site ka istamal kar sakte hai. Tu agar app Bewakoof to jaroor use ki jiye.',
+		'We are a bunch of passionate software developers looking to disrupt the job portal industry with our job portal. We ourselves have experienced the frustration of using multiple job portals. The user interface and user experience of other job portals is also not very great. So we thought why not develop a job portal that looks and feels great.',
 	categories: [
 		{
-			name: 'ggaga',
+			name: 'Private Jobs',
 			link: '/category',
 		},
 		{
-			name: 'ggaga',
+			name: 'Govt Jobs',
 			link: '/category',
 		},
 		{
-			name: 'ggaga',
+			name: 'Internships',
+			link: '/category',
+		},
+		{
+			name: 'Part Time Jobs',
+			link: '/category',
+		},
+		{
+			name: 'I.T Jobs',
 			link: '/category',
 		},
 	],
 	quicklinks: [
 		{
-			name: 'ggagsa',
+			name: 'Privacy Policy',
 			link: '/category',
 		},
 		{
-			name: 'ggaga',
+			name: 'Terms Of Use',
 			link: '/category',
 		},
 		{

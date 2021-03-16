@@ -54,10 +54,8 @@ const SecOne = () => {
 		<HeroSection>
 			<ContainerOne>
 				<ContainerOneLeft>
-					<HeroHeading>Tired of searching for jobs ?</HeroHeading>
-					<HeroSubHeading>
-						Forget the hassle for searching by the revolution
-					</HeroSubHeading>
+					<HeroHeading>{Data.homeTitle}</HeroHeading>
+					<HeroSubHeading>{Data.homeContent}</HeroSubHeading>
 					<SearchBox>
 						<SearchIcon />
 						<SearchInput
