@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const Card = styled.div`
 	padding: 0.5rem 1.4rem;

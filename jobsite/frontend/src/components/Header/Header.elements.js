@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import { NavLink as NavvLink, Link } from 'react-router-dom';
+import { NavLink as NavvLink } from 'react-router-dom';
 import { FaHamburger } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
 

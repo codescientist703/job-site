@@ -20,6 +20,9 @@ class Category(models.Model):
 class JobTitle(models.Model):
     name = models.CharField(max_length=200)
 
+    class Meta:
+        ordering = ['name']
+
     def __str__(self):
         return self.name
 
@@ -30,12 +33,18 @@ class Location(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        ordering = ['name']
+
 
 class Company(models.Model):
     name = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        ordering = ['name']
 
 
 class Job(models.Model):
@@ -57,7 +66,7 @@ class Job(models.Model):
     apply_link = models.URLField(max_length=255)
 
     class Meta:
-        ordering = ['-date']
+        ordering = ['-date', '-salary', 'experience']
 
     def __str__(self):
         return self.title
@@ -80,4 +89,4 @@ class Interview(models.Model):
         ordering = ['draft']
 
     def __str__(self):
-        return self.title
+        return f'{self.jobtitle} at {self.company}'

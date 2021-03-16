@@ -1,10 +1,5 @@
 import { useState, useEffect } from 'react';
-import {
-	JobTitle,
-	SingleJobContainer,
-	Line,
-	ApplyBtn,
-} from './JobSingle.elements';
+import { SingleJobContainer, Line, ApplyBtn } from './JobSingle.elements';
 import {
 	JobCard,
 	Container,
@@ -12,7 +7,6 @@ import {
 	Breadcumb,
 	FluidContainer,
 	LayoutContainer,
-	ShareDropdown,
 	Title,
 	Seo,
 } from '../../components';

@@ -15,9 +15,8 @@ import {
 } from './JobCard.elements';
 import { AiFillHome } from 'react-icons/ai';
 import { BiTimeFive } from 'react-icons/bi';
-import { LinkButton } from '../../components';
+import { LinkButton, ShareDropdown } from '../../components';
 import Skeleton from 'react-loading-skeleton';
-import { ShareDropdown } from '../../components';
 
 const convertToLacs = (number) => {
 	if (number >= 100000) {

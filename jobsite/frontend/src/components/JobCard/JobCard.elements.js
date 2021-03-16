@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro';
-import { FiStar } from 'react-icons/fi';
 
 export const Card = styled.div`
 	/* for mobile */

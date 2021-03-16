@@ -21,7 +21,7 @@ class CategoryView(generics.ListAPIView):
 
 
 class JobTitleView(generics.ListAPIView):
-    queryset = JobTitle.objects.all().order_by('name')
+    queryset = JobTitle.objects.all()
     serializer_class = JobTitleSerializer
     pagination_class = None
     filter_backends = [filters.SearchFilter]
@@ -29,7 +29,7 @@ class JobTitleView(generics.ListAPIView):
 
 
 class LocationView(generics.ListAPIView):
-    queryset = Location.objects.all().order_by('name')
+    queryset = Location.objects.all()
     serializer_class = LocationSerializer
     pagination_class = None
     filter_backends = [filters.SearchFilter]
@@ -37,7 +37,7 @@ class LocationView(generics.ListAPIView):
 
 
 class CompanyView(generics.ListAPIView):
-    queryset = Company.objects.all().order_by('name')
+    queryset = Company.objects.all()
     serializer_class = CompanySerializer
     pagination_class = None
     filter_backends = [filters.SearchFilter]

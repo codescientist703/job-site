@@ -14,9 +14,8 @@ import {
 } from './ExperienceCard.elements';
 import { BiBookContent, BiUser, BiBuildings } from 'react-icons/bi';
 import { FaHandshake } from 'react-icons/fa';
-import { LinkButton } from '../../components';
+import { LinkButton, ShareDropdown } from '../../components';
 import Skeleton from 'react-loading-skeleton';
-import ShareDropdown from '../ShareDropdown/ShareDropdown';
 
 function ExperienceCard({ type, company, name, jobtitle, description, slug }) {
 	return (

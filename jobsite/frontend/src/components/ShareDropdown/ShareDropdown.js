@@ -6,7 +6,7 @@ import {
 	SocialIcon,
 	SocialIconName,
 } from './ShareDropdown.elements';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
 	FacebookShareButton,
 	FacebookIcon,

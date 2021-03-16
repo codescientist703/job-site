@@ -8,8 +8,7 @@ import {
 } from '../../components';
 import { Form, FormInput, Label, Inpt, Para } from './JobExperience.elements';
 import axios from '../../axios';
-import { toast } from 'react-toastify';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 function getCookie(name) {
@@ -48,7 +47,7 @@ const JobExperienceForm = () => {
 				...formData,
 				content: content,
 			};
-			const response = await axios.post(apiUrl, validatedData, {
+			await axios.post(apiUrl, validatedData, {
 				headers: {
 					'X-CSRFToken': getCookie('csrftoken'),
 				},

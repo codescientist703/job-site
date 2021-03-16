@@ -10,7 +10,7 @@ import {
 	Range,
 	RangeData,
 } from './Filter.elements';
-import MyAutosuggest from '../MyAutosuggest/MyAutosuggest';
+import { MyAutosuggest } from '../../components';
 import Skeleton from 'react-loading-skeleton';
 import { useState, useEffect } from 'react';
 const Filter = ({

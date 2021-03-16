@@ -3,8 +3,7 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { theme } from './theme';
 import { ThemeProvider } from 'styled-components';
-import { Header, Footer } from './components';
-import { Loader } from './components';
+import { Header, Footer, Loader } from './components';
 
 const Home = React.lazy(() => import('./pages/Home/Home'));
 const JobList = React.lazy(() => import('./pages/JobList/JobList'));
