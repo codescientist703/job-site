@@ -74,7 +74,7 @@ export const ItemDescription = styled.p`
 
 export const JobTag = styled.div`
 	font-size: 0.85rem;
-	border: 2px solid ${({ theme }) => theme.primaryColor};
+	border: 1px solid ${({ theme }) => theme.primaryColor};
 	padding: 0.3rem 0.7rem;
 	color: ${({ theme }) => theme.primaryColor};
 	border-radius: 30px;
