@@ -31,8 +31,8 @@ export const CardMiddle = styled.div`
 
 export const CardBottom = styled.div`
 	display: flex;
-	justify-content: flex-end;
-	align-items: flex-start;
+	justify-content: space-between;
+	align-items: center;
 `;
 
 export const JobDetails = styled.div``;
@@ -72,7 +72,10 @@ export const ItemDescription = styled.p`
 	}
 `;
 
-export const JobDescription = styled.p`
+export const JobTag = styled.div`
 	font-size: 0.85rem;
-	width: 60%;
+	border: 2px solid ${({ theme }) => theme.primaryColor};
+	padding: 0.3rem 0.7rem;
+	color: ${({ theme }) => theme.primaryColor};
+	border-radius: 30px;
 `;

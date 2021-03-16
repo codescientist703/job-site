@@ -6,7 +6,7 @@ import {
 	JobDetails,
 	JobTitle,
 	JobCompany,
-	JobDescription,
+	JobTag,
 	Item,
 	ItemIcon,
 	ItemTitle,
@@ -32,7 +32,7 @@ const JobCard = ({
 	date,
 	salary,
 	experience,
-	description,
+	part_time,
 	slug,
 }) => {
 	return (
@@ -142,6 +142,7 @@ const JobCard = ({
 			</CardMiddle>
 			{type !== 'single' && (
 				<CardBottom>
+					<JobTag>Part Time Job</JobTag>
 					{slug ? (
 						<LinkButton to={`/${slug}`}>View More &gt;</LinkButton>
 					) : (
