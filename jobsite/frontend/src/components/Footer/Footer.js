@@ -56,7 +56,7 @@ const Footer = () => {
 					<DividerContainer>
 						<Divider />
 						<CopyRight>
-							Copyright © {curYear} | All Rights Reserved by JobLele.{' '}
+							Copyright © {curYear} | All Rights Reserved by JobDundho.{' '}
 						</CopyRight>
 					</DividerContainer>
 					<LastLine>

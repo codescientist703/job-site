@@ -19,22 +19,22 @@ const data = {
 			link: '/category',
 		},
 		{
-			name: 'I.T Jobs',
+			name: 'IT Jobs',
 			link: '/category',
 		},
 	],
 	quicklinks: [
 		{
+			name: 'Contribute',
+			link: '/contribute-your-experience',
+		},
+		{
 			name: 'Privacy Policy',
-			link: '/category',
+			link: '/privacy-policy',
 		},
 		{
 			name: 'Terms Of Use',
-			link: '/category',
-		},
-		{
-			name: 'ggaga',
-			link: '/category',
+			link: '/terms-of-use',
 		},
 	],
 };

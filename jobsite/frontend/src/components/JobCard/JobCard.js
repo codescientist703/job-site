@@ -142,7 +142,6 @@ const JobCard = ({
 			</CardMiddle>
 			{type !== 'single' && (
 				<CardBottom>
-					<JobDescription>{description || <Skeleton />}</JobDescription>
 					{slug ? (
 						<LinkButton to={`/${slug}`}>View More &gt;</LinkButton>
 					) : (

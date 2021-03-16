@@ -3,8 +3,9 @@ import { MdWork } from 'react-icons/md';
 import { RiGovernmentLine } from 'react-icons/ri';
 import { GrUserWorker } from 'react-icons/gr';
 import { BsCodeSlash } from 'react-icons/bs';
-import { BiTime } from 'react-icons/bi';
+import { BiTime, BiBuildings } from 'react-icons/bi';
 import { GrUserExpert } from 'react-icons/gr';
+import { IoNewspaperOutline } from 'react-icons/io5';
 
 const Data = {
 	homeTitle: 'Tired of Searching For Jobs?',
@@ -18,40 +19,40 @@ const Data = {
 			cardTitle: 'Private Jobs',
 			cardContent: 'Explore various different jobs in the private sector.',
 			cardIcon: <MdWork />,
-			cardIconColor: 'blue',
+			cardIconColor: '#7579e7',
 		},
 		{
 			cardTitle: 'Government Jobs',
 			cardContent:
 				'Explore various lucrative government jobs in the public sector.',
 			cardIcon: <RiGovernmentLine />,
-			cardIconColor: 'red',
+			cardIconColor: '#7579e7',
 		},
 		{
 			cardTitle: 'Internships',
 			cardContent: 'Explore various internships if you are a student.',
-			cardIcon: <GrUserWorker />,
-			cardIconColor: 'blue',
+			cardIcon: <BiBuildings />,
+			cardIconColor: '#7579e7',
 		},
 		{
-			cardTitle: 'I.T Jobs',
+			cardTitle: 'IT Jobs',
 			cardContent:
 				'Explore various jobs in one the largest sector of the world.',
 			cardIcon: <BsCodeSlash />,
-			cardIconColor: 'blue',
+			cardIconColor: '#7579e7',
 		},
 		{
 			cardTitle: 'Part Time Jobs',
 			cardContent:
 				'We have got you covered if you do not have time for full time commitments.',
 			cardIcon: <BiTime />,
-			cardIconColor: 'blue',
+			cardIconColor: '#7579e7',
 		},
 		{
 			cardTitle: 'Interview Experiences',
 			cardContent: 'Learn from the interview experiences of other people.',
-			cardIcon: <GrUserExpert />,
-			cardIconColor: 'blue',
+			cardIcon: <IoNewspaperOutline />,
+			cardIconColor: '#7579e7',
 		},
 	],
 };

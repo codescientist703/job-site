@@ -17,23 +17,28 @@ const Data = [
 	},
 	{
 		name: 'Internships',
-		link: '/category/internship',
+		link: '/category/internships',
 		icon: <BiBuildings />,
 	},
 	{
-		name: 'Interview Experience',
-		link: '/job-experience',
+		name: 'IT Jobs',
+		link: '/it-jobs',
+		icon: <IoNewspaperOutline />,
+	},
+	{
+		name: 'Govt Jobs',
+		link: '/government-jobs',
+		icon: <IoNewspaperOutline />,
+	},
+	{
+		name: 'Interview Experiences',
+		link: '/interview-experiences',
 		icon: <IoNewspaperOutline />,
 	},
 	{
 		name: 'Contribute',
 		link: '/contribute-your-experience',
 		icon: <BsAward />,
-	},
-	{
-		name: 'Privacy Policy',
-		link: '/privacy-policy',
-		icon: <BiBuildings />,
 	},
 ];
 export default Data;

@@ -64,6 +64,7 @@ class Job(models.Model):
     description = models.TextField(max_length=200, blank=True, null=True)
     slug = models.SlugField(unique=True, max_length=300)
     apply_link = models.URLField(max_length=255)
+    part_time = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['-date', '-salary', 'experience']

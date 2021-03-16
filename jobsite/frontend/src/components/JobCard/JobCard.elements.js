@@ -31,7 +31,7 @@ export const CardMiddle = styled.div`
 
 export const CardBottom = styled.div`
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: flex-start;
 `;
 

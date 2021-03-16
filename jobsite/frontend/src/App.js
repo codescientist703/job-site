@@ -31,19 +31,23 @@ function App() {
 				<Suspense fallback={<Loader />}>
 					<Switch>
 						<Route path='/' exact component={Home} />
-						<Route path='/category/:categoryName' exact component={JobList} />
-						<Route path='/job-experience' exact component={JobExperience} />
+						<Route
+							path='/interview-experience'
+							exact
+							component={JobExperience}
+						/>
 						<Route path='/privacy-policy' exact component={PrivacyPolicy} />
 						<Route path='/terms-of-use' exact component={TermsOfUse} />
-						<Route
-							path='/job-experience/:slug'
-							exact
-							component={JobExperienceSingle}
-						/>
 						<Route
 							path='/contribute-your-experience'
 							exact
 							component={JobExperienceForm}
+						/>
+						<Route path='/category/:categoryName' exact component={JobList} />
+						<Route
+							path='/job-experience/:slug'
+							exact
+							component={JobExperienceSingle}
 						/>
 						<Route path='/:slug' component={JobSingle} />
 					</Switch>

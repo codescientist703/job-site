@@ -86,7 +86,6 @@ export const NavItem = styled.li`
 		padding: 0.2rem 0.6rem;
 		border-radius: 5px;
 		transition: 0.3s;
-		font-size: 1.08rem;
 
 		&:hover > .Headerelements__NavLink-vjhw7q-7 {
 			color: ${({ theme }) => theme.primaryColor};
