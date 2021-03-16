@@ -7,8 +7,8 @@ const PrivacyPolicy = () => {
 				<Title generalPage={true}>Privacy Policy for Job Dundho</Title>
 				<Content generalPage={true}>
 					<p>
-						At Job Dundho, accessible from jobdundho.com, one of our main
-						priorities is the privacy of our visitors. This Privacy Policy
+						At Job Dundho, accessible from https://jobdundho.com, one of our
+						main priorities is the privacy of our visitors. This Privacy Policy
 						document contains types of information that is collected and
 						recorded by Job Dundho and how we use it.
 					</p>
@@ -23,12 +23,7 @@ const PrivacyPolicy = () => {
 						valid for visitors to our website with regards to the information
 						that they shared and/or collect in Job Dundho. This policy is not
 						applicable to any information collected offline or via channels
-						other than this website. Our Privacy Policy was created with the
-						help of the{' '}
-						<a href='https://www.privacypolicygenerator.info/#wizard'>
-							Free Privacy Policy Generator
-						</a>
-						.
+						other than this website.
 					</p>
 
 					<h2>Consent</h2>
@@ -110,6 +105,20 @@ const PrivacyPolicy = () => {
 							"What Are Cookies" from Cookie Consent
 						</a>
 						.
+					</p>
+
+					<h2>Google DoubleClick DART Cookie</h2>
+
+					<p>
+						Google is one of a third-party vendor on our site. It also uses
+						cookies, known as DART cookies, to serve ads to our site visitors
+						based upon their visit to www.website.com and other sites on the
+						internet. However, visitors may choose to decline the use of DART
+						cookies by visiting the Google ad and content network Privacy Policy
+						at the following URL –{' '}
+						<a href='https://policies.google.com/technologies/ads'>
+							https://policies.google.com/technologies/ads
+						</a>
 					</p>
 
 					<h2>Advertising Partners Privacy Policies</h2>

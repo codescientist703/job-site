@@ -21,6 +21,7 @@ const JobExperienceForm = React.lazy(() =>
 const PrivacyPolicy = React.lazy(() =>
 	import('./pages/PrivacyPolicy/PrivacyPolicy')
 );
+const TermsOfUse = React.lazy(() => import('./pages/TermsOfUse/TermsOfUse'));
 function App() {
 	return (
 		<Router>
@@ -33,6 +34,7 @@ function App() {
 						<Route path='/category/:categoryName' exact component={JobList} />
 						<Route path='/job-experience' exact component={JobExperience} />
 						<Route path='/privacy-policy' exact component={PrivacyPolicy} />
+						<Route path='/terms-of-use' exact component={TermsOfUse} />
 						<Route
 							path='/job-experience/:slug'
 							exact
