@@ -39,7 +39,7 @@ class Company(models.Model):
 
 
 class Job(models.Model):
-    title = models.TextField(max_length=255, null=True)
+    title = models.TextField(max_length=255)
     category = models.ForeignKey(
         Category, on_delete=models.SET_NULL, blank=True, null=True)
     jobtitle = models.ForeignKey(
@@ -53,8 +53,8 @@ class Job(models.Model):
         Company, on_delete=models.SET_NULL, blank=True, null=True)
     content = RichTextField(blank=True, null=True)
     description = models.TextField(max_length=200, blank=True, null=True)
-    slug = models.SlugField(unique=True, max_length=300, null=True)
-    apply_link = models.URLField(max_length=255, null=True)
+    slug = models.SlugField(unique=True, max_length=300)
+    apply_link = models.URLField(max_length=255)
 
     class Meta:
         ordering = ['-date']
