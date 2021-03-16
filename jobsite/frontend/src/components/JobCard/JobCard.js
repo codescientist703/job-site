@@ -142,7 +142,7 @@ const JobCard = ({
 			</CardMiddle>
 			{type !== 'single' && (
 				<CardBottom>
-					<JobTag>Part Time Job</JobTag>
+					<JobTag>{part_time ? 'Part' : 'Full'} Time Job</JobTag>
 					{slug ? (
 						<LinkButton to={`/${slug}`}>View More &gt;</LinkButton>
 					) : (
