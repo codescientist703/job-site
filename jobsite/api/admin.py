@@ -8,11 +8,15 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class JobAdmin(admin.ModelAdmin):
-    list_display = ('jobtitle', 'company', 'location')
+    list_display = ('jobtitle', 'company', 'location', 'category')
     autocomplete_fields = ('jobtitle', 'company', 'location')
+    save_on_top = True
     list_filter = (
         ('date', admin.DateFieldListFilter),
         ('category__name', admin.AllValuesFieldListFilter),
+        ('jobtitle', admin.RelatedOnlyFieldListFilter),
+        ('company', admin.RelatedOnlyFieldListFilter),
+        ('location', admin.RelatedOnlyFieldListFilter),
     )
 
 

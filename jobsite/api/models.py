@@ -14,7 +14,7 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
     def __str__(self):
-        return f'{self.name} - {self.description}'
+        return self.name
 
 
 class JobTitle(models.Model):
@@ -47,8 +47,8 @@ class Job(models.Model):
     location = models.ForeignKey(
         Location, on_delete=models.SET_NULL, blank=True, null=True)
     date = models.DateField()
-    salary = models.IntegerField(default=-1)
-    experience = models.IntegerField()
+    salary = models.IntegerField(default=0)
+    experience = models.IntegerField(default=0)
     company = models.ForeignKey(
         Company, on_delete=models.SET_NULL, blank=True, null=True)
     content = RichTextField(blank=True, null=True)
@@ -58,6 +58,9 @@ class Job(models.Model):
 
     class Meta:
         ordering = ['-date']
+
+    def __str__(self):
+        return self.title
 
 
 class Interview(models.Model):
@@ -75,3 +78,6 @@ class Interview(models.Model):
 
     class Meta:
         ordering = ['draft']
+
+    def __str__(self):
+        return self.title
