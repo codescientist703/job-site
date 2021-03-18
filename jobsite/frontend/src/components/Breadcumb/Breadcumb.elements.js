@@ -9,7 +9,11 @@ export const BreadContainer = styled.ul`
 	border-radius: 5px;
 `;
 
-export const BreadItems = styled.li``;
+export const BreadItems = styled.li`
+	&:last-child > .Breadcumbelements__BreadLink-sc-1xnvhuf-2 {
+		font-weight: 600;
+	}
+`;
 
 export const BreadLink = styled(Link)`
 	text-decoration: none;

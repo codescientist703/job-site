@@ -76,6 +76,7 @@ export const HeroSubHeading = styled.p`
 	font-weight: 500;
 	color: ${({ theme }) => theme.subParaColor};
 	margin-bottom: 1.875rem;
+	/* text-align: justify; */
 
 	/* for tablet */
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
@@ -221,6 +222,7 @@ export const Heading = styled.h2`
 	/* for mobile */
 	font-size: 1.7rem;
 	margin-bottom: 1rem;
+	text-align: justify;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		font-size: 1.9rem;
@@ -232,6 +234,7 @@ export const Description = styled.p`
 	font-size: 1.05rem;
 	margin-bottom: 1rem;
 	color: ${({ theme }) => theme.subParaColor};
+	text-align: justify;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		margin-bottom: 1.2rem;

@@ -8,7 +8,7 @@ import { theme } from '../theme';
 const Data = {
 	homeTitle: 'Tired of Searching For Jobs?',
 	homeContent:
-		'Now easily browse through hundreds of jobs and forget the worry of finding jobs on multiple job portals.',
+		'Now easily browse through hundreds of jobs and forget the worry of finding jobs on multiple job portals',
 	sec2Title: 'Find different types of jobs and apply for what you like...',
 	sec2Content:
 		'Our job portal is specially designed in mind to be very user friendly and easy to use. Often we have to search through different portals and this can be quite frustrating in the long run. Just imagine how easy it would become if every job is available in one place? This portal is designed specifically to solve that problem.',
