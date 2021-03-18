@@ -10,7 +10,7 @@ const Page404 = () => {
 				<br />
 				Oops! The page you're looking for cannot be found.
 			</Text>
-			<BackBtn href='/www.jobdundho.com'>&lt; Go Home</BackBtn>
+			<BackBtn to='/'>&lt; Go Home</BackBtn>
 		</NotFoundPage>
 	);
 };

@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import { Button } from '../../components';
+import { GoHomeBtn } from '../../components';
 
 export const NotFoundPage = styled.div`
 	display: flex;
@@ -44,7 +44,7 @@ export const Text = styled.p`
 	}
 `;
 
-export const BackBtn = styled(Button)`
+export const BackBtn = styled(GoHomeBtn)`
 	margin-top: 1rem;
 	font-weight: 600;
 	border-radius: 50px;

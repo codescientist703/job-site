@@ -36,6 +36,25 @@ export const Button = styled.a`
 	}
 `;
 
+export const GoHomeBtn = styled(Link)`
+	display: inline-block;
+	font-size: 1.1rem;
+	font-weight: 550;
+	padding: 0.44rem 1.55rem;
+	border: 2px solid ${({ theme }) => theme.primaryColor};
+	background: ${({ theme }) => theme.button.background};
+	color: ${({ theme }) => theme.button.color};
+	transition: 0.5s;
+	border-radius: 5px;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover {
+		background: ${({ theme }) => theme.button.hover.background};
+		color: ${({ theme }) => theme.button.hover.color};
+	}
+`;
+
 export const LinkButton = styled(Link)`
 	border: none;
 	outline: none;
