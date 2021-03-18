@@ -29,6 +29,10 @@ if DEBUG:
     ALLOWED_HOSTS = []
 else:
     ALLOWED_HOSTS = ['159.89.167.226', 'jobdundho.com', 'www.jobdundho.com']
+    CORS_ALLOWED_ORIGINS = [
+        "https://jobdundho.com",
+        "https://www.jobdundho.com",
+    ]
 
 # Application definition
 
