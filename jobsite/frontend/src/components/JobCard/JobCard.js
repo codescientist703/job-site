@@ -43,7 +43,11 @@ const JobCard = ({
 					<JobCompany>{company || <Skeleton width={80} />}</JobCompany>
 				</JobDetails>
 				<ShareIconDiv type={type}>
-					<ShareDropdown />
+					{jobtitle ? (
+						<ShareDropdown />
+					) : (
+						<Skeleton circle={true} height={30} width={30} />
+					)}
 				</ShareIconDiv>
 			</CardTop>
 			<CardMiddle type={type}>

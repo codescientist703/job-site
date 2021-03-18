@@ -37,7 +37,7 @@ import { theme } from '../../theme';
 const Home = () => {
 	return (
 		<article>
-			<Seo title={'bolbo'} />
+			<Seo />
 			<SecOne />
 			<SectionTwo />
 			<SectionThree />

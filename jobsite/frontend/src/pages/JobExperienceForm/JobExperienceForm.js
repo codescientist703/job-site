@@ -5,6 +5,7 @@ import {
 	Btn,
 	Breadcumb,
 	Title,
+	Seo,
 } from '../../components';
 import { Form, FormInput, Label, Inpt, Para } from './JobExperience.elements';
 import axios from '../../axios';
@@ -109,6 +110,7 @@ const JobExperienceForm = () => {
 
 	return (
 		<FluidContainer>
+			<Seo title={'Contribute your interview experience'} />
 			<Container>
 				<Breadcumb breadData={breadData} />
 				<Title>Share Your Interview Experience</Title>

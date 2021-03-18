@@ -1,8 +1,15 @@
-import { Content, Title, FluidContainer, Container } from '../../components';
+import {
+	Content,
+	Title,
+	FluidContainer,
+	Container,
+	Seo,
+} from '../../components';
 
 const TermsOfUse = () => {
 	return (
 		<FluidContainer>
+			<Seo title={'Terms Of Use'} />
 			<Container>
 				<Title generalPage={true}>Terms Of Use</Title>
 				<Content generalPage={true}>

@@ -47,7 +47,11 @@ function ExperienceCard({ type, company, name, jobtitle, description, slug }) {
 					</JobDetail>
 				</CardLeft>
 				<CardRight type={type}>
-					<ShareDropdown />
+					{jobtitle ? (
+						<ShareDropdown />
+					) : (
+						<Skeleton circle={true} height={30} width={30} />
+					)}
 				</CardRight>
 			</CardHeader>
 			<CardCredits>
