@@ -39,7 +39,7 @@ export const Button = styled.a`
 export const GoHomeBtn = styled(Link)`
 	display: inline-block;
 	font-size: 1.1rem;
-	font-weight: 550;
+	font-weight: 600;
 	padding: 0.44rem 1.55rem;
 	border: 2px solid ${({ theme }) => theme.primaryColor};
 	background: ${({ theme }) => theme.button.background};

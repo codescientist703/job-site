@@ -30,7 +30,7 @@ import {
 } from './Home.elements';
 import JobImg from '../../images/homejob.svg';
 import BoyImg from '../../images/boyjob.svg';
-import { Button, Seo } from '../../components';
+import { GoHomeBtn, Seo } from '../../components';
 import Data from '../../RawContent/HomeContent';
 import { theme } from '../../theme';
 
@@ -107,7 +107,7 @@ const SectionTwo = () => {
 				<ContainerRight>
 					<Heading>{Data.sec2Title}</Heading>
 					<Description>{Data.sec2Content}</Description>
-					<Button>Apply Now</Button>
+					<GoHomeBtn to='/category/jobs'>Apply Now</GoHomeBtn>
 				</ContainerRight>
 			</Container>
 		</SecTwoContainer>

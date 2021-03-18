@@ -46,6 +46,5 @@ export const Text = styled.p`
 
 export const BackBtn = styled(GoHomeBtn)`
 	margin-top: 1rem;
-	font-weight: 600;
 	border-radius: 50px;
 `;
