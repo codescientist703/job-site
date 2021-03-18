@@ -9,6 +9,7 @@ import {
 	LayoutContainer,
 	FluidContainer,
 	Title,
+	NoResult,
 } from '../../components';
 import {
 	MainContainer,
@@ -149,6 +150,7 @@ const JobList = (props) => {
 							) : (
 								<JobCards />
 							)}
+							{data.length === 0 && <NoResult />}
 							<PaginateComponent>
 								<ReactPaginate
 									previousLabel={`prev`}
