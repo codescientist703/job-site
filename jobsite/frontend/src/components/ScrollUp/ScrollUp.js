@@ -29,6 +29,7 @@ const ScrollUp = () => {
 		<ScrollToTop
 			style={{ position: 'fixed', bottom: '13px', right: '10px' }}
 			showUnder={500}
+			duration={600}
 		>
 			<UpArrow />
 		</ScrollToTop>

@@ -39,6 +39,14 @@ const Filter = ({
 		setInputValue(filterData.salary);
 	}, [filterData.salary]);
 
+	const conversion = (number) => {
+		if (number >= 1000 && number <= 99999) {
+			return `${number / 1000} K`;
+		} else if (number >= 100000) {
+			return `${number / 100000} LPA`;
+		} else return `${number}`;
+	};
+
 	return (
 		<FilterContainer isFilterOpen={isFilterOpen}>
 			<FilterHeader>
@@ -115,11 +123,11 @@ const Filter = ({
 					{isLoading ? <Skeleton width={80} /> : 'Minimum Salary'}
 				</FilterName>
 				<SliderValue>
-					{isLoading ? <Skeleton width={30} /> : `₹ ${inputValue}`}
+					{isLoading ? <Skeleton width={30} /> : `₹ ${conversion(inputValue)}`}
 				</SliderValue>
 				{isLoading ? (
 					<Skeleton height={10} />
-				) : filterFor === 'internship' ? (
+				) : filterFor === 'internships' ? (
 					<FilterRange
 						step='1000'
 						type='range'
@@ -145,7 +153,7 @@ const Filter = ({
 					/>
 				)}
 
-				{filterFor === 'internship' ? (
+				{filterFor === 'internships' ? (
 					<>
 						{isLoading ? (
 							<Skeleton />

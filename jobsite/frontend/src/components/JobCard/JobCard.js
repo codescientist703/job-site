@@ -18,8 +18,10 @@ import { BiTimeFive } from 'react-icons/bi';
 import { LinkButton, ShareDropdown } from '../../components';
 import Skeleton from 'react-loading-skeleton';
 
-const convertToLacs = (number) => {
-	if (number >= 100000) {
+const conversion = (number) => {
+	if (number >= 1000 && number <= 99999) {
+		return `${number / 1000} K`;
+	} else if (number >= 100000) {
 		return `${number / 100000} LPA`;
 	} else return `${number}`;
 };
@@ -105,7 +107,7 @@ const JobCard = ({
 								Salary
 							</ItemTitle>
 							<ItemDescription>
-								{salary === 0 ? 'Not Specified' : `₹ ${convertToLacs(salary)}`}
+								{salary === 0 ? 'Not Specified' : `₹ ${conversion(salary)}`}
 							</ItemDescription>
 						</>
 					) : (
