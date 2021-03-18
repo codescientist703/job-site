@@ -5,6 +5,7 @@ import { theme } from './theme';
 import { ThemeProvider } from 'styled-components';
 import { Header, Footer, Loader } from './components';
 
+const ScrollUp = React.lazy(() => import('./components/ScrollUp/ScrollUp'));
 const Home = React.lazy(() => import('./pages/Home/Home'));
 const JobList = React.lazy(() => import('./pages/JobList/JobList'));
 const JobSingle = React.lazy(() => import('./pages/JobSingle/JobSingle'));
@@ -51,6 +52,7 @@ function App() {
 						/>
 						<Route path='/:slug' component={JobSingle} />
 					</Switch>
+					<ScrollUp />
 				</Suspense>
 				<Footer />
 			</ThemeProvider>
