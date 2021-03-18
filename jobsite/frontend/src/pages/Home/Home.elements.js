@@ -286,7 +286,7 @@ export const CardContainer = styled.div`
 	}
 `;
 
-export const Card = styled.div`
+export const Card = styled(Link)`
 	/* for mobile */
 	width: 100%;
 	margin: 0 auto;
@@ -298,6 +298,8 @@ export const Card = styled.div`
 	padding: 1.25rem 1.3rem;
 	transition: transform 0.5s, box-shadow 0.5s;
 	text-align: justify;
+	text-decoration: none;
+	color: #000;
 
 	&:hover {
 		box-shadow: ${({ theme }) => theme.cardShadowHover};

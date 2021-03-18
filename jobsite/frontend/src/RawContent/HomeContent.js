@@ -1,4 +1,5 @@
-import { MdWork } from 'react-icons/md';
+// import { MdWork } from 'react-icons/md';
+import { CgWorkAlt } from 'react-icons/cg';
 import { RiGovernmentLine } from 'react-icons/ri';
 import { BsCodeSlash } from 'react-icons/bs';
 import { BiTime, BiBuildings } from 'react-icons/bi';
@@ -16,8 +17,9 @@ const Data = {
 		{
 			cardTitle: 'Private Jobs',
 			cardContent: 'Explore various different jobs in the private sector',
-			cardIcon: <MdWork />,
+			cardIcon: <CgWorkAlt />,
 			cardIconColor: theme.primaryColor,
+			cardLink: '/category/jobs',
 		},
 		{
 			cardTitle: 'Government Jobs',
@@ -25,12 +27,14 @@ const Data = {
 				'Explore various lucrative government jobs in the public sector',
 			cardIcon: <RiGovernmentLine />,
 			cardIconColor: theme.primaryColor,
+			cardLink: '/category/government-jobs',
 		},
 		{
 			cardTitle: 'Internships',
 			cardContent: 'Explore various internships if you are a student',
 			cardIcon: <BiBuildings />,
 			cardIconColor: theme.primaryColor,
+			cardLink: '/category/internships',
 		},
 		{
 			cardTitle: 'IT Jobs',
@@ -38,6 +42,7 @@ const Data = {
 				'Explore various jobs in one the largest sector of the world',
 			cardIcon: <BsCodeSlash />,
 			cardIconColor: theme.primaryColor,
+			cardLink: '/category/it-jobs',
 		},
 		{
 			cardTitle: 'Part Time Jobs',
@@ -45,12 +50,14 @@ const Data = {
 				'We have got you covered if you do not have time for full time commitments',
 			cardIcon: <BiTime />,
 			cardIconColor: theme.primaryColor,
+			cardLink: '/category',
 		},
 		{
 			cardTitle: 'Interview Experiences',
 			cardContent: 'Learn from the interview experiences of other people',
 			cardIcon: <IoNewspaperOutline />,
 			cardIconColor: theme.primaryColor,
+			cardLink: '/interview-experiences',
 		},
 	],
 };

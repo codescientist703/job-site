@@ -4,15 +4,15 @@ const data = {
 	categories: [
 		{
 			name: 'Private Jobs',
-			link: '/category',
+			link: '/category/jobs',
 		},
 		{
 			name: 'Govt Jobs',
-			link: '/category',
+			link: '/category/government-jobs',
 		},
 		{
 			name: 'Internships',
-			link: '/category',
+			link: '/category/internships',
 		},
 		{
 			name: 'Part Time Jobs',
@@ -20,7 +20,7 @@ const data = {
 		},
 		{
 			name: 'IT Jobs',
-			link: '/category',
+			link: '/category/it-jobs',
 		},
 	],
 	quicklinks: [
