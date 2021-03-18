@@ -15,40 +15,40 @@ const Data = {
 	card: [
 		{
 			cardTitle: 'Private Jobs',
-			cardContent: 'Explore various different jobs in the private sector.',
+			cardContent: 'Explore various different jobs in the private sector',
 			cardIcon: <MdWork />,
 			cardIconColor: theme.primaryColor,
 		},
 		{
 			cardTitle: 'Government Jobs',
 			cardContent:
-				'Explore various lucrative government jobs in the public sector.',
+				'Explore various lucrative government jobs in the public sector',
 			cardIcon: <RiGovernmentLine />,
 			cardIconColor: theme.primaryColor,
 		},
 		{
 			cardTitle: 'Internships',
-			cardContent: 'Explore various internships if you are a student.',
+			cardContent: 'Explore various internships if you are a student',
 			cardIcon: <BiBuildings />,
 			cardIconColor: theme.primaryColor,
 		},
 		{
 			cardTitle: 'IT Jobs',
 			cardContent:
-				'Explore various jobs in one the largest sector of the world.',
+				'Explore various jobs in one the largest sector of the world',
 			cardIcon: <BsCodeSlash />,
 			cardIconColor: theme.primaryColor,
 		},
 		{
 			cardTitle: 'Part Time Jobs',
 			cardContent:
-				'We have got you covered if you do not have time for full time commitments.',
+				'We have got you covered if you do not have time for full time commitments',
 			cardIcon: <BiTime />,
 			cardIconColor: theme.primaryColor,
 		},
 		{
 			cardTitle: 'Interview Experiences',
-			cardContent: 'Learn from the interview experiences of other people.',
+			cardContent: 'Learn from the interview experiences of other people',
 			cardIcon: <IoNewspaperOutline />,
 			cardIconColor: theme.primaryColor,
 		},

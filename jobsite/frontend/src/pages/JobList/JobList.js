@@ -9,6 +9,7 @@ import {
 	LayoutContainer,
 	FluidContainer,
 	Title,
+	NoResult,
 } from '../../components';
 import {
 	MainContainer,
@@ -45,6 +46,7 @@ const JobList = (props) => {
 		title: '',
 		description: '',
 	});
+	let isSearch = false;
 
 	const breadData = [
 		{ name: 'home', link: '/' },
@@ -52,10 +54,11 @@ const JobList = (props) => {
 	];
 	if (categoryName === 'search') {
 		categoryName = 'jobs';
+		isSearch = true;
 	}
 	useEffectUpdate(() => {
 		onFilterClear();
-	}, [categoryName]);
+	}, [useParams().categoryName]);
 
 	useEffect(() => {
 		async function fetchData() {
@@ -66,7 +69,7 @@ const JobList = (props) => {
 				setIsLoading(true);
 			}
 			let apiUrl = `joblist/${categoryName}/?location=${filterData.location}&company=${filterData.company}&jobtitle=${filterData.jobtitle}&salary=${filterData.salary}&experience=${filterData.experience}&page=${filterData.page}`;
-			if (filterData.search !== '') {
+			if (isSearch) {
 				apiUrl = apiUrl + `&search=${filterData.search}`;
 			}
 			try {
@@ -147,6 +150,7 @@ const JobList = (props) => {
 							) : (
 								<JobCards />
 							)}
+							{data.length === 0 && <NoResult />}
 							<PaginateComponent>
 								<ReactPaginate
 									previousLabel={`prev`}
