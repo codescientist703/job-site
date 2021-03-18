@@ -9,7 +9,7 @@ const UpArrow = styled(BiUpArrowCircle)`
 
 const ScrollUp = () => {
 	return (
-		<ScrollToTop style={{ position: 'fixed', bottom: '20px' }} showUnder={1400}>
+		<ScrollToTop style={{ position: 'fixed', bottom: '20px' }} showUnder={500}>
 			<UpArrow />
 		</ScrollToTop>
 	);

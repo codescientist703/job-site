@@ -22,12 +22,12 @@ const Data = [
 	},
 	{
 		name: 'IT Jobs',
-		link: '/it-jobs',
+		link: '/category/it-jobs',
 		icon: <IoNewspaperOutline />,
 	},
 	{
 		name: 'Govt Jobs',
-		link: '/government-jobs',
+		link: '/category/government-jobs',
 		icon: <IoNewspaperOutline />,
 	},
 	{
