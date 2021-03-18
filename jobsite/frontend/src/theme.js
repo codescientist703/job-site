@@ -23,7 +23,7 @@ export const theme = {
 	bgColor: 'rgba(238, 238, 252, 0.4)',
 	primaryColor: '#7579e7',
 	secondaryColor: 'rgba(203, 204, 246, 0.6)',
-	bgLight: '#f8f8f8',
+	bgLight: 'rgba(238, 238, 252)',
 
 	button: {
 		color: '#fff',

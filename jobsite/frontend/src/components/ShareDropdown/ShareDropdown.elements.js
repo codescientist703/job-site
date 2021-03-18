@@ -23,12 +23,12 @@ export const ShareIcon = styled(FiShare2)`
 
 export const SocialIcon = styled.div`
 	margin: 0.2rem 0;
-	padding: 0.2rem 0.5rem;
+	padding: 0.2rem 0.8rem;
 	border-radius: 3px;
 	transition: 0.3s;
 
 	&:hover {
-		background-color: #ddd;
+		background-color: ${({ theme }) => theme.secondaryColor};
 	}
 `;
 
@@ -38,10 +38,10 @@ export const DropDownContent = styled.div`
 	display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
 	position: absolute;
 	right: 10%;
-	background-color: #f1f1f1;
+	background-color: #fff;
 	min-width: 160px;
 	z-index: 1;
-	padding: 0.5rem;
+	padding: 0.3rem 0;
 	border: 1px solid #ddd;
 	border-radius: 5px;
 
