@@ -1,10 +1,10 @@
 import { AiOutlineHome } from 'react-icons/ai';
 import { BiBuildings } from 'react-icons/bi';
-import { BsAward } from 'react-icons/bs';
+import { BsAward, BsCodeSlash } from 'react-icons/bs';
 import { IoNewspaperOutline } from 'react-icons/io5';
 import { CgWorkAlt } from 'react-icons/cg';
 import { RiGovernmentLine } from 'react-icons/ri';
-import { BsCodeSlash } from 'react-icons/bs';
+
 const Data = [
 	{
 		name: 'Home',
