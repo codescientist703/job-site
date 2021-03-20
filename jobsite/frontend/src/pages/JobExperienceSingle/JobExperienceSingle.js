@@ -20,8 +20,11 @@ const JobExperienceSingle = () => {
 
 	const breadData = [
 		{ name: 'home', link: '/' },
-		{ name: 'experience', link: '/job-experience' },
-		{ name: data.company ? data.company : '', link: '/job-experience/exp' },
+		{ name: 'interview experiences', link: '/interview-experiences' },
+		{
+			name: data.company ? data.company : '',
+			link: `/interview-experiences/${slug}`,
+		},
 	];
 	const [is404, setIs404] = useState(false);
 

@@ -75,7 +75,9 @@ function ExperienceCard({ type, company, name, jobtitle, description, slug }) {
 							</Icon>
 							<Paragraph>
 								{description}...&nbsp;
-								<LinkButton to={`job-experience/${slug}`}>Read More</LinkButton>
+								<LinkButton to={`interview-experiences/${slug}`}>
+									Read More
+								</LinkButton>
 							</Paragraph>
 						</JobDetail>
 					) : (

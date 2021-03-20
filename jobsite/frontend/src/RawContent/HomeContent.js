@@ -1,4 +1,3 @@
-// import { MdWork } from 'react-icons/md';
 import { CgWorkAlt } from 'react-icons/cg';
 import { RiGovernmentLine } from 'react-icons/ri';
 import { BsCodeSlash } from 'react-icons/bs';

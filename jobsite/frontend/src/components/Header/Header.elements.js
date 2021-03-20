@@ -25,7 +25,7 @@ export const NavContainer = styled.div`
 export const NavLogo = styled(NavvLink)`
 	cursor: pointer;
 	text-decoration: none;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	color: #000;
 	text-align: left;
 
@@ -121,7 +121,7 @@ export const NavLink = styled(NavvLink)`
 
 export const SideBarIcon = styled.div`
 	margin-top: 0.2rem;
-	margin-right: 0.9rem;
+	margin-right: 1.2rem;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		display: none;
@@ -130,7 +130,7 @@ export const SideBarIcon = styled.div`
 
 export const SideBarLogo = styled(NavLogo)`
 	padding: 0 0.6rem;
-	margin-bottom: 1.6rem;
+	margin-bottom: 1rem;
 `;
 
 export const NavBar = styled.nav`
@@ -148,4 +148,9 @@ export const NavBar = styled.nav`
 		width: auto;
 		height: fit-content;
 	}
+`;
+
+export const Divider = styled.hr`
+	margin-bottom: 1rem;
+	opacity: 0.3;
 `;

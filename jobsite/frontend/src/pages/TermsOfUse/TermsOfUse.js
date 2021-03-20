@@ -14,9 +14,7 @@ const TermsOfUse = () => {
 				<Title generalPage={true}>Terms Of Use</Title>
 				<Content generalPage={true}>
 					<h2>Website Terms of Use</h2>
-
 					<p>Version 1.0</p>
-
 					<p>
 						The Job Dundho website located at https://jobdundho.com is a
 						copyrighted work belonging to Job Dundho. Certain features of the
@@ -39,16 +37,7 @@ const TermsOfUse = () => {
 					<p>
 						These terms require the use of arbitration Section 10.2 on an
 						individual basis to resolve disputes and also limit the remedies
-						available to you in the event of a dispute. These Terms of Use were
-						created with the help of the{' '}
-						<a href='https://www.termsofusegenerator.net'>
-							Terms Of Use Generator
-						</a>{' '}
-						and the{' '}
-						<a href='https://www.generateprivacypolicy.com'>
-							Privacy Policy Generator
-						</a>
-						.
+						available to you in the event of a dispute.
 					</p>
 
 					<h2>Access to the Site</h2>
@@ -655,7 +644,7 @@ const TermsOfUse = () => {
 					<h2>Contact Information</h2>
 
 					<p>Address: Gujarat, India</p>
-					<p>Email: nihalmittal47@gmail.com</p>
+					<p>Email: jobdundho@gmail.com</p>
 				</Content>
 			</Container>
 		</FluidContainer>

@@ -11,6 +11,7 @@ import {
 	SideBarLogo,
 	SideBarIcon,
 	NavBar,
+	Divider,
 } from './Header.elements';
 import Data from '../../RawContent/HeaderContent';
 import { useMediaQuery } from 'react-responsive';
@@ -22,7 +23,8 @@ const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 	return (
 		<NavBar isOpen={isOpen} onClick={handleClick}>
 			<NavMenu isOpen={isOpen}>
-				{!isDesktop && <SideBarLogo to='/'>LOGO</SideBarLogo>}
+				{!isDesktop && <SideBarLogo to='/'>Job Dundha</SideBarLogo>}
+				{!isDesktop && <Divider />}
 				{Data.map((data, index) => (
 					<NavItem key={index} onClick={handleClick}>
 						<NavLink
@@ -55,7 +57,7 @@ const Header = () => {
 	return (
 		<NavHeader>
 			<NavContainer>
-				<NavLogo to='/'>LOGO</NavLogo>
+				<NavLogo to='/'>Job Dundho</NavLogo>
 				<NavIcon onClick={handleClick} />
 				<DisplayMenu
 					isDesktop={isDesktop}

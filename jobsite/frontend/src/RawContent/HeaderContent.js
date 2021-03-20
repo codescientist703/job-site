@@ -1,9 +1,10 @@
 import { AiOutlineHome } from 'react-icons/ai';
-import { HiOutlineOfficeBuilding } from 'react-icons/hi';
 import { BiBuildings } from 'react-icons/bi';
 import { BsAward } from 'react-icons/bs';
 import { IoNewspaperOutline } from 'react-icons/io5';
-
+import { CgWorkAlt } from 'react-icons/cg';
+import { RiGovernmentLine } from 'react-icons/ri';
+import { BsCodeSlash } from 'react-icons/bs';
 const Data = [
 	{
 		name: 'Home',
@@ -13,7 +14,7 @@ const Data = [
 	{
 		name: 'Jobs',
 		link: '/category/jobs',
-		icon: <HiOutlineOfficeBuilding />,
+		icon: <CgWorkAlt />,
 	},
 	{
 		name: 'Internships',
@@ -23,12 +24,12 @@ const Data = [
 	{
 		name: 'IT Jobs',
 		link: '/category/it-jobs',
-		icon: <IoNewspaperOutline />,
+		icon: <BsCodeSlash />,
 	},
 	{
 		name: 'Govt Jobs',
 		link: '/category/government-jobs',
-		icon: <IoNewspaperOutline />,
+		icon: <RiGovernmentLine />,
 	},
 	{
 		name: 'Interview Experiences',

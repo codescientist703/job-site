@@ -46,7 +46,7 @@ function App() {
 						/>
 						<Route path='/category/:categoryName' exact component={JobList} />
 						<Route
-							path='/job-experience/:slug'
+							path='/interview-experiences/:slug'
 							exact
 							component={JobExperienceSingle}
 						/>
