@@ -151,6 +151,6 @@ export const NavBar = styled.nav`
 `;
 
 export const Divider = styled.hr`
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 	opacity: 0.3;
 `;

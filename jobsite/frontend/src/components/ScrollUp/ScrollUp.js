@@ -8,7 +8,7 @@ const animate = keyframes`
 		transform: translateY(0);
 	}
 	50%{
-		transform: translateY(-15px);
+		transform: translateY(-12px);
 	}
 	100%{
 		transform: translateY(0);
@@ -27,7 +27,12 @@ const UpArrow = styled(ImArrowUp2)`
 const ScrollUp = () => {
 	return (
 		<ScrollToTop
-			style={{ position: 'fixed', bottom: '13px', right: '10px' }}
+			style={{
+				position: 'fixed',
+				bottom: '13px',
+				right: '10px',
+				zIndex: '1',
+			}}
 			showUnder={500}
 			duration={600}
 		>
