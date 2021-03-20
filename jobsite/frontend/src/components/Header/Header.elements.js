@@ -78,7 +78,7 @@ export const NavItem = styled.li`
 	align-items: center;
 	text-align: left;
 	width: 100%;
-	font-size: 1rem;
+	font-size: 17px;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		width: fit-content;
