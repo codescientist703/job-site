@@ -1,11 +1,10 @@
 {
 	"meta": {
-		"title": "Job Site",
+		"title": "Job Dundho",
 		"titleTemplate": "%s",
-		"description": "Find any job and be relaxed.",
-		"siteUrl": "https://jobsite.com",
-		"siteName": "Job Wali site",
-		"iconimage": "",
-		"image": ""
+		"description": "Search for any type of job in the portal and never worry about using multiple job portals.",
+		"siteUrl": "https://jobdundho.com",
+		"siteName": "Job Dundho",
+		"iconimage": ""
 	}
 }
