@@ -2,7 +2,6 @@ import styled from 'styled-components/macro';
 import { NavLink as NavvLink } from 'react-router-dom';
 import { FaHamburger } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
-
 export const NavHeader = styled.header`
 	position: relative;
 	z-index: 1000;
@@ -28,6 +27,9 @@ export const NavLogo = styled(NavvLink)`
 	font-size: 1.5rem;
 	color: #000;
 	text-align: left;
+	img {
+		margin-bottom: -0.6rem;
+	}
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		width: auto;
@@ -86,11 +88,7 @@ export const NavItem = styled.li`
 		padding: 0.2rem 0.6rem;
 		border-radius: 5px;
 		transition: 0.3s;
-		font-size: 0.94rem;
-
-		&:hover > .Headerelements__NavLink-vjhw7q-7 {
-			color: ${({ theme }) => theme.primaryColor};
-		}
+		font-size: 1rem;
 	}
 `;
 
@@ -112,10 +110,8 @@ export const NavLink = styled(NavvLink)`
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		padding: 0;
-
 		&:hover {
 			background-color: transparent;
-			color: initial;
 		}
 	}
 `;

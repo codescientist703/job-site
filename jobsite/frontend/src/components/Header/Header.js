@@ -18,12 +18,17 @@ import { useMediaQuery } from 'react-responsive';
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { theme } from '../../theme';
+import Logo from '../../images/logo.png';
 
 const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 	return (
 		<NavBar isOpen={isOpen} onClick={handleClick}>
 			<NavMenu isOpen={isOpen}>
-				{!isDesktop && <SideBarLogo to='/'>Job Dundha</SideBarLogo>}
+				{!isDesktop && (
+					<SideBarLogo to='/'>
+						<img src={Logo} />
+					</SideBarLogo>
+				)}
 				{!isDesktop && <Divider />}
 				{Data.map((data, index) => (
 					<NavItem key={index} onClick={handleClick}>
@@ -57,7 +62,9 @@ const Header = () => {
 	return (
 		<NavHeader>
 			<NavContainer>
-				<NavLogo to='/'>Job Dundho</NavLogo>
+				<NavLogo to='/'>
+					<img src={Logo} />
+				</NavLogo>
 				<NavIcon onClick={handleClick} />
 				<DisplayMenu
 					isDesktop={isDesktop}
