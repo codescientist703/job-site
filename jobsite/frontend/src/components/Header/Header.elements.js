@@ -2,6 +2,8 @@ import styled from 'styled-components/macro';
 import { NavLink as NavvLink } from 'react-router-dom';
 import { FaHamburger } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
+import { IoMdArrowDropdown } from 'react-icons/io';
+
 export const NavHeader = styled.header`
 	position: relative;
 	z-index: 1000;
@@ -93,8 +95,9 @@ export const NavItem = styled.li`
 `;
 
 export const NavLink = styled(NavvLink)`
-	display: flex;
-	align-items: center;
+	position: relative;
+	/* display: flex;
+	align-items: center; */
 	text-decoration: none;
 	outline: none;
 	padding: 0.2rem 0.6rem;
@@ -104,19 +107,35 @@ export const NavLink = styled(NavvLink)`
 	width: 100%;
 	border-radius: 5px;
 
+	& > ul {
+		display: none;
+		background-color: #eee;
+		width: fit-content;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 150px;
+		padding: 0;
+	}
+
 	&:hover {
 		color: ${({ theme }) => theme.primaryColor};
+
+		& > ul {
+			display: block;
+		}
 	}
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		padding: 0;
+
 		&:hover {
 			background-color: transparent;
 		}
 	}
 `;
 
-export const SideBarIcon = styled.div`
+export const SideBarIcon = styled.i`
 	margin-top: 0.2rem;
 	margin-right: 1.2rem;
 
@@ -150,4 +169,16 @@ export const NavBar = styled.nav`
 export const Divider = styled.hr`
 	margin-bottom: 1.5rem;
 	opacity: 0.3;
+`;
+
+export const SmallArrow = styled(IoMdArrowDropdown)`
+	display: none;
+
+	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
+		display: inline-block;
+	}
+`;
+
+export const DropdownItem = styled(NavLink)`
+	padding: 0.1rem 0;
 `;

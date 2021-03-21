@@ -10,36 +10,43 @@ const Data = [
 		name: 'Home',
 		link: '/',
 		icon: <AiOutlineHome />,
+		isDropDown: false,
 	},
 	{
 		name: 'Jobs',
 		link: '/category/jobs',
 		icon: <CgWorkAlt />,
+		isDropDown: true,
+		dropDownList: [
+			{
+				name: 'IT Jobs',
+				link: '/category/it-jobs',
+				icon: <BsCodeSlash />,
+			},
+			{
+				name: 'Govt Jobs',
+				link: '/category/government-jobs',
+				icon: <RiGovernmentLine />,
+			},
+		],
 	},
 	{
 		name: 'Internships',
 		link: '/category/internships',
 		icon: <BiBuildings />,
-	},
-	{
-		name: 'IT Jobs',
-		link: '/category/it-jobs',
-		icon: <BsCodeSlash />,
-	},
-	{
-		name: 'Govt Jobs',
-		link: '/category/government-jobs',
-		icon: <RiGovernmentLine />,
+		isDropDown: false,
 	},
 	{
 		name: 'Interview Experiences',
 		link: '/interview-experiences',
 		icon: <IoNewspaperOutline />,
+		isDropDown: false,
 	},
 	{
 		name: 'Contribute',
 		link: '/contribute-your-experience',
 		icon: <BsAward />,
+		isDropDown: false,
 	},
 ];
 export default Data;
