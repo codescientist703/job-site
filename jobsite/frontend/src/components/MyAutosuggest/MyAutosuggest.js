@@ -81,10 +81,13 @@ const MyAutosuggest = ({
 	const onChange = (event, { newValue }) => {
 		if (newValue !== errorMsg) {
 			setValue(newValue);
+			if (newValue === '' && value !== '') {
+				onSuggestionValueChange(field, newValue);
+			}
 		}
 	};
 	const onSuggestionsFetchRequested = async ({ value }) => {
-		setValue(value);
+		// setValue(value);
 		let data = await getSuggestions(value);
 		if (data.length === 0) {
 			data = [{ name: errorMsg }];
@@ -102,8 +105,8 @@ const MyAutosuggest = ({
 			onSuggestionValueChange(field, suggestionValue);
 		}
 	};
-	function shouldRenderSuggestions(value, reason) {
-		return value.trim().length >= 0;
+	function shouldRenderSuggestions(value) {
+		return value.trim().length >= 0 && value.trim().length <= 30;
 	}
 	const inputProps = {
 		placeholder: placeholder,
