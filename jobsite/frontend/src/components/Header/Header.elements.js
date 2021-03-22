@@ -91,6 +91,10 @@ export const NavItem = styled.li`
 		border-radius: 5px;
 		transition: 0.3s;
 		font-size: 1rem;
+
+		&:hover > .Headerelements__NavLink-vjhw7q-7 {
+			color: ${({ theme }) => theme.primaryColor};
+		}
 	}
 `;
 
@@ -116,13 +120,13 @@ export const NavLink = styled(NavvLink)`
 		padding: 0;
 	}
 
-	&:hover {
+	/* &:hover {
 		color: ${({ theme }) => theme.primaryColor};
 
 		& > ul {
 			display: block;
 		}
-	}
+	} */
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		padding: 0;
@@ -144,13 +148,14 @@ export const NavLink2 = styled.div`
 	transition: 0.3s;
 	width: 100%;
 	border-radius: 5px;
+	padding: 0;
 
 	& > ul {
 		display: none;
 		background-color: #eee;
 		width: fit-content;
 		position: absolute;
-		top: 130%;
+		top: 100%;
 		left: 0;
 		width: 150px;
 		padding: 0;
@@ -162,8 +167,6 @@ export const NavLink2 = styled.div`
 			display: block;
 		}
 	}
-
-	padding: 0;
 
 	&:hover {
 		background-color: transparent;
@@ -210,15 +213,16 @@ export const SmallArrow = styled(IoMdArrowDropdown)`
 	display: none;
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
+		font-size: 1rem;
 		display: inline-block;
-		margin-bottom: -2px;
+		margin-bottom: -3px;
 		margin-left: 3px;
 	}
 `;
 
 export const DropDownContainer = styled.ul`
 	position: relative;
-	background-color: #eeeefc !important;
+	background-color: #f8f8f8 !important;
 	padding: 0.7rem 0 !important;
 	box-shadow: ${({ theme }) => theme.cardShadow};
 	border-radius: 6px;
@@ -230,17 +234,5 @@ export const DropDownContainer = styled.ul`
 	& > li:hover {
 		background-color: ${({ theme }) => theme.secondaryColor};
 		border-radius: 0;
-	}
-
-	&::after {
-		content: '';
-		position: absolute;
-		left: 15%;
-		bottom: 100%;
-		width: 0;
-		height: 0;
-		border-left: 9px solid transparent;
-		border-right: 9px solid transparent;
-		border-bottom: 9px solid ${({ theme }) => theme.secondaryColor};
 	}
 `;
