@@ -214,6 +214,8 @@ export const SmallArrow = styled(IoMdArrowDropdown)`
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		display: inline-block;
+		margin-bottom: -2px;
+		margin-left: 3px;
 	}
 `;
 
