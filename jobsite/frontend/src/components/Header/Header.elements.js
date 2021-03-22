@@ -96,8 +96,6 @@ export const NavItem = styled.li`
 
 export const NavLink = styled(NavvLink)`
 	position: relative;
-	/* display: flex;
-	align-items: center; */
 	text-decoration: none;
 	outline: none;
 	padding: 0.2rem 0.6rem;
@@ -152,7 +150,7 @@ export const NavLink2 = styled.div`
 		background-color: #eee;
 		width: fit-content;
 		position: absolute;
-		top: 100%;
+		top: 130%;
 		left: 0;
 		width: 150px;
 		padding: 0;
@@ -160,7 +158,6 @@ export const NavLink2 = styled.div`
 
 	&:hover {
 		color: ${({ theme }) => theme.primaryColor};
-
 		& > ul {
 			display: block;
 		}
@@ -220,7 +217,30 @@ export const SmallArrow = styled(IoMdArrowDropdown)`
 `;
 
 export const DropDownContainer = styled.ul`
-	padding: 0.5rem 0.4rem !important;
-	background-color: #fff !important;
-	box-shadow: 2px 2px 2px #888888;
+	position: relative;
+	background-color: #eeeefc !important;
+	padding: 0.7rem 0 !important;
+	box-shadow: ${({ theme }) => theme.cardShadow};
+	border-radius: 6px;
+
+	& > li {
+		width: 100%;
+	}
+
+	& > li:hover {
+		background-color: ${({ theme }) => theme.secondaryColor};
+		border-radius: 0;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 15%;
+		bottom: 100%;
+		width: 0;
+		height: 0;
+		border-left: 9px solid transparent;
+		border-right: 9px solid transparent;
+		border-bottom: 9px solid ${({ theme }) => theme.secondaryColor};
+	}
 `;
