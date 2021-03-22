@@ -219,6 +219,8 @@ export const SmallArrow = styled(IoMdArrowDropdown)`
 	}
 `;
 
-export const DropdownItem = styled(NavLink)`
-	padding: 0.1rem 0;
+export const DropDownContainer = styled.ul`
+	padding: 0.5rem 0.4rem !important;
+	background-color: #fff !important;
+	box-shadow: 2px 2px 2px #888888;
 `;

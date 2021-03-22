@@ -14,7 +14,7 @@ import {
 	NavBar,
 	Divider,
 	SmallArrow,
-	DropdownItem,
+	DropDownContainer,
 } from './Header.elements';
 import { mobileData, desktopData } from '../../RawContent/HeaderContent';
 import { useMediaQuery } from 'react-responsive';
@@ -44,7 +44,7 @@ const NavLinkComponent = ({ isDropDown, children, link }) => {
 
 const DropDown = ({ listData, click }) => {
 	return (
-		<ul>
+		<DropDownContainer>
 			{listData.map((item, index) => (
 				<NavItem key={index} onClick={click}>
 					<NavLink
@@ -60,7 +60,7 @@ const DropDown = ({ listData, click }) => {
 					</NavLink>
 				</NavItem>
 			))}
-		</ul>
+		</DropDownContainer>
 	);
 };
 

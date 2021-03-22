@@ -62,7 +62,7 @@ const mobileData = [
 		icon: <AiOutlineHome />,
 	},
 	{
-		name: 'Jobs',
+		name: 'Private Jobs',
 		link: '/category/jobs',
 		icon: <CgWorkAlt />,
 	},
@@ -75,11 +75,6 @@ const mobileData = [
 		name: 'Govt Jobs',
 		link: '/category/government-jobs',
 		icon: <RiGovernmentLine />,
-	},
-	{
-		name: 'Private Jobs',
-		link: '/category/jobs',
-		icon: <CgWorkAlt />,
 	},
 	{
 		name: 'Internships',
