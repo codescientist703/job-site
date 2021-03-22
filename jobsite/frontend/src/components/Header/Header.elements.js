@@ -83,6 +83,9 @@ export const NavItem = styled.li`
 	text-align: left;
 	width: 100%;
 	font-size: 1rem;
+	&:hover > .Headerelements__NavLink-vjhw7q-7 {
+		color: ${({ theme }) => theme.primaryColor};
+	}
 
 	@media screen and (min-width: ${({ theme }) => theme.lg}px) {
 		width: fit-content;
@@ -91,10 +94,6 @@ export const NavItem = styled.li`
 		border-radius: 5px;
 		transition: 0.3s;
 		font-size: 1rem;
-
-		&:hover > .Headerelements__NavLink-vjhw7q-7 {
-			color: ${({ theme }) => theme.primaryColor};
-		}
 	}
 `;
 
