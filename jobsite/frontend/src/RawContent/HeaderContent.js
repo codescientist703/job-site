@@ -5,7 +5,7 @@ import { IoNewspaperOutline } from 'react-icons/io5';
 import { CgWorkAlt } from 'react-icons/cg';
 import { RiGovernmentLine } from 'react-icons/ri';
 
-const Data = [
+const desktopData = [
 	{
 		name: 'Home',
 		link: '/',
@@ -19,11 +19,6 @@ const Data = [
 		isDropDown: true,
 		dropDownList: [
 			{
-				name: 'Private Jobs',
-				link: '/category/jobs',
-				icon: <CgWorkAlt />,
-			},
-			{
 				name: 'IT Jobs',
 				link: '/category/it-jobs',
 				icon: <BsCodeSlash />,
@@ -32,6 +27,11 @@ const Data = [
 				name: 'Govt Jobs',
 				link: '/category/government-jobs',
 				icon: <RiGovernmentLine />,
+			},
+			{
+				name: 'Private Jobs',
+				link: '/category/jobs',
+				icon: <CgWorkAlt />,
 			},
 		],
 	},
@@ -54,4 +54,48 @@ const Data = [
 		isDropDown: false,
 	},
 ];
-export default Data;
+
+const mobileData = [
+	{
+		name: 'Home',
+		link: '/',
+		icon: <AiOutlineHome />,
+	},
+	{
+		name: 'Jobs',
+		link: '/category/jobs',
+		icon: <CgWorkAlt />,
+	},
+	{
+		name: 'IT Jobs',
+		link: '/category/it-jobs',
+		icon: <BsCodeSlash />,
+	},
+	{
+		name: 'Govt Jobs',
+		link: '/category/government-jobs',
+		icon: <RiGovernmentLine />,
+	},
+	{
+		name: 'Private Jobs',
+		link: '/category/jobs',
+		icon: <CgWorkAlt />,
+	},
+	{
+		name: 'Internships',
+		link: '/category/internships',
+		icon: <BiBuildings />,
+	},
+	{
+		name: 'Interview Experiences',
+		link: '/interview-experiences',
+		icon: <IoNewspaperOutline />,
+	},
+	{
+		name: 'Contribute',
+		link: '/contribute-your-experience',
+		icon: <BsAward />,
+	},
+];
+
+export { desktopData, mobileData };

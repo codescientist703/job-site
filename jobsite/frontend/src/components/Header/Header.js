@@ -16,7 +16,7 @@ import {
 	SmallArrow,
 	DropdownItem,
 } from './Header.elements';
-import Data from '../../RawContent/HeaderContent';
+import { mobileData, desktopData } from '../../RawContent/HeaderContent';
 import { useMediaQuery } from 'react-responsive';
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
@@ -67,7 +67,7 @@ const DropDown = ({ listData, click }) => {
 const MobileItems = ({ handleClick }) => {
 	return (
 		<>
-			{Data.map((data, index) => (
+			{mobileData.map((data, index) => (
 				<NavItem key={index} onClick={handleClick}>
 					<NavLink
 						exact
@@ -89,7 +89,7 @@ const MobileItems = ({ handleClick }) => {
 const DesktopItems = ({ handleClick }) => {
 	return (
 		<>
-			{Data.map((data, index) => (
+			{desktopData.map((data, index) => (
 				<NavItem key={index} onClick={handleClick}>
 					<NavLinkComponent isDropDown={data.isDropDown} link={data.link}>
 						<SideBarIcon>{data.icon}</SideBarIcon>
