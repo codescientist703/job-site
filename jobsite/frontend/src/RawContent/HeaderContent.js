@@ -19,6 +19,11 @@ const Data = [
 		isDropDown: true,
 		dropDownList: [
 			{
+				name: 'Private Jobs',
+				link: '/category/jobs',
+				icon: <CgWorkAlt />,
+			},
+			{
 				name: 'IT Jobs',
 				link: '/category/it-jobs',
 				icon: <BsCodeSlash />,

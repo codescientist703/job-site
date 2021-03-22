@@ -79,6 +79,11 @@ const DesktopItems = ({ handleClick }) => {
 							fontWeight: '600',
 						}}
 						isDropDown
+						onClick={(e) => {
+							if (data.isDropDown) {
+								e.preventDefault();
+							}
+						}}
 					>
 						<SideBarIcon>{data.icon}</SideBarIcon>
 						{data.name}
