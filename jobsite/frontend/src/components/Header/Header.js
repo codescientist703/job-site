@@ -44,6 +44,57 @@ const DropDown = ({ listData, click }) => {
 	);
 };
 
+const MobileItems = ({ handleClick }) => {
+	return (
+		<>
+			{Data.map((data, index) => (
+				<NavItem key={index} onClick={handleClick}>
+					<NavLink
+						exact
+						to={data.link}
+						activeStyle={{
+							color: theme.primaryColor,
+							fontWeight: '600',
+						}}
+					>
+						<SideBarIcon>{data.icon}</SideBarIcon>
+						{data.name}
+					</NavLink>
+				</NavItem>
+			))}
+		</>
+	);
+};
+
+const DesktopItems = ({ handleClick }) => {
+	return (
+		<>
+			{Data.map((data, index) => (
+				<NavItem key={index} onClick={handleClick}>
+					<NavLink
+						exact
+						to={data.link}
+						activeStyle={{
+							color: theme.primaryColor,
+							fontWeight: '600',
+						}}
+						isDropDown
+					>
+						<SideBarIcon>{data.icon}</SideBarIcon>
+						{data.name}
+
+						{data.isDropDown && (
+							<>
+								<SmallArrow />
+								<DropDown listData={data.dropDownList} click={handleClick} />
+							</>
+						)}
+					</NavLink>
+				</NavItem>
+			))}
+		</>
+	);
+};
 const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 	return (
 		<NavBar isOpen={isOpen} onClick={handleClick}>
@@ -54,74 +105,9 @@ const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 					</SideBarLogo>
 				)}
 				{!isDesktop && <Divider />}
-				{/* {Data.map((data, index) => (
-					<NavItem key={index} onClick={handleClick}>
-						<NavLink
-							exact
-							to={data.link}
-							activeStyle={{
-								color: theme.primaryColor,
-								fontWeight: '600',
-							}}
-						>
-							<SideBarIcon>{data.icon}</SideBarIcon>
-							{data.name}
-						</NavLink>
-					</NavItem>
-				))} */}
+				{!isDesktop && <MobileItems handleClick={handleClick} />}
 
-				{/* editing start */}
-
-				{Data.map((data, index) => (
-					<NavItem key={index} onClick={handleClick}>
-						<NavLink
-							exact
-							to={data.link}
-							activeStyle={{
-								color: theme.primaryColor,
-								fontWeight: '600',
-							}}
-							isDropDown
-						>
-							<SideBarIcon>{data.icon}</SideBarIcon>
-							{data.name}
-
-							{data.isDropDown && (
-								<>
-									<SmallArrow />
-
-									{isDesktop ? (
-										<DropDown
-											listData={data.dropDownList}
-											click={handleClick}
-										/>
-									) : (
-										data.dropDownList.map((item, index) => (
-											<>
-												<NavItem key={index} onClick={handleClick}>
-													<DropdownItem
-														exact
-														to={item.link}
-														activeStyle={{
-															color: theme.primaryColor,
-															fontWeight: '600',
-														}}
-													>
-														<SideBarIcon>{item.icon}</SideBarIcon>
-														{item.name}
-													</DropdownItem>
-												</NavItem>
-											</>
-										))
-									)}
-								</>
-							)}
-						</NavLink>
-					</NavItem>
-				))}
-
-				{/* editing end */}
-
+				{isDesktop && <DesktopItems handleClick={handleClick} />}
 				{!isDesktop && <CloseIcon onClick={handleClick} />}
 			</NavMenu>
 		</NavBar>
