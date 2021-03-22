@@ -5,6 +5,7 @@ import {
 	NavMenu,
 	NavLink,
 	NavItem,
+	NavLink2,
 	NavLogo,
 	NavIcon,
 	CloseIcon,
@@ -21,6 +22,25 @@ import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { theme } from '../../theme';
 import Logo from '../../images/logo.png';
+
+const NavLinkComponent = ({ isDropDown, children, link }) => {
+	if (isDropDown === false)
+		return (
+			<NavLink
+				exact
+				to={link}
+				activeStyle={{
+					color: theme.primaryColor,
+					fontWeight: '600',
+				}}
+			>
+				{children}
+			</NavLink>
+		);
+	else {
+		return <NavLink2>{children}</NavLink2>;
+	}
+};
 
 const DropDown = ({ listData, click }) => {
 	return (
@@ -71,30 +91,16 @@ const DesktopItems = ({ handleClick }) => {
 		<>
 			{Data.map((data, index) => (
 				<NavItem key={index} onClick={handleClick}>
-					<NavLink
-						exact
-						to={data.link}
-						activeStyle={{
-							color: theme.primaryColor,
-							fontWeight: '600',
-						}}
-						isDropDown
-						onClick={(e) => {
-							if (data.isDropDown) {
-								e.preventDefault();
-							}
-						}}
-					>
+					<NavLinkComponent isDropDown={data.isDropDown} link={data.link}>
 						<SideBarIcon>{data.icon}</SideBarIcon>
 						{data.name}
-
 						{data.isDropDown && (
 							<>
 								<SmallArrow />
 								<DropDown listData={data.dropDownList} click={handleClick} />
 							</>
 						)}
-					</NavLink>
+					</NavLinkComponent>
 				</NavItem>
 			))}
 		</>

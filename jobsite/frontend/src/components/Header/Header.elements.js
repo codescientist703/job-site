@@ -135,6 +135,44 @@ export const NavLink = styled(NavvLink)`
 	}
 `;
 
+export const NavLink2 = styled.div`
+	position: relative;
+	cursor: pointer;
+	text-decoration: none;
+	outline: none;
+	padding: 0.2rem 0.6rem;
+	height: 100%;
+	color: #000;
+	transition: 0.3s;
+	width: 100%;
+	border-radius: 5px;
+
+	& > ul {
+		display: none;
+		background-color: #eee;
+		width: fit-content;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 150px;
+		padding: 0;
+	}
+
+	&:hover {
+		color: ${({ theme }) => theme.primaryColor};
+
+		& > ul {
+			display: block;
+		}
+	}
+
+	padding: 0;
+
+	&:hover {
+		background-color: transparent;
+	}
+`;
+
 export const SideBarIcon = styled.i`
 	margin-top: 0.2rem;
 	margin-right: 1.2rem;
