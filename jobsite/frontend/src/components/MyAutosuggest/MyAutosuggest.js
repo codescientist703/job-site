@@ -10,9 +10,10 @@ export const InputContainer = styled.div`
 		border-radius: 5px;
 		font-size: 1rem;
 		width: 100%;
+		outline: none;
 
 		&:focus {
-			border-color: red;
+			border-color: blue;
 		}
 	}
 

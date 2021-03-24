@@ -112,7 +112,7 @@ const DisplayMenu = ({ isDesktop, isOpen, handleClick }) => {
 			<NavMenu isOpen={isOpen}>
 				{!isDesktop && (
 					<SideBarLogo to='/'>
-						<img src={Logo} />
+						<img src={Logo} alt='Job Dundho Logo' />
 					</SideBarLogo>
 				)}
 				{!isDesktop && <Divider />}
@@ -137,7 +137,7 @@ const Header = () => {
 		<NavHeader>
 			<NavContainer>
 				<NavLogo to='/'>
-					<img src={Logo} />
+					<img src={Logo} alt='Job Dundho Logo' />
 				</NavLogo>
 				<NavIcon onClick={handleClick} />
 				<DisplayMenu

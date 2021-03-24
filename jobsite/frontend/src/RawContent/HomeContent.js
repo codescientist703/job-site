@@ -43,14 +43,14 @@ const Data = {
 			cardIconColor: theme.primaryColor,
 			cardLink: '/category/it-jobs',
 		},
-		{
-			cardTitle: 'Part Time Jobs',
-			cardContent:
-				'We have got you covered if you do not have time for full time commitments',
-			cardIcon: <BiTime />,
-			cardIconColor: theme.primaryColor,
-			cardLink: '/category',
-		},
+		// {
+		// 	cardTitle: 'Part Time Jobs',
+		// 	cardContent:
+		// 		'We have got you covered if you do not have time for full time commitments',
+		// 	cardIcon: <BiTime />,
+		// 	cardIconColor: theme.primaryColor,
+		// 	cardLink: '/category',
+		// },
 		{
 			cardTitle: 'Interview Experiences',
 			cardContent: 'Learn from the interview experiences of other people',
