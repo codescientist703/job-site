@@ -186,6 +186,7 @@ MATERIAL_ADMIN_SITE = {
 if DEBUG == False:
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
+    CKEDITOR_BASEPATH = 'https://jobdundho.com/static/ckeditor/ckeditor/'
 
 if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
