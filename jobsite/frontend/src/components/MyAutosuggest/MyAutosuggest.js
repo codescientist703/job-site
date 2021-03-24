@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 import Autosuggest from 'react-autosuggest';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from '../../axios';
 
 export const InputContainer = styled.div`
@@ -72,11 +72,24 @@ const MyAutosuggest = ({
 	const errorMsg = 'No Results Found :(';
 	const [value, setValue] = useState(filterData);
 	const [suggestions, setSuggestions] = useState([]);
+	const [data, setData] = useState([]);
+
+	useEffect(() => {
+		async function fetchData() {
+			const response = await axios.get(`${field}/`);
+			setData(response.data);
+		}
+		fetchData();
+	}, []);
+
 	const getSuggestions = async (value) => {
 		const inputValue = value.trim().toLowerCase();
-		const response = await axios.get(`${field}/?search=` + inputValue);
+		// const response = await axios.get(`${field}/?search=` + inputValue);
+		const filteredSuggestions = data.filter((element) =>
+			element.name.toLowerCase().includes(inputValue)
+		);
 
-		return response.data.slice(0, 6);
+		return filteredSuggestions;
 	};
 
 	const onChange = (event, { newValue }) => {
