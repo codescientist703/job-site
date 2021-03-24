@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 export const Content = styled.div`
 	padding: ${({ generalPage }) => (generalPage ? '0 0.5rem' : '1rem')};
 	text-align: justify;
+	line-height: 1.6;
 
 	h1,
 	h2,
