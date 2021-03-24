@@ -37,6 +37,7 @@ else:
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -172,16 +173,41 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 15
 }
 
-MATERIAL_ADMIN_SITE = {
-    'HEADER':  ('Job Site Admin Portal'),  # Admin site header
-    'TITLE':  ('REST API'),
-    'SHOW_THEMES':  True,  # Show default admin themes button
-    'TRAY_REVERSE': False,  # Hide object-tools and additional-submit-line by default
-    'NAVBAR_REVERSE': False,  # Hide side navbar by default
-    'SHOW_COUNTS': True,  # Show instances counts for each model
+JAZZMIN_SETTINGS = {
+    "site_title": "Job Dundho",
+    "site_header": "Job Dundho Admin",
+    "welcome_sign": "Welcome to the Job Dundho",
+    "copyright": "Job Dundho",
+    "search_model": "auth.User",
+    "topmenu_links": [
 
+        {"name": "Home",  "url": "admin:index",
+            "permissions": ["auth.view_user"]},
+        {"model": "auth.User"},
+        {"app": "api"},
+        {"name": "Website",  "url": "https://jobdundho.com", "new_window": True},
+    ],
+
+    "usermenu_links": [
+        {"model": "auth.user"}
+    ],
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+    },
+    "default_icon_parents": "fas fa-chevron-circle-right",
+    "default_icon_children": "fas fa-circle",
+    "related_modal_active": False,
+    "show_ui_builder": False,
 }
 
+JAZZMIN_UI_TWEAKS = {
+    "theme": "journal",
+    "sidebar_fixed": True
+}
 if DEBUG == False:
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
