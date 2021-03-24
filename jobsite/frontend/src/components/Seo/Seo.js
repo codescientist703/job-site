@@ -8,7 +8,7 @@ const Seo = ({ title, description, image }) => {
 	const defaultTitle = SiteData.meta.title;
 	const defaultDescription = SiteData.meta.description;
 	const siteUrl = SiteData.meta.siteUrl;
-	const defaultImage = SiteData.meta.image;
+	const defaultImage = SiteData.meta.thumbnail;
 
 	const seo = {
 		title: title || defaultTitle,
