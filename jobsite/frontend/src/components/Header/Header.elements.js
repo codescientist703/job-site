@@ -59,7 +59,7 @@ export const NavMenu = styled.ul`
 	left: ${({ isOpen }) => (isOpen ? 0 : '-100%')};
 	display: flex;
 	flex-direction: column;
-	width: 290px;
+	width: 270px;
 	height: 100%;
 	background: #e2eafc;
 	padding: 5rem 1rem 1rem;
