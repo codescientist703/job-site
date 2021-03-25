@@ -54,7 +54,10 @@ class JobListView(generics.ListAPIView):
     def get_queryset(self):
         category = self.kwargs.get('category')
         self.categoryObj = get_object_or_404(Category, name=category)
-        jobs = Job.objects.filter(category=self.categoryObj)
+        if category == 'all-jobs':
+            jobs = Job.objects.exclude(category__name='internships')
+        else:
+            jobs = Job.objects.filter(category=self.categoryObj)
         return jobs
 
     def list(self, request, *args, **kwargs):
