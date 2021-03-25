@@ -19,7 +19,7 @@ export const BreadLink = styled(Link)`
 	text-decoration: none;
 	color: black;
 	text-transform: capitalize;
-	font-size: 0.8rem;
+	font-size: 0.75rem;
 	letter-spacing: 1px;
 	font-weight: 500;
 
