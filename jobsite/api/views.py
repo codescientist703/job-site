@@ -84,7 +84,7 @@ class InterviewListView(generics.ListAPIView):
     def list(self, request, *args, **kwargs):
         response = super().list(request, args, kwargs)
         # Add data to response.data Example for your object:
-        categoryObj = get_object_or_404(Category, name='interviewexperience')
+        categoryObj = get_object_or_404(Category, name='interview-experiences')
         response.data['page_size'] = settings.REST_FRAMEWORK['PAGE_SIZE']
         response.data['title'] = categoryObj.title
         response.data['description'] = categoryObj.description
