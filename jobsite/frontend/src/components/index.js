@@ -20,3 +20,4 @@ export { default as MyAutosuggest } from './MyAutosuggest/MyAutosuggest';
 export { default as ShareDropdown } from './ShareDropdown/ShareDropdown';
 export { default as ScrollUp } from './ScrollUp/ScrollUp';
 export { default as NoResult } from './NoResult/NoResult';
+export { default as ScrollToTop } from './ScrollToTop/ScrollToTop';

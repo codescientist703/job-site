@@ -5,6 +5,9 @@ import { theme } from './theme';
 import { ThemeProvider } from 'styled-components';
 import { Header, Footer, Loader } from './components';
 
+const ScrollToTop = React.lazy(() =>
+	import('./components/ScrollToTop/ScrollToTop')
+);
 const ScrollUp = React.lazy(() => import('./components/ScrollUp/ScrollUp'));
 const Home = React.lazy(() => import('./pages/Home/Home'));
 const JobList = React.lazy(() => import('./pages/JobList/JobList'));
@@ -30,6 +33,7 @@ function App() {
 				<GlobalStyle />
 				<Header />
 				<Suspense fallback={<Loader />}>
+					<ScrollToTop />
 					<Switch>
 						<Route path='/' exact component={Home} />
 						<Route
