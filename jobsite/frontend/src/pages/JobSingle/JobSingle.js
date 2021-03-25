@@ -26,7 +26,7 @@ const JobSingle = () => {
 			name: `${data.category ? data.category : ''}`,
 			link: `/category/${data.category}`,
 		},
-		{ name: `${data.title ? data.title : ''}`, link: `/${slug}` },
+		{ name: `${data.jobtitle ? data.jobtitle : ''}`, link: `/${slug}` },
 	];
 
 	useEffect(() => {

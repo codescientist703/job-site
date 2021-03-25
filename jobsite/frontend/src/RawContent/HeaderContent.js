@@ -1,5 +1,5 @@
 import { AiOutlineHome } from 'react-icons/ai';
-import { BiBuildings } from 'react-icons/bi';
+import { BiBuildings, BiBorderAll } from 'react-icons/bi';
 import { BsAward, BsCodeSlash } from 'react-icons/bs';
 import { IoNewspaperOutline } from 'react-icons/io5';
 import { CgWorkAlt } from 'react-icons/cg';
@@ -19,6 +19,16 @@ const desktopData = [
 		isDropDown: true,
 		dropDownList: [
 			{
+				name: 'All Jobs',
+				link: '/category/all-jobs',
+				icon: <BiBorderAll />,
+			},
+			{
+				name: 'Private Jobs',
+				link: '/category/jobs',
+				icon: <CgWorkAlt />,
+			},
+			{
 				name: 'IT Jobs',
 				link: '/category/it-jobs',
 				icon: <BsCodeSlash />,
@@ -27,11 +37,6 @@ const desktopData = [
 				name: 'Govt Jobs',
 				link: '/category/government-jobs',
 				icon: <RiGovernmentLine />,
-			},
-			{
-				name: 'Private Jobs',
-				link: '/category/jobs',
-				icon: <CgWorkAlt />,
 			},
 		],
 	},
@@ -60,6 +65,11 @@ const mobileData = [
 		name: 'Home',
 		link: '/',
 		icon: <AiOutlineHome />,
+	},
+	{
+		name: 'All Jobs',
+		link: '/category/all-jobs',
+		icon: <BiBorderAll />,
 	},
 	{
 		name: 'Private Jobs',

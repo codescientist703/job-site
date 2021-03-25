@@ -40,7 +40,7 @@ const JobList = (props) => {
 	const [data, setData] = useState([]);
 	const [numPages, setNumPages] = useState(-1);
 	const [is404, setIs404] = useState(false);
-	const title = filterData.search !== '' ? 'search results' : `${categoryName}`;
+	const title = props.location.state ? 'search results' : `${categoryName}`;
 
 	const [seoData, setSeoData] = useState({
 		title: '',
@@ -53,7 +53,7 @@ const JobList = (props) => {
 		{ name: title, link: `/category/${categoryName}` },
 	];
 	if (categoryName === 'search') {
-		categoryName = 'jobs';
+		categoryName = 'all-jobs';
 		isSearch = true;
 	}
 	useEffectUpdate(() => {
