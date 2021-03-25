@@ -74,13 +74,13 @@ class Job(models.Model):
     def __str__(self):
         return self.title
 
-    def save(self):
+    def save(self, *args, **kwargs):
         jobType = 'job'
         if self.category.name == 'internships':
             jobType = 'internship'
 
         self.title = f'{self.jobtitle.name} {jobType} at {self.company.name}'
-        super().save(self)
+        super(Job, self).save(*args, **kwargs)
 
 
 class Interview(models.Model):
