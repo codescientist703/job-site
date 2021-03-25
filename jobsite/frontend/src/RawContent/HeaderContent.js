@@ -24,11 +24,6 @@ const desktopData = [
 				icon: <BiBorderAll />,
 			},
 			{
-				name: 'Private Jobs',
-				link: '/category/jobs',
-				icon: <CgWorkAlt />,
-			},
-			{
 				name: 'IT Jobs',
 				link: '/category/it-jobs',
 				icon: <BsCodeSlash />,
@@ -37,6 +32,11 @@ const desktopData = [
 				name: 'Govt Jobs',
 				link: '/category/government-jobs',
 				icon: <RiGovernmentLine />,
+			},
+			{
+				name: 'Private Jobs',
+				link: '/category/jobs',
+				icon: <CgWorkAlt />,
 			},
 		],
 	},
