@@ -8,6 +8,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class JobAdmin(admin.ModelAdmin):
+    exclude = ('title',)
     list_display = ('jobtitle', 'company', 'location', 'category')
     autocomplete_fields = ('jobtitle', 'company', 'location')
     save_on_top = True

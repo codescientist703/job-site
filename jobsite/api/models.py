@@ -2,6 +2,7 @@ from django.db import models
 
 from ckeditor.fields import RichTextField
 # Create your models here.
+from autoslug import AutoSlugField
 
 
 class Category(models.Model):
@@ -49,7 +50,7 @@ class Company(models.Model):
 
 
 class Job(models.Model):
-    title = models.TextField(max_length=255)
+    title = models.TextField(max_length=255, blank=True)
     category = models.ForeignKey(
         Category, on_delete=models.SET_NULL, blank=True, null=True)
     jobtitle = models.ForeignKey(
@@ -63,7 +64,7 @@ class Job(models.Model):
         Company, on_delete=models.SET_NULL, blank=True, null=True)
     content = RichTextField(blank=True, null=True)
     description = models.TextField(max_length=200, blank=True, null=True)
-    slug = models.SlugField(unique=True, max_length=300)
+    slug = AutoSlugField(unique=True, populate_from='title')
     apply_link = models.URLField(max_length=255)
     part_time = models.BooleanField(default=False)
 
@@ -72,6 +73,14 @@ class Job(models.Model):
 
     def __str__(self):
         return self.title
+
+    def save(self):
+        jobType = 'job'
+        if self.category.name == 'internships':
+            jobType = 'internship'
+
+        self.title = f'{self.jobtitle.name} {jobType} at {self.company.name}'
+        super().save(self)
 
 
 class Interview(models.Model):
@@ -85,7 +94,8 @@ class Interview(models.Model):
     content = RichTextField()
     draft = models.BooleanField(default=True)
     description = models.TextField(max_length=200, blank=True, null=True)
-    slug = models.SlugField(unique=True, max_length=300, null=True, blank=True)
+    slug = models.SlugField(unique=True, max_length=300,
+                            null=True, blank=True)
 
     class Meta:
         ordering = ['draft']
