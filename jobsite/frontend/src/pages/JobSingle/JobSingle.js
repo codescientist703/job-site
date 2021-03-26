@@ -69,12 +69,12 @@ const JobSingle = () => {
 							) : (
 								<Skeleton count={5} />
 							)}
+							{isLoading === false && (
+								<ApplyBtn href={data.apply_link} target={'_blank'}>
+									Apply Now
+								</ApplyBtn>
+							)}
 						</Content>
-						{isLoading === false && (
-							<ApplyBtn href={data.apply_link} target={'_blank'}>
-								Apply Now
-							</ApplyBtn>
-						)}
 					</SingleJobContainer>
 				</Container>
 			</FluidContainer>

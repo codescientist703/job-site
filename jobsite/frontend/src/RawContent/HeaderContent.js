@@ -1,6 +1,6 @@
 import { AiOutlineHome } from 'react-icons/ai';
 import { BiBuildings, BiBorderAll } from 'react-icons/bi';
-import { BsAward, BsCodeSlash } from 'react-icons/bs';
+import { BsAward, BsCodeSlash, BsBuilding } from 'react-icons/bs';
 import { IoNewspaperOutline } from 'react-icons/io5';
 import { CgWorkAlt } from 'react-icons/cg';
 import { RiGovernmentLine } from 'react-icons/ri';
@@ -21,7 +21,7 @@ const desktopData = [
 			{
 				name: 'All Jobs',
 				link: '/category/all-jobs',
-				icon: <BiBorderAll />,
+				icon: <BsBuilding />,
 			},
 			{
 				name: 'IT Jobs',
@@ -69,7 +69,7 @@ const mobileData = [
 	{
 		name: 'All Jobs',
 		link: '/category/all-jobs',
-		icon: <BiBorderAll />,
+		icon: <BsBuilding />,
 	},
 	{
 		name: 'Private Jobs',

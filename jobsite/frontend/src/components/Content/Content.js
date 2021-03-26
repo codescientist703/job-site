@@ -1,9 +1,15 @@
 import styled from 'styled-components/macro';
 
 export const Content = styled.div`
-	padding: ${({ generalPage }) => (generalPage ? '0 0.5rem' : '1rem')};
+	padding: ${({ generalPage }) =>
+		generalPage ? '0 0.5rem' : '1rem 1rem 1.5rem'};
 	line-height: 1.6;
 	word-wrap: break-word;
+
+	@media screen and (min-width: ${({ theme }) => theme.md}px) {
+		padding: ${({ generalPage }) =>
+			generalPage ? '0 0.5rem' : '1rem 1.5rem 1.5rem'};
+	}
 
 	h1,
 	h2,
@@ -17,7 +23,7 @@ export const Content = styled.div`
 	}
 
 	h2 {
-		font-size: 1.5rem;
+		font-size: 1.3rem;
 		font-weight: 600;
 	}
 

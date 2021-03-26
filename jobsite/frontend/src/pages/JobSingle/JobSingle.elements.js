@@ -17,13 +17,13 @@ export const SingleJobContainer = styled.div`
 `;
 
 export const Line = styled.div`
-	width: 97%;
+	width: 96%;
 	height: 2px;
 	background-color: #ddd;
 	margin: 0.5rem auto 0;
 `;
 
 export const ApplyBtn = styled(Button)`
-	margin: 1rem;
-	margin-top: 0;
+	/* margin: 1rem;
+	margin-top: 0; */
 `;

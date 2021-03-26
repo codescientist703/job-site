@@ -1,7 +1,7 @@
 import { CgWorkAlt } from 'react-icons/cg';
 import { RiGovernmentLine } from 'react-icons/ri';
-import { BsCodeSlash } from 'react-icons/bs';
-import { BiTime, BiBuildings } from 'react-icons/bi';
+import { BsCodeSlash, BsBuilding } from 'react-icons/bs';
+import { BiBuildings } from 'react-icons/bi';
 import { IoNewspaperOutline } from 'react-icons/io5';
 import { theme } from '../theme';
 
@@ -13,6 +13,13 @@ const Data = {
 	sec2Content:
 		'Our job portal is specially designed in mind to be very user friendly and easy to use. Often we have to search through different portals and this can be quite frustrating in the long run. Just imagine how easy it would become if every job is available in one place? This portal is designed specifically to solve that problem.',
 	card: [
+		{
+			cardTitle: 'All Jobs',
+			cardContent: 'Explore variety of jobs in private or government sector.',
+			cardIcon: <BsBuilding />,
+			cardIconColor: theme.primaryColor,
+			cardLink: '/category/all-jobs',
+		},
 		{
 			cardTitle: 'Private Jobs',
 			cardContent: 'Explore various different jobs in the private sector',
