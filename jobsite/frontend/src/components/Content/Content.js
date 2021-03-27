@@ -36,6 +36,7 @@ export const Content = styled.div`
 	ol,
 	ul {
 		padding-left: 1rem;
+		margin-bottom: 1rem;
 	}
 `;
 
