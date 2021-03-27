@@ -6,10 +6,11 @@ from autoslug import AutoSlugField
 
 
 class Category(models.Model):
-    name = models.TextField(max_length=300)
+    display = models.CharField(max_length=200, null=True, blank=True)
+    name = models.CharField(max_length=300)
     title = models.TextField(max_length=300, null=True, blank=True)
+    description = models.CharField(max_length=300, null=True, blank=True)
     content = RichTextField(null=True, blank=True)
-    description = models.CharField(max_length=200, null=True, blank=True)
 
     class Meta:
         verbose_name_plural = 'Categories'
@@ -63,7 +64,7 @@ class Job(models.Model):
     company = models.ForeignKey(
         Company, on_delete=models.SET_NULL, blank=True, null=True)
     content = RichTextField(blank=True, null=True)
-    description = models.TextField(max_length=200, blank=True, null=True)
+    description = models.TextField(max_length=300, blank=True, null=True)
     slug = AutoSlugField(unique=True, populate_from='title')
     apply_link = models.URLField(max_length=255)
     part_time = models.BooleanField(default=False)
@@ -84,16 +85,16 @@ class Job(models.Model):
 
 
 class Interview(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=255)
     email = models.EmailField()
-    company = models.CharField(max_length=200)
-    jobtitle = models.CharField(max_length=254)
+    company = models.CharField(max_length=255)
+    jobtitle = models.CharField(max_length=255)
     title = models.CharField(max_length=255, null=True, blank=True)
     category = models.ForeignKey(
         Category, on_delete=models.SET_NULL, blank=True, null=True, related_name='interviews')
     content = RichTextField()
     draft = models.BooleanField(default=True)
-    description = models.TextField(max_length=200, blank=True, null=True)
+    description = models.TextField(max_length=300, blank=True, null=True)
     slug = models.SlugField(unique=True, max_length=300,
                             null=True, blank=True)
 

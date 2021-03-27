@@ -66,6 +66,7 @@ class JobListView(generics.ListAPIView):
         response.data['page_size'] = settings.REST_FRAMEWORK['PAGE_SIZE']
         response.data['description'] = self.categoryObj.description
         response.data['title'] = self.categoryObj.title
+        response.data['display'] = self.categoryObj.display
 
         return response
 
@@ -88,7 +89,7 @@ class InterviewListView(generics.ListAPIView):
         response.data['page_size'] = settings.REST_FRAMEWORK['PAGE_SIZE']
         response.data['title'] = categoryObj.title
         response.data['description'] = categoryObj.description
-
+        response.data['display'] = categoryObj.display
         return response
 
 

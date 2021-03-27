@@ -40,17 +40,21 @@ const JobList = (props) => {
 	const [data, setData] = useState([]);
 	const [numPages, setNumPages] = useState(-1);
 	const [is404, setIs404] = useState(false);
-	const title = props.location.state ? 'search results' : `${categoryName}`;
+	const slug = props.location.state ? 'search results' : `${categoryName}`;
 
 	const [seoData, setSeoData] = useState({
 		title: '',
 		description: '',
+		display: '',
 	});
 	let isSearch = false;
 
 	const breadData = [
 		{ name: 'home', link: '/' },
-		{ name: title, link: `/category/${categoryName}` },
+		{
+			name: seoData.display !== '' ? seoData.display : '',
+			link: `/category/${slug}`,
+		},
 	];
 	if (categoryName === 'search') {
 		categoryName = 'all-jobs';
@@ -80,6 +84,7 @@ const JobList = (props) => {
 				setSeoData({
 					title: response.data.title,
 					description: response.data.description,
+					display: response.data.display,
 				});
 			} catch (error) {
 				setIsLoading(false);

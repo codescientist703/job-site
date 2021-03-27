@@ -23,7 +23,7 @@ const JobSingle = () => {
 	const breadData = [
 		{ name: 'home', link: '/' },
 		{
-			name: `${data.category ? data.category : ''}`,
+			name: `${data.display ? data.display : ''}`,
 			link: `/category/${data.category}`,
 		},
 		{ name: `${data.jobtitle ? data.jobtitle : ''}`, link: `/${slug}` },

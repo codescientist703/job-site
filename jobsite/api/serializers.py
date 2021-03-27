@@ -43,12 +43,14 @@ class JobSerializer(serializers.ModelSerializer):
     location = serializers.StringRelatedField()
     category = serializers.CharField(
         read_only=True, source='category.name')
+    display = serializers.CharField(
+        read_only=True, source='category.display')
     company = serializers.StringRelatedField()
 
     class Meta:
         model = Job
         fields = ['jobtitle', 'location', 'date',
-                  'salary', 'experience', 'company', 'content', 'category', 'apply_link', 'title', 'description']
+                  'salary', 'experience', 'company', 'content', 'category', 'apply_link', 'title', 'description', 'display']
 
 
 class InterviewListSerializer(serializers.ModelSerializer):
