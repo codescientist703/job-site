@@ -59,6 +59,7 @@ export const ItemIcon = styled.i`
 	vertical-align: middle;
 	margin-right: 0.3rem;
 	display: none;
+	font-size: 1rem;
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		display: initial;
 	}

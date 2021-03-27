@@ -13,11 +13,12 @@ import {
 	ItemDescription,
 	ShareIconDiv,
 } from './JobCard.elements';
-import { AiFillHome } from 'react-icons/ai';
-import { BiTimeFive } from 'react-icons/bi';
 import { LinkButton, ShareDropdown } from '../../components';
 import Skeleton from 'react-loading-skeleton';
-
+import { AiFillHome } from 'react-icons/ai';
+import { BiTimeFive } from 'react-icons/bi';
+import { HiCurrencyRupee } from 'react-icons/hi';
+import { MdTimeline } from 'react-icons/md';
 const conversion = (number) => {
 	if (number >= 1000 && number <= 99999) {
 		return `${number / 1000} K`;
@@ -102,7 +103,7 @@ const JobCard = ({
 						<>
 							<ItemTitle>
 								<ItemIcon>
-									<BiTimeFive />
+									<HiCurrencyRupee />
 								</ItemIcon>
 								Salary
 							</ItemTitle>
@@ -126,7 +127,7 @@ const JobCard = ({
 						<>
 							<ItemTitle>
 								<ItemIcon>
-									<BiTimeFive />
+									<MdTimeline />
 								</ItemIcon>
 								Experience
 							</ItemTitle>
