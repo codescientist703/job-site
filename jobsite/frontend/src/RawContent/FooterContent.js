@@ -16,7 +16,7 @@ const data = {
 		},
 		{
 			name: 'Private Jobs',
-			link: '/category/jobs',
+			link: '/category/private-jobs',
 		},
 		{
 			name: 'Internships',
