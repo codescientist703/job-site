@@ -107,7 +107,7 @@ const SectionTwo = () => {
 				<ContainerRight>
 					<Heading>{Data.sec2Title}</Heading>
 					<Description>{Data.sec2Content}</Description>
-					<GoHomeBtn to='/category/jobs'>Apply Now</GoHomeBtn>
+					<GoHomeBtn to='/category/all-jobs'>Apply Now</GoHomeBtn>
 				</ContainerRight>
 			</Container>
 		</SecTwoContainer>

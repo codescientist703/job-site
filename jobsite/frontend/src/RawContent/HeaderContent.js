@@ -35,7 +35,7 @@ const desktopData = [
 			},
 			{
 				name: 'Private Jobs',
-				link: '/category/jobs',
+				link: '/category/private-jobs',
 				icon: <CgWorkAlt />,
 			},
 		],
@@ -73,7 +73,7 @@ const mobileData = [
 	},
 	{
 		name: 'Private Jobs',
-		link: '/category/jobs',
+		link: '/category/private-jobs',
 		icon: <CgWorkAlt />,
 	},
 	{

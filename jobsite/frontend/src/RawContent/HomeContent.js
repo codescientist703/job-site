@@ -25,7 +25,7 @@ const Data = {
 			cardContent: 'Explore various different jobs in the private sector',
 			cardIcon: <CgWorkAlt />,
 			cardIconColor: theme.primaryColor,
-			cardLink: '/category/jobs',
+			cardLink: '/category/private-jobs',
 		},
 		{
 			cardTitle: 'Government Jobs',

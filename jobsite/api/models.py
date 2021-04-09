@@ -9,7 +9,7 @@ class Category(models.Model):
     display = models.CharField(max_length=200, null=True, blank=True)
     name = models.CharField(max_length=300)
     title = models.TextField(max_length=300, null=True, blank=True)
-    description = models.CharField(max_length=300, null=True, blank=True)
+    description = models.CharField(max_length=600, null=True, blank=True)
     content = RichTextField(null=True, blank=True)
 
     class Meta:
@@ -64,7 +64,7 @@ class Job(models.Model):
     company = models.ForeignKey(
         Company, on_delete=models.SET_NULL, blank=True, null=True)
     content = RichTextField(blank=True, null=True)
-    description = models.TextField(max_length=300, blank=True, null=True)
+    description = models.TextField(max_length=600, blank=True, null=True)
     slug = AutoSlugField(unique=True, populate_from='title')
     apply_link = models.URLField(max_length=255)
     part_time = models.BooleanField(default=False)
@@ -94,7 +94,7 @@ class Interview(models.Model):
         Category, on_delete=models.SET_NULL, blank=True, null=True, related_name='interviews')
     content = RichTextField()
     draft = models.BooleanField(default=True)
-    description = models.TextField(max_length=300, blank=True, null=True)
+    description = models.TextField(max_length=600, blank=True, null=True)
     slug = models.SlugField(unique=True, max_length=300,
                             null=True, blank=True)
 

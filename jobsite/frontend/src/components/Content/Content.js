@@ -3,18 +3,19 @@ import styled from 'styled-components/macro';
 export const Content = styled.div`
 	font-size: 1rem;
 	padding: ${({ generalPage }) =>
-		generalPage ? '0 0.5rem' : '1rem 1rem 1.5rem'};
+		generalPage ? '0 0.5rem' : '1rem 0.7rem 1.5rem'};
 	line-height: 1.6;
 	word-wrap: break-word;
 	@media screen and (min-width: ${({ theme }) => theme.md}px) {
 		padding: ${({ generalPage }) =>
 			generalPage ? '0 0.5rem' : '1rem 1.5rem 1.5rem'};
 	}
+	div,
 	p,
 	h1,
 	h2,
 	h3 {
-		margin-bottom: 1rem;
+		margin-bottom: 1.1rem;
 	}
 	h1 {
 		font-size: 2rem;

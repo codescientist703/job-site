@@ -56,6 +56,9 @@ class JobListView(generics.ListAPIView):
         self.categoryObj = get_object_or_404(Category, name=category)
         if category == 'all-jobs':
             jobs = Job.objects.exclude(category__name='internships')
+        elif category == 'private-jobs':
+            li = ['internships', 'government-jobs']
+            jobs = Job.objects.exclude(category__name__in=li)
         else:
             jobs = Job.objects.filter(category=self.categoryObj)
         return jobs
