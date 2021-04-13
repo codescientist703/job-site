@@ -78,14 +78,14 @@ const JobList = (props) => {
 			}
 			try {
 				const response = await axios.get(apiUrl);
-				setData(response.data.results);
-				setIsLoading(false);
-				setNumPages(Math.ceil(response.data.count / response.data.page_size));
 				setSeoData({
 					title: response.data.title,
 					description: response.data.description,
 					display: response.data.display,
 				});
+				setIsLoading(false);
+				setData(response.data.results);
+				setNumPages(Math.ceil(response.data.count / response.data.page_size));
 			} catch (error) {
 				setIsLoading(false);
 				setIs404(true);

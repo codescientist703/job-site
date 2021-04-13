@@ -40,8 +40,8 @@ const JobSingle = () => {
 			let apiUrl = `job/${slug}/`;
 			try {
 				const response = await axios.get(apiUrl);
-				setIsLoading(false);
 				setData(response.data);
+				setIsLoading(false);
 			} catch (error) {
 				setIsLoading(false);
 				setIs404(true);

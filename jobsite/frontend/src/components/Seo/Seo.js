@@ -20,7 +20,6 @@ const Seo = ({ title, description, image }) => {
 
 	return (
 		<Helmet title={seo.title} titleTemplate={SiteData.meta.titleTemplate}>
-			<html lang='en-US' />
 			<meta name='description' content={seo.description} />
 			<meta name='image' content={seo.image} />
 			<link rel='canonical' href={seo.url} />
@@ -30,6 +29,7 @@ const Seo = ({ title, description, image }) => {
 			<meta property='og:image' content={seo.image} />
 			<meta property='og:description' content={seo.description} />
 			<meta property='og:site_name' content={seo.siteName} />
+			<html lang='en-US' />
 		</Helmet>
 	);
 };
